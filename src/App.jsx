@@ -74,7 +74,7 @@ export default function App() {
       <div className="pick-rail">
         {friendPicks.map((offer) => <article className="pick" key={offer.name}>
           <img src={offer.imageUrl} alt="" />
-          <div><span className="pick-label">{offer.friendLabel ?? "朋友提到"}</span><strong>{offer.nameZh}</strong><p>{offer.friendNote}</p><b><Price value={offer.sale} /></b> <UnitPrice offer={offer} /></div>
+          <div><span className="pick-label">{offer.friendLabel ?? "朋友提到"}</span><strong>{offer.nameZh}</strong><p>{offer.friendNote}</p><div className="pick-price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>}{offer.discountPercent && <i>−{offer.discountPercent}%</i>}<UnitPrice offer={offer} /></div></div>
         </article>)}
       </div>
     </section>
