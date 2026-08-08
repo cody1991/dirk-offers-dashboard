@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 const euro = new Intl.NumberFormat("nl-NL", { style: "currency", currency: "EUR" });
 const dateFormatter = new Intl.DateTimeFormat("zh-CN", { timeZone: "Europe/Amsterdam", dateStyle: "medium", timeStyle: "short" });
 const purchaseStorageKey = "dirk-purchase-log-v1";
+const todayPurchaseSeeds = [["XL watermeloen", 3.99], ["Kipkluifjes gekruid", 3.99], ["Roerbakgarnalen", 2.99], ["Roombroodjes", 2.49], ["Magnum ijs", 2.99]];
 
 function amsterdamDate() {
   const parts = Object.fromEntries(new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Amsterdam", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date()).filter((part) => part.type !== "literal").map((part) => [part.type, part.value]));
@@ -37,14 +38,13 @@ export default function App() {
     if (purchaseStoreReady || currentOffers.length === 0) return;
     try {
       const saved = JSON.parse(localStorage.getItem(purchaseStorageKey));
-      if (Array.isArray(saved)) setPurchases(saved);
-      else {
-        const initialPurchases = [["XL watermeloen", 3.99], ["Kipkluifjes gekruid", 3.99], ["Roerbakgarnalen", 2.99]].map(([term, paidPrice]) => {
-          const offer = currentOffers.find((item) => item.name.includes(term));
-          return offer && { id: `${offer.name}-${purchaseDate}`, name: offer.name, nameZh: offer.nameZh, paidPrice, date: purchaseDate };
-        }).filter(Boolean);
-        setPurchases(initialPurchases);
-      }
+      const existingPurchases = Array.isArray(saved) ? saved : [];
+      const missingTodayPurchases = todayPurchaseSeeds.map(([term, paidPrice]) => {
+        const offer = currentOffers.find((item) => item.name.includes(term));
+        const alreadyRecorded = offer && existingPurchases.some((item) => item.name === offer.name && item.date === purchaseDate);
+        return offer && !alreadyRecorded && { id: `${offer.name}-${purchaseDate}`, name: offer.name, nameZh: offer.nameZh, paidPrice, date: purchaseDate };
+      }).filter(Boolean);
+      setPurchases([...missingTodayPurchases, ...existingPurchases]);
       setPurchaseProduct(currentOffers[0].name);
       setPurchasePrice(String(currentOffers[0].sale));
     } catch {
