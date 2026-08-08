@@ -28,7 +28,7 @@ export default function App() {
     <header className="hero">
       <div className="stamp">DIRK / DAILY</div>
       <div>
-        <p className="kicker">阿姆斯特丹 · 每天 10:00 自动更新</p>
+        <div className="hero-meta"><p className="kicker">阿姆斯特丹 · 每天 10:00 自动更新</p><a className="official-link" href="https://www.dirk.nl/aanbiedingen" target="_blank" rel="noreferrer">查看 Dirk 官方优惠 <span>↗</span></a></div>
         <h1>今天，<em>买对</em>一点。</h1>
         <p className="subhead">当前 Dirk 优惠的价格分析、朋友推荐与商品图，一页看完。</p>
       </div>
