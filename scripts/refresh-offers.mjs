@@ -1,0 +1,78 @@
+import fs from "node:fs/promises";
+import path from "node:path";
+import initSqlJs from "sql.js";
+
+const root = path.resolve(import.meta.dirname, "..");
+const publicDir = path.join(root, "public", "data");
+const dbDir = path.join(root, "data");
+const offerUrl = "https://www.dirk.nl/aanbiedingen";
+const force = process.argv.includes("--force");
+const localHour = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Amsterdam", hour: "2-digit", hourCycle: "h23" }).format(new Date());
+
+if (!force && process.env.GITHUB_ACTIONS && localHour !== "10") {
+  console.log(`Skipped: Amsterdam time is ${localHour}:00, not 10:00.`);
+  process.exit(0);
+}
+
+const translations = [
+  ["Aardbeien", "草莓"], ["Chinese kool", "大白菜"], ["Cocktail trostomaten", "串番茄"], ["Handperen", "雪梨"], ["blauwe bessen", "有机蓝莓"], ["Galia meloen", "哈密瓜"], ["Roerbakgarnalen", "炒虾"], ["Kipkluifjes gekruid", "腌制鸡翅根"], ["XL watermeloen", "特大西瓜"], ["Kersen", "樱桃"], ["Mango ready to eat", "即食芒果"], ["witte druiven", "白葡萄"], ["Nectarines", "油桃"], ["courgette", "西葫芦"], ["rode paprika", "红甜椒"], ["Uien", "洋葱"], ["Avocado", "牛油果"], ["koffiebonen", "咖啡豆"], ["koffie", "咖啡"], ["Magnum ijs", "梦龙冰淇淋"], ["Friet", "薯条"], ["pasta", "意大利面"], ["pastasaus", "意面酱"], ["wasmiddel", "洗衣液/洗衣凝珠"], ["shampoo", "洗发水"], ["conditioner", "护发素"], ["deodorant", "止汗剂"], ["Klene", "甘草糖"], ["Lay", "乐事薯片"], ["Heineken", "喜力啤酒"], ["Grolsch", "格罗尔施啤酒"]
+];
+const friendTerms = new Map([
+  ["Roerbakgarnalen", "朋友认为便宜，但提醒去壳后量会少。"], ["XL watermeloen", "朋友说西瓜便宜，建议买。"], ["Aardbeien", "朋友确认草莓可以。"], ["blauwe bessen", "朋友确认蓝莓也可以。"], ["Chinese kool", "朋友确认大白菜也可以。"], ["Galia meloen", "朋友确认是哈密瓜，可以买。"], ["Handperen", "朋友确认雪梨可以。"], ["Cocktail trostomaten", "朋友说这种串番茄好吃。"], ["Kipkluifjes gekruid", "朋友确认腌制好，适合空气炸锅。"], ["Mango", "朋友觉得芒果看起来很大。"], ["Kersen verpakt", "朋友认为樱桃便宜。"], ["witte druiven", "朋友认为葡萄/油桃很便宜。"]
+]);
+function chineseName(name) { let value = name; for (const [nl, zh] of translations) value = value.replace(new RegExp(nl, "ig"), zh); return value.replace(/1 de Beste/ig, "Dirk 自有品牌").replace(/\s+/g, " ").trim(); }
+function grams(name) { if (/\b(?:of|or)\b/i.test(name)) return null; const kg = name.match(/(\d+(?:[.,]\d+)?)\s*(?:kilo|kg)\b/i); if (kg) return Number(kg[1].replace(",", ".")) * 1000; const g = name.match(/(\d+(?:[.,]\d+)?)\s*(?:gram|g)\b/i); return g ? Number(g[1].replace(",", ".")) : null; }
+function analysis(offer) {
+  const saving = offer.original == null ? null : offer.original - offer.sale;
+  const percent = saving == null ? null : Math.round(saving / offer.original * 100);
+  const perKg = offer.grams ? offer.sale / offer.grams * 1000 : null;
+  const prefix = saving == null ? `现价 €${offer.sale.toFixed(2)}` : `省 €${saving.toFixed(2)}（${percent}%）`;
+  if (offer.name.includes("XL watermeloen")) return `${prefix}；约 €${perKg.toFixed(2)}/kg，是本页最值的水果。`;
+  if (offer.name.includes("Roerbakgarnalen")) return `${prefix}；约 €${perKg.toFixed(2)}/kg，单价仍高，不必囤。`;
+  if (percent != null && percent >= 45) return `${prefix}；折扣很大，刚好需要就带。`;
+  if (percent != null && percent >= 25) return `${prefix}${perKg ? `；约 €${perKg.toFixed(2)}/kg` : ""}，正常好价。`;
+  return `${prefix}${perKg ? `；约 €${perKg.toFixed(2)}/kg` : ""}，折扣有限，不缺不用凑。`;
+}
+
+const response = await fetch(`https://r.jina.ai/${offerUrl}`);
+if (!response.ok) throw new Error(`Offer page request failed: ${response.status}`);
+const markdown = await response.text();
+const headings = [...markdown.matchAll(/^##\s+(.+)$/gm)].map((m) => ({ index: m.index, name: m[1] }));
+const offers = new Map();
+const product = /\[([^\]]+)\]\((https:\/\/www\.dirk\.nl\/(?:aanbiedingen|boodschappen)[^)]*)\)/g;
+for (const match of markdown.matchAll(product)) {
+  const name = match[1].replace(/\s+/g, " ").trim();
+  if (name.length < 5 || name.includes("Image ")) continue;
+  const prior = markdown.slice(Math.max(0, match.index - 3000), match.index);
+  const chunks = prior.trim().split(/\n\s*\n/);
+  const parts = chunks.at(-1).trim().match(/^(\d+)(?:\s+(\d+))?$/);
+  if (!parts) continue;
+  const sale = parts[2] ? Number(`${parts[1]}.${parts[2]}`) : Number(`0.${parts[1]}`);
+  const original = chunks.at(-2)?.match(/van\s+(\d+\.\d+)/)?.[1];
+  const heading = headings.filter((item) => item.index < match.index).at(-1)?.name ?? "其他";
+  const imageUrl = [...prior.matchAll(/!\[Image \d+: Foto van [^\]]+\]\((https:[^)]+)\)/g)].at(-1)?.[1] ?? "";
+  const candidate = { name, category: heading, sale, original: original ? Number(original) : null, imageUrl };
+  const existing = offers.get(name);
+  if (!existing || (existing.category === "Weekendverwenners" && heading !== "Weekendverwenners")) offers.set(name, candidate);
+}
+
+const output = [...offers.values()].map((item) => {
+  const note = [...friendTerms.entries()].find(([term]) => item.name.includes(term))?.[1] ?? "";
+  const weight = grams(item.name);
+  const analysisData = { ...item, grams: weight };
+  return { ...item, nameZh: chineseName(item.name), package: item.name.match(/(?:Bak|Pak|Zak|Per stuk|Schaal|Fles|Blik).*/i)?.[0] ?? "", grams: weight, friendPick: Boolean(note), friendNote: note, discountPercent: item.original ? Math.round((1 - item.sale / item.original) * 100) : null, advice: analysis(analysisData) };
+}).sort((a, b) => Number(b.friendPick) - Number(a.friendPick) || a.nameZh.localeCompare(b.nameZh));
+
+await fs.mkdir(publicDir, { recursive: true });
+await fs.mkdir(dbDir, { recursive: true });
+const SQL = await initSqlJs();
+const dbPath = path.join(dbDir, "offers.sqlite");
+const db = new SQL.Database(await fs.readFile(dbPath).catch(() => undefined));
+db.run("CREATE TABLE IF NOT EXISTS snapshots (id INTEGER PRIMARY KEY, generated_at TEXT NOT NULL, source_url TEXT NOT NULL); CREATE TABLE IF NOT EXISTS offers (snapshot_id INTEGER, name TEXT, name_zh TEXT, category TEXT, sale REAL, original_price REAL, image_url TEXT, friend_pick INTEGER, advice TEXT);");
+db.run("INSERT INTO snapshots (generated_at, source_url) VALUES (?, ?)", [new Date().toISOString(), offerUrl]);
+const snapshotId = db.exec("SELECT last_insert_rowid() AS id")[0].values[0][0];
+for (const item of output) db.run("INSERT INTO offers VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [snapshotId, item.name, item.nameZh, item.category, item.sale, item.original, item.imageUrl, Number(item.friendPick), item.advice]);
+await fs.writeFile(dbPath, db.export());
+db.close();
+await fs.writeFile(path.join(publicDir, "offers.json"), JSON.stringify({ generatedAt: new Date().toISOString(), sourceUrl: offerUrl, offers: output }, null, 2));
+console.log(`Saved ${output.length} offers.`);
