@@ -69,7 +69,7 @@ for (const match of markdown.matchAll(product)) {
   const original = chunks.at(-2)?.match(/van\s+(\d+\.\d+)/)?.[1];
   const heading = headings.filter((item) => item.index < match.index).at(-1)?.name ?? "其他";
   const imageUrl = [...prior.matchAll(/!\[Image \d+: Foto van [^\]]+\]\((https:[^)]+)\)/g)].at(-1)?.[1] ?? "";
-  const candidate = { name, category: heading, sale, original: original ? Number(original) : null, imageUrl };
+  const candidate = { name, category: heading, sale, original: original ? Number(original) : null, imageUrl, productUrl: match[2] };
   const existing = offers.get(name);
   if (!existing || (existing.category === "Weekendverwenners" && heading !== "Weekendverwenners")) offers.set(name, candidate);
 }

@@ -98,7 +98,7 @@ export default function App() {
       {friendPicks.length > 0 ? <div className="pick-rail">
         {friendPicks.map((offer) => <article className="pick" key={offer.name}>
           <img src={offer.imageUrl} alt="" />
-          <div><span className="pick-label">{offer.friendLabel ?? "朋友提到"}</span><strong>{offer.nameZh}</strong><p>{offer.friendNote}</p><div className="pick-price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>}{offer.discountPercent && <i>−{offer.discountPercent}%</i>}<UnitPrice offer={offer} /></div></div>
+          <div><span className="pick-label">{offer.friendLabel ?? "朋友提到"}</span><strong>{offer.nameZh}</strong><p>{offer.friendNote}</p><div className="pick-price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>}{offer.discountPercent && <i>−{offer.discountPercent}%</i>}<UnitPrice offer={offer} /></div>{offer.productUrl && <a className="product-link pick-link" href={offer.productUrl} target="_blank" rel="noreferrer">在 Dirk 查看 ↗</a>}</div>
         </article>)}
       </div> : <div className="empty-picks"><div><span>今天没有朋友特别提到的商品</span><p>不代表没有好价；可以从折扣或单位价格开始挑。</p></div><div><button onClick={() => openSortedOffers("discount")}>看折扣最高</button><button onClick={() => openSortedOffers("unit")}>看单位价格低</button></div></div>}
     </section>
@@ -109,7 +109,7 @@ export default function App() {
       <div className="offer-grid">
         {offers.map((offer) => <article className={`offer ${offer.friendPick ? "friend" : ""}`} key={offer.name}>
           <div className="photo"><img src={offer.imageUrl} alt={offer.nameZh} loading="lazy" decoding="async" />{offer.friendPick && <span>{offer.friendLabel || "朋友推荐"}</span>}</div>
-          <div className="offer-body"><p className="category">{offer.category}</p><h3>{offer.nameZh}</h3><p className="pack">{offer.package}</p><div className="price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>} {offer.discountPercent && <i>−{offer.discountPercent}%</i>}</div><UnitPrice offer={offer} /><PriceTrail history={productHistories[offer.name]} /><p className="advice">{offer.advice}</p></div>
+          <div className="offer-body"><p className="category">{offer.category}</p><h3>{offer.nameZh}</h3><p className="pack">{offer.package}</p><div className="price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>} {offer.discountPercent && <i>−{offer.discountPercent}%</i>}</div><UnitPrice offer={offer} /><PriceTrail history={productHistories[offer.name]} /><p className="advice">{offer.advice}</p>{offer.productUrl && <a className="product-link" href={offer.productUrl} target="_blank" rel="noreferrer">在 Dirk 查看原商品 ↗</a>}</div>
         </article>)}
       </div>
     </section>
