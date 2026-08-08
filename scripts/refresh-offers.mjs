@@ -15,17 +15,28 @@ if (!force && process.env.GITHUB_ACTIONS && localHour !== "10") {
 }
 
 const translations = [
-  ["Aardbeien", "草莓"], ["Chinese kool", "大白菜"], ["Cocktail trostomaten", "串番茄"], ["Handperen", "雪梨"], ["blauwe bessen", "有机蓝莓"], ["Galia meloen", "哈密瓜"], ["Roerbakgarnalen", "炒虾"], ["Kipkluifjes gekruid", "腌制鸡翅根"], ["XL watermeloen", "特大西瓜"], ["Kersen", "樱桃"], ["Mango ready to eat", "即食芒果"], ["witte druiven", "白葡萄"], ["Nectarines", "油桃"], ["courgette", "西葫芦"], ["rode paprika", "红甜椒"], ["Uien", "洋葱"], ["Avocado", "牛油果"], ["koffiebonen", "咖啡豆"], ["koffie", "咖啡"], ["Magnum ijs", "梦龙冰淇淋"], ["Friet", "薯条"], ["pasta", "意大利面"], ["pastasaus", "意面酱"], ["wasmiddel", "洗衣液/洗衣凝珠"], ["shampoo", "洗发水"], ["conditioner", "护发素"], ["deodorant", "止汗剂"], ["Klene", "甘草糖"], ["Lay", "乐事薯片"], ["Heineken", "喜力啤酒"], ["Grolsch", "格罗尔施啤酒"]
+  ["Aardbeien", "草莓"], ["Chinese kool", "大白菜"], ["Cocktail trostomaten", "串番茄"], ["Handperen", "雪梨"], ["blauwe bessen", "蓝莓"], ["Galia meloen", "哈密瓜"], ["Roerbakgarnalen", "炒虾"], ["Kipkluifjes gekruid", "腌制鸡翅根"], ["XL watermeloen", "特大西瓜"], ["Kersen", "樱桃"], ["Mango ready to eat", "即食芒果"], ["witte druiven", "白葡萄"], ["Nectarines", "油桃"], ["courgette", "西葫芦"], ["rode paprika", "红甜椒"], ["Uien", "洋葱"], ["Avocado", "牛油果"], ["koffiebonen", "咖啡豆"], ["koffie", "咖啡"], ["Magnum ijs", "梦龙冰淇淋"], ["Friet", "薯条"], ["pasta", "意大利面"], ["pastasaus", "意面酱"], ["wasmiddel", "洗衣液/洗衣凝珠"], ["shampoo", "洗发水"], ["conditioner", "护发素"], ["deodorant", "止汗剂"], ["Klene", "甘草糖"], ["Lay", "乐事薯片"], ["Heineken", "喜力啤酒"], ["Grolsch", "格罗尔施啤酒"]
 ];
 const friendTerms = new Map([
-  ["Roerbakgarnalen", "朋友认为便宜，但提醒去壳后量会少。"], ["XL watermeloen", "朋友说西瓜便宜，建议买。"], ["Aardbeien", "朋友确认草莓可以。"], ["blauwe bessen", "朋友确认蓝莓也可以。"], ["Chinese kool", "朋友确认大白菜也可以。"], ["Galia meloen", "朋友确认是哈密瓜，可以买。"], ["Handperen", "朋友确认雪梨可以。"], ["Cocktail trostomaten", "朋友说这种串番茄好吃。"], ["Kipkluifjes gekruid", "朋友确认腌制好，适合空气炸锅。"], ["Mango", "朋友觉得芒果看起来很大。"], ["Kersen verpakt", "朋友认为樱桃便宜。"], ["witte druiven", "朋友认为葡萄/油桃很便宜。"]
+  ["Roerbakgarnalen", { label: "觉得便宜", rank: 2, note: "朋友认为便宜，但提醒去壳后量会少。" }],
+  ["XL watermeloen", { label: "推荐购买", rank: 3, note: "朋友说西瓜便宜，建议买。" }],
+  ["Aardbeien", { label: "可以购买", rank: 2, note: "朋友确认草莓可以。" }],
+  ["blauwe bessen", { label: "可以购买", rank: 2, note: "朋友确认蓝莓也可以。" }],
+  ["Chinese kool", { label: "可以购买", rank: 2, note: "朋友确认大白菜也可以。" }],
+  ["Galia meloen", { label: "推荐购买", rank: 3, note: "朋友确认是哈密瓜，可以买。" }],
+  ["Handperen", { label: "可以购买", rank: 2, note: "朋友确认雪梨可以。" }],
+  ["Cocktail trostomaten", { label: "推荐购买", rank: 3, note: "朋友说这种串番茄好吃，建议买。" }],
+  ["Kipkluifjes gekruid", { label: "可以购买", rank: 2, note: "朋友确认腌制好，适合空气炸锅。" }],
+  ["Mango", { label: "可以尝试", rank: 1, note: "朋友觉得芒果看起来很大。" }],
+  ["Kersen verpakt", { label: "觉得便宜", rank: 2, note: "朋友认为樱桃便宜。" }],
+  ["witte druiven", { label: "觉得便宜", rank: 2, note: "朋友认为葡萄/油桃很便宜。" }]
 ]);
-function chineseName(name) { let value = name; for (const [nl, zh] of translations) value = value.replace(new RegExp(nl, "ig"), zh); return value.replace(/1 de Beste/ig, "Dirk 自有品牌").replace(/\s+/g, " ").trim(); }
+function chineseName(name) { let value = name; for (const [nl, zh] of translations) value = value.replace(new RegExp(nl, "ig"), zh); return value.replace(/1 de Beste/ig, "Dirk 自有品牌").replace(/Biologische/ig, "有机").replace(/verpakt/ig, "包装").replace(/Per stuk/ig, "每个").replace(/\s+/g, " ").trim(); }
 function grams(name) { if (/\b(?:of|or)\b/i.test(name)) return null; const kg = name.match(/(\d+(?:[.,]\d+)?)\s*(?:kilo|kg)\b/i); if (kg) return Number(kg[1].replace(",", ".")) * 1000; const g = name.match(/(\d+(?:[.,]\d+)?)\s*(?:gram|g)\b/i); return g ? Number(g[1].replace(",", ".")) : null; }
 function analysis(offer) {
   const saving = offer.original == null ? null : offer.original - offer.sale;
   const percent = saving == null ? null : Math.round(saving / offer.original * 100);
-  const perKg = offer.grams ? offer.sale / offer.grams * 1000 : null;
+  const perKg = offer.unitPrice;
   const prefix = saving == null ? `现价 €${offer.sale.toFixed(2)}` : `省 €${saving.toFixed(2)}（${percent}%）`;
   if (offer.name.includes("XL watermeloen")) return `${prefix}；约 €${perKg.toFixed(2)}/kg，是本页最值的水果。`;
   if (offer.name.includes("Roerbakgarnalen")) return `${prefix}；约 €${perKg.toFixed(2)}/kg，单价仍高，不必囤。`;
@@ -57,11 +68,12 @@ for (const match of markdown.matchAll(product)) {
 }
 
 const output = [...offers.values()].map((item) => {
-  const note = [...friendTerms.entries()].find(([term]) => item.name.includes(term))?.[1] ?? "";
+  const friend = [...friendTerms.entries()].find(([term]) => item.name.includes(term))?.[1] ?? null;
   const weight = grams(item.name);
-  const analysisData = { ...item, grams: weight };
-  return { ...item, nameZh: chineseName(item.name), package: item.name.match(/(?:Bak|Pak|Zak|Per stuk|Schaal|Fles|Blik).*/i)?.[0] ?? "", grams: weight, friendPick: Boolean(note), friendNote: note, discountPercent: item.original ? Math.round((1 - item.sale / item.original) * 100) : null, advice: analysis(analysisData) };
-}).sort((a, b) => Number(b.friendPick) - Number(a.friendPick) || a.nameZh.localeCompare(b.nameZh));
+  const unitPrice = weight ? Number((item.sale / weight * 1000).toFixed(2)) : null;
+  const analysisData = { ...item, grams: weight, unitPrice };
+  return { ...item, nameZh: chineseName(item.name), package: item.name.match(/(?:Bak|Pak|Zak|Per stuk|Schaal|Fles|Blik).*/i)?.[0] ?? "", grams: weight, unitPrice, friendPick: Boolean(friend), friendNote: friend?.note ?? "", friendLabel: friend?.label ?? "", friendRank: friend?.rank ?? 0, discountPercent: item.original ? Math.round((1 - item.sale / item.original) * 100) : null, advice: analysis(analysisData) };
+}).sort((a, b) => b.friendRank - a.friendRank || (b.discountPercent ?? -1) - (a.discountPercent ?? -1) || a.nameZh.localeCompare(b.nameZh));
 
 await fs.mkdir(publicDir, { recursive: true });
 await fs.mkdir(dbDir, { recursive: true });
