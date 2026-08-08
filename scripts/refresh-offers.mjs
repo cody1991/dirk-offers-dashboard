@@ -4,10 +4,14 @@ import initSqlJs from "sql.js";
 
 const root = path.resolve(import.meta.dirname, "..");
 const publicDir = path.join(root, "public", "data");
+const historyDir = path.join(publicDir, "history");
 const dbDir = path.join(root, "data");
 const offerUrl = "https://www.dirk.nl/aanbiedingen";
 const force = process.argv.includes("--force");
 const localHour = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Amsterdam", hour: "2-digit", hourCycle: "h23" }).format(new Date());
+const generatedAt = new Date().toISOString();
+const localDate = Object.fromEntries(new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Amsterdam", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date()).filter((part) => part.type !== "literal").map((part) => [part.type, part.value]));
+const archiveDate = `${localDate.year}-${localDate.month}-${localDate.day}`;
 
 if (!force && process.env.GITHUB_ACTIONS && localHour !== "10") {
   console.log(`Skipped: Amsterdam time is ${localHour}:00, not 10:00.`);
@@ -76,15 +80,22 @@ const output = [...offers.values()].map((item) => {
 }).sort((a, b) => b.friendRank - a.friendRank || (b.discountPercent ?? -1) - (a.discountPercent ?? -1) || a.nameZh.localeCompare(b.nameZh));
 
 await fs.mkdir(publicDir, { recursive: true });
+await fs.mkdir(historyDir, { recursive: true });
 await fs.mkdir(dbDir, { recursive: true });
 const SQL = await initSqlJs();
 const dbPath = path.join(dbDir, "offers.sqlite");
 const db = new SQL.Database(await fs.readFile(dbPath).catch(() => undefined));
 db.run("CREATE TABLE IF NOT EXISTS snapshots (id INTEGER PRIMARY KEY, generated_at TEXT NOT NULL, source_url TEXT NOT NULL); CREATE TABLE IF NOT EXISTS offers (snapshot_id INTEGER, name TEXT, name_zh TEXT, category TEXT, sale REAL, original_price REAL, image_url TEXT, friend_pick INTEGER, advice TEXT);");
-db.run("INSERT INTO snapshots (generated_at, source_url) VALUES (?, ?)", [new Date().toISOString(), offerUrl]);
+db.run("INSERT INTO snapshots (generated_at, source_url) VALUES (?, ?)", [generatedAt, offerUrl]);
 const snapshotId = db.exec("SELECT last_insert_rowid() AS id")[0].values[0][0];
 for (const item of output) db.run("INSERT INTO offers VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [snapshotId, item.name, item.nameZh, item.category, item.sale, item.original, item.imageUrl, Number(item.friendPick), item.advice]);
 await fs.writeFile(dbPath, db.export());
 db.close();
-await fs.writeFile(path.join(publicDir, "offers.json"), JSON.stringify({ generatedAt: new Date().toISOString(), sourceUrl: offerUrl, offers: output }, null, 2));
-console.log(`Saved ${output.length} offers.`);
+const snapshot = { generatedAt, archiveDate, sourceUrl: offerUrl, offers: output };
+const indexPath = path.join(publicDir, "history.json");
+const priorHistory = JSON.parse(await fs.readFile(indexPath, "utf8").catch(() => "[]"));
+const history = [{ date: archiveDate, generatedAt, offerCount: output.length }, ...priorHistory.filter((entry) => entry.date !== archiveDate)].sort((a, b) => b.date.localeCompare(a.date));
+await fs.writeFile(path.join(publicDir, "offers.json"), JSON.stringify(snapshot, null, 2));
+await fs.writeFile(path.join(historyDir, `${archiveDate}.json`), JSON.stringify(snapshot, null, 2));
+await fs.writeFile(indexPath, JSON.stringify(history, null, 2));
+console.log(`Saved ${output.length} offers for ${archiveDate}; ${history.length} daily snapshots available.`);
