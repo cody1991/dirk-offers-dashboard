@@ -2,16 +2,10 @@ import { useEffect, useMemo, useState } from "react";
 
 const euro = new Intl.NumberFormat("nl-NL", { style: "currency", currency: "EUR" });
 const dateFormatter = new Intl.DateTimeFormat("zh-CN", { timeZone: "Europe/Amsterdam", dateStyle: "medium", timeStyle: "short" });
-const purchaseStorageKey = "dirk-purchase-log-v1";
-const todayPurchaseSeeds = [["XL watermeloen", 3.99], ["Kipkluifjes gekruid", 3.99], ["Roerbakgarnalen", 2.99], ["Roombroodjes", 2.49], ["Magnum ijs", 2.99]];
-
-function amsterdamDate() {
-  const parts = Object.fromEntries(new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Amsterdam", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date()).filter((part) => part.type !== "literal").map((part) => [part.type, part.value]));
-  return `${parts.year}-${parts.month}-${parts.day}`;
-}
 
 function Price({ value }) { return value == null ? "—" : euro.format(value); }
 function UnitPrice({ offer }) { const value = offer.unitPrice ?? (offer.grams ? offer.sale / offer.grams * 1000 : null); return value == null ? null : <span className="unit-price">€{value.toFixed(2)}/kg</span>; }
+function PriceTrail({ history }) { return history ? <p className="price-trail">价格足迹：{history.days} 天 · 史低 <b>{euro.format(history.low)}</b> · 史高 <b>{euro.format(history.high)}</b></p> : <p className="price-trail">价格足迹：等待首次出现</p>; }
 
 export default function App() {
   const [data, setData] = useState(null);
@@ -22,40 +16,16 @@ export default function App() {
   const [selectedDate, setSelectedDate] = useState("latest");
   const [currentOffers, setCurrentOffers] = useState([]);
   const [purchases, setPurchases] = useState([]);
-  const [purchaseStoreReady, setPurchaseStoreReady] = useState(false);
-  const [purchaseProduct, setPurchaseProduct] = useState("");
-  const [purchasePrice, setPurchasePrice] = useState("");
-  const [purchaseDate, setPurchaseDate] = useState(amsterdamDate);
+  const [productHistories, setProductHistories] = useState({});
 
   useEffect(() => {
     Promise.all([
       fetch("./data/offers.json").then((response) => response.json()),
-      fetch("./data/history.json").then((response) => response.ok ? response.json() : [])
-    ]).then(([offers, snapshots]) => { setData(offers); setCurrentOffers(offers.offers); setHistory(snapshots); }).catch(() => setData({ offers: [], error: true }));
+      fetch("./data/history.json").then((response) => response.ok ? response.json() : []),
+      fetch("./data/purchases.json").then((response) => response.ok ? response.json() : []),
+      fetch("./data/product-history.json").then((response) => response.ok ? response.json() : {})
+    ]).then(([offers, snapshots, purchaseRows, priceHistory]) => { setData(offers); setCurrentOffers(offers.offers); setHistory(snapshots); setPurchases(purchaseRows); setProductHistories(priceHistory); }).catch(() => setData({ offers: [], error: true }));
   }, []);
-
-  useEffect(() => {
-    if (purchaseStoreReady || currentOffers.length === 0) return;
-    try {
-      const saved = JSON.parse(localStorage.getItem(purchaseStorageKey));
-      const existingPurchases = Array.isArray(saved) ? saved : [];
-      const missingTodayPurchases = todayPurchaseSeeds.map(([term, paidPrice]) => {
-        const offer = currentOffers.find((item) => item.name.includes(term));
-        const alreadyRecorded = offer && existingPurchases.some((item) => item.name === offer.name && item.date === purchaseDate);
-        return offer && !alreadyRecorded && { id: `${offer.name}-${purchaseDate}`, name: offer.name, nameZh: offer.nameZh, paidPrice, date: purchaseDate };
-      }).filter(Boolean);
-      setPurchases([...missingTodayPurchases, ...existingPurchases]);
-      setPurchaseProduct(currentOffers[0].name);
-      setPurchasePrice(String(currentOffers[0].sale));
-    } catch {
-      setPurchases([]);
-    }
-    setPurchaseStoreReady(true);
-  }, [currentOffers, purchaseDate, purchaseStoreReady]);
-
-  useEffect(() => {
-    if (purchaseStoreReady) localStorage.setItem(purchaseStorageKey, JSON.stringify(purchases));
-  }, [purchases, purchaseStoreReady]);
 
   async function loadArchive(value) {
     setSelectedDate(value);
@@ -95,19 +65,6 @@ export default function App() {
     setSortBy(nextSort);
     document.getElementById("catalogue-title")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
-  function selectPurchaseProduct(name) {
-    const offer = currentOffers.find((item) => item.name === name);
-    setPurchaseProduct(name);
-    setPurchasePrice(offer ? String(offer.sale) : "");
-  }
-  function addPurchase(event) {
-    event.preventDefault();
-    const offer = currentOffers.find((item) => item.name === purchaseProduct);
-    const paidPrice = Number(purchasePrice);
-    if (!offer || !Number.isFinite(paidPrice) || paidPrice < 0) return;
-    setPurchases((items) => [{ id: `${offer.name}-${purchaseDate}-${Date.now()}`, name: offer.name, nameZh: offer.nameZh, paidPrice, date: purchaseDate }, ...items]);
-  }
-  function removePurchase(id) { setPurchases((items) => items.filter((item) => item.id !== id)); }
   return <main className="page">
     <header className="hero">
       <div className="stamp">DIRK / DAILY</div>
@@ -125,19 +82,13 @@ export default function App() {
     </section>
 
     <section className="purchases" id="purchases" aria-labelledby="purchases-title">
-      <div className="purchase-heading"><div><span>我的购买记录</span><h2 id="purchases-title">买过的，留个价。</h2><p>只保存在这台设备的浏览器中；同一商品再次出现时自动与当前价对比。</p></div></div>
-      <form className="purchase-form" onSubmit={addPurchase}>
-        <label>商品<select value={purchaseProduct} onChange={(event) => selectPurchaseProduct(event.target.value)}>{currentOffers.map((offer) => <option value={offer.name} key={offer.name}>{offer.nameZh}</option>)}</select></label>
-        <label>实付价格 (€)<input value={purchasePrice} onChange={(event) => setPurchasePrice(event.target.value)} inputMode="decimal" type="number" min="0" step="0.01" required /></label>
-        <label>购买日期<input value={purchaseDate} onChange={(event) => setPurchaseDate(event.target.value)} type="date" required /></label>
-        <button type="submit">加入记录</button>
-      </form>
+      <div className="purchase-heading"><div><span>我的购买记录</span><h2 id="purchases-title">买过的，留个价。</h2><p>已写入发布数据库；同一商品再次出现时自动与当前价和历史价格对比。</p></div></div>
       <div className="purchase-list">
-        {purchases.length === 0 ? <p className="purchase-empty">还没有记录。选一件商品和实际付款价，之后就能看到是否又降价。</p> : purchases.map((purchase) => {
+        {purchases.length === 0 ? <p className="purchase-empty">还没有购买记录。</p> : purchases.map((purchase) => {
           const current = currentOffers.find((offer) => offer.name === purchase.name);
           const difference = current ? current.sale - purchase.paidPrice : null;
           const comparison = difference == null ? "当前没有这件商品的优惠" : Math.abs(difference) < 0.005 ? `当前同价 ${euro.format(current.sale)}` : difference < 0 ? `现在便宜 ${euro.format(Math.abs(difference))}` : `现在贵 ${euro.format(difference)}`;
-          return <article className="purchase" key={purchase.id}><time>{purchase.date}</time><strong>{purchase.nameZh}</strong><b>{euro.format(purchase.paidPrice)}</b><span className={difference != null && difference < 0 ? "cheaper" : difference != null && difference > 0 ? "pricier" : ""}>{comparison}</span><button type="button" onClick={() => removePurchase(purchase.id)} aria-label={`删除 ${purchase.nameZh}`}>×</button></article>;
+          return <article className="purchase" key={`${purchase.name}-${purchase.date}`}><time>{purchase.date}</time><strong>{purchase.nameZh}</strong><b>{euro.format(purchase.paidPrice)}</b><div><span className={difference != null && difference < 0 ? "cheaper" : difference != null && difference > 0 ? "pricier" : ""}>{comparison}</span><PriceTrail history={productHistories[purchase.name]} /></div></article>;
         })}
       </div>
     </section>
@@ -158,7 +109,7 @@ export default function App() {
       <div className="offer-grid">
         {offers.map((offer) => <article className={`offer ${offer.friendPick ? "friend" : ""}`} key={offer.name}>
           <div className="photo"><img src={offer.imageUrl} alt={offer.nameZh} loading="lazy" decoding="async" />{offer.friendPick && <span>{offer.friendLabel || "朋友推荐"}</span>}</div>
-          <div className="offer-body"><p className="category">{offer.category}</p><h3>{offer.nameZh}</h3><p className="pack">{offer.package}</p><div className="price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>} {offer.discountPercent && <i>−{offer.discountPercent}%</i>}</div><UnitPrice offer={offer} /><p className="advice">{offer.advice}</p></div>
+          <div className="offer-body"><p className="category">{offer.category}</p><h3>{offer.nameZh}</h3><p className="pack">{offer.package}</p><div className="price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>} {offer.discountPercent && <i>−{offer.discountPercent}%</i>}</div><UnitPrice offer={offer} /><PriceTrail history={productHistories[offer.name]} /><p className="advice">{offer.advice}</p></div>
         </article>)}
       </div>
     </section>

@@ -35,6 +35,9 @@ const friendTerms = new Map([
   ["Kersen verpakt", { label: "觉得便宜", rank: 2, note: "朋友认为樱桃便宜。" }],
   ["witte druiven", { label: "觉得便宜", rank: 2, note: "朋友认为葡萄/油桃很便宜。" }]
 ]);
+const personalPurchases = [
+  ["XL watermeloen", 3.99], ["Kipkluifjes gekruid", 3.99], ["Roerbakgarnalen", 2.99], ["Roombroodjes", 2.49], ["Magnum ijs", 2.99]
+];
 function chineseName(name) { let value = name; for (const [nl, zh] of translations) value = value.replace(new RegExp(nl, "ig"), zh); return value.replace(/1 de Beste/ig, "Dirk 自有品牌").replace(/Biologische/ig, "有机").replace(/verpakt/ig, "包装").replace(/Per stuk/ig, "每个").replace(/\s+/g, " ").trim(); }
 function grams(name) { if (/\b(?:of|or)\b/i.test(name)) return null; const kg = name.match(/(\d+(?:[.,]\d+)?)\s*(?:kilo|kg)\b/i); if (kg) return Number(kg[1].replace(",", ".")) * 1000; const g = name.match(/(\d+(?:[.,]\d+)?)\s*(?:gram|g)\b/i); return g ? Number(g[1].replace(",", ".")) : null; }
 function analysis(offer) {
@@ -85,10 +88,37 @@ await fs.mkdir(dbDir, { recursive: true });
 const SQL = await initSqlJs();
 const dbPath = path.join(dbDir, "offers.sqlite");
 const db = new SQL.Database(await fs.readFile(dbPath).catch(() => undefined));
-db.run("CREATE TABLE IF NOT EXISTS snapshots (id INTEGER PRIMARY KEY, generated_at TEXT NOT NULL, source_url TEXT NOT NULL); CREATE TABLE IF NOT EXISTS offers (snapshot_id INTEGER, name TEXT, name_zh TEXT, category TEXT, sale REAL, original_price REAL, image_url TEXT, friend_pick INTEGER, advice TEXT);");
+db.run("CREATE TABLE IF NOT EXISTS snapshots (id INTEGER PRIMARY KEY, generated_at TEXT NOT NULL, source_url TEXT NOT NULL); CREATE TABLE IF NOT EXISTS offers (snapshot_id INTEGER, name TEXT, name_zh TEXT, category TEXT, sale REAL, original_price REAL, image_url TEXT, friend_pick INTEGER, advice TEXT); CREATE TABLE IF NOT EXISTS purchases (id INTEGER PRIMARY KEY, product_name TEXT NOT NULL, product_name_zh TEXT NOT NULL, paid_price REAL NOT NULL, purchased_on TEXT NOT NULL, UNIQUE(product_name, paid_price, purchased_on));");
 db.run("INSERT INTO snapshots (generated_at, source_url) VALUES (?, ?)", [generatedAt, offerUrl]);
 const snapshotId = db.exec("SELECT last_insert_rowid() AS id")[0].values[0][0];
 for (const item of output) db.run("INSERT INTO offers VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [snapshotId, item.name, item.nameZh, item.category, item.sale, item.original, item.imageUrl, Number(item.friendPick), item.advice]);
+for (const [term, paidPrice] of personalPurchases) {
+  const item = output.find((offer) => offer.name.includes(term));
+  if (item) db.run("INSERT OR IGNORE INTO purchases (product_name, product_name_zh, paid_price, purchased_on) VALUES (?, ?, ?, ?)", [item.name, item.nameZh, paidPrice, archiveDate]);
+}
+function queryRows(result) {
+  if (!result[0]) return [];
+  const { columns, values } = result[0];
+  return values.map((values) => Object.fromEntries(columns.map((column, index) => [column, values[index]])));
+}
+const purchaseRows = queryRows(db.exec("SELECT product_name AS name, product_name_zh AS nameZh, paid_price AS paidPrice, purchased_on AS date FROM purchases ORDER BY purchased_on DESC, id DESC"));
+const snapshotRows = queryRows(db.exec("SELECT s.generated_at AS generatedAt, substr(s.generated_at, 1, 10) AS date, o.name, o.name_zh AS nameZh, o.sale FROM offers o JOIN snapshots s ON s.id = o.snapshot_id ORDER BY s.generated_at ASC"));
+const lastAppearancePerDay = new Map();
+for (const row of snapshotRows) lastAppearancePerDay.set(`${row.name}|${row.date}`, row);
+const productHistories = {};
+for (const row of lastAppearancePerDay.values()) {
+  const history = productHistories[row.name] ?? { name: row.name, nameZh: row.nameZh, entries: [] };
+  history.entries.push({ date: row.date, price: row.sale });
+  productHistories[row.name] = history;
+}
+for (const history of Object.values(productHistories)) {
+  history.entries.sort((a, b) => a.date.localeCompare(b.date));
+  const prices = history.entries.map((entry) => entry.price);
+  history.days = history.entries.length;
+  history.low = Math.min(...prices);
+  history.high = Math.max(...prices);
+  history.latest = history.entries.at(-1).price;
+}
 await fs.writeFile(dbPath, db.export());
 db.close();
 const snapshot = { generatedAt, archiveDate, sourceUrl: offerUrl, offers: output };
@@ -98,4 +128,6 @@ const history = [{ date: archiveDate, generatedAt, offerCount: output.length }, 
 await fs.writeFile(path.join(publicDir, "offers.json"), JSON.stringify(snapshot, null, 2));
 await fs.writeFile(path.join(historyDir, `${archiveDate}.json`), JSON.stringify(snapshot, null, 2));
 await fs.writeFile(indexPath, JSON.stringify(history, null, 2));
-console.log(`Saved ${output.length} offers for ${archiveDate}; ${history.length} daily snapshots available.`);
+await fs.writeFile(path.join(publicDir, "purchases.json"), JSON.stringify(purchaseRows, null, 2));
+await fs.writeFile(path.join(publicDir, "product-history.json"), JSON.stringify(productHistories, null, 2));
+console.log(`Saved ${output.length} offers for ${archiveDate}; ${history.length} daily snapshots and ${purchaseRows.length} purchases available.`);
