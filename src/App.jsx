@@ -62,6 +62,7 @@ export default function App() {
   const isLatest = selectedDate === "latest";
   return <main className="page">
     <header className="hero">
+      <a className="repo-link" href="https://github.com/cody1991/dirk-offers-dashboard" target="_blank" rel="noreferrer" aria-label="在 GitHub 查看本项目仓库">GitHub 仓库 <span>↗</span></a>
       <div className="stamp">DIRK / DAILY</div>
       <div>
         <div className="hero-meta"><p className="kicker">{isLatest ? "阿姆斯特丹 · 每天 10:00 自动更新" : `${data.archiveDate ?? selectedDate} · 历史快照`}</p><a className="official-link" href="https://www.dirk.nl/aanbiedingen" target="_blank" rel="noreferrer">查看 Dirk 官方优惠 <span>↗</span></a></div>
