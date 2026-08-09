@@ -1,9 +1,6 @@
 name: Refresh Dirk offers
 
 on:
-  schedule:
-    # The script runs only during 10:00 in Europe/Amsterdam (DST-safe).
-    - cron: "0 8,9 * * *"
   workflow_dispatch:
 
 permissions:
@@ -25,7 +22,7 @@ jobs:
           node-version: 24
       - name: Install dependencies
         run: npm ci
-      - name: Refresh offers at 10:00 Amsterdam time
+      - name: Refresh offers on demand
         run: node scripts/refresh-offers.mjs
       - name: Commit fresh data
         run: |
