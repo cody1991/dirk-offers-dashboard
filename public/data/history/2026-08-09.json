@@ -19,7 +19,7 @@
       "friendLabel": "推荐购买",
       "friendRank": 3,
       "discountPercent": 50,
-      "advice": "朋友确认是哈密瓜，可以买。；现价降 50%，但目前只有短期记录，按这周需求买即可。"
+      "advice": "朋友确认是哈密瓜，可以买。；现价降 50%。"
     },
     {
       "name": "1 de Beste Cocktail trostomaten 650 g",
@@ -37,7 +37,7 @@
       "friendLabel": "推荐购买",
       "friendRank": 3,
       "discountPercent": 17,
-      "advice": "朋友说这种串番茄好吃，建议买。；现价降 17%，但目前只有短期记录，按这周需求买即可。"
+      "advice": "朋友说这种串番茄好吃，建议买。；现价降 17%。"
     },
     {
       "name": "XL watermeloen Ca. 4 kilo. Per stuk",
@@ -55,7 +55,7 @@
       "friendLabel": "推荐购买",
       "friendRank": 3,
       "discountPercent": null,
-      "advice": "与 2026-08-08 买入价相同，目前只有短期记录，不必重复囤货。"
+      "advice": "与 2026-08-08 买入价相同，不必重复囤货。"
     },
     {
       "name": "1 de Beste Chinese kool Per stuk",
@@ -73,7 +73,7 @@
       "friendLabel": "可以购买",
       "friendRank": 2,
       "discountPercent": 38,
-      "advice": "朋友确认大白菜也可以。；现价降 38%，但目前只有短期记录，按这周需求买即可。"
+      "advice": "朋友确认大白菜也可以。；现价降 38%。"
     },
     {
       "name": "Vleeschmeesters Kipkluifjes gekruid 800 g",
@@ -91,7 +91,7 @@
       "friendLabel": "可以购买",
       "friendRank": 2,
       "discountPercent": 36,
-      "advice": "与 2026-08-08 买入价相同，目前只有短期记录，不必重复囤货。"
+      "advice": "与 2026-08-08 买入价相同，不必重复囤货。"
     },
     {
       "name": "Biologische blauwe bessen 200 g",
@@ -109,7 +109,7 @@
       "friendLabel": "可以购买",
       "friendRank": 2,
       "discountPercent": 25,
-      "advice": "朋友确认蓝莓也可以。；现价降 25%，但目前只有短期记录，按这周需求买即可。"
+      "advice": "朋友确认蓝莓也可以。；现价降 25%。"
     },
     {
       "name": "Nectarines of witte druiven Bak 500 gram of 1 kilo.",
@@ -127,7 +127,7 @@
       "friendLabel": "觉得便宜",
       "friendRank": 2,
       "discountPercent": 24,
-      "advice": "朋友认为葡萄/油桃很便宜。；现价降 24%，但目前只有短期记录，按这周需求买即可。"
+      "advice": "朋友认为葡萄/油桃很便宜。；现价降 24%。"
     },
     {
       "name": "1 de Beste Handperen verpakt 1 kg",
@@ -145,7 +145,7 @@
       "friendLabel": "可以购买",
       "friendRank": 2,
       "discountPercent": 6,
-      "advice": "朋友确认雪梨可以。；现价降 6%，但目前只有短期记录，按这周需求买即可。"
+      "advice": "朋友确认雪梨可以。；现价降 6%。"
     },
     {
       "name": "Kersen verpakt 500 g",
@@ -163,7 +163,7 @@
       "friendLabel": "觉得便宜",
       "friendRank": 2,
       "discountPercent": null,
-      "advice": "朋友认为樱桃便宜。；现价没有标原价，但目前只有短期记录，按这周需求买即可。"
+      "advice": "朋友认为樱桃便宜。；现价未列原价。"
     },
     {
       "name": "Eat Me Mango ready to eat 2 stuks",
@@ -181,7 +181,7 @@
       "friendLabel": "可以尝试",
       "friendRank": 1,
       "discountPercent": 7,
-      "advice": "朋友觉得芒果看起来很大。；现价降 7%，但目前只有短期记录，按这周需求买即可。"
+      "advice": "朋友觉得芒果看起来很大。；现价降 7%。"
     },
     {
       "name": "Calvé partysaus Fles 320 ml.",
@@ -199,7 +199,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 63,
-      "advice": "标价降 63%，力度很强；但目前只有短期记录，家里会用到再补，别为折扣凑单。"
+      "advice": "标价降 63%，降幅明显。"
     },
     {
       "name": "Robijn wasparfum Flacon 342 ml.",
@@ -217,7 +217,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 63,
-      "advice": "标价降 63%，力度很强；但目前只有短期记录，家里会用到再补，别为折扣凑单。"
+      "advice": "标价降 63%，降幅明显。"
     },
     {
       "name": "Silvo kruiden of specerijen Pot 4 - 83 gram (m.u.v. bio en dragon).",
@@ -271,7 +271,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 62,
-      "advice": "标价降 62%，力度很强；但目前只有短期记录，家里会用到再补，别为折扣凑单。"
+      "advice": "标价降 62%，降幅明显。"
     },
     {
       "name": "Prodent Tube 75 ml (m.u.v. junior en kids).",
@@ -289,7 +289,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 62,
-      "advice": "标价降 62%，力度很强；但目前只有短期记录，家里会用到再补，别为折扣凑单。"
+      "advice": "标价降 62%，降幅明显。"
     },
     {
       "name": "Magnum ijs Pak 3 - 6 stuks of beker 204 - 440 ml.",
@@ -307,7 +307,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 58,
-      "advice": "与 2026-08-08 买入价相同，目前只有短期记录，不必重复囤货。"
+      "advice": "与 2026-08-08 买入价相同，不必重复囤货。"
     },
     {
       "name": "Coca-Cola, Fanta, Sprite of Fernandes Blik 250 ml.",
@@ -325,7 +325,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 57,
-      "advice": "标价降 57%，力度很强；但目前只有短期记录，家里会用到再补，别为折扣凑单。"
+      "advice": "标价降 57%，降幅明显。"
     },
     {
       "name": "De Vegetarische Slager burgers Pak 2 stuks.",
@@ -343,7 +343,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 56,
-      "advice": "标价降 56%，力度很强；但目前只有短期记录，家里会用到再补，别为折扣凑单。"
+      "advice": "标价降 56%，降幅明显。"
     },
     {
       "name": "Danio kwark Beker 450 gram.",
@@ -361,7 +361,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 55,
-      "advice": "约 €2.87/kg，单价有竞争力；但目前只有短期记录，适合刚好需要时带上。"
+      "advice": "约 €2.87/kg，单价有竞争力。"
     },
     {
       "name": "Dettol reiniger Flacon 500 of pak 72 stuks. OP=OP",
@@ -379,7 +379,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 54,
-      "advice": "标价降 54%，力度很强；但目前只有短期记录，家里会用到再补，别为折扣凑单。"
+      "advice": "标价降 54%，降幅明显。"
     },
     {
       "name": "Dubbelfrisss Boost Pak 1.5 liter.",
@@ -397,7 +397,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 54,
-      "advice": "标价降 54%，力度很强；但目前只有短期记录，家里会用到再补，别为折扣凑单。"
+      "advice": "标价降 54%，降幅明显。"
     },
     {
       "name": "Mad sauce of Gouda's Glorie saus Statube 500 of 550 ml.",
@@ -487,7 +487,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "标价降 45%，是不错的常规优惠；但目前只有短期记录，按计划购买即可。"
+      "advice": "标价降 45%，属于不错的常规优惠。"
     },
     {
       "name": "Coolbest 100% juice Pak 1 liter.",
@@ -505,7 +505,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "标价降 45%，是不错的常规优惠；但目前只有短期记录，按计划购买即可。"
+      "advice": "标价降 45%，属于不错的常规优惠。"
     },
     {
       "name": "Hollandse courgette of rode paprika Per stuk.",
@@ -523,7 +523,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "标价降 45%，是不错的常规优惠；但目前只有短期记录，按计划购买即可。"
+      "advice": "标价降 45%，属于不错的常规优惠。"
     },
     {
       "name": "Mangiare scrocchi Zak 150 gram.",
@@ -541,7 +541,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "标价降 45%，是不错的常规优惠；但目前只有短期记录，按计划购买即可。"
+      "advice": "标价降 45%，属于不错的常规优惠。"
     },
     {
       "name": "Zuivelhoeve Boer'n yoghurt Beker 170 gram.",
@@ -559,7 +559,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "标价降 45%，是不错的常规优惠；但目前只有短期记录，按计划购买即可。"
+      "advice": "标价降 45%，属于不错的常规优惠。"
     },
     {
       "name": "Appelflap Per stuk",
@@ -577,7 +577,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 44,
-      "advice": "标价降 44%，是不错的常规优惠；但目前只有短期记录，按计划购买即可。"
+      "advice": "标价降 44%，属于不错的常规优惠。"
     },
     {
       "name": "Arla Skyr Beker 450 gram. OP=OP",
@@ -595,7 +595,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 43,
-      "advice": "约 €2.64/kg，单价有竞争力；但目前只有短期记录，适合刚好需要时带上。"
+      "advice": "约 €2.64/kg，单价有竞争力。"
     },
     {
       "name": "Milner kaasplakken Pak 6 plakken.",
@@ -613,7 +613,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 43,
-      "advice": "标价降 43%，是不错的常规优惠；但目前只有短期记录，按计划购买即可。"
+      "advice": "标价降 43%，属于不错的常规优惠。"
     },
     {
       "name": "Patak's Indiase specialiteiten Pak 2 - 4 stuks of pot 165 - 450 gram.",
@@ -649,7 +649,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 43,
-      "advice": "标价降 43%，是不错的常规优惠；但目前只有短期记录，按计划购买即可。"
+      "advice": "标价降 43%，属于不错的常规优惠。"
     },
     {
       "name": "Lavazza koffiebonen Per zak.",
@@ -667,7 +667,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 40,
-      "advice": "标价降 40%，是不错的常规优惠；但目前只有短期记录，按计划购买即可。"
+      "advice": "标价降 40%，属于不错的常规优惠。"
     },
     {
       "name": "Luxe gevulde kaasstengel of borek stick spinazie feta Per stuk.",
@@ -685,7 +685,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 40,
-      "advice": "标价降 40%，是不错的常规优惠；但目前只有短期记录，按计划购买即可。"
+      "advice": "标价降 40%，属于不错的常规优惠。"
     },
     {
       "name": "Beemster kaas 48+ Per stuk 400 gram. OP=OP",
@@ -703,7 +703,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 39,
-      "advice": "约 €13.73/kg，单价仍偏高；即使降 39% 也更适合按需买。"
+      "advice": "约 €13.73/kg，单价仍偏高。"
     },
     {
       "name": "Whiskas Pak 12 x 85 gram.",
@@ -721,7 +721,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 38,
-      "advice": "约 €46.94/kg，单价仍偏高；即使降 38% 也更适合按需买。"
+      "advice": "约 €46.94/kg，单价仍偏高。"
     },
     {
       "name": "Balconi Trancetto of Rollino Pak 6 of 10 stuks. OP=OP",
@@ -757,7 +757,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 37,
-      "advice": "标价降 37%，是不错的常规优惠；但目前只有短期记录，按计划购买即可。"
+      "advice": "标价降 37%，属于不错的常规优惠。"
     },
     {
       "name": "Heks'nkaas Origineel 200 g",
@@ -775,7 +775,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 33,
-      "advice": "标价降 33%，是不错的常规优惠；但目前只有短期记录，按计划购买即可。"
+      "advice": "标价降 33%，属于不错的常规优惠。"
     },
     {
       "name": "1 de Beste Serrano of prosciutto Pak 110 gram.",
@@ -793,7 +793,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 32,
-      "advice": "标价降 32%，是不错的常规优惠；但目前只有短期记录，按计划购买即可。"
+      "advice": "标价降 32%，属于不错的常规优惠。"
     },
     {
       "name": "Jan Napoli pizzadeeg 300 g",
@@ -811,7 +811,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 32,
-      "advice": "标价降 32%，是不错的常规优惠；但目前只有短期记录，按计划购买即可。"
+      "advice": "标价降 32%，属于不错的常规优惠。"
     },
     {
       "name": "Kanis & Gunnink koffie Per pak.",
@@ -829,7 +829,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 30,
-      "advice": "标价降 30%，是不错的常规优惠；但目前只有短期记录，按计划购买即可。"
+      "advice": "标价降 30%，属于不错的常规优惠。"
     },
     {
       "name": "President of Castello Per stuk 125 - 200 gram.",
@@ -883,7 +883,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 29,
-      "advice": "标价降 29%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 29%，价格优势一般。"
     },
     {
       "name": "Spa Fruit Fles 1.25 liter.",
@@ -901,7 +901,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 29,
-      "advice": "标价降 29%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 29%，价格优势一般。"
     },
     {
       "name": "Zandvliet Gelderse kookworst 250 g",
@@ -919,7 +919,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 29,
-      "advice": "标价降 29%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 29%，价格优势一般。"
     },
     {
       "name": "Affligem Blond of Tripel 6-pack fles à 30 cl.",
@@ -937,7 +937,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "标价降 25%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 25%，价格优势一般。"
     },
     {
       "name": "Bakker Bollebof cakeplakken Pak 4 stuks. OP=OP",
@@ -955,7 +955,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "标价降 25%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 25%，价格优势一般。"
     },
     {
       "name": "Bakker van der Akker Reuze rozijnen- of mueslibollen Zak 4 stuks.",
@@ -973,7 +973,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "标价降 25%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 25%，价格优势一般。"
     },
     {
       "name": "DeliciouS Fles 75 cl.",
@@ -991,7 +991,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "标价降 25%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 25%，价格优势一般。"
     },
     {
       "name": "Hertog Jan pils of 0.0 6-pack blik à 33 of 50 cl.",
@@ -1009,7 +1009,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "标价降 25%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 25%，价格优势一般。"
     },
     {
       "name": "IJsbergsla naturel of melange Per stuk.",
@@ -1027,7 +1027,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "标价降 25%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 25%，价格优势一般。"
     },
     {
       "name": "Texels Zeebries, Skuumkoppe of 0.0 4 of 6-pack fles à 30 cl.",
@@ -1045,7 +1045,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "标价降 25%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 25%，价格优势一般。"
     },
     {
       "name": "Wicky Pakje 200 ml.",
@@ -1063,7 +1063,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "标价降 25%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 25%，价格优势一般。"
     },
     {
       "name": "Heineken Pilsener Krat 24 x 300 ml",
@@ -1081,7 +1081,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "标价降 25%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 25%，价格优势一般。"
     },
     {
       "name": "Grolsch Premium pilsener beugel krat 16 x 450 ml",
@@ -1099,7 +1099,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "标价降 25%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 25%，价格优势一般。"
     },
     {
       "name": "Grolsch Premium pilsener krat 24 x 300 ml",
@@ -1117,7 +1117,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "标价降 25%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 25%，价格优势一般。"
     },
     {
       "name": "1 de Beste Gebraden gehakt of fijne cervelaat gerookt Pak 125 gram.",
@@ -1135,7 +1135,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 24,
-      "advice": "标价降 24%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 24%，价格优势一般。"
     },
     {
       "name": "Oreo enrobed Pak 6 x 2 stuks.",
@@ -1153,7 +1153,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 23,
-      "advice": "标价降 23%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 23%，价格优势一般。"
     },
     {
       "name": "Real Cool Hard Seltzer of iced tea Blik 25 cl.",
@@ -1171,7 +1171,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 23,
-      "advice": "标价降 23%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 23%，价格优势一般。"
     },
     {
       "name": "1 de Beste Uien 1 kg",
@@ -1189,7 +1189,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 22,
-      "advice": "约 €0.69/kg，单价有竞争力；但目前只有短期记录，适合刚好需要时带上。"
+      "advice": "约 €0.69/kg，单价有竞争力。"
     },
     {
       "name": "Die 5 Groot Fles 75 cl.",
@@ -1207,7 +1207,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 20,
-      "advice": "标价降 20%，有一定优惠；但目前只有短期记录，不缺可以等下一轮。"
+      "advice": "标价降 20%，价格优势一般。"
     },
     {
       "name": "1 de Beste Kipfilet gerookt 100 g",
@@ -1225,7 +1225,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 17,
-      "advice": "约 €19.90/kg，单价仍偏高；即使降 17% 也更适合按需买。"
+      "advice": "约 €19.90/kg，单价仍偏高。"
     },
     {
       "name": "Zalmfilet met huid 2 st. 250 g",
@@ -1243,7 +1243,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 17,
-      "advice": "约 €19.96/kg，单价仍偏高；即使降 17% 也更适合按需买。"
+      "advice": "约 €19.96/kg，单价仍偏高。"
     },
     {
       "name": "Primá! verse maaltijd Per bak.",
@@ -1261,7 +1261,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 16,
-      "advice": "只降 16% ，价格信号不强；但目前只有短期记录，按需买，不必专程囤。"
+      "advice": "只降 16%，价格优势有限。"
     },
     {
       "name": "Boerenbrood Per stuk.",
@@ -1279,7 +1279,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 15,
-      "advice": "只降 15% ，价格信号不强；但目前只有短期记录，按需买，不必专程囤。"
+      "advice": "只降 15%，价格优势有限。"
     },
     {
       "name": "1 de Beste Watermeloen part Per stuk",
@@ -1297,7 +1297,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 15,
-      "advice": "只降 15% ，价格信号不强；但目前只有短期记录，按需买，不必专程囤。"
+      "advice": "只降 15%，价格优势有限。"
     },
     {
       "name": "Zespri Kiwi sungold verpakt 4 Stuks",
@@ -1315,7 +1315,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 14,
-      "advice": "只降 14% ，价格信号不强；但目前只有短期记录，按需买，不必专程囤。"
+      "advice": "只降 14%，价格优势有限。"
     },
     {
       "name": "1 de Beste Knoflook- zeezout- of kruidenboter Kuip 100 gram.",
@@ -1333,7 +1333,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 13,
-      "advice": "只降 13% ，价格信号不强；但目前只有短期记录，按需买，不必专程囤。"
+      "advice": "只降 13%，价格优势有限。"
     },
     {
       "name": "RIMBOESAUZEN Hamburgersaus squeeze 250 ml",
@@ -1351,7 +1351,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 12,
-      "advice": "只降 12% ，价格信号不强；但目前只有短期记录，按需买，不必专程囤。"
+      "advice": "只降 12%，价格优势有限。"
     },
     {
       "name": "Vleeschmeesters Duitse biefstuk 2 stuks 200 g",
@@ -1369,7 +1369,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 12,
-      "advice": "约 €14.95/kg，单价仍偏高；即使降 12% 也更适合按需买。"
+      "advice": "约 €14.95/kg，单价仍偏高。"
     },
     {
       "name": "Pink lady 6 Stuks",
@@ -1387,7 +1387,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 10,
-      "advice": "只降 10% ，价格信号不强；但目前只有短期记录，按需买，不必专程囤。"
+      "advice": "只降 10%，价格优势有限。"
     },
     {
       "name": "Vleeschmeesters Gemengd gehakt 750 g",
@@ -1405,7 +1405,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 9,
-      "advice": "只降 9% ，价格信号不强；但目前只有短期记录，按需买，不必专程囤。"
+      "advice": "只降 9%，价格优势有限。"
     },
     {
       "name": "Bleekselderij Per stuk",
@@ -1423,7 +1423,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 8,
-      "advice": "只降 8% ，价格信号不强；但目前只有短期记录，按需买，不必专程囤。"
+      "advice": "只降 8%，价格优势有限。"
     },
     {
       "name": "Ariel wasmiddel Pods 44, poeder 40 of vloeibaar wasmiddel 50 wasbeurten. OP=OP",
@@ -1441,7 +1441,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "没有标出原价，无法确认折扣力度；目前只有短期记录，不要只因“促销”字样囤货。"
+      "advice": "未列原价，优惠幅度无法核实。"
     },
     {
       "name": "Barilla pasta Per pak. OP=OP",
@@ -1459,7 +1459,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "没有标出原价，无法确认折扣力度；目前只有短期记录，不要只因“促销”字样囤货。"
+      "advice": "未列原价，优惠幅度无法核实。"
     },
     {
       "name": "Bertolli pastasaus Zak 460 of pot 670 gram. OP=OP",
@@ -1477,7 +1477,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "没有标出原价，无法确认折扣力度；目前只有短期记录，不要只因“促销”字样囤货。"
+      "advice": "未列原价，优惠幅度无法核实。"
     },
     {
       "name": "Desperados of Corona 12-pack. OP=OP",
@@ -1495,7 +1495,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "没有标出原价，无法确认折扣力度；目前只有短期记录，不要只因“促销”字样囤货。"
+      "advice": "未列原价，优惠幅度无法核实。"
     },
     {
       "name": "Finish Vaatwastabletten quantum 44 Stuks",
@@ -1513,7 +1513,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "没有标出原价，无法确认折扣力度；目前只有短期记录，不要只因“促销”字样囤货。"
+      "advice": "未列原价，优惠幅度无法核实。"
     },
     {
       "name": "La Perla tonijnstukken Blik 185 gram. OP=OP",
@@ -1531,7 +1531,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "没有标出原价，无法确认折扣力度；目前只有短期记录，不要只因“促销”字样囤货。"
+      "advice": "未列原价，优惠幅度无法核实。"
     },
     {
       "name": "Lenor La Collection wasverzachter Per flacon. OP=OP",
@@ -1549,7 +1549,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "没有标出原价，无法确认折扣力度；目前只有短期记录，不要只因“促销”字样囤货。"
+      "advice": "未列原价，优惠幅度无法核实。"
     },
     {
       "name": "Nalys Keukenpapier vochtvangers 12 stuks",
@@ -1567,7 +1567,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "没有标出原价，无法确认折扣力度；目前只有短期记录，不要只因“促销”字样囤货。"
+      "advice": "未列原价，优惠幅度无法核实。"
     },
     {
       "name": "Nivea deodorant Roller 50 ml of bus 150 ml. OP=OP",
@@ -1585,7 +1585,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "没有标出原价，无法确认折扣力度；目前只有短期记录，不要只因“促销”字样囤货。"
+      "advice": "未列原价，优惠幅度无法核实。"
     },
     {
       "name": "Red Band Bites Zak 145 gram. OP=OP",
@@ -1603,7 +1603,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "没有标出原价，无法确认折扣力度；目前只有短期记录，不要只因“促销”字样囤货。"
+      "advice": "未列原价，优惠幅度无法核实。"
     },
     {
       "name": "Vleeschmeesters Actie varkensoester 6 st. 720 g",
@@ -1621,7 +1621,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "没有标出原价，无法确认折扣力度；目前只有短期记录，不要只因“促销”字样囤货。"
+      "advice": "未列原价，优惠幅度无法核实。"
     },
     {
       "name": "Klene drop Zak 120 gram. OP=OP",
@@ -1639,7 +1639,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "没有标出原价，无法确认折扣力度；目前只有短期记录，不要只因“促销”字样囤货。"
+      "advice": "未列原价，优惠幅度无法核实。"
     }
   ]
 }
