@@ -58,13 +58,8 @@ export default function App() {
   if (!data) return <main className="loading">正在读取今天的 Dirk 优惠…</main>;
   if (data.error) return <main className="loading">今天的数据还没有生成。请稍后刷新。</main>;
 
-  const friendPicks = data.offers.filter((offer) => offer.friendPick).sort((a, b) => (b.friendRank ?? 1) - (a.friendRank ?? 1));
   const stale = Date.now() - Date.parse(data.generatedAt) > 36 * 60 * 60 * 1000;
   const isLatest = selectedDate === "latest";
-  function openSortedOffers(nextSort) {
-    setSortBy(nextSort);
-    document.getElementById("catalogue-title")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
   return <main className="page">
     <header className="hero">
       <div className="stamp">DIRK / DAILY</div>
@@ -91,16 +86,6 @@ export default function App() {
           return <article className="purchase" key={`${purchase.name}-${purchase.date}`}><time>{purchase.date}</time><strong>{purchase.nameZh}</strong><b>{euro.format(purchase.paidPrice)}</b><div><span className={difference != null && difference < 0 ? "cheaper" : difference != null && difference > 0 ? "pricier" : ""}>{comparison}</span><PriceTrail history={productHistories[purchase.name]} /></div></article>;
         })}
       </div>
-    </section>
-
-    <section className="picks" aria-labelledby="picks-title">
-      <div className="section-title"><span>朋友说值得</span><h2 id="picks-title">先看这些。</h2></div>
-      {friendPicks.length > 0 ? <div className="pick-rail">
-        {friendPicks.map((offer) => <article className="pick" key={offer.name}>
-          <img src={offer.imageUrl} alt="" />
-          <div><span className="pick-label">{offer.friendLabel ?? "朋友提到"}</span><strong>{offer.nameZh}</strong><p>{offer.friendNote}</p><div className="pick-price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>}{offer.discountPercent && <i>−{offer.discountPercent}%</i>}<UnitPrice offer={offer} /></div>{offer.productUrl && <a className="product-link pick-link" href={offer.productUrl} target="_blank" rel="noreferrer">在 Dirk 查看 ↗</a>}</div>
-        </article>)}
-      </div> : <div className="empty-picks"><div><span>今天没有朋友特别提到的商品</span><p>不代表没有好价；可以从折扣或单位价格开始挑。</p></div><div><button onClick={() => openSortedOffers("discount")}>看折扣最高</button><button onClick={() => openSortedOffers("unit")}>看单位价格低</button></div></div>}
     </section>
 
     <section className="catalogue" aria-labelledby="catalogue-title">
