@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import JoybuyPage from "./JoybuyPage";
 
 const euro = new Intl.NumberFormat("nl-NL", { style: "currency", currency: "EUR" });
 const dateFormatter = new Intl.DateTimeFormat("zh-CN", { timeZone: "Europe/Amsterdam", dateStyle: "medium", timeStyle: "short" });
@@ -8,6 +9,7 @@ function UnitPrice({ offer }) { const value = offer.unitPrice ?? (offer.grams ? 
 function PriceTrail({ history }) { return history ? <p className="price-trail">价格足迹：{history.days} 天 · 史低 <b>{euro.format(history.low)}</b> · 史高 <b>{euro.format(history.high)}</b></p> : <p className="price-trail">价格足迹：等待首次出现</p>; }
 
 export default function App() {
+  if (new URLSearchParams(window.location.search).get("shop") === "joybuy") return <JoybuyPage />;
   const [data, setData] = useState(null);
   const [category, setCategory] = useState("全部");
   const [query, setQuery] = useState("");
@@ -71,6 +73,7 @@ export default function App() {
       </div>
       <div className={`update ${stale ? "stale" : ""}`}><b>{data.offers.length}</b><span>个优惠<br />{stale ? "数据等待更新" : "最近更新"}<br />{dateFormatter.format(new Date(data.generatedAt))}</span></div>
     </header>
+    <nav className="shop-switch" aria-label="优惠来源"><a className="selected" href="./">Dirk 超市</a><a href="?shop=joybuy">Joybuy 闪电优惠</a></nav>
 
     <section className="archive" aria-label="每日优惠存档">
       <div><span>每日存档</span><strong>{isLatest ? "今天的优惠" : `${data.archiveDate ?? selectedDate} 的优惠`}</strong><p>每天成功更新后自动保存；目前可查看 {history.length} 天。</p></div>
