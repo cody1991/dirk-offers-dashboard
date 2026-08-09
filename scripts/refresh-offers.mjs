@@ -36,7 +36,7 @@ const friendTerms = new Map([
   ["witte druiven", { label: "觉得便宜", rank: 2, note: "朋友认为葡萄/油桃很便宜。" }]
 ]);
 const personalPurchases = [
-  ["XL watermeloen", 3.99], ["Kipkluifjes gekruid", 3.99], ["Roerbakgarnalen", 2.99], ["Roombroodjes", 2.49], ["Magnum ijs", 2.99]
+  ["XL watermeloen", 3.99, "2026-08-08"], ["Kipkluifjes gekruid", 3.99, "2026-08-08"], ["Roerbakgarnalen", 2.99, "2026-08-08"], ["Roombroodjes", 2.49, "2026-08-08"], ["Magnum ijs", 2.99, "2026-08-08"]
 ];
 function chineseName(name) { let value = name; for (const [nl, zh] of translations) value = value.replace(new RegExp(nl, "ig"), zh); return value.replace(/1 de Beste/ig, "Dirk 自有品牌").replace(/Biologische/ig, "有机").replace(/verpakt/ig, "包装").replace(/Per stuk/ig, "每个").replace(/\s+/g, " ").trim(); }
 function grams(name) { if (/\b(?:of|or)\b/i.test(name)) return null; const kg = name.match(/(\d+(?:[.,]\d+)?)\s*(?:kilo|kg)\b/i); if (kg) return Number(kg[1].replace(",", ".")) * 1000; const g = name.match(/(\d+(?:[.,]\d+)?)\s*(?:gram|g)\b/i); return g ? Number(g[1].replace(",", ".")) : null; }
@@ -92,9 +92,12 @@ db.run("CREATE TABLE IF NOT EXISTS snapshots (id INTEGER PRIMARY KEY, generated_
 db.run("INSERT INTO snapshots (generated_at, source_url) VALUES (?, ?)", [generatedAt, offerUrl]);
 const snapshotId = db.exec("SELECT last_insert_rowid() AS id")[0].values[0][0];
 for (const item of output) db.run("INSERT INTO offers VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [snapshotId, item.name, item.nameZh, item.category, item.sale, item.original, item.imageUrl, Number(item.friendPick), item.advice]);
-for (const [term, paidPrice] of personalPurchases) {
+for (const [term, paidPrice, purchasedOn] of personalPurchases) {
   const item = output.find((offer) => offer.name.includes(term));
-  if (item) db.run("INSERT OR IGNORE INTO purchases (product_name, product_name_zh, paid_price, purchased_on) VALUES (?, ?, ?, ?)", [item.name, item.nameZh, paidPrice, archiveDate]);
+  if (item) {
+    db.run("DELETE FROM purchases WHERE product_name = ? AND paid_price = ? AND purchased_on <> ?", [item.name, paidPrice, purchasedOn]);
+    db.run("INSERT OR IGNORE INTO purchases (product_name, product_name_zh, paid_price, purchased_on) VALUES (?, ?, ?, ?)", [item.name, item.nameZh, paidPrice, purchasedOn]);
+  }
 }
 function queryRows(result) {
   if (!result[0]) return [];
