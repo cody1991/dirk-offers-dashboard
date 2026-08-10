@@ -8,8 +8,11 @@ const judgement = (offer) => offer.advice || (offer.discountPercent >= 50 && Num
 
 export default function JoybuyPage() {
   const [data, setData] = useState(null);
+  const [history, setHistory] = useState([]);
+  const [selectedDate, setSelectedDate] = useState("latest");
   const [query, setQuery] = useState("");
-  useEffect(() => { fetch("./data/joybuy-offers.json").then((response) => response.json()).then(setData).catch(() => setData({ error: true, offers: [] })); }, []);
+  useEffect(() => { Promise.all([fetch("./data/joybuy-offers.json").then((response) => response.json()), fetch("./data/joybuy-history.json").then((response) => response.ok ? response.json() : [])]).then(([offers, snapshots]) => { setData(offers); setHistory(snapshots); }).catch(() => setData({ error: true, offers: [] })); }, []);
+  async function loadArchive(value) { setSelectedDate(value); setQuery(""); try { const url = value === "latest" ? "./data/joybuy-offers.json" : `./data/joybuy-history/${value}.json`; const response = await fetch(url); setData(response.ok ? await response.json() : await (await fetch("./data/joybuy-offers.json")).json()); } catch { setData({ error: true, offers: [] }); } }
   const offers = useMemo(() => (data?.offers ?? []).filter((offer) => `${offer.name} ${chineseName(offer)}`.toLowerCase().includes(query.toLowerCase())).sort((a, b) => b.discountPercent - a.discountPercent), [data, query]);
   if (!data) return <main className="loading">正在读取 Joybuy 闪电优惠…</main>;
   if (data.error) return <main className="loading">Joybuy 数据暂不可用。</main>;
@@ -18,13 +21,14 @@ export default function JoybuyPage() {
       <a className="repo-link" href="https://github.com/cody1991/dirk-offers-dashboard" target="_blank" rel="noreferrer">GitHub 仓库 <span>↗</span></a>
       <div className="stamp joybuy-stamp">JOY<br />BUY</div>
       <div>
-        <div className="hero-meta"><p className="kicker">荷兰公开站 · 食品与饮料</p><a className="official-link" href={data.sourceUrl} target="_blank" rel="noreferrer">打开 Joybuy 闪电优惠 <span>↗</span></a></div>
+        <div className="hero-meta"><p className="kicker">{selectedDate === "latest" ? "荷兰公开站 · 食品与饮料" : `${data.archiveDate ?? selectedDate} · 历史快照`}</p><a className="official-link" href={data.sourceUrl} target="_blank" rel="noreferrer">打开 Joybuy 闪电优惠 <span>↗</span></a></div>
         <h1>食品闪电价，<em>先看</em>再买。</h1>
         <p className="subhead">未登录也能看到的 Joybuy 食品与饮料优惠；与个人账户、收货地址无关。</p>
       </div>
       <div className="update"><b>{data.offers.length}</b><span>个闪电优惠<br />最近更新<br />{dateFormatter.format(new Date(data.generatedAt))}</span></div>
     </header>
     <nav className="shop-switch" aria-label="优惠来源"><a href="./">Dirk 超市</a><a className="selected" href="?shop=joybuy">Joybuy 闪电优惠</a></nav>
+    <section className="archive" aria-label="Joybuy 每日优惠存档"><div><span>每日存档</span><strong>{selectedDate === "latest" ? "最新公开食品优惠" : `${data.archiveDate ?? selectedDate} 的优惠`}</strong><p>每天成功更新后自动保存；目前可查看 {history.length} 天。</p></div><label>查看日期<select value={selectedDate} onChange={(event) => loadArchive(event.target.value)}><option value="latest">最新一批 · {data.offers.length} 项</option>{history.map((entry) => <option value={entry.date} key={entry.date}>{entry.date} · {entry.offerCount} 项</option>)}</select></label></section>
     <section className="catalogue joybuy-catalogue" aria-labelledby="joybuy-title">
       <div className="catalogue-head"><div><span>公开食品闪电优惠 · {offers.length} 项</span><h2 id="joybuy-title">折扣先排好，再决定要不要点开。</h2></div><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索：饺子、米、饮料…" aria-label="搜索 Joybuy 食品优惠" /></div>
       <div className="offer-grid joybuy-grid">{offers.map((offer) => <article className="offer joybuy-offer" key={offer.name}><div className="photo"><img src={offer.imageUrl} alt={offer.name} loading="lazy" decoding="async" /><span>−{offer.discountPercent}%</span></div><div className="offer-body"><p className="category">JOYBUY · FOOD FLASH DEAL</p><h3>{chineseName(offer)}</h3><p className="pack">{offer.name}</p><p className="joybuy-meta">{offer.rating && `评分 ${offer.rating}`} {offer.rating && offer.sold && " · "}{offer.sold}</p><div className="price"><b>{euro.format(offer.sale)}</b>{offer.original && <s>{euro.format(offer.original)}</s>}</div><p className="advice">{judgement(offer)}</p><a className="product-link" href={offer.productUrl} target="_blank" rel="noreferrer">在 Joybuy 查看商品 ↗</a></div></article>)}</div>
