@@ -92,10 +92,13 @@ export default function App() {
       <div className="catalogue-head"><div><span>全部优惠 · {offers.length} 项</span><h2 id="catalogue-title">按价格，挑真正值的。</h2></div><div className="catalogue-controls"><label>排序<select value={sortBy} onChange={(e) => setSortBy(e.target.value)}><option value="friend">朋友优先</option><option value="discount">折扣最高</option><option value="unit">单位价格低</option><option value="price">售价最低</option></select></label><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="搜索：草莓、鸡翅、咖啡…" aria-label="搜索优惠" /></div></div>
       <div className="filters">{categories.map((item) => <button className={item === category ? "selected" : ""} onClick={() => setCategory(item)} key={item}>{item}</button>)}</div>
       <div className="offer-grid">
-        {offers.map((offer) => <article className={`offer ${offer.friendPick ? "friend" : ""}`} key={offer.name}>
-          <div className="photo"><img src={offer.imageUrl} alt={offer.nameZh} loading="lazy" decoding="async" />{offer.friendPick && <span>{offer.friendLabel || "朋友推荐"}</span>}</div>
-          <div className="offer-body"><p className="category">{offer.category}</p><h3>{offer.nameZh}</h3><p className="pack">{offer.package}</p><div className="price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>} {offer.discountPercent && <i>−{offer.discountPercent}%</i>}</div><UnitPrice offer={offer} /><PriceTrail history={productHistories[offer.name]} /><p className="advice">{offer.advice}</p>{offer.productUrl && <a className="product-link" href={offer.productUrl} target="_blank" rel="noreferrer">在 Dirk 查看原商品 ↗</a>}</div>
-        </article>)}
+        {offers.map((offer) => {
+          const atHistoricalLow = productHistories[offer.name]?.low != null && Math.abs(offer.sale - productHistories[offer.name].low) < 0.005;
+          return <article className={"offer " + (offer.friendPick ? "friend " : "") + (atHistoricalLow ? "historical-low" : "")} key={offer.name}>
+            <div className="photo"><img src={offer.imageUrl} alt={offer.nameZh} loading="lazy" decoding="async" />{offer.friendPick && <span>{offer.friendLabel || "朋友推荐"}</span>}{atHistoricalLow && <span className="low-badge">史低价</span>}</div>
+            <div className="offer-body"><p className="category">{offer.category}</p><h3>{offer.nameZh}</h3><p className="pack">{offer.package}</p><div className="price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>} {offer.discountPercent && <i>−{offer.discountPercent}%</i>}</div><UnitPrice offer={offer} /><PriceTrail history={productHistories[offer.name]} /><p className="advice">{offer.advice}</p>{offer.productUrl && <a className="product-link" href={offer.productUrl} target="_blank" rel="noreferrer">在 Dirk 查看原商品 ↗</a>}</div>
+          </article>;
+        })}
       </div>
     </section>
     <footer>数据来自 Dirk aanbiedingen；每日快照在当天成功抓取后保存。图片与价格以门店实际标签为准。</footer>
