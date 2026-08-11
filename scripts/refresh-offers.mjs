@@ -18,6 +18,7 @@ if (!force && process.env.GITHUB_ACTIONS && localHour !== "10") {
   process.exit(0);
 }
 
+const exactTranslations = new Map([["Vleeschmeesters Actie varkensoester 6 st. 720 g", "Vleeschmeesters 特价猪里脊肉 6 块 720g"]]);
 const translations = [
   ["Aardbeien", "草莓"], ["Chinese kool", "大白菜"], ["Cocktail trostomaten", "串番茄"], ["Handperen", "雪梨"], ["blauwe bessen", "蓝莓"], ["Galia meloen", "哈密瓜"], ["Roerbakgarnalen", "炒虾"], ["Kipkluifjes gekruid", "腌制鸡翅根"], ["XL watermeloen", "特大西瓜"], ["Kersen", "樱桃"], ["Mango ready to eat", "即食芒果"], ["witte druiven", "白葡萄"], ["Nectarines", "油桃"], ["courgette", "西葫芦"], ["rode paprika", "红甜椒"], ["Uien", "洋葱"], ["Avocado", "牛油果"], ["koffiebonen", "咖啡豆"], ["koffie", "咖啡"], ["Magnum ijs", "梦龙冰淇淋"], ["Friet", "薯条"], ["pasta", "意大利面"], ["pastasaus", "意面酱"], ["wasmiddel", "洗衣液/洗衣凝珠"], ["shampoo", "洗发水"], ["conditioner", "护发素"], ["deodorant", "止汗剂"], ["Klene", "甘草糖"], ["Lay", "乐事薯片"], ["Heineken", "喜力啤酒"], ["Grolsch", "格罗尔施啤酒"]
 ];
@@ -38,7 +39,7 @@ const friendTerms = new Map([
 const personalPurchases = [
   ["XL watermeloen", 3.99, "2026-08-08"], ["Kipkluifjes gekruid", 3.99, "2026-08-08"], ["Roerbakgarnalen", 2.99, "2026-08-08"], ["Roombroodjes", 2.49, "2026-08-08"], ["Magnum ijs", 2.99, "2026-08-08"]
 ];
-function chineseName(name) { let value = name; for (const [nl, zh] of translations) value = value.replace(new RegExp(nl, "ig"), zh); return value.replace(/1 de Beste/ig, "Dirk 自有品牌").replace(/Biologische/ig, "有机").replace(/verpakt/ig, "包装").replace(/Per stuk/ig, "每个").replace(/\s+/g, " ").trim(); }
+function chineseName(name) { if (exactTranslations.has(name)) return exactTranslations.get(name); let value = name; for (const [nl, zh] of translations) value = value.replace(new RegExp(nl, "ig"), zh); return value.replace(/1 de Beste/ig, "Dirk 自有品牌").replace(/Biologische/ig, "有机").replace(/verpakt/ig, "包装").replace(/Per stuk/ig, "每个").replace(/\s+/g, " ").trim(); }
 function grams(name) { if (/\b(?:of|or)\b/i.test(name)) return null; const kg = name.match(/(\d+(?:[.,]\d+)?)\s*(?:kilo|kg)\b/i); if (kg) return Number(kg[1].replace(",", ".")) * 1000; const g = name.match(/(\d+(?:[.,]\d+)?)\s*(?:gram|g)\b/i); return g ? Number(g[1].replace(",", ".")) : null; }
 function analysis(offer) {
   const saving = offer.original == null ? null : offer.original - offer.sale;
