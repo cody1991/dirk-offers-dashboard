@@ -19,7 +19,7 @@
       "friendLabel": "推荐购买",
       "friendRank": 3,
       "discountPercent": 17,
-      "advice": "省€0.50（17%），€3.83/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.50（17%）；约 €3.83/kg，折扣有限，不缺不用凑。"
     },
     {
       "name": "1 de Beste Chinese kool Per stuk",
@@ -37,7 +37,7 @@
       "friendLabel": "可以购买",
       "friendRank": 2,
       "discountPercent": 38,
-      "advice": "省€0.60（38%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.60（38%），正常好价。"
     },
     {
       "name": "Vleeschmeesters Kipkluifjes gekruid 800 g",
@@ -55,7 +55,7 @@
       "friendLabel": "可以购买",
       "friendRank": 2,
       "discountPercent": 36,
-      "advice": "现价与买入€3.99相同，€4.99/kg，无价差可利用。"
+      "advice": "省 €2.20（36%）；约 €4.99/kg，正常好价。"
     },
     {
       "name": "Biologische blauwe bessen 200 g",
@@ -73,7 +73,7 @@
       "friendLabel": "可以购买",
       "friendRank": 2,
       "discountPercent": 25,
-      "advice": "省€1.00（25%），€14.95/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.00（25%）；约 €14.95/kg，正常好价。"
     },
     {
       "name": "Nectarines of witte druiven Bak 500 gram of 1 kilo.",
@@ -91,7 +91,7 @@
       "friendLabel": "觉得便宜",
       "friendRank": 2,
       "discountPercent": 24,
-      "advice": "省€0.60（24%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.60（24%），折扣有限，不缺不用凑。"
     },
     {
       "name": "1 de Beste Handperen verpakt 1 kg",
@@ -109,7 +109,7 @@
       "friendLabel": "可以购买",
       "friendRank": 2,
       "discountPercent": 6,
-      "advice": "省€0.10（6%），€1.69/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.10（6%）；约 €1.69/kg，折扣有限，不缺不用凑。"
     },
     {
       "name": "Eat Me Mango ready to eat 2 stuks",
@@ -127,7 +127,7 @@
       "friendLabel": "可以尝试",
       "friendRank": 1,
       "discountPercent": 7,
-      "advice": "省€0.20（7%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.20（7%），折扣有限，不缺不用凑。"
     },
     {
       "name": "Calvé partysaus Fles 320 ml.",
@@ -145,7 +145,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 63,
-      "advice": "省€1.50（63%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.50（63%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Robijn wasparfum Flacon 342 ml.",
@@ -163,7 +163,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 63,
-      "advice": "省€4.16（63%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €4.16（63%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Silvo kruiden of specerijen Pot 4 - 83 gram (m.u.v. bio en dragon).",
@@ -181,7 +181,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 63,
-      "advice": "省€2.50（63%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €2.50（63%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Andrélon shampoo of conditioner Flacon 200 - 400 ml.",
@@ -199,7 +199,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 62,
-      "advice": "省€4.06（62%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €4.06（62%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Douwe Egberts ice coffee Beker 230 ml of blik 250 ml.",
@@ -217,7 +217,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 62,
-      "advice": "省€0.95（62%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.95（62%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Prodent Tube 75 ml (m.u.v. junior en kids).",
@@ -235,7 +235,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 62,
-      "advice": "省€1.60（62%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.60（62%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Magnum ijs Pak 3 - 6 stuks of beker 204 - 440 ml.",
@@ -253,7 +253,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 58,
-      "advice": "现价与买入€2.99相同，无价差可利用。"
+      "advice": "省 €4.16（58%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Coca-Cola, Fanta, Sprite of Fernandes Blik 250 ml.",
@@ -271,7 +271,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 57,
-      "advice": "省€0.60（57%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.60（57%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "De Vegetarische Slager burgers Pak 2 stuks.",
@@ -289,7 +289,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 56,
-      "advice": "省€2.50（56%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €2.50（56%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Danio kwark Beker 450 gram.",
@@ -307,7 +307,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 55,
-      "advice": "省€1.60（55%），€2.87/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.60（55%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Dettol reiniger Flacon 500 of pak 72 stuks. OP=OP",
@@ -325,7 +325,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 54,
-      "advice": "省€2.30（54%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €2.30（54%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Dubbelfrisss Boost Pak 1.5 liter.",
@@ -343,7 +343,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 54,
-      "advice": "省€1.03（54%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.03（54%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Mad sauce of Gouda's Glorie saus Statube 500 of 550 ml.",
@@ -361,7 +361,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 53,
-      "advice": "省€1.66（53%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.66（53%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Bonduelle diepvriesgroente Zak 300 of 400 gram.",
@@ -379,7 +379,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 52,
-      "advice": "省€1.60（52%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.60（52%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Kesbeke tafelzuren Pot 330 - 675 gram.",
@@ -397,7 +397,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 50,
-      "advice": "省€1.50（50%），€2.21/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.50（50%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Bieze rauwkost Kuip 250 gram.",
@@ -415,7 +415,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 47,
-      "advice": "省€0.89（47%），€3.96/kg，持平2天史低，当前价处记录低位。"
+      "advice": "省 €0.89（47%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Tasty Basics Pak 200 of 350 gram (m.u.v. robuust brood).",
@@ -433,7 +433,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 47,
-      "advice": "省€1.80（47%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.80（47%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Becel, Blue Band of Croma Wikkel 250 gram.",
@@ -451,7 +451,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "省€1.20（45%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.20（45%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Coolbest 100% juice Pak 1 liter.",
@@ -469,7 +469,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "省€1.60（45%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.60（45%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Hollandse courgette of rode paprika Per stuk.",
@@ -487,7 +487,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "省€0.40（45%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.40（45%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Mangiare scrocchi Zak 150 gram.",
@@ -505,7 +505,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "省€0.80（45%），€6.60/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.80（45%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Zuivelhoeve Boer'n yoghurt Beker 170 gram.",
@@ -523,7 +523,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "省€0.80（45%），€5.82/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.80（45%）；折扣很大，刚好需要就带。"
     },
     {
       "name": "Appelflap Per stuk",
@@ -541,7 +541,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 44,
-      "advice": "省€0.39（44%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.39（44%），正常好价。"
     },
     {
       "name": "Arla Skyr Beker 450 gram. OP=OP",
@@ -559,7 +559,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 43,
-      "advice": "省€0.90（43%），€2.64/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.90（43%）；约 €2.64/kg，正常好价。"
     },
     {
       "name": "Milner kaasplakken Pak 6 plakken.",
@@ -577,7 +577,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 43,
-      "advice": "省€1.48（43%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.48（43%），正常好价。"
     },
     {
       "name": "Patak's Indiase specialiteiten Pak 2 - 4 stuks of pot 165 - 450 gram.",
@@ -595,7 +595,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 43,
-      "advice": "省€1.26（43%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.26（43%），正常好价。"
     },
     {
       "name": "Sourcy Vitaminwater Fles 500 ml.",
@@ -613,7 +613,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 43,
-      "advice": "省€0.76（43%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.76（43%），正常好价。"
     },
     {
       "name": "Lavazza koffiebonen Per zak.",
@@ -631,7 +631,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 40,
-      "advice": "省€6.00（40%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €6.00（40%），正常好价。"
     },
     {
       "name": "Luxe gevulde kaasstengel of borek stick spinazie feta Per stuk.",
@@ -649,7 +649,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 40,
-      "advice": "省€0.46（40%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.46（40%），正常好价。"
     },
     {
       "name": "Beemster kaas 48+ Per stuk 400 gram. OP=OP",
@@ -667,7 +667,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 39,
-      "advice": "省€3.50（39%），€13.73/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €3.50（39%）；约 €13.73/kg，正常好价。"
     },
     {
       "name": "Whiskas Pak 12 x 85 gram.",
@@ -685,7 +685,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 38,
-      "advice": "省€2.40（38%），€46.94/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €2.40（38%）；约 €46.94/kg，正常好价。"
     },
     {
       "name": "Balconi Trancetto of Rollino Pak 6 of 10 stuks. OP=OP",
@@ -703,7 +703,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 37,
-      "advice": "省€0.86（37%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.86（37%），正常好价。"
     },
     {
       "name": "Lay's MAX Zak 185 gram.",
@@ -721,7 +721,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 37,
-      "advice": "省€0.86（37%），€8.05/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.86（37%）；约 €8.05/kg，正常好价。"
     },
     {
       "name": "Heks'nkaas Origineel 200 g",
@@ -739,7 +739,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 33,
-      "advice": "省€1.00（33%），€9.95/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.00（33%）；约 €9.95/kg，正常好价。"
     },
     {
       "name": "1 de Beste Serrano of prosciutto Pak 110 gram.",
@@ -757,7 +757,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 32,
-      "advice": "省€1.40（32%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.40（32%），正常好价。"
     },
     {
       "name": "Jan Napoli pizzadeeg 300 g",
@@ -775,7 +775,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 32,
-      "advice": "省€0.70（32%），€4.97/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.70（32%）；约 €4.97/kg，正常好价。"
     },
     {
       "name": "Kanis & Gunnink koffie Per pak.",
@@ -793,7 +793,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 30,
-      "advice": "省€2.50（30%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €2.50（30%），正常好价。"
     },
     {
       "name": "President of Castello Per stuk 125 - 200 gram.",
@@ -811,7 +811,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 30,
-      "advice": "省€1.00（30%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.00（30%），正常好价。"
     },
     {
       "name": "Aviko Friet van 't huis of aardappelschotel Zak 450 of 750 gram.",
@@ -829,7 +829,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 29,
-      "advice": "省€0.80（29%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.80（29%），正常好价。"
     },
     {
       "name": "1 de Beste Chocolade mix 225 g",
@@ -847,7 +847,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 29,
-      "advice": "省€1.00（29%），€11.07/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.00（29%）；约 €11.07/kg，正常好价。"
     },
     {
       "name": "Spa Fruit Fles 1.25 liter.",
@@ -865,7 +865,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 29,
-      "advice": "省€0.70（29%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.70（29%），正常好价。"
     },
     {
       "name": "Zandvliet Gelderse kookworst 250 g",
@@ -883,7 +883,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 27,
-      "advice": "省€0.60（27%），€6.36/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.60（27%）；约 €6.36/kg，正常好价。"
     },
     {
       "name": "Affligem Blond of Tripel 6-pack fles à 30 cl.",
@@ -901,7 +901,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€2.19（25%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €2.19（25%），正常好价。"
     },
     {
       "name": "Bakker Bollebof cakeplakken Pak 4 stuks. OP=OP",
@@ -919,7 +919,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€0.50（25%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.50（25%），正常好价。"
     },
     {
       "name": "Bakker van der Akker Reuze rozijnen- of mueslibollen Zak 4 stuks.",
@@ -937,7 +937,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€0.50（25%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.50（25%），正常好价。"
     },
     {
       "name": "DeliciouS Fles 75 cl.",
@@ -955,7 +955,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€1.00（25%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.00（25%），正常好价。"
     },
     {
       "name": "Hertog Jan pils of 0.0 6-pack blik à 33 of 50 cl.",
@@ -973,7 +973,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€2.25（25%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €2.25（25%），正常好价。"
     },
     {
       "name": "IJsbergsla naturel of melange Per stuk.",
@@ -991,7 +991,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€0.30（25%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.30（25%），正常好价。"
     },
     {
       "name": "Texels Zeebries, Skuumkoppe of 0.0 4 of 6-pack fles à 30 cl.",
@@ -1009,7 +1009,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€2.25（25%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €2.25（25%），正常好价。"
     },
     {
       "name": "Wicky Pakje 200 ml.",
@@ -1027,7 +1027,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€0.50（25%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.50（25%），正常好价。"
     },
     {
       "name": "Heineken Pilsener Krat 24 x 300 ml",
@@ -1045,7 +1045,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€4.74（25%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €4.74（25%），正常好价。"
     },
     {
       "name": "Grolsch Premium pilsener beugel krat 16 x 450 ml",
@@ -1063,7 +1063,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€4.66（25%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €4.66（25%），正常好价。"
     },
     {
       "name": "Grolsch Premium pilsener krat 24 x 300 ml",
@@ -1081,7 +1081,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€4.66（25%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €4.66（25%），正常好价。"
     },
     {
       "name": "1 de Beste Gebraden gehakt of fijne cervelaat gerookt Pak 125 gram.",
@@ -1099,7 +1099,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 24,
-      "advice": "省€0.56（24%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.56（24%），折扣有限，不缺不用凑。"
     },
     {
       "name": "Oreo enrobed Pak 6 x 2 stuks.",
@@ -1117,7 +1117,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 23,
-      "advice": "省€0.66（23%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.66（23%），折扣有限，不缺不用凑。"
     },
     {
       "name": "Real Cool Hard Seltzer of iced tea Blik 25 cl.",
@@ -1135,7 +1135,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 23,
-      "advice": "省€0.30（23%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.30（23%），折扣有限，不缺不用凑。"
     },
     {
       "name": "1 de Beste Uien 1 kg",
@@ -1153,7 +1153,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 22,
-      "advice": "省€0.20（22%），€0.69/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.20（22%）；约 €0.69/kg，折扣有限，不缺不用凑。"
     },
     {
       "name": "Die 5 Groot Fles 75 cl.",
@@ -1171,7 +1171,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 20,
-      "advice": "省€1.00（20%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €1.00（20%），折扣有限，不缺不用凑。"
     },
     {
       "name": "1 de Beste Kipfilet gerookt 100 g",
@@ -1189,7 +1189,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 17,
-      "advice": "省€0.40（17%），€19.90/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.40（17%）；约 €19.90/kg，折扣有限，不缺不用凑。"
     },
     {
       "name": "Zalmfilet met huid 2 st. 250 g",
@@ -1207,7 +1207,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 17,
-      "advice": "省€1.00（17%），€19.96/kg，持平3天史低，当前价处记录低位。"
+      "advice": "省 €1.00（17%）；约 €19.96/kg，折扣有限，不缺不用凑。"
     },
     {
       "name": "Primá! verse maaltijd Per bak.",
@@ -1225,7 +1225,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 16,
-      "advice": "省€0.70（16%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.70（16%），折扣有限，不缺不用凑。"
     },
     {
       "name": "Boerenbrood Per stuk.",
@@ -1243,7 +1243,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 15,
-      "advice": "省€0.30（15%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.30（15%），折扣有限，不缺不用凑。"
     },
     {
       "name": "1 de Beste Watermeloen part Per stuk",
@@ -1261,7 +1261,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 15,
-      "advice": "省€0.30（15%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.30（15%），折扣有限，不缺不用凑。"
     },
     {
       "name": "Zespri Kiwi sungold verpakt 4 Stuks",
@@ -1279,7 +1279,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 14,
-      "advice": "省€0.50（14%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.50（14%），折扣有限，不缺不用凑。"
     },
     {
       "name": "1 de Beste Knoflook- zeezout- of kruidenboter Kuip 100 gram.",
@@ -1297,7 +1297,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 13,
-      "advice": "省€0.15（13%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.15（13%），折扣有限，不缺不用凑。"
     },
     {
       "name": "RIMBOESAUZEN Hamburgersaus squeeze 250 ml",
@@ -1315,7 +1315,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 12,
-      "advice": "省€0.20（12%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.20（12%），折扣有限，不缺不用凑。"
     },
     {
       "name": "Vleeschmeesters Duitse biefstuk 2 stuks 200 g",
@@ -1333,7 +1333,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 12,
-      "advice": "省€0.40（12%），€14.95/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.40（12%）；约 €14.95/kg，折扣有限，不缺不用凑。"
     },
     {
       "name": "Corona Extra 12x 25cl 3 liter",
@@ -1351,7 +1351,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 10,
-      "advice": "省€1.00（10%），持平1天史低，当前价处记录低位。"
+      "advice": "省 €1.00（10%），折扣有限，不缺不用凑。"
     },
     {
       "name": "Pink lady 6 Stuks",
@@ -1369,7 +1369,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 10,
-      "advice": "省€0.30（10%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.30（10%），折扣有限，不缺不用凑。"
     },
     {
       "name": "Vleeschmeesters Gemengd gehakt 750 g",
@@ -1387,7 +1387,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 9,
-      "advice": "省€0.50（9%），€6.65/kg，持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.50（9%）；约 €6.65/kg，折扣有限，不缺不用凑。"
     },
     {
       "name": "Bleekselderij Per stuk",
@@ -1405,7 +1405,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 8,
-      "advice": "省€0.10（8%），持平4天史低，当前价处记录低位。"
+      "advice": "省 €0.10（8%），折扣有限，不缺不用凑。"
     },
     {
       "name": "Ariel wasmiddel Pods 44, poeder 40 of vloeibaar wasmiddel 50 wasbeurten. OP=OP",
@@ -1423,7 +1423,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€9.99，持平4天史低，当前价处记录低位。"
+      "advice": "现价 €9.99，折扣有限，不缺不用凑。"
     },
     {
       "name": "Barilla pasta Per pak. OP=OP",
@@ -1441,7 +1441,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€1.99，持平4天史低，当前价处记录低位。"
+      "advice": "现价 €1.99，折扣有限，不缺不用凑。"
     },
     {
       "name": "Bertolli pastasaus Zak 460 of pot 670 gram. OP=OP",
@@ -1459,7 +1459,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€1.59，持平4天史低，当前价处记录低位。"
+      "advice": "现价 €1.59，折扣有限，不缺不用凑。"
     },
     {
       "name": "Cantaloupe of gele honing meloen Schaal 250 gram.",
@@ -1477,7 +1477,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€1.49，持平2天史低，当前价处记录低位。"
+      "advice": "现价 €1.49，折扣有限，不缺不用凑。"
     },
     {
       "name": "Finish Vaatwastabletten quantum 44 Stuks",
@@ -1495,7 +1495,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€6.99，持平4天史低，当前价处记录低位。"
+      "advice": "现价 €6.99，折扣有限，不缺不用凑。"
     },
     {
       "name": "La Perla tonijnstukken Blik 185 gram. OP=OP",
@@ -1513,7 +1513,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€0.99，€5.35/kg，持平4天史低，当前价处记录低位。"
+      "advice": "现价 €0.99；约 €5.35/kg，折扣有限，不缺不用凑。"
     },
     {
       "name": "Lenor La Collection wasverzachter Per flacon. OP=OP",
@@ -1531,7 +1531,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€3.99，持平4天史低，当前价处记录低位。"
+      "advice": "现价 €3.99，折扣有限，不缺不用凑。"
     },
     {
       "name": "Nalys Keukenpapier vochtvangers 12 stuks",
@@ -1549,7 +1549,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€5.99，持平4天史低，当前价处记录低位。"
+      "advice": "现价 €5.99，折扣有限，不缺不用凑。"
     },
     {
       "name": "Nivea deodorant Roller 50 ml of bus 150 ml. OP=OP",
@@ -1567,7 +1567,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€2.49，持平4天史低，当前价处记录低位。"
+      "advice": "现价 €2.49，折扣有限，不缺不用凑。"
     },
     {
       "name": "Red Band Bites Zak 145 gram. OP=OP",
@@ -1585,7 +1585,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€0.99，€6.83/kg，持平4天史低，当前价处记录低位。"
+      "advice": "现价 €0.99；约 €6.83/kg，折扣有限，不缺不用凑。"
     },
     {
       "name": "Vleeschmeesters Actie varkensoester 6 st. 720 g",
@@ -1603,7 +1603,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€5.99，€8.32/kg，持平4天史低，当前价处记录低位。"
+      "advice": "现价 €5.99；约 €8.32/kg，折扣有限，不缺不用凑。"
     },
     {
       "name": "Klene drop Zak 120 gram. OP=OP",
@@ -1621,7 +1621,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€0.99，€8.25/kg，持平4天史低，当前价处记录低位。"
+      "advice": "现价 €0.99；约 €8.25/kg，折扣有限，不缺不用凑。"
     }
   ]
 }
