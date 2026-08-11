@@ -16,15 +16,13 @@ export default function App() {
   const [selectedDate, setSelectedDate] = useState("latest");
   const [currentOffers, setCurrentOffers] = useState([]);
   const [purchases, setPurchases] = useState([]);
-  const [productHistories, setProductHistories] = useState({});
 
   useEffect(() => {
     Promise.all([
       fetch("./data/offers.json").then((response) => response.json()),
       fetch("./data/history.json").then((response) => response.ok ? response.json() : []),
-      fetch("./data/purchases.json").then((response) => response.ok ? response.json() : []),
-      fetch("./data/product-history.json").then((response) => response.ok ? response.json() : {})
-    ]).then(([offers, snapshots, purchaseRows, priceHistory]) => { setData(offers); setCurrentOffers(offers.offers); setHistory(snapshots); setPurchases(purchaseRows); setProductHistories(priceHistory); }).catch(() => setData({ offers: [], error: true }));
+      fetch("./data/purchases.json").then((response) => response.ok ? response.json() : [])
+    ]).then(([offers, snapshots, purchaseRows]) => { setData(offers); setCurrentOffers(offers.offers); setHistory(snapshots); setPurchases(purchaseRows); }).catch(() => setData({ offers: [], error: true }));
   }, []);
 
   async function loadArchive(value) {
@@ -83,7 +81,7 @@ export default function App() {
           const current = currentOffers.find((offer) => offer.name === purchase.name);
           const difference = current ? current.sale - purchase.paidPrice : null;
           const comparison = difference == null ? "当前没有这件商品的优惠" : Math.abs(difference) < 0.005 ? `当前同价 ${euro.format(current.sale)}` : difference < 0 ? `现在便宜 ${euro.format(Math.abs(difference))}` : `现在贵 ${euro.format(difference)}`;
-          return <article className="purchase" key={`${purchase.name}-${purchase.date}`}><time>{purchase.date}</time><strong>{purchase.nameZh}</strong><b>{euro.format(purchase.paidPrice)}</b><div><span className={difference != null && difference < 0 ? "cheaper" : difference != null && difference > 0 ? "pricier" : ""}>{comparison}</span><PriceTrail history={productHistories[purchase.name]} /></div></article>;
+          return <article className="purchase" key={`${purchase.name}-${purchase.date}`}><time>{purchase.date}</time><strong>{purchase.nameZh}</strong><b>{euro.format(purchase.paidPrice)}</b><div><span className={difference != null && difference < 0 ? "cheaper" : difference != null && difference > 0 ? "pricier" : ""}>{comparison}</span><PriceTrail history={current?.metrics} /></div></article>;
         })}
       </div>
     </section>
@@ -93,10 +91,10 @@ export default function App() {
       <div className="filters">{categories.map((item) => <button className={item === category ? "selected" : ""} onClick={() => setCategory(item)} key={item}>{item}</button>)}</div>
       <div className="offer-grid">
         {offers.map((offer) => {
-          const atHistoricalLow = productHistories[offer.name]?.low != null && Math.abs(offer.sale - productHistories[offer.name].low) < 0.005;
+          const atHistoricalLow = offer.metrics?.low != null && Math.abs(offer.sale - offer.metrics.low) < 0.005;
           return <article className={"offer " + (offer.friendPick ? "friend " : "") + (atHistoricalLow ? "historical-low" : "")} key={offer.name}>
             <div className="photo"><img src={offer.imageUrl} alt={offer.nameZh} loading="lazy" decoding="async" />{offer.friendPick && <span>{offer.friendLabel || "朋友推荐"}</span>}{atHistoricalLow && <span className="low-badge">史低价</span>}</div>
-            <div className="offer-body"><p className="category">{offer.category}</p><h3>{offer.nameZh}</h3><p className="pack">{offer.package}</p><div className="price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>} {offer.discountPercent && <i>−{offer.discountPercent}%</i>}</div><UnitPrice offer={offer} /><PriceTrail history={productHistories[offer.name]} /><p className="advice">{offer.advice}</p>{offer.productUrl && <a className="product-link" href={offer.productUrl} target="_blank" rel="noreferrer">在 Dirk 查看原商品 ↗</a>}</div>
+            <div className="offer-body"><p className="category">{offer.category}</p><h3>{offer.nameZh}</h3><p className="pack">{offer.package}</p><div className="price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>} {offer.discountPercent && <i>−{offer.discountPercent}%</i>}</div><UnitPrice offer={offer} /><PriceTrail history={offer.metrics} /><p className="advice">{offer.advice}</p>{offer.productUrl && <a className="product-link" href={offer.productUrl} target="_blank" rel="noreferrer">在 Dirk 查看原商品 ↗</a>}</div>
           </article>;
         })}
       </div>

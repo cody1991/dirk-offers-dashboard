@@ -3,14 +3,13 @@ import path from "node:path";
 
 const root = path.resolve(import.meta.dirname, "..");
 const offersPath = path.join(root, "public/data/offers.json");
-const [data, history, purchases] = await Promise.all([
+const [data, purchases] = await Promise.all([
   fs.readFile(offersPath, "utf8").then(JSON.parse),
-  fs.readFile(path.join(root, "public/data/product-history.json"), "utf8").then(JSON.parse),
   fs.readFile(path.join(root, "public/data/purchases.json"), "utf8").then(JSON.parse)
 ]);
 
 for (const offer of data.offers) {
-  const trail = history[offer.name];
+  const trail = offer.metrics;
   const bought = purchases.find((item) => item.name === offer.name);
   const discount = offer.discountPercent != null ? `省€${(offer.original - offer.sale).toFixed(2)}（${offer.discountPercent}%）` : `现€${offer.sale.toFixed(2)}`;
   const unit = offer.unitPrice != null ? `，€${offer.unitPrice.toFixed(2)}/kg` : "";
