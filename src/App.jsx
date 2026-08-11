@@ -81,7 +81,7 @@ export default function App() {
           const current = currentOffers.find((offer) => offer.name === purchase.name);
           const difference = current ? current.sale - purchase.paidPrice : null;
           const comparison = difference == null ? "当前没有这件商品的优惠" : Math.abs(difference) < 0.005 ? `当前同价 ${euro.format(current.sale)}` : difference < 0 ? `现在便宜 ${euro.format(Math.abs(difference))}` : `现在贵 ${euro.format(difference)}`;
-          return <article className="purchase" key={`${purchase.name}-${purchase.date}`}><time>{purchase.date}</time><strong>{purchase.nameZh}</strong><b>{euro.format(purchase.paidPrice)}</b><div><span className={difference != null && difference < 0 ? "cheaper" : difference != null && difference > 0 ? "pricier" : ""}>{comparison}</span><PriceTrail history={current?.metrics} /></div></article>;
+          return <article className="purchase" key={`${purchase.name}-${purchase.date}`}><time>{purchase.date}</time><strong>{purchase.nameZh}</strong><b>{euro.format(purchase.paidPrice)}</b><div><span className={difference != null && difference < 0 ? "cheaper" : difference != null && difference > 0 ? "pricier" : ""}>{comparison}</span><PriceTrail history={purchase.metrics} /></div></article>;
         })}
       </div>
     </section>

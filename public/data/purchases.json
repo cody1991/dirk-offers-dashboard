@@ -3,30 +3,60 @@
     "name": "Magnum ijs Pak 3 - 6 stuks of beker 204 - 440 ml.",
     "nameZh": "梦龙冰淇淋 Pak 3 - 6 stuks of beker 204 - 440 ml.",
     "paidPrice": 2.99,
-    "date": "2026-08-08"
+    "date": "2026-08-08",
+    "metrics": {
+      "days": 4,
+      "low": 2.99,
+      "high": 2.99,
+      "latest": 2.99
+    }
   },
   {
     "name": "Roombroodjes 2 stuks",
     "nameZh": "Roombroodjes 2 stuks",
     "paidPrice": 2.49,
-    "date": "2026-08-08"
+    "date": "2026-08-08",
+    "metrics": {
+      "days": 1,
+      "low": 2.49,
+      "high": 2.49,
+      "latest": 2.49
+    }
   },
   {
     "name": "Roerbakgarnalen Bak 150 gram.",
     "nameZh": "炒虾 Bak 150 gram.",
     "paidPrice": 2.99,
-    "date": "2026-08-08"
+    "date": "2026-08-08",
+    "metrics": {
+      "days": 1,
+      "low": 2.99,
+      "high": 2.99,
+      "latest": 2.99
+    }
   },
   {
     "name": "Vleeschmeesters Kipkluifjes gekruid 800 g",
     "nameZh": "Vleeschmeesters 腌制鸡翅根 800 g",
     "paidPrice": 3.99,
-    "date": "2026-08-08"
+    "date": "2026-08-08",
+    "metrics": {
+      "days": 4,
+      "low": 3.99,
+      "high": 3.99,
+      "latest": 3.99
+    }
   },
   {
     "name": "XL watermeloen Ca. 4 kilo. Per stuk",
     "nameZh": "特大西瓜 Ca. 4 kilo. 每个",
     "paidPrice": 3.99,
-    "date": "2026-08-08"
+    "date": "2026-08-08",
+    "metrics": {
+      "days": 3,
+      "low": 3.99,
+      "high": 3.99,
+      "latest": 3.99
+    }
   }
 ]

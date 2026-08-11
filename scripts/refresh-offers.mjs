@@ -132,6 +132,10 @@ for (const item of output) {
   const history = productHistories[item.name];
   item.metrics = history ? { days: history.days, low: history.low, high: history.high, latest: history.latest } : null;
 }
+for (const purchase of purchaseRows) {
+  const history = productHistories[purchase.name];
+  purchase.metrics = history ? { days: history.days, low: history.low, high: history.high, latest: history.latest } : null;
+}
 db.run("VACUUM");
 await fs.writeFile(dbPath, db.export());
 db.close();

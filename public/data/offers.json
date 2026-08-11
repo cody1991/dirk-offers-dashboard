@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T08:59:14.249Z",
+  "generatedAt": "2026-08-11T09:38:06.364Z",
   "archiveDate": "2026-08-11",
   "sourceUrl": "https://www.dirk.nl/aanbiedingen",
   "offers": [
@@ -19,7 +19,7 @@
       "friendLabel": "推荐购买",
       "friendRank": 3,
       "discountPercent": 17,
-      "advice": "省€0.50（17%），€3.83/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€0.50（17%），现€2.49，约 €3.83/kg，降幅有限，不列优先。",
       "metrics": {
         "days": 4,
         "low": 2.49,
@@ -43,7 +43,7 @@
       "friendLabel": "可以购买",
       "friendRank": 2,
       "discountPercent": 38,
-      "advice": "省€0.60（38%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.60（38%），现€0.99，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 0.99,
@@ -67,7 +67,7 @@
       "friendLabel": "可以购买",
       "friendRank": 2,
       "discountPercent": 36,
-      "advice": "现价与买入€3.99相同，€4.99/kg，无价差可利用。",
+      "advice": "现价€3.99与买入价相同，约 €4.99/kg，没有新增价差。",
       "metrics": {
         "days": 4,
         "low": 3.99,
@@ -91,7 +91,7 @@
       "friendLabel": "可以购买",
       "friendRank": 2,
       "discountPercent": 25,
-      "advice": "省€1.00（25%），€14.95/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€1.00（25%），现€2.99，约 €14.95/kg，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 2.99,
@@ -115,7 +115,7 @@
       "friendLabel": "觉得便宜",
       "friendRank": 2,
       "discountPercent": 24,
-      "advice": "省€0.60（24%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.60（24%），现€1.89，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 1.89,
@@ -139,7 +139,7 @@
       "friendLabel": "可以购买",
       "friendRank": 2,
       "discountPercent": 6,
-      "advice": "省€0.10（6%），€1.69/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€0.10（6%），现€1.69，约 €1.69/kg，降幅有限，不列优先。",
       "metrics": {
         "days": 4,
         "low": 1.69,
@@ -163,7 +163,7 @@
       "friendLabel": "可以尝试",
       "friendRank": 1,
       "discountPercent": 7,
-      "advice": "省€0.20（7%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.20（7%），现€2.79，降幅有限，不列优先。",
       "metrics": {
         "days": 4,
         "low": 2.79,
@@ -187,7 +187,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 63,
-      "advice": "省€1.50（63%），持平4天史低，当前价处记录低位。",
+      "advice": "省€1.50（63%），现€0.89，折扣超过五成，优先级高。",
       "metrics": {
         "days": 4,
         "low": 0.89,
@@ -211,7 +211,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 63,
-      "advice": "省€2.50（63%），持平4天史低，当前价处记录低位。",
+      "advice": "省€2.50（63%），现€1.49，折扣超过五成，优先级高。",
       "metrics": {
         "days": 4,
         "low": 1.49,
@@ -235,7 +235,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 63,
-      "advice": "省€4.16（63%），持平4天史低，当前价处记录低位。",
+      "advice": "省€4.16（63%），现€2.49，折扣超过五成，优先级高。",
       "metrics": {
         "days": 4,
         "low": 2.49,
@@ -259,7 +259,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 62,
-      "advice": "省€4.06（62%），持平4天史低，当前价处记录低位。",
+      "advice": "省€4.06（62%），现€2.49，折扣超过五成，优先级高。",
       "metrics": {
         "days": 4,
         "low": 2.49,
@@ -283,7 +283,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 62,
-      "advice": "省€0.95（62%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.95（62%），现€0.59，折扣超过五成，优先级高。",
       "metrics": {
         "days": 4,
         "low": 0.59,
@@ -307,7 +307,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 62,
-      "advice": "省€1.60（62%），持平4天史低，当前价处记录低位。",
+      "advice": "省€1.60（62%），现€0.99，折扣超过五成，优先级高。",
       "metrics": {
         "days": 4,
         "low": 0.99,
@@ -331,7 +331,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 58,
-      "advice": "现价与买入€2.99相同，无价差可利用。",
+      "advice": "现价€2.99与买入价相同，没有新增价差。",
       "metrics": {
         "days": 4,
         "low": 2.99,
@@ -355,7 +355,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 57,
-      "advice": "省€0.60（57%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.60（57%），现€0.45，折扣超过五成，优先级高。",
       "metrics": {
         "days": 4,
         "low": 0.45,
@@ -379,7 +379,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 56,
-      "advice": "省€2.50（56%），持平4天史低，当前价处记录低位。",
+      "advice": "省€2.50（56%），现€1.99，折扣超过五成，优先级高。",
       "metrics": {
         "days": 4,
         "low": 1.99,
@@ -403,7 +403,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 55,
-      "advice": "省€1.60（55%），€2.87/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€1.60（55%），现€1.29，约 €2.87/kg，折扣超过五成，优先级高。",
       "metrics": {
         "days": 4,
         "low": 1.29,
@@ -427,7 +427,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 54,
-      "advice": "省€2.30（54%），持平4天史低，当前价处记录低位。",
+      "advice": "省€2.30（54%），现€1.99，折扣超过五成，优先级高。",
       "metrics": {
         "days": 4,
         "low": 1.99,
@@ -451,7 +451,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 54,
-      "advice": "省€1.03（54%），持平4天史低，当前价处记录低位。",
+      "advice": "省€1.03（54%），现€0.89，折扣超过五成，优先级高。",
       "metrics": {
         "days": 4,
         "low": 0.89,
@@ -475,7 +475,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 53,
-      "advice": "省€1.66（53%），持平4天史低，当前价处记录低位。",
+      "advice": "省€1.66（53%），现€1.49，折扣超过五成，优先级高。",
       "metrics": {
         "days": 4,
         "low": 1.49,
@@ -499,7 +499,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 52,
-      "advice": "省€1.60（52%），持平4天史低，当前价处记录低位。",
+      "advice": "省€1.60（52%），现€1.49，折扣超过五成，优先级高。",
       "metrics": {
         "days": 4,
         "low": 1.49,
@@ -523,7 +523,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 50,
-      "advice": "省€1.50（50%），€2.21/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€1.50（50%），现€1.49，约 €2.21/kg，折扣超过五成，优先级高。",
       "metrics": {
         "days": 4,
         "low": 1.49,
@@ -547,7 +547,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 47,
-      "advice": "省€0.89（47%），€3.96/kg，持平2天史低，当前价处记录低位。",
+      "advice": "省€0.89（47%），现€0.99，约 €3.96/kg，降幅明显，值得优先查看。",
       "metrics": {
         "days": 2,
         "low": 0.99,
@@ -571,7 +571,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 47,
-      "advice": "省€1.80（47%），持平4天史低，当前价处记录低位。",
+      "advice": "省€1.80（47%），现€1.99，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 1.99,
@@ -595,7 +595,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "省€1.20（45%），持平4天史低，当前价处记录低位。",
+      "advice": "省€1.20（45%），现€1.49，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 1.49,
@@ -619,7 +619,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "省€1.60（45%），持平4天史低，当前价处记录低位。",
+      "advice": "省€1.60（45%），现€1.99，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 1.99,
@@ -643,7 +643,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "省€0.40（45%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.40（45%），现€0.49，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 0.49,
@@ -667,7 +667,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "省€0.80（45%），€6.60/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€0.80（45%），现€0.99，约 €6.60/kg，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 0.99,
@@ -691,7 +691,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "省€0.80（45%），€5.82/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€0.80（45%），现€0.99，约 €5.82/kg，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 0.99,
@@ -715,7 +715,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 44,
-      "advice": "省€0.39（44%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.39（44%），现€0.49，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 0.49,
@@ -739,7 +739,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 43,
-      "advice": "省€0.90（43%），€2.64/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€0.90（43%），现€1.19，约 €2.64/kg，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 1.19,
@@ -763,7 +763,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 43,
-      "advice": "省€1.26（43%），持平4天史低，当前价处记录低位。",
+      "advice": "省€1.26（43%），现€1.69，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 1.69,
@@ -787,7 +787,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 43,
-      "advice": "省€0.76（43%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.76（43%），现€0.99，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 0.99,
@@ -811,7 +811,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 43,
-      "advice": "省€1.48（43%），持平4天史低，当前价处记录低位。",
+      "advice": "省€1.48（43%），现€1.99，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 1.99,
@@ -835,7 +835,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 40,
-      "advice": "省€6.00（40%），持平4天史低，当前价处记录低位。",
+      "advice": "省€6.00（40%），现€8.99，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 8.99,
@@ -859,7 +859,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 40,
-      "advice": "省€0.46（40%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.46（40%），现€0.69，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 0.69,
@@ -883,7 +883,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 39,
-      "advice": "省€3.50（39%），€13.73/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€3.50（39%），现€5.49，约 €13.73/kg，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 5.49,
@@ -907,7 +907,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 38,
-      "advice": "省€2.40（38%），€46.94/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€2.40（38%），现€3.99，约 €46.94/kg，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 3.99,
@@ -931,7 +931,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 37,
-      "advice": "省€0.86（37%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.86（37%），现€1.49，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 1.49,
@@ -955,7 +955,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 37,
-      "advice": "省€0.86（37%），€8.05/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€0.86（37%），现€1.49，约 €8.05/kg，降幅明显，值得优先查看。",
       "metrics": {
         "days": 4,
         "low": 1.49,
@@ -979,7 +979,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 33,
-      "advice": "省€1.00（33%），€9.95/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€1.00（33%），现€1.99，约 €9.95/kg，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 1.99,
@@ -1003,7 +1003,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 32,
-      "advice": "省€1.40（32%），持平4天史低，当前价处记录低位。",
+      "advice": "省€1.40（32%），现€2.99，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 2.99,
@@ -1027,7 +1027,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 32,
-      "advice": "省€0.70（32%），€4.97/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€0.70（32%），现€1.49，约 €4.97/kg，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 1.49,
@@ -1051,7 +1051,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 30,
-      "advice": "省€2.50（30%），持平4天史低，当前价处记录低位。",
+      "advice": "省€2.50（30%），现€5.89，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 5.89,
@@ -1075,7 +1075,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 30,
-      "advice": "省€1.00（30%），持平4天史低，当前价处记录低位。",
+      "advice": "省€1.00（30%），现€2.29，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 2.29,
@@ -1099,7 +1099,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 29,
-      "advice": "省€0.80（29%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.80（29%），现€1.99，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 1.99,
@@ -1123,7 +1123,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 29,
-      "advice": "省€1.00（29%），€11.07/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€1.00（29%），现€2.49，约 €11.07/kg，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 2.49,
@@ -1147,7 +1147,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 29,
-      "advice": "省€0.70（29%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.70（29%），现€1.69，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 1.69,
@@ -1171,7 +1171,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 27,
-      "advice": "省€0.60（27%），€6.36/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€0.60（27%），现€1.59，约 €6.36/kg，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 1.59,
@@ -1195,7 +1195,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€2.19（25%），持平4天史低，当前价处记录低位。",
+      "advice": "省€2.19（25%），现€6.56，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 6.56,
@@ -1219,7 +1219,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€0.50（25%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.50（25%），现€1.49，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 1.49,
@@ -1243,7 +1243,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€0.50（25%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.50（25%），现€1.49，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 1.49,
@@ -1267,7 +1267,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€2.25（25%），持平4天史低，当前价处记录低位。",
+      "advice": "省€2.25（25%），现€6.74，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 6.74,
@@ -1291,7 +1291,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€0.30（25%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.30（25%），现€0.89，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 0.89,
@@ -1315,7 +1315,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€2.25（25%），持平4天史低，当前价处记录低位。",
+      "advice": "省€2.25（25%），现€6.74，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 6.74,
@@ -1339,7 +1339,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€0.50（25%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.50（25%），现€1.49，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 1.49,
@@ -1363,7 +1363,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€4.74（25%），持平4天史低，当前价处记录低位。",
+      "advice": "省€4.74（25%），现€14.21，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 14.21,
@@ -1387,7 +1387,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€4.66（25%），持平4天史低，当前价处记录低位。",
+      "advice": "省€4.66（25%），现€13.99，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 13.99,
@@ -1411,7 +1411,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€4.66（25%），持平4天史低，当前价处记录低位。",
+      "advice": "省€4.66（25%），现€13.99，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 13.99,
@@ -1435,7 +1435,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "省€1.00（25%），持平4天史低，当前价处记录低位。",
+      "advice": "省€1.00（25%），现€2.99，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 2.99,
@@ -1459,7 +1459,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 24,
-      "advice": "省€0.56（24%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.56（24%），现€1.79，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 1.79,
@@ -1483,7 +1483,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 23,
-      "advice": "省€0.30（23%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.30（23%），现€0.99，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 0.99,
@@ -1507,7 +1507,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 23,
-      "advice": "省€0.66（23%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.66（23%），现€2.19，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 2.19,
@@ -1531,7 +1531,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 22,
-      "advice": "省€0.20（22%），€0.69/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€0.20（22%），现€0.69，约 €0.69/kg，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 0.69,
@@ -1555,7 +1555,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 20,
-      "advice": "省€1.00（20%），持平4天史低，当前价处记录低位。",
+      "advice": "省€1.00（20%），现€3.99，有价格让利，按规格决定。",
       "metrics": {
         "days": 4,
         "low": 3.99,
@@ -1579,7 +1579,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 17,
-      "advice": "省€0.40（17%），€19.90/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€0.40（17%），现€1.99，约 €19.90/kg，降幅有限，不列优先。",
       "metrics": {
         "days": 4,
         "low": 1.99,
@@ -1603,7 +1603,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 17,
-      "advice": "省€1.00（17%），€19.96/kg，持平3天史低，当前价处记录低位。",
+      "advice": "省€1.00（17%），现€4.99，约 €19.96/kg，降幅有限，不列优先。",
       "metrics": {
         "days": 3,
         "low": 4.99,
@@ -1627,7 +1627,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 16,
-      "advice": "省€0.70（16%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.70（16%），现€3.79，降幅有限，不列优先。",
       "metrics": {
         "days": 4,
         "low": 3.79,
@@ -1651,7 +1651,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 15,
-      "advice": "省€0.30（15%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.30（15%），现€1.69，降幅有限，不列优先。",
       "metrics": {
         "days": 4,
         "low": 1.69,
@@ -1675,7 +1675,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 15,
-      "advice": "省€0.30（15%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.30（15%），现€1.69，降幅有限，不列优先。",
       "metrics": {
         "days": 4,
         "low": 1.69,
@@ -1699,7 +1699,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 14,
-      "advice": "省€0.50（14%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.50（14%），现€2.99，降幅有限，不列优先。",
       "metrics": {
         "days": 4,
         "low": 2.99,
@@ -1723,7 +1723,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 13,
-      "advice": "省€0.15（13%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.15（13%），现€0.99，降幅有限，不列优先。",
       "metrics": {
         "days": 4,
         "low": 0.99,
@@ -1747,7 +1747,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 12,
-      "advice": "省€0.20（12%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.20（12%），现€1.49，降幅有限，不列优先。",
       "metrics": {
         "days": 4,
         "low": 1.49,
@@ -1771,7 +1771,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 12,
-      "advice": "省€0.40（12%），€14.95/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€0.40（12%），现€2.99，约 €14.95/kg，降幅有限，不列优先。",
       "metrics": {
         "days": 4,
         "low": 2.99,
@@ -1795,7 +1795,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 10,
-      "advice": "省€1.00（10%），持平1天史低，当前价处记录低位。",
+      "advice": "省€1.00（10%），现€8.99，降幅有限，不列优先。",
       "metrics": {
         "days": 1,
         "low": 8.99,
@@ -1819,7 +1819,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 10,
-      "advice": "省€0.30（10%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.30（10%），现€2.69，降幅有限，不列优先。",
       "metrics": {
         "days": 4,
         "low": 2.69,
@@ -1843,7 +1843,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 9,
-      "advice": "省€0.50（9%），€6.65/kg，持平4天史低，当前价处记录低位。",
+      "advice": "省€0.50（9%），现€4.99，约 €6.65/kg，降幅有限，不列优先。",
       "metrics": {
         "days": 4,
         "low": 4.99,
@@ -1867,7 +1867,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 8,
-      "advice": "省€0.10（8%），持平4天史低，当前价处记录低位。",
+      "advice": "省€0.10（8%），现€1.19，降幅有限，不列优先。",
       "metrics": {
         "days": 4,
         "low": 1.19,
@@ -1891,7 +1891,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€9.99，持平4天史低，当前价处记录低位。",
+      "advice": "现价€9.99，缺少原价，无法核验折扣。",
       "metrics": {
         "days": 4,
         "low": 9.99,
@@ -1915,7 +1915,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€1.99，持平4天史低，当前价处记录低位。",
+      "advice": "现价€1.99，缺少原价，无法核验折扣。",
       "metrics": {
         "days": 4,
         "low": 1.99,
@@ -1939,7 +1939,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€1.59，持平4天史低，当前价处记录低位。",
+      "advice": "现价€1.59，缺少原价，无法核验折扣。",
       "metrics": {
         "days": 4,
         "low": 1.59,
@@ -1963,7 +1963,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€6.99，持平4天史低，当前价处记录低位。",
+      "advice": "现价€6.99，缺少原价，无法核验折扣。",
       "metrics": {
         "days": 4,
         "low": 6.99,
@@ -1987,7 +1987,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€0.99，€5.35/kg，持平4天史低，当前价处记录低位。",
+      "advice": "现价€0.99，约 €5.35/kg，缺少原价，无法核验折扣。",
       "metrics": {
         "days": 4,
         "low": 0.99,
@@ -2011,7 +2011,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€3.99，持平4天史低，当前价处记录低位。",
+      "advice": "现价€3.99，缺少原价，无法核验折扣。",
       "metrics": {
         "days": 4,
         "low": 3.99,
@@ -2035,7 +2035,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€5.99，持平4天史低，当前价处记录低位。",
+      "advice": "现价€5.99，缺少原价，无法核验折扣。",
       "metrics": {
         "days": 4,
         "low": 5.99,
@@ -2059,7 +2059,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€2.49，持平4天史低，当前价处记录低位。",
+      "advice": "现价€2.49，缺少原价，无法核验折扣。",
       "metrics": {
         "days": 4,
         "low": 2.49,
@@ -2083,7 +2083,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€5.99，€8.32/kg，持平4天史低，当前价处记录低位。",
+      "advice": "现价€5.99，约 €8.32/kg，缺少原价，无法核验折扣。",
       "metrics": {
         "days": 4,
         "low": 5.99,
@@ -2107,7 +2107,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€1.49，持平2天史低，当前价处记录低位。",
+      "advice": "现价€1.49，缺少原价，无法核验折扣。",
       "metrics": {
         "days": 2,
         "low": 1.49,
@@ -2131,7 +2131,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€0.99，€8.25/kg，持平4天史低，当前价处记录低位。",
+      "advice": "现价€0.99，约 €8.25/kg，缺少原价，无法核验折扣。",
       "metrics": {
         "days": 4,
         "low": 0.99,
@@ -2155,7 +2155,7 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "现€0.99，€6.83/kg，持平4天史低，当前价处记录低位。",
+      "advice": "现价€0.99，约 €6.83/kg，缺少原价，无法核验折扣。",
       "metrics": {
         "days": 4,
         "low": 0.99,
