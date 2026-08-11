@@ -18,7 +18,220 @@ if (!force && process.env.GITHUB_ACTIONS && localHour !== "10") {
   process.exit(0);
 }
 
-const exactTranslations = new Map([["Vleeschmeesters Actie varkensoester 6 st. 720 g", "Vleeschmeesters 特价猪里脊肉 6 块 720g"]]);
+const exactTranslations = new Map([
+  [
+    "Vleeschmeesters Actie varkensoester 6 st. 720 g",
+    "Vleeschmeesters 特价猪里脊肉 6 块 720g"
+  ],
+  [
+    "Calvé partysaus Fles 320 ml.",
+    "Calvé 派对酱 瓶装 320 毫升。"
+  ],
+  [
+    "Robijn wasparfum Flacon 342 ml.",
+    "红宝石洗涤香水瓶 342 毫升。"
+  ],
+  [
+    "Silvo kruiden of specerijen Pot 4 - 83 gram (m.u.v. bio en dragon).",
+    "Silvo 香草或香料 罐子 4 - 83 克（有机和龙蒿除外）。"
+  ],
+  [
+    "Douwe Egberts ice coffee Beker 230 ml of blik 250 ml.",
+    "Douwe Egberts 冰咖啡杯 230 毫升或罐装 250 毫升。"
+  ],
+  [
+    "Prodent Tube 75 ml (m.u.v. junior en kids).",
+    "Prodent 管 75 毫升（青少年和儿童除外）。"
+  ],
+  [
+    "Coca-Cola, Fanta, Sprite of Fernandes Blik 250 ml.",
+    "可口可乐、芬达、雪碧或 Fernandes 罐装 250 毫升。"
+  ],
+  [
+    "De Vegetarische Slager burgers Pak 2 stuks.",
+    "Vegetarian Butcher 汉堡 2 件装。"
+  ],
+  [
+    "Danio kwark Beker 450 gram.",
+    "Danio 干酪杯 450 克。"
+  ],
+  [
+    "Dettol reiniger Flacon 500 of pak 72 stuks. OP=OP",
+    "Dettol 清洁剂 500 瓶或 72 件装。 OP=OP"
+  ],
+  [
+    "Dubbelfrisss Boost Pak 1.5 liter.",
+    "Dubbelfrisss Boost Pak 1.5 升。"
+  ],
+  [
+    "Mad sauce of Gouda's Glorie saus Statube 500 of 550 ml.",
+    "Mad 酱或 Gouda's Glorie 酱 Statube 500 或 550 毫升。"
+  ],
+  [
+    "Bonduelle diepvriesgroente Zak 300 of 400 gram.",
+    "Bonduelle 冷冻蔬菜袋装 300 或 400 克。"
+  ],
+  [
+    "Kesbeke tafelzuren Pot 330 - 675 gram.",
+    "Kesbeke 泡菜锅 330 - 675 克。"
+  ],
+  [
+    "Bieze rauwkost Kuip 250 gram.",
+    "备泽生菜盆250克。"
+  ],
+  [
+    "Tasty Basics Pak 200 of 350 gram (m.u.v. robuust brood).",
+    "美味基本装 200 或 350 克（粗面包除外）。"
+  ],
+  [
+    "Becel, Blue Band of Croma Wikkel 250 gram.",
+    "Becel、Blue Band 或 Croma Wrap 250 克。"
+  ],
+  [
+    "Coolbest 100% juice Pak 1 liter.",
+    "Coolbest 100% 果汁装 1 升。"
+  ],
+  [
+    "Mangiare scrocchi Zak 150 gram.",
+    "Mangiare scrocchi 袋装 150 克。"
+  ],
+  [
+    "Zuivelhoeve Boer'n yoghurt Beker 170 gram.",
+    "Zuivelhoeve Boer'n 杯酸奶 170 克。"
+  ],
+  [
+    "Arla Skyr Beker 450 gram. OP=OP",
+    "Arla Skyr 杯 450 克。 OP=OP"
+  ],
+  [
+    "Milner kaasplakken Pak 6 plakken.",
+    "米尔纳奶酪片 6 片装。"
+  ],
+  [
+    "Patak's Indiase specialiteiten Pak 2 - 4 stuks of pot 165 - 450 gram.",
+    "Patak 的印度特色菜 2 - 4 件装或罐装 165 - 450 克。"
+  ],
+  [
+    "Sourcy Vitaminwater Fles 500 ml.",
+    "Sourcy 维生素水瓶 500 毫升。"
+  ],
+  [
+    "Whiskas Pak 12 x 85 gram.",
+    "Whiskas 包装 12 x 85 克。"
+  ],
+  [
+    "Balconi Trancetto of Rollino Pak 6 of 10 stuks. OP=OP",
+    "Balconi Trancetto 或 Rollino 6 件或 10 件装。 OP=OP"
+  ],
+  [
+    "Heks'nkaas Origineel 200 g",
+    "女巫奶酪原味 200 克"
+  ],
+  [
+    "Jan Napoli pizzadeeg 300 g",
+    "Jan Napoli 披萨面团 300 克"
+  ],
+  [
+    "Spa Fruit Fles 1.25 liter.",
+    "Spa 水果瓶 1.25 升。"
+  ],
+  [
+    "Zandvliet Gelderse kookworst 250 g",
+    "Zandvliet 海尔德兰香肠 250 克"
+  ],
+  [
+    "Affligem Blond of Tripel 6-pack fles à 30 cl.",
+    "Affligem Blonde 或 Tripel 6 瓶装 30 cl。"
+  ],
+  [
+    "Bakker Bollebof cakeplakken Pak 4 stuks. OP=OP",
+    "Bakker Bollebof 蛋糕片 4 片装。 OP=OP"
+  ],
+  [
+    "Bakker van der Akker Reuze rozijnen- of mueslibollen Zak 4 stuks.",
+    "Bakker van der Akker 巨型葡萄干或麦片球 4 件装袋。"
+  ],
+  [
+    "DeliciouS Fles 75 cl.",
+    "美味瓶装 75 cl。"
+  ],
+  [
+    "Hertog Jan pils of 0.0 6-pack blik à 33 of 50 cl.",
+    "Hertog Jan 啤酒或 0.0 6 罐装 33 或 50 cl。"
+  ],
+  [
+    "Texels Zeebries, Skuumkoppe of 0.0 4 of 6-pack fles à 30 cl.",
+    "Texels Sea Breeze、Skuumkoppe 或 0.0 4 或 6 瓶装 30 cl。"
+  ],
+  [
+    "Wicky Pakje 200 ml.",
+    "Wicky 套装 200 毫升。"
+  ],
+  [
+    "Oreo enrobed Pak 6 x 2 stuks.",
+    "奥利奥包裹 6 x 2 件装。"
+  ],
+  [
+    "Real Cool Hard Seltzer of iced tea Blik 25 cl.",
+    "Real Cool 硬苏打水或冰茶罐装 25 cl。"
+  ],
+  [
+    "Die 5 Groot Fles 75 cl.",
+    "Die 5 Groot 瓶 75 cl。"
+  ],
+  [
+    "Zalmfilet met huid 2 st. 250 g",
+    "带皮三文鱼片2块。 250克"
+  ],
+  [
+    "Primá! verse maaltijd Per bak.",
+    "美好的！新鲜膳食 每个容器。"
+  ],
+  [
+    "RIMBOESAUZEN Hamburgersaus squeeze 250 ml",
+    "RIMBUS SAUCES 汉堡酱挤压 250 毫升"
+  ],
+  [
+    "Vleeschmeesters Duitse biefstuk 2 stuks 200 g",
+    "Vleeschmeesters 德国牛排 2 块 200 克"
+  ],
+  [
+    "Corona Extra 12x 25cl 3 liter",
+    "Corona Extra 12x 25cl 3 升"
+  ],
+  [
+    "Pink lady 6 Stuks",
+    "粉红佳人6片"
+  ],
+  [
+    "Vleeschmeesters Gemengd gehakt 750 g",
+    "Vleeschmeesters 混合肉末 750 克"
+  ],
+  [
+    "Cantaloupe of gele honing meloen Schaal 250 gram.",
+    "哈密​​瓜或黄蜜瓜碗250克。"
+  ],
+  [
+    "Finish Vaatwastabletten quantum 44 Stuks",
+    "Finish 洗碗机片 44 片"
+  ],
+  [
+    "La Perla tonijnstukken Blik 185 gram. OP=OP",
+    "La Perla 金枪鱼片罐头 185 克。 OP=OP"
+  ],
+  [
+    "Lenor La Collection wasverzachter Per flacon. OP=OP",
+    "Lenor La Collection 织物柔顺剂 每瓶。 OP=OP"
+  ],
+  [
+    "Nalys Keukenpapier vochtvangers 12 stuks",
+    "Nalys 厨房吸湿纸 12 片"
+  ],
+  [
+    "Red Band Bites Zak 145 gram. OP=OP",
+    "红带咬袋 145 克。 OP=OP"
+  ]
+]);
 const translations = [
   ["Aardbeien", "草莓"], ["Chinese kool", "大白菜"], ["Cocktail trostomaten", "串番茄"], ["Handperen", "雪梨"], ["blauwe bessen", "蓝莓"], ["Galia meloen", "哈密瓜"], ["Roerbakgarnalen", "炒虾"], ["Kipkluifjes gekruid", "腌制鸡翅根"], ["XL watermeloen", "特大西瓜"], ["Kersen", "樱桃"], ["Mango ready to eat", "即食芒果"], ["witte druiven", "白葡萄"], ["Nectarines", "油桃"], ["courgette", "西葫芦"], ["rode paprika", "红甜椒"], ["Uien", "洋葱"], ["Avocado", "牛油果"], ["koffiebonen", "咖啡豆"], ["koffie", "咖啡"], ["Magnum ijs", "梦龙冰淇淋"], ["Friet", "薯条"], ["pasta", "意大利面"], ["pastasaus", "意面酱"], ["wasmiddel", "洗衣液/洗衣凝珠"], ["shampoo", "洗发水"], ["conditioner", "护发素"], ["deodorant", "止汗剂"], ["Klene", "甘草糖"], ["Lay", "乐事薯片"], ["Heineken", "喜力啤酒"], ["Grolsch", "格罗尔施啤酒"]
 ];
