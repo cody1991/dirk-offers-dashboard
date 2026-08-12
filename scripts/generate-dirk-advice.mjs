@@ -37,4 +37,8 @@ for (const offer of data.offers) {
   }
 }
 await fs.writeFile(offersPath, JSON.stringify(data, null, 2) + "\n");
+if (data.archiveDate) {
+  const historyPath = path.join(root, "public", "data", "history", `${data.archiveDate}.json`);
+  await fs.writeFile(historyPath, JSON.stringify(data, null, 2) + "\n");
+}
 console.log("Generated evidence-based advice for " + data.offers.length + " Dirk offers.");
