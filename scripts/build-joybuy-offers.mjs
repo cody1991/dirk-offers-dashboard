@@ -25,8 +25,9 @@ function advice({ discountPercent, sale, rating, sold, unitPrice, deposit }) {
 const offers = raw.map(({ name, imageUrl, productUrl, text }) => {
   const prices = [...text.matchAll(/€\s*([\d.]+,[\d]{2})/g)].map((match) => money(match[1]));
   const discountPercent = Number(text.match(/(\d+)% korting/)?.[1]);
-  const rating = text.match(/\s*([\d.]+)/)?.[1] ?? null;
-  const sold = text.match(/(\d+[k+]*\+?\s*verkocht)/)?.[1] ?? null;
+  const review = text.match(/\s*([0-5]\.\d)(\d+(?:k)?\+\s*verkocht)/);
+  const rating = review?.[1] ?? null;
+  const sold = review?.[2] ?? text.match(/(\d+(?:k)?\+\s*verkocht)/)?.[1] ?? null;
   const unit = text.match(/€\s*([\d.]+,[\d]{2})\s+per\s+(kg|liter|stuk)/);
   const unitPrice = unit ? `€${unit[1]}/${unit[2]}` : null;
   const deposit = text.match(/excl\.\s*€\s*([\d.]+,[\d]{2})\s+Statiegeld/)?.[1];
