@@ -10,16 +10,22 @@ const [data, purchases] = await Promise.all([
 
 function amount(value) { return "€" + value.toFixed(2); }
 function unitEvidence(offer) { return offer.unitPrice != null ? "，约 €" + offer.unitPrice.toFixed(2) + "/kg" : ""; }
+function historyEvidence(offer) {
+  const days = offer.metrics?.days;
+  const low = offer.metrics?.low;
+  return days && low != null ? `近${days}日已是最低价${amount(low)}` : "暂无历史低价";
+}
 function regularAdvice(offer) {
   const saving = offer.original == null ? null : offer.original - offer.sale;
   const discount = offer.discountPercent;
-  const evidence = saving == null ? "现价" + amount(offer.sale) : "省" + amount(saving) + "（" + discount + "%），现" + amount(offer.sale);
+  const evidence = saving == null ? "现价" + amount(offer.sale) : "现价" + amount(offer.sale) + "，直降" + amount(saving) + "（" + discount + "%）";
   const unit = unitEvidence(offer);
-  if (discount == null) return evidence + unit + "，缺少原价，无法核验折扣。";
-  if (discount >= 50) return evidence + unit + "，折扣超过五成，优先级高。";
-  if (discount >= 35) return evidence + unit + "，降幅明显，值得优先查看。";
-  if (discount >= 20) return evidence + unit + "，有价格让利，按规格决定。";
-  return evidence + unit + "，降幅有限，不列优先。";
+  const history = historyEvidence(offer);
+  if (discount == null) return evidence + unit + "，" + history + "；原价未列。";
+  if (discount >= 50) return evidence + unit + "；" + history + "。";
+  if (discount >= 35) return evidence + unit + "；" + history + "，降幅明显。";
+  if (discount >= 20) return evidence + unit + "；" + history + "，有实际让利。";
+  return evidence + unit + "；" + history + "，降幅有限。";
 }
 
 for (const offer of data.offers) {
@@ -28,10 +34,10 @@ for (const offer of data.offers) {
     const delta = offer.sale - bought.paidPrice;
     const unit = unitEvidence(offer);
     offer.advice = Math.abs(delta) < 0.005
-      ? "现价" + amount(offer.sale) + "与买入价相同" + unit + "，没有新增价差。"
+      ? "现价" + amount(offer.sale) + "与买入价相同" + unit + "；" + historyEvidence(offer) + "。"
       : delta < 0
-        ? "现价比买入" + amount(bought.paidPrice) + "低" + amount(Math.abs(delta)) + unit + "，价差可用。"
-        : "现价比买入" + amount(bought.paidPrice) + "高" + amount(delta) + unit + "，不如上次。";
+        ? "现价比买入" + amount(bought.paidPrice) + "低" + amount(Math.abs(delta)) + unit + "；" + historyEvidence(offer) + "。"
+        : "现价比买入" + amount(bought.paidPrice) + "高" + amount(delta) + unit + "；" + historyEvidence(offer) + "。";
   } else {
     offer.advice = regularAdvice(offer);
   }
