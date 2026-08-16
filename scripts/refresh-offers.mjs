@@ -53,6 +53,19 @@ function analysis(offer) {
   if (percent != null && percent >= 25) return `${prefix}${perKg ? `；约 €${perKg.toFixed(2)}/kg` : ""}，正常好价。`;
   return `${prefix}${perKg ? `；约 €${perKg.toFixed(2)}/kg` : ""}，折扣有限，不缺不用凑。`;
 }
+function evidenceAdvice(offer, purchase) {
+  const low = offer.metrics?.low;
+  const days = offer.metrics?.days;
+  if (purchase && offer.sale < purchase.paidPrice) {
+    return `较买入€${purchase.paidPrice.toFixed(2)}省€${(purchase.paidPrice - offer.sale).toFixed(2)}，现€${offer.sale.toFixed(2)}。`;
+  }
+  if (offer.original != null) {
+    const saving = offer.original - offer.sale;
+    const percent = Math.round(saving / offer.original * 100);
+    return `省€${saving.toFixed(2)}（${percent}%）；近${days}日低€${low.toFixed(2)}。`;
+  }
+  return `现€${offer.sale.toFixed(2)}；近${days}日低€${low.toFixed(2)}，无原价。`;
+}
 
 const response = await fetch(`https://r.jina.ai/${offerUrl}`);
 if (!response.ok) throw new Error(`Offer page request failed: ${response.status}`);
@@ -135,6 +148,11 @@ for (const item of output) {
 for (const purchase of purchaseRows) {
   const history = productHistories[purchase.name];
   purchase.metrics = history ? { days: history.days, low: history.low, high: history.high, latest: history.latest } : null;
+}
+const purchasesByName = new Map(purchaseRows.map((purchase) => [purchase.name, purchase]));
+for (const item of output) {
+  item.advice = evidenceAdvice(item, purchasesByName.get(item.name));
+  db.run("UPDATE offers SET advice = ? WHERE snapshot_id = ? AND name = ?", [item.advice, snapshotId, item.name]);
 }
 db.run("VACUUM");
 await fs.writeFile(dbPath, db.export());
