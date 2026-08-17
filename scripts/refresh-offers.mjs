@@ -66,6 +66,13 @@ function evidenceAdvice(offer, purchase) {
   }
   return `现€${offer.sale.toFixed(2)}；近${days}日低€${low.toFixed(2)}，无原价。`;
 }
+function recommendation(offer, purchase) {
+  if (purchase && offer.sale < purchase.paidPrice) return { rank: 4, label: "强烈推荐" };
+  if ((offer.discountPercent ?? 0) >= 60) return { rank: 3, label: "强烈推荐" };
+  if ((offer.discountPercent ?? 0) >= 50) return { rank: 2, label: "优先看看" };
+  if ((offer.discountPercent ?? 0) >= 40 && offer.metrics?.low != null && Math.abs(offer.sale - offer.metrics.low) < 0.005) return { rank: 1, label: "值得关注" };
+  return { rank: 0, label: "" };
+}
 
 const response = await fetch(`https://r.jina.ai/${offerUrl}`);
 if (!response.ok) throw new Error(`Offer page request failed: ${response.status}`);
@@ -152,8 +159,12 @@ for (const purchase of purchaseRows) {
 const purchasesByName = new Map(purchaseRows.map((purchase) => [purchase.name, purchase]));
 for (const item of output) {
   item.advice = evidenceAdvice(item, purchasesByName.get(item.name));
+  const pick = recommendation(item, purchasesByName.get(item.name));
+  item.recommendationRank = pick.rank;
+  item.recommendationLabel = pick.label;
   db.run("UPDATE offers SET advice = ? WHERE snapshot_id = ? AND name = ?", [item.advice, snapshotId, item.name]);
 }
+output.sort((a, b) => b.recommendationRank - a.recommendationRank || b.friendRank - a.friendRank || (b.discountPercent ?? -1) - (a.discountPercent ?? -1) || a.nameZh.localeCompare(b.nameZh));
 db.run("VACUUM");
 await fs.writeFile(dbPath, db.export());
 db.close();

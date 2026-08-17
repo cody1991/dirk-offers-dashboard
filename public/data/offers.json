@@ -1,32 +1,8 @@
 {
-  "generatedAt": "2026-08-17T08:06:13.612Z",
+  "generatedAt": "2026-08-17T08:11:50.730Z",
   "archiveDate": "2026-08-17",
   "sourceUrl": "https://www.dirk.nl/aanbiedingen",
   "offers": [
-    {
-      "name": "Galia meloen Per stuk",
-      "category": "Aardappelen, groente & fruit",
-      "sale": 0.99,
-      "original": 1.99,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F268844_2026-08-17_04-04-25-252_9490d3d7-0d03-4221-a2b0-4b3157c72039.png?width=190",
-      "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/galia%20meloen/4582",
-      "nameZh": "哈密瓜 每个",
-      "package": "Per stuk",
-      "grams": null,
-      "unitPrice": null,
-      "friendPick": true,
-      "friendNote": "朋友确认是哈密瓜，可以买。",
-      "friendLabel": "推荐购买",
-      "friendRank": 3,
-      "discountPercent": 50,
-      "advice": "省€1.00（50%）；近7日低€0.99。",
-      "metrics": {
-        "days": 7,
-        "low": 0.99,
-        "high": 0.99,
-        "latest": 0.99
-      }
-    },
     {
       "name": "XL watermeloen Ca. 4 kilo. Per stuk",
       "category": "Aardappelen, groente & fruit",
@@ -49,31 +25,9 @@
         "low": 3.49,
         "high": 3.99,
         "latest": 3.49
-      }
-    },
-    {
-      "name": "1 de Beste Pitloze witte druiven 500 g",
-      "category": "Aardappelen, groente & fruit",
-      "sale": 1.49,
-      "original": 2.39,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F412119_2026-08-17_04-07-30-334_e37a03af-e38c-4a9c-8cbe-4720fdfbd675.png?width=190",
-      "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/1%20de%20beste%20pitloze%20witte%20druiven/59971",
-      "nameZh": "Dirk 自有品牌 Pitloze 白葡萄 500 g",
-      "package": "",
-      "grams": 500,
-      "unitPrice": 2.98,
-      "friendPick": true,
-      "friendNote": "朋友认为葡萄/油桃很便宜。",
-      "friendLabel": "觉得便宜",
-      "friendRank": 2,
-      "discountPercent": 38,
-      "advice": "省€0.90（38%）；近4日低€1.49。",
-      "metrics": {
-        "days": 4,
-        "low": 1.49,
-        "high": 1.49,
-        "latest": 1.49
-      }
+      },
+      "recommendationRank": 4,
+      "recommendationLabel": "强烈推荐"
     },
     {
       "name": "Sun Vaatwastabletten expert lemon 16 Stuks",
@@ -97,7 +51,9 @@
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
-      }
+      },
+      "recommendationRank": 3,
+      "recommendationLabel": "强烈推荐"
     },
     {
       "name": "Pepsi, Royal Club, Fanta, Sprite of Fuze Tea Fles 1 of 1.25 liter. OP=OP",
@@ -121,7 +77,9 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      }
+      },
+      "recommendationRank": 3,
+      "recommendationLabel": "强烈推荐"
     },
     {
       "name": "Zonnatura thee Pak 20 stuks.",
@@ -145,7 +103,9 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      }
+      },
+      "recommendationRank": 3,
+      "recommendationLabel": "强烈推荐"
     },
     {
       "name": "3G reiniger Flacon 500 ml.",
@@ -169,7 +129,9 @@
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
-      }
+      },
+      "recommendationRank": 3,
+      "recommendationLabel": "强烈推荐"
     },
     {
       "name": "Knorr Wereldgerechten Pak 2 - 3 personen (m.u.v. voordeelpakken).",
@@ -193,7 +155,35 @@
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
-      }
+      },
+      "recommendationRank": 3,
+      "recommendationLabel": "强烈推荐"
+    },
+    {
+      "name": "Galia meloen Per stuk",
+      "category": "Aardappelen, groente & fruit",
+      "sale": 0.99,
+      "original": 1.99,
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F268844_2026-08-17_04-04-25-252_9490d3d7-0d03-4221-a2b0-4b3157c72039.png?width=190",
+      "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/galia%20meloen/4582",
+      "nameZh": "哈密瓜 每个",
+      "package": "Per stuk",
+      "grams": null,
+      "unitPrice": null,
+      "friendPick": true,
+      "friendNote": "朋友确认是哈密瓜，可以买。",
+      "friendLabel": "推荐购买",
+      "friendRank": 3,
+      "discountPercent": 50,
+      "advice": "省€1.00（50%）；近7日低€0.99。",
+      "metrics": {
+        "days": 7,
+        "low": 0.99,
+        "high": 0.99,
+        "latest": 0.99
+      },
+      "recommendationRank": 2,
+      "recommendationLabel": "优先看看"
     },
     {
       "name": "Knorr Good Noodles of Pasta Beker 62 - 89 gram.",
@@ -217,7 +207,9 @@
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
-      }
+      },
+      "recommendationRank": 2,
+      "recommendationLabel": "优先看看"
     },
     {
       "name": "De Cecco pasta Zak 250 of 500 gram (m.u.v. Cannelloni).",
@@ -241,7 +233,9 @@
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
-      }
+      },
+      "recommendationRank": 2,
+      "recommendationLabel": "优先看看"
     },
     {
       "name": "Remia satésaus kant & klaar Kuip 325 gram.",
@@ -265,7 +259,9 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      }
+      },
+      "recommendationRank": 2,
+      "recommendationLabel": "优先看看"
     },
     {
       "name": "Chocomel, Fristi of Optimel Pakje 200 ml.",
@@ -289,7 +285,9 @@
         "low": 1.79,
         "high": 1.79,
         "latest": 1.79
-      }
+      },
+      "recommendationRank": 2,
+      "recommendationLabel": "优先看看"
     },
     {
       "name": "Dr. Pepper of Oasis Blik 33 cl. OP=OP",
@@ -313,7 +311,9 @@
         "low": 0.59,
         "high": 0.59,
         "latest": 0.59
-      }
+      },
+      "recommendationRank": 2,
+      "recommendationLabel": "优先看看"
     },
     {
       "name": "Hertog Jan 0.0 Krat 24 flessen à 30 cl.",
@@ -337,7 +337,9 @@
         "low": 8.99,
         "high": 8.99,
         "latest": 8.99
-      }
+      },
+      "recommendationRank": 2,
+      "recommendationLabel": "优先看看"
     },
     {
       "name": "Hertog ijs Bak 825 of 900 ml.",
@@ -361,7 +363,9 @@
         "low": 2.89,
         "high": 2.89,
         "latest": 2.89
-      }
+      },
+      "recommendationRank": 2,
+      "recommendationLabel": "优先看看"
     },
     {
       "name": "Vivera Pak 2 of 12 stuks of 150 - 500 gram (m.u.v. tofu 280 - 450 gram).",
@@ -385,7 +389,9 @@
         "low": 1.89,
         "high": 1.89,
         "latest": 1.89
-      }
+      },
+      "recommendationRank": 2,
+      "recommendationLabel": "优先看看"
     },
     {
       "name": "1 de Beste Watermeloen part Per stuk",
@@ -409,7 +415,9 @@
         "low": 0.99,
         "high": 1.69,
         "latest": 0.99
-      }
+      },
+      "recommendationRank": 2,
+      "recommendationLabel": "优先看看"
     },
     {
       "name": "Palmolive handzeep Flacon 300 ml.",
@@ -433,7 +441,9 @@
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
-      }
+      },
+      "recommendationRank": 2,
+      "recommendationLabel": "优先看看"
     },
     {
       "name": "Wella haarspray Per XL- bus. OP=OP",
@@ -457,7 +467,9 @@
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
-      }
+      },
+      "recommendationRank": 2,
+      "recommendationLabel": "优先看看"
     },
     {
       "name": "Fitmeals of Mama's maaltijd Pak 400 of 425 gram. OP=OP",
@@ -481,7 +493,9 @@
         "low": 3.49,
         "high": 3.49,
         "latest": 3.49
-      }
+      },
+      "recommendationRank": 1,
+      "recommendationLabel": "值得关注"
     },
     {
       "name": "Oreo rollpack Rol 154 of 157 gram (m.u.v. original).",
@@ -505,7 +519,9 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      }
+      },
+      "recommendationRank": 1,
+      "recommendationLabel": "值得关注"
     },
     {
       "name": "Fruity 100% smoothie of Fruity Juice lemonade Fles 250 of 500 ml.",
@@ -529,7 +545,9 @@
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
-      }
+      },
+      "recommendationRank": 1,
+      "recommendationLabel": "值得关注"
     },
     {
       "name": "La Vache qui rit Cheez Dippers of smeerpuntjes Pak 5 of 8 stuks.",
@@ -553,7 +571,9 @@
         "low": 1.79,
         "high": 1.79,
         "latest": 1.79
-      }
+      },
+      "recommendationRank": 1,
+      "recommendationLabel": "值得关注"
     },
     {
       "name": "Tena Discreet Pak 6 - 28 stuks.",
@@ -577,7 +597,9 @@
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
-      }
+      },
+      "recommendationRank": 1,
+      "recommendationLabel": "值得关注"
     },
     {
       "name": "Almhof choco met slagroom of yoghurtmousse Beker 180 gram of pak 2 x 95 gram.",
@@ -601,7 +623,9 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      }
+      },
+      "recommendationRank": 1,
+      "recommendationLabel": "值得关注"
     },
     {
       "name": "Kips Per stuk 120 - 230 gram.",
@@ -625,7 +649,9 @@
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
-      }
+      },
+      "recommendationRank": 1,
+      "recommendationLabel": "值得关注"
     },
     {
       "name": "Wilde perziken verpakt 1 kg",
@@ -649,7 +675,35 @@
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
-      }
+      },
+      "recommendationRank": 1,
+      "recommendationLabel": "值得关注"
+    },
+    {
+      "name": "1 de Beste Pitloze witte druiven 500 g",
+      "category": "Aardappelen, groente & fruit",
+      "sale": 1.49,
+      "original": 2.39,
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F412119_2026-08-17_04-07-30-334_e37a03af-e38c-4a9c-8cbe-4720fdfbd675.png?width=190",
+      "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/1%20de%20beste%20pitloze%20witte%20druiven/59971",
+      "nameZh": "Dirk 自有品牌 Pitloze 白葡萄 500 g",
+      "package": "",
+      "grams": 500,
+      "unitPrice": 2.98,
+      "friendPick": true,
+      "friendNote": "朋友认为葡萄/油桃很便宜。",
+      "friendLabel": "觉得便宜",
+      "friendRank": 2,
+      "discountPercent": 38,
+      "advice": "省€0.90（38%）；近4日低€1.49。",
+      "metrics": {
+        "days": 4,
+        "low": 1.49,
+        "high": 1.49,
+        "latest": 1.49
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Nestle Multipacks Pak 4 - 6 stuks.",
@@ -673,7 +727,9 @@
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Cashew- of pistachenoten Kuip 140 of 170 gram.",
@@ -697,7 +753,9 @@
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Dubbeldrank Pak 1 liter.",
@@ -721,7 +779,9 @@
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Karvan Cévitam Zero Bus 600 ml.",
@@ -745,7 +805,9 @@
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Trostomaten los 1 kg (ca. 10 stuks)",
@@ -769,7 +831,9 @@
         "low": 1.18,
         "high": 1.18,
         "latest": 1.18
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Campina Botergoud ongezouten 250 g",
@@ -793,7 +857,9 @@
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Bolletje Goed Bezig tussendoorrepen Pak 9 stuks.",
@@ -817,7 +883,9 @@
         "low": 1.69,
         "high": 1.69,
         "latest": 1.69
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Chio Borrelbites of Fusion Nuts Zak 200 of 240 gram.",
@@ -841,7 +909,9 @@
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Penotti Duopasta hazelnoot-vanille 800 g",
@@ -865,7 +935,9 @@
         "low": 3.49,
         "high": 3.49,
         "latest": 3.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Sheba kattenvoer Kuip 85 gram.",
@@ -889,7 +961,9 @@
         "low": 0.59,
         "high": 0.59,
         "latest": 0.59
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Zaanse mayonaise Per knijpfles.",
@@ -913,7 +987,9 @@
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Bakker Bollebof Luxe koeken Pak 4 - 7 stuks.",
@@ -937,7 +1013,9 @@
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Vleeschmeesters Actie verse worst 2 st. 750 g",
@@ -961,7 +1039,9 @@
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Yakult Drink original 15 stuks 975 ml",
@@ -985,7 +1065,9 @@
         "low": 4.99,
         "high": 4.99,
         "latest": 4.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Bits & Bites Kaasblokjes Kuip 100 - 130 gram.",
@@ -1009,7 +1091,9 @@
         "low": 1.59,
         "high": 1.59,
         "latest": 1.59
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Bugles, Hamka's of Wokkels Zak 100 of 125 gram.",
@@ -1033,7 +1117,9 @@
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Kühne tafelzuren Pot 330 of 670 gram.",
@@ -1057,7 +1143,9 @@
         "low": 1.79,
         "high": 1.79,
         "latest": 1.79
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Vergeer kaasplakken Pak 150 of 175 gram.",
@@ -1081,7 +1169,9 @@
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "HiPRO Fles 300 ml, knijpzakje of kuip 200 gram of reep 45 gram.",
@@ -1105,7 +1195,9 @@
         "low": 1.69,
         "high": 1.69,
         "latest": 1.69
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Campina kwark Griekse stijl Per emmer.",
@@ -1129,7 +1221,9 @@
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "1 de Beste Chorizo 125 g",
@@ -1153,7 +1247,9 @@
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Senseo koffiepads Per voordeelpak.",
@@ -1177,7 +1273,9 @@
         "low": 6.49,
         "high": 6.49,
         "latest": 6.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "De Kuyper Cocktail 0.0 Blik 25 cl.",
@@ -1201,7 +1299,9 @@
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Doornbosch Fles 75 cl.",
@@ -1225,7 +1325,9 @@
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Leffe Zomerbier, Blond of Tripel 6-pack fles à 30 of 33 cl.",
@@ -1249,7 +1351,9 @@
         "low": 7.49,
         "high": 7.49,
         "latest": 7.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Vers Somun flatbread grill 120 g",
@@ -1273,7 +1377,9 @@
         "low": 0.59,
         "high": 0.59,
         "latest": 0.59
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Bleekselderij Per stuk",
@@ -1297,7 +1403,9 @@
         "low": 0.99,
         "high": 1.19,
         "latest": 0.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "1 de Beste Andijvie fijn kleinverpakking 250 g",
@@ -1321,7 +1429,9 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "1 de Beste Gerookte ontbijtspek 150 g",
@@ -1345,7 +1455,9 @@
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "1 de Beste Minkrieltjes 700 g",
@@ -1369,7 +1481,9 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Hele dorade, zeebaars of schol Pak 300 - 330 gram. OP=OP",
@@ -1393,7 +1507,9 @@
         "low": 4.99,
         "high": 4.99,
         "latest": 4.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Capri-Sun 10-pack.",
@@ -1417,7 +1533,9 @@
         "low": 3.79,
         "high": 3.79,
         "latest": 3.79
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "1 de Beste Flinterdunne vleeswaren Pak 100 gram.",
@@ -1441,7 +1559,9 @@
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Amstel of Grolsch pils of 0.0 6-pack blik à 33 cl.",
@@ -1465,7 +1585,9 @@
         "low": 4.49,
         "high": 4.49,
         "latest": 4.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Bits & Bites Kaasplateau pittig 230 g",
@@ -1489,7 +1611,9 @@
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Diamond Allure Fles 75 cl.",
@@ -1513,7 +1637,9 @@
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Vleeschmeesters Actie hamburger jalapeno 4 st. 360 g",
@@ -1537,7 +1663,9 @@
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Vers afbak Saucijzenbroodje 1 Stuks",
@@ -1561,7 +1689,9 @@
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Knorr soep Pak 80 - 100 gram.",
@@ -1585,7 +1715,9 @@
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "1 de Beste Spinazie ongewassen 450 g",
@@ -1609,7 +1741,9 @@
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Daily Chef Oosterse maaltijd Schaal 450 gram.",
@@ -1633,7 +1767,9 @@
         "low": 3.79,
         "high": 3.79,
         "latest": 3.79
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Maoam Uitdeelzak 480 g",
@@ -1657,7 +1793,9 @@
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Vleeschmeesters Actie gehaktschnitzel korean 2 st. 200 g",
@@ -1681,7 +1819,9 @@
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "1 de Beste Citroenen verpakt 500 g",
@@ -1705,7 +1845,9 @@
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Hardanger lachs Actie gerookte zalm 150 g",
@@ -1729,7 +1871,9 @@
         "low": 3.49,
         "high": 3.49,
         "latest": 3.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "1 de Beste Radijs Per bos",
@@ -1753,7 +1897,9 @@
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Vloerbrood Per stuk.",
@@ -1777,7 +1923,9 @@
         "low": 1.69,
         "high": 1.69,
         "latest": 1.69
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Bakker van der Akker Bruine of volkoren bollen Per zak.",
@@ -1801,7 +1949,9 @@
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Bio+ Oesterzwammen bio 150 g",
@@ -1825,7 +1975,9 @@
         "low": 1.79,
         "high": 1.79,
         "latest": 1.79
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "1 de Beste Waspeen 500 g",
@@ -1849,7 +2001,9 @@
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Love beets Rode bieten gekookt 250 g",
@@ -1873,7 +2027,9 @@
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Tante Fanny Kit verse kaneelbroodjes 600 g",
@@ -1897,7 +2053,9 @@
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Cosmic crisp 4 Stuks",
@@ -1921,7 +2079,9 @@
         "low": 1.89,
         "high": 1.89,
         "latest": 1.89
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "1 de Beste Royal gala 1,5 kg",
@@ -1945,7 +2105,9 @@
         "low": 3.49,
         "high": 3.49,
         "latest": 3.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Vleeschmeesters Kipdijshoarma 700 g",
@@ -1969,7 +2131,9 @@
         "low": 7.99,
         "high": 7.99,
         "latest": 7.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Zespri Kiwi sungold 1 kg",
@@ -1993,7 +2157,9 @@
         "low": 5.78,
         "high": 5.78,
         "latest": 5.78
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Dove deodorant Bus 150 ml.",
@@ -2017,7 +2183,9 @@
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Dreft wasmiddel Flacon 21 wasbeurten of pak 14 capsules. OP=OP",
@@ -2041,7 +2209,9 @@
         "low": 3.89,
         "high": 3.89,
         "latest": 3.89
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Garnier Micellair water 400 ml",
@@ -2065,7 +2235,9 @@
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Guhl shampoo of conditioner Flacon 250 ml. OP=OP",
@@ -2089,7 +2261,9 @@
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Haverkoeken cranberry 80 g",
@@ -2113,7 +2287,9 @@
         "low": 0.59,
         "high": 0.59,
         "latest": 0.59
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Jong belegen kaas voordeelstuk 1 kg",
@@ -2137,7 +2313,9 @@
         "low": 5.99,
         "high": 5.99,
         "latest": 5.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Koko fruitbites Pot 130 gram. OP=OP",
@@ -2161,7 +2339,9 @@
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Lavazza koffiecups 30-pack. OP=OP",
@@ -2185,7 +2365,9 @@
         "low": 8.49,
         "high": 8.49,
         "latest": 8.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "M&M's Zak 340 of 363 gram. OP=OP",
@@ -2209,7 +2391,9 @@
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Melkunie smoothie Fles 350 ml. OP=OP",
@@ -2233,7 +2417,9 @@
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Page toiletpapier Pak 9 of 12 rollen. OP=OP",
@@ -2257,7 +2443,9 @@
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Quaker Cruesli Pak 725 - 900 gram. OP=OP",
@@ -2281,7 +2469,9 @@
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Sanex douchegel Per flacon. OP=OP",
@@ -2305,7 +2495,9 @@
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Silan wasverzachter Flacon 35 wasbeurten. OP=OP",
@@ -2329,7 +2521,9 @@
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Snelle Jelle 7-pack. OP=OP",
@@ -2353,7 +2547,9 @@
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Stëlz 6-pack. OP=OP",
@@ -2377,7 +2573,9 @@
         "low": 7.99,
         "high": 7.99,
         "latest": 7.99
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Wagner Big Sensation of Pizzeria Style Per stuk 450 gram. OP=OP",
@@ -2401,7 +2599,9 @@
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     },
     {
       "name": "Avocado verpakt 1 kg 1 kg",
@@ -2425,7 +2625,9 @@
         "low": 3.49,
         "high": 3.49,
         "latest": 3.49
-      }
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
     }
   ]
 }

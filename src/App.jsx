@@ -11,7 +11,7 @@ export default function App() {
   const [data, setData] = useState(null);
   const [category, setCategory] = useState("全部");
   const [query, setQuery] = useState("");
-  const [sortBy, setSortBy] = useState("friend");
+  const [sortBy, setSortBy] = useState("recommended");
   const [history, setHistory] = useState([]);
   const [selectedDate, setSelectedDate] = useState("latest");
   const [currentOffers, setCurrentOffers] = useState([]);
@@ -47,10 +47,12 @@ export default function App() {
     return (category === "全部" || item.category === category) && haystack.includes(query.toLowerCase());
   }).sort((a, b) => {
     const unit = (item) => item.unitPrice ?? (item.grams ? item.sale / item.grams * 1000 : Number.POSITIVE_INFINITY);
-    if (sortBy === "discount") return (b.discountPercent ?? -1) - (a.discountPercent ?? -1) || b.friendRank - a.friendRank;
-    if (sortBy === "unit") return unit(a) - unit(b) || b.friendRank - a.friendRank;
-    if (sortBy === "price") return a.sale - b.sale || b.friendRank - a.friendRank;
-    return (b.friendRank ?? Number(b.friendPick)) - (a.friendRank ?? Number(a.friendPick)) || (b.discountPercent ?? -1) - (a.discountPercent ?? -1);
+    const priority = (item) => item.recommendationRank ?? 0;
+    const friend = (item) => item.friendRank ?? Number(item.friendPick);
+    if (sortBy === "discount") return (b.discountPercent ?? -1) - (a.discountPercent ?? -1) || priority(b) - priority(a) || friend(b) - friend(a);
+    if (sortBy === "unit") return unit(a) - unit(b) || priority(b) - priority(a) || friend(b) - friend(a);
+    if (sortBy === "price") return a.sale - b.sale || priority(b) - priority(a) || friend(b) - friend(a);
+    return priority(b) - priority(a) || friend(b) - friend(a) || (b.discountPercent ?? -1) - (a.discountPercent ?? -1);
   }), [data, category, query, sortBy]);
 
   if (!data) return <main className="loading">正在读取今天的 Dirk 优惠…</main>;
@@ -58,6 +60,8 @@ export default function App() {
 
   const stale = Date.now() - Date.parse(data.generatedAt) > 36 * 60 * 60 * 1000;
   const isLatest = selectedDate === "latest";
+  const strongCount = data.offers.filter((offer) => (offer.recommendationRank ?? 0) >= 3).length;
+  const priorityCount = data.offers.filter((offer) => (offer.recommendationRank ?? 0) >= 2).length;
   return <main className="page">
     <header className="hero">
       <a className="repo-link" href="https://github.com/cody1991/dirk-offers-dashboard" target="_blank" rel="noreferrer" aria-label="在 GitHub 查看本项目仓库">GitHub 仓库 <span>↗</span></a>
@@ -87,13 +91,13 @@ export default function App() {
     </section>
 
     <section className="catalogue" aria-labelledby="catalogue-title">
-      <div className="catalogue-head"><div><span>全部优惠 · {offers.length} 项</span><h2 id="catalogue-title">按价格，挑真正值的。</h2></div><div className="catalogue-controls"><label>排序<select value={sortBy} onChange={(e) => setSortBy(e.target.value)}><option value="friend">朋友优先</option><option value="discount">折扣最高</option><option value="unit">单位价格低</option><option value="price">售价最低</option></select></label><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="搜索：草莓、鸡翅、咖啡…" aria-label="搜索优惠" /></div></div>
+      <div className="catalogue-head"><div><span>全部优惠 · {offers.length} 项</span><h2 id="catalogue-title">先看 {strongCount} 个强烈推荐。</h2><p className="recommendation-summary">共 {priorityCount} 项优先推荐：按买入价差、60% 以上折扣与 50% 以上折扣筛选。</p></div><div className="catalogue-controls"><label>排序<select value={sortBy} onChange={(e) => setSortBy(e.target.value)}><option value="recommended">优先推荐</option><option value="friend">朋友优先</option><option value="discount">折扣最高</option><option value="unit">单位价格低</option><option value="price">售价最低</option></select></label><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="搜索：草莓、鸡翅、咖啡…" aria-label="搜索优惠" /></div></div>
       <div className="filters">{categories.map((item) => <button className={item === category ? "selected" : ""} onClick={() => setCategory(item)} key={item}>{item}</button>)}</div>
       <div className="offer-grid">
         {offers.map((offer) => {
           const atHistoricalLow = offer.metrics?.low != null && Math.abs(offer.sale - offer.metrics.low) < 0.005;
-          return <article className={"offer " + (offer.friendPick ? "friend " : "") + (atHistoricalLow ? "historical-low" : "")} key={offer.name}>
-            <div className="photo"><img src={offer.imageUrl} alt={offer.nameZh} loading="lazy" decoding="async" />{offer.friendPick && <span>{offer.friendLabel || "朋友推荐"}</span>}{atHistoricalLow && <span className="low-badge">史低价</span>}</div>
+          return <article className={"offer " + ((offer.recommendationRank ?? 0) >= 2 ? "recommended " : "") + (offer.friendPick ? "friend " : "") + (atHistoricalLow ? "historical-low" : "")} key={offer.name}>
+            <div className="photo"><img src={offer.imageUrl} alt={offer.nameZh} loading="lazy" decoding="async" />{offer.recommendationLabel && <span className={'recommendation-badge rank-' + offer.recommendationRank}>{offer.recommendationLabel}</span>}{offer.friendPick && <span className="friend-badge">{offer.friendLabel || "朋友推荐"}</span>}{atHistoricalLow && <span className="low-badge">史低价</span>}</div>
             <div className="offer-body"><p className="category">{offer.category}</p><h3>{offer.nameZh}</h3><p className="pack">{offer.package}</p><div className="price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>} {offer.discountPercent && <i>−{offer.discountPercent}%</i>}</div><UnitPrice offer={offer} /><PriceTrail history={offer.metrics} /><p className="advice">{offer.advice}</p>{offer.productUrl && <a className="product-link" href={offer.productUrl} target="_blank" rel="noreferrer">在 Dirk 查看原商品 ↗</a>}</div>
           </article>;
         })}
