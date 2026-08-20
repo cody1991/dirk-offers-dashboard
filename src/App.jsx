@@ -75,7 +75,7 @@ export default function App() {
     </header>
     <section className="archive" aria-label="每日优惠存档">
       <div><span>每日存档</span><strong>{isLatest ? "今天的优惠" : `${data.archiveDate ?? selectedDate} 的优惠`}</strong><p>每天成功更新后自动保存；目前可查看 {history.length} 天。</p></div>
-      <label>查看日期<select value={selectedDate} onChange={(event) => loadArchive(event.target.value)}><option value="latest">最新一批 · {data.offers.length} 项</option>{history.slice(1).map((entry) => <option value={entry.date} key={entry.date}>{entry.date} · {entry.offerCount} 项</option>)}</select></label>
+      <label>查看日期<select value={selectedDate} onChange={(event) => loadArchive(event.target.value)}><option value="latest">最新一批 · {data.archiveDate} · {data.offers.length} 项</option>{history.slice(1).map((entry) => <option value={entry.date} key={entry.date}>{entry.date} · {entry.offerCount} 项</option>)}</select></label>
     </section>
 
     <section className="purchases" id="purchases" aria-labelledby="purchases-title">
