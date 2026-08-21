@@ -56,15 +56,23 @@ function analysis(offer) {
 function evidenceAdvice(offer, purchase) {
   const low = offer.metrics?.low;
   const days = offer.metrics?.days;
+  const key = [...offer.name].reduce((total, char) => total + char.codePointAt(0), 0);
+  const variants = [
+    "直降", "现省", "比原价少", "降去", "省下", "价格下调",
+    "本周减", "优惠减", "标价少了", "折扣省", "到手省", "售价少"
+  ];
+  const lowLabels = ["最低", "低位", "新低", "低价", "历史低", "底价"];
+  const verb = variants[key % variants.length];
+  const lowLabel = lowLabels[Math.floor(key / variants.length) % lowLabels.length];
   if (purchase && offer.sale < purchase.paidPrice) {
-    return `较买入€${purchase.paidPrice.toFixed(2)}省€${(purchase.paidPrice - offer.sale).toFixed(2)}，现€${offer.sale.toFixed(2)}。`;
+    return `较买入€${purchase.paidPrice.toFixed(2)}省€${(purchase.paidPrice - offer.sale).toFixed(2)}。`;
   }
   if (offer.original != null) {
     const saving = offer.original - offer.sale;
     const percent = Math.round(saving / offer.original * 100);
-    return `省€${saving.toFixed(2)}（${percent}%）；近${days}日低€${low.toFixed(2)}。`;
+    return `${verb}€${saving.toFixed(2)}（${percent}%），${days}日${lowLabel}€${low.toFixed(2)}。`;
   }
-  return `现€${offer.sale.toFixed(2)}；近${days}日低€${low.toFixed(2)}，无原价。`;
+  return `原价未列，${days}日${lowLabel}€${low.toFixed(2)}。`;
 }
 function recommendation(offer, purchase) {
   if (purchase && offer.sale < purchase.paidPrice) return { rank: 4, label: "强烈推荐" };
