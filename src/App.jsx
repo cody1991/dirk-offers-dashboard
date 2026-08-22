@@ -67,7 +67,7 @@ export default function App() {
       <a className="repo-link" href="https://github.com/cody1991/dirk-offers-dashboard" target="_blank" rel="noreferrer" aria-label="在 GitHub 查看本项目仓库">GitHub 仓库 <span>↗</span></a>
       <div className="stamp">DIRK / DAILY</div>
       <div>
-        <div className="hero-meta"><p className="kicker">{isLatest ? "阿姆斯特丹 · 每天 10:00 自动更新" : `${data.archiveDate ?? selectedDate} · 历史快照`}</p><a className="official-link" href="https://www.dirk.nl/aanbiedingen" target="_blank" rel="noreferrer">查看 Dirk 官方优惠 <span>↗</span></a></div>
+        <div className="hero-meta"><p className="kicker">{isLatest ? `${data.store?.nameZh ?? "Dirk 门店"} · 今日关店 ${data.store?.closesAt ?? "待确认"}` : `${data.archiveDate ?? selectedDate} · 历史快照`}</p><a className="official-link" href={isLatest && data.store?.url ? data.store.url : "https://www.dirk.nl/aanbiedingen"} target="_blank" rel="noreferrer">{isLatest ? "查看门店营业时间" : "查看 Dirk 官方优惠"} <span>↗</span></a></div>
         <h1>今天，<em>买对</em>一点。</h1>
         <p className="subhead">当前 Dirk 优惠的价格分析、朋友推荐与商品图，一页看完。</p>
       </div>

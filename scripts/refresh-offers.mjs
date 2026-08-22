@@ -7,11 +7,20 @@ const publicDir = path.join(root, "public", "data");
 const historyDir = path.join(publicDir, "history");
 const dbDir = path.join(root, "data");
 const offerUrl = "https://www.dirk.nl/aanbiedingen";
+const storeUrl = "https://www.dirk.nl/winkels/almere/korte-promenade/68";
+const store = {
+  name: "Dirk supermarkt Almere",
+  nameZh: "Dirk Almere（Korte Promenade）",
+  address: "Korte Promenade 2-6, 1315 HN Almere",
+  url: storeUrl
+};
 const force = process.argv.includes("--force");
 const localHour = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Amsterdam", hour: "2-digit", hourCycle: "h23" }).format(new Date());
 const generatedAt = new Date().toISOString();
 const localDate = Object.fromEntries(new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Amsterdam", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date()).filter((part) => part.type !== "literal").map((part) => [part.type, part.value]));
 const archiveDate = `${localDate.year}-${localDate.month}-${localDate.day}`;
+const weekday = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Amsterdam", weekday: "long" }).format(new Date());
+const dutchWeekdays = { Monday: "Maandag", Tuesday: "Dinsdag", Wednesday: "Woensdag", Thursday: "Donderdag", Friday: "Vrijdag", Saturday: "Zaterdag", Sunday: "Zondag" };
 
 if (!force && process.env.GITHUB_ACTIONS && localHour !== "10") {
   console.log(`Skipped: Amsterdam time is ${localHour}:00, not 10:00.`);
@@ -82,9 +91,16 @@ function recommendation(offer, purchase) {
   return { rank: 0, label: "" };
 }
 
-const response = await fetch(`https://r.jina.ai/${offerUrl}`);
+const [response, storeResponse] = await Promise.all([
+  fetch(`https://r.jina.ai/${offerUrl}`),
+  fetch(`https://r.jina.ai/${storeUrl}`)
+]);
 if (!response.ok) throw new Error(`Offer page request failed: ${response.status}`);
-const markdown = await response.text();
+if (!storeResponse.ok) throw new Error(`Store page request failed: ${storeResponse.status}`);
+const [markdown, storeMarkdown] = await Promise.all([response.text(), storeResponse.text()]);
+const storeHours = storeMarkdown.match(new RegExp(`\\*\\s+${dutchWeekdays[weekday]}\\s*\\n+([0-2]\\d:[0-5]\\d)\\s*-\\s*([0-2]\\d:[0-5]\\d)`));
+if (!storeHours) throw new Error(`Could not parse ${dutchWeekdays[weekday]} opening hours for ${store.name}`);
+const todayStore = { ...store, opensAt: storeHours[1], closesAt: storeHours[2] };
 const headings = [...markdown.matchAll(/^##\s+(.+)$/gm)].map((m) => ({ index: m.index, name: m[1] }));
 const offers = new Map();
 const product = /\[([^\]]+)\]\((https:\/\/www\.dirk\.nl\/(?:aanbiedingen|boodschappen)[^)]*)\)/g;
@@ -176,7 +192,7 @@ output.sort((a, b) => b.recommendationRank - a.recommendationRank || b.friendRan
 db.run("VACUUM");
 await fs.writeFile(dbPath, db.export());
 db.close();
-const snapshot = { generatedAt, archiveDate, sourceUrl: offerUrl, offers: output };
+const snapshot = { generatedAt, archiveDate, sourceUrl: offerUrl, store: todayStore, offers: output };
 const indexPath = path.join(publicDir, "history.json");
 const priorHistory = JSON.parse(await fs.readFile(indexPath, "utf8").catch(() => "[]"));
 const history = [{ date: archiveDate, generatedAt, offerCount: output.length }, ...priorHistory.filter((entry) => entry.date !== archiveDate)].sort((a, b) => b.date.localeCompare(a.date));
