@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-08-22T09:29:33.047Z",
+  "generatedAt": "2026-08-22T15:24:53.367Z",
   "archiveDate": "2026-08-22",
   "sourceUrl": "https://www.dirk.nl/aanbiedingen",
+  "store": {
+    "name": "Dirk supermarkt Almere",
+    "nameZh": "Dirk Almere（Korte Promenade）",
+    "address": "Korte Promenade 2-6, 1315 HN Almere",
+    "url": "https://www.dirk.nl/winkels/almere/korte-promenade/68",
+    "opensAt": "08:00",
+    "closesAt": "20:00"
+  },
   "offers": [
     {
       "name": "Robijn wasverzachter Flacon 38 of 39 wasbeurten.",
