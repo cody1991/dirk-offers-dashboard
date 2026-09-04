@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T22:09:15.442Z",
+  "generatedAt": "2026-09-04T08:23:11.561Z",
   "archiveDate": "2026-09-04",
   "sourceUrl": "https://www.dirk.nl/aanbiedingen",
   "store": {
@@ -27,9 +27,35 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 75,
-      "advice": "较原价省€3.00（75%），近2日低€0.99。",
+      "advice": "较原价省€3.00（75%），近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
+        "low": 0.99,
+        "high": 0.99,
+        "latest": 0.99
+      },
+      "recommendationRank": 3,
+      "recommendationLabel": "强烈推荐"
+    },
+    {
+      "name": "1 de Beste Aardappelen vastkokend 3 kg",
+      "category": "Aardappelen, groente & fruit",
+      "sale": 0.99,
+      "original": 3.49,
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F252492_1_464204_639113382357909654.png?width=190",
+      "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/aardappelen/1%20de%20beste%20aardappelen%20vastkokend/103916",
+      "nameZh": "Dirk 自有品牌 Aardappelen vastkokend 3 公斤",
+      "package": "",
+      "grams": 3000,
+      "unitPrice": 0.33,
+      "friendPick": false,
+      "friendNote": "",
+      "friendLabel": "",
+      "friendRank": 0,
+      "discountPercent": 72,
+      "advice": "较原价省€2.50（72%），近1日低€0.99。",
+      "metrics": {
+        "days": 1,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -53,9 +79,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 67,
-      "advice": "较原价省€3.00（67%），近2日低€1.49。",
+      "advice": "较原价省€3.00（67%），近3日低€1.49。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
@@ -79,9 +105,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 65,
-      "advice": "较原价省€1.86（65%），近2日低€0.99。",
+      "advice": "较原价省€1.86（65%），近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -105,9 +131,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 62,
-      "advice": "较原价省€4.06（62%），近6日低€2.49。",
+      "advice": "较原价省€4.06（62%），近7日低€2.49。",
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
@@ -131,9 +157,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 58,
-      "advice": "较原价省€4.90（58%），近2日低€3.49。",
+      "advice": "较原价省€4.90（58%），近3日低€3.49。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 3.49,
         "high": 3.49,
         "latest": 3.49
@@ -157,9 +183,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 57,
-      "advice": "较原价省€1.70（57%），近2日低€1.29。",
+      "advice": "较原价省€1.70（57%），近3日低€1.29。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
@@ -183,9 +209,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 57,
-      "advice": "较原价省€1.30（57%），近2日低€0.99。",
+      "advice": "较原价省€1.30（57%），近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -209,9 +235,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 56,
-      "advice": "较原价省€2.50（56%），近2日低€1.99。",
+      "advice": "较原价省€2.50（56%），近3日低€1.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -235,9 +261,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 55,
-      "advice": "较原价省€1.60（55%），近2日低€1.29。",
+      "advice": "较原价省€1.60（55%），近3日低€1.29。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
@@ -261,9 +287,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 55,
-      "advice": "较原价省€1.20（55%），近2日低€0.99。",
+      "advice": "较原价省€1.20（55%），近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -287,9 +313,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 55,
-      "advice": "较原价省€1.20（55%），近2日低€0.99。",
+      "advice": "较原价省€1.20（55%），近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -313,9 +339,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 54,
-      "advice": "较原价省€1.06（54%），近2日低€0.89。",
+      "advice": "较原价省€1.06（54%），近3日低€0.89。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
@@ -339,9 +365,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 54,
-      "advice": "较原价省€3.50（54%），近2日低€2.99。",
+      "advice": "较原价省€3.50（54%），近3日低€2.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
@@ -365,9 +391,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 53,
-      "advice": "较原价省€2.10（53%），近2日低€1.89。",
+      "advice": "较原价省€2.10（53%），近3日低€1.89。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.89,
         "high": 1.89,
         "latest": 1.89
@@ -391,9 +417,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 52,
-      "advice": "较原价省€0.76（52%），近2日低€0.69。",
+      "advice": "较原价省€0.76（52%），近3日低€0.69。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.69,
         "high": 0.69,
         "latest": 0.69
@@ -417,9 +443,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 51,
-      "advice": "较原价省€9.30（51%），近2日低€8.99。",
+      "advice": "较原价省€9.30（51%），近3日低€8.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 8.99,
         "high": 8.99,
         "latest": 8.99
@@ -443,9 +469,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 50,
-      "advice": "较原价省€1.00（50%），近2日低€0.99。",
+      "advice": "较原价省€1.00（50%），近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -469,9 +495,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 50,
-      "advice": "较原价省€1.30（50%），近2日低€1.29。",
+      "advice": "较原价省€1.30（50%），近3日低€1.29。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
@@ -495,9 +521,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 50,
-      "advice": "较原价省€1.00（50%），近2日低€0.99。",
+      "advice": "较原价省€1.00（50%），近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -521,9 +547,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 50,
-      "advice": "较原价省€1.00（50%），近2日低€0.99。",
+      "advice": "较原价省€1.00（50%），近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -547,9 +573,9 @@
       "friendLabel": "可以购买",
       "friendRank": 2,
       "discountPercent": 45,
-      "advice": "较原价省€0.80（45%），近6日低€0.99。",
+      "advice": "较原价省€0.80（45%），近7日低€0.99。",
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.99,
         "high": 1.69,
         "latest": 0.99
@@ -573,9 +599,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 48,
-      "advice": "较原价省€0.45（48%），近2日低€0.49。",
+      "advice": "较原价省€0.45（48%），近3日低€0.49。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.49,
         "high": 0.49,
         "latest": 0.49
@@ -599,9 +625,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 48,
-      "advice": "较原价省€0.46（48%），近2日低€0.49。",
+      "advice": "较原价省€0.46（48%），近3日低€0.49。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.49,
         "high": 0.49,
         "latest": 0.49
@@ -625,9 +651,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 48,
-      "advice": "较原价省€0.93（48%），近2日低€0.99。",
+      "advice": "较原价省€0.93（48%），近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -651,9 +677,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "较原价省€0.40（45%），近2日低€0.49。",
+      "advice": "较原价省€0.40（45%），近3日低€0.49。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.49,
         "high": 0.49,
         "latest": 0.49
@@ -677,9 +703,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "较原价省€0.80（45%），近2日低€0.99。",
+      "advice": "较原价省€0.80（45%），近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -703,9 +729,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 43,
-      "advice": "较原价省€0.76（43%），近2日低€0.99。",
+      "advice": "较原价省€0.76（43%），近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -729,9 +755,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 43,
-      "advice": "较原价省€1.30（43%），近2日低€1.69。",
+      "advice": "较原价省€1.30（43%），近3日低€1.69。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.69,
         "high": 1.69,
         "latest": 1.69
@@ -755,9 +781,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 42,
-      "advice": "较原价省€1.46（42%），近2日低€1.99。",
+      "advice": "较原价省€1.46（42%），近3日低€1.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -781,9 +807,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 42,
-      "advice": "较原价省€1.20（42%），近2日低€1.69。",
+      "advice": "较原价省€1.20（42%），近3日低€1.69。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.69,
         "high": 1.69,
         "latest": 1.69
@@ -807,9 +833,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 42,
-      "advice": "较原价省€1.46（42%），近2日低€1.99。",
+      "advice": "较原价省€1.46（42%），近3日低€1.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -833,9 +859,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 42,
-      "advice": "较原价省€3.30（42%），近2日低€4.49。",
+      "advice": "较原价省€3.30（42%），近3日低€4.49。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 4.49,
         "high": 4.49,
         "latest": 4.49
@@ -859,9 +885,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 42,
-      "advice": "较原价省€1.46（42%），近2日低€1.99。",
+      "advice": "较原价省€1.46（42%），近3日低€1.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -885,9 +911,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 41,
-      "advice": "较原价省€1.36（41%），近2日低€1.99。",
+      "advice": "较原价省€1.36（41%），近3日低€1.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -911,9 +937,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 40,
-      "advice": "较原价省€1.80（40%），近2日低€2.69。",
+      "advice": "较原价省€1.80（40%），近3日低€2.69。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 2.69,
         "high": 2.69,
         "latest": 2.69
@@ -937,9 +963,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 40,
-      "advice": "较原价省€2.00（40%），近2日低€2.99。",
+      "advice": "较原价省€2.00（40%），近3日低€2.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
@@ -963,12 +989,38 @@
       "friendLabel": "觉得便宜",
       "friendRank": 2,
       "discountPercent": 17,
-      "advice": "较原价省€0.40（17%），近14日低€1.49。",
+      "advice": "较原价省€0.40（17%），近15日低€1.49。",
       "metrics": {
-        "days": 14,
+        "days": 15,
         "low": 1.49,
         "high": 1.99,
         "latest": 1.99
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
+    },
+    {
+      "name": "1 de Beste Aardbeien 400 g",
+      "category": "Aardappelen, groente & fruit",
+      "sale": 2.89,
+      "original": 2.99,
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F243172_1_481279_638956218528263034.png?width=190",
+      "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/1%20de%20beste%20aardbeien/118477",
+      "nameZh": "Dirk 自有品牌 草莓 400 克",
+      "package": "",
+      "grams": 400,
+      "unitPrice": 7.23,
+      "friendPick": true,
+      "friendNote": "朋友确认草莓可以。",
+      "friendLabel": "可以购买",
+      "friendRank": 2,
+      "discountPercent": 3,
+      "advice": "较原价省€0.10（3%），近2日低€2.79。",
+      "metrics": {
+        "days": 2,
+        "low": 2.79,
+        "high": 2.89,
+        "latest": 2.89
       },
       "recommendationRank": 0,
       "recommendationLabel": ""
@@ -989,9 +1041,9 @@
       "friendLabel": "可以尝试",
       "friendRank": 1,
       "discountPercent": null,
-      "advice": "原价未列，近2日低€4.99。",
+      "advice": "原价未列，近3日低€4.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 4.99,
         "high": 4.99,
         "latest": 4.99
@@ -1015,9 +1067,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 48,
-      "advice": "较原价省€0.93（48%），近6日低€0.89。",
+      "advice": "较原价省€0.93（48%），近7日低€0.89。",
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.89,
         "high": 0.99,
         "latest": 0.99
@@ -1041,9 +1093,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 38,
-      "advice": "较原价省€0.60（38%），近2日低€0.99。",
+      "advice": "较原价省€0.60（38%），近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -1067,9 +1119,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 36,
-      "advice": "较原价省€2.20（36%），近2日低€3.99。",
+      "advice": "较原价省€2.20（36%），近3日低€3.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
@@ -1093,9 +1145,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 36,
-      "advice": "较原价省€0.56（36%），近2日低€0.99。",
+      "advice": "较原价省€0.56（36%），近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -1119,9 +1171,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 35,
-      "advice": "较原价省€0.70（35%），近2日低€1.29。",
+      "advice": "较原价省€0.70（35%），近3日低€1.29。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
@@ -1145,9 +1197,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 35,
-      "advice": "较原价省€0.26（35%），近2日低€0.49。",
+      "advice": "较原价省€0.26（35%），近3日低€0.49。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.49,
         "high": 0.49,
         "latest": 0.49
@@ -1171,9 +1223,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 35,
-      "advice": "较原价省€0.90（35%），近2日低€1.69。",
+      "advice": "较原价省€0.90（35%），近3日低€1.69。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.69,
         "high": 1.69,
         "latest": 1.69
@@ -1197,9 +1249,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 34,
-      "advice": "较原价省€0.36（34%），近2日低€0.69。",
+      "advice": "较原价省€0.36（34%），近3日低€0.69。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.69,
         "high": 0.69,
         "latest": 0.69
@@ -1223,9 +1275,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 34,
-      "advice": "较原价省€0.50（34%），近2日低€0.99。",
+      "advice": "较原价省€0.50（34%），近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -1249,9 +1301,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 34,
-      "advice": "较原价省€0.96（34%），近2日低€1.89。",
+      "advice": "较原价省€0.96（34%），近3日低€1.89。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.89,
         "high": 1.89,
         "latest": 1.89
@@ -1275,9 +1327,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 34,
-      "advice": "较原价省€0.36（34%），近2日低€0.69。",
+      "advice": "较原价省€0.36（34%），近3日低€0.69。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.69,
         "high": 0.69,
         "latest": 0.69
@@ -1301,9 +1353,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 33,
-      "advice": "较原价省€1.00（33%），近2日低€1.99。",
+      "advice": "较原价省€1.00（33%），近3日低€1.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -1327,9 +1379,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 33,
-      "advice": "较原价省€1.00（33%），近2日低€1.99。",
+      "advice": "较原价省€1.00（33%），近3日低€1.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -1353,9 +1405,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 33,
-      "advice": "较原价省€1.30（33%），近2日低€2.69。",
+      "advice": "较原价省€1.30（33%），近3日低€2.69。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 2.69,
         "high": 2.69,
         "latest": 2.69
@@ -1379,9 +1431,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 31,
-      "advice": "较原价省€0.90（31%），近2日低€1.99。",
+      "advice": "较原价省€0.90（31%），近3日低€1.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -1405,9 +1457,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 31,
-      "advice": "较原价省€0.26（31%），近2日低€0.59。",
+      "advice": "较原价省€0.26（31%），近3日低€0.59。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.59,
         "high": 0.59,
         "latest": 0.59
@@ -1431,38 +1483,12 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 30,
-      "advice": "较原价省€0.30（30%），近9日低€0.69。",
+      "advice": "较原价省€0.30（30%），近10日低€0.69。",
       "metrics": {
-        "days": 9,
+        "days": 10,
         "low": 0.69,
         "high": 0.89,
         "latest": 0.69
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
-    },
-    {
-      "name": "Hollandse vastkokende aardappelen Per zak.",
-      "category": "Aardappelen, groente & fruit",
-      "sale": 2.49,
-      "original": 3.49,
-      "imageUrl": "https://web-fileserver.dirk.nl/offers/2%2F2%2F8%2F8%2F3%2F1%2FHollandse%20aardappelen_639235079032884295.png?width=190",
-      "productUrl": "https://www.dirk.nl/aanbiedingen",
-      "nameZh": "Hollandse vastkokende aardappelen 每 袋装.",
-      "package": "zak.",
-      "grams": null,
-      "unitPrice": null,
-      "friendPick": false,
-      "friendNote": "",
-      "friendLabel": "",
-      "friendRank": 0,
-      "discountPercent": 29,
-      "advice": "较原价省€1.00（29%），近2日低€2.49。",
-      "metrics": {
-        "days": 2,
-        "low": 2.49,
-        "high": 2.49,
-        "latest": 2.49
       },
       "recommendationRank": 0,
       "recommendationLabel": ""
@@ -1483,9 +1509,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 29,
-      "advice": "较原价省€0.56（29%），近2日低€1.39。",
+      "advice": "较原价省€0.56（29%），近3日低€1.39。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.39,
         "high": 1.39,
         "latest": 1.39
@@ -1509,9 +1535,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 28,
-      "advice": "较原价省€2.76（28%），近2日低€6.99。",
+      "advice": "较原价省€2.76（28%），近3日低€6.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 6.99,
         "high": 6.99,
         "latest": 6.99
@@ -1535,9 +1561,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 27,
-      "advice": "较原价省€0.74（27%），近2日低€1.99。",
+      "advice": "较原价省€0.74（27%），近3日低€1.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -1561,9 +1587,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 26,
-      "advice": "较原价省€4.60（26%），近2日低€12.99。",
+      "advice": "较原价省€4.60（26%），近3日低€12.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 12.99,
         "high": 12.99,
         "latest": 12.99
@@ -1587,9 +1613,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "较原价省€2.33（25%），近2日低€6.99。",
+      "advice": "较原价省€2.33（25%），近3日低€6.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 6.99,
         "high": 6.99,
         "latest": 6.99
@@ -1613,9 +1639,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "较原价省€1.30（25%），近2日低€3.99。",
+      "advice": "较原价省€1.30（25%），近3日低€3.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
@@ -1639,9 +1665,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "较原价省€1.00（25%），近2日低€2.99。",
+      "advice": "较原价省€1.00（25%），近3日低€2.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
@@ -1665,9 +1691,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "较原价省€4.74（25%），近13日低€14.21。",
+      "advice": "较原价省€4.74（25%），近14日低€14.21。",
       "metrics": {
-        "days": 13,
+        "days": 14,
         "low": 14.21,
         "high": 14.21,
         "latest": 14.21
@@ -1691,9 +1717,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "较原价省€1.00（25%），近2日低€2.99。",
+      "advice": "较原价省€1.00（25%），近3日低€2.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
@@ -1717,9 +1743,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 24,
-      "advice": "较原价省€1.10（24%），近2日低€3.49。",
+      "advice": "较原价省€1.10（24%），近3日低€3.49。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 3.49,
         "high": 3.49,
         "latest": 3.49
@@ -1743,9 +1769,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 24,
-      "advice": "较原价省€0.40（24%），近2日低€1.29。",
+      "advice": "较原价省€0.40（24%），近3日低€1.29。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
@@ -1769,9 +1795,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 23,
-      "advice": "较原价省€1.20（23%），近9日低€3.99。",
+      "advice": "较原价省€1.20（23%），近10日低€3.99。",
       "metrics": {
-        "days": 9,
+        "days": 10,
         "low": 3.99,
         "high": 4.49,
         "latest": 3.99
@@ -1795,9 +1821,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 23,
-      "advice": "较原价省€0.30（23%），近8日低€0.99。",
+      "advice": "较原价省€0.30（23%），近9日低€0.99。",
       "metrics": {
-        "days": 8,
+        "days": 9,
         "low": 0.99,
         "high": 1.19,
         "latest": 0.99
@@ -1821,9 +1847,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 23,
-      "advice": "较原价省€0.50（23%），近2日低€1.69。",
+      "advice": "较原价省€0.50（23%），近3日低€1.69。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.69,
         "high": 1.69,
         "latest": 1.69
@@ -1847,9 +1873,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 22,
-      "advice": "较原价省€1.00（22%），近2日低€3.49。",
+      "advice": "较原价省€1.00（22%），近3日低€3.49。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 3.49,
         "high": 3.49,
         "latest": 3.49
@@ -1873,9 +1899,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 20,
-      "advice": "较原价省€0.20（20%），近2日低€0.79。",
+      "advice": "较原价省€0.20（20%），近3日低€0.79。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
@@ -1899,9 +1925,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 20,
-      "advice": "较原价省€0.20（20%），近2日低€0.79。",
+      "advice": "较原价省€0.20（20%），近3日低€0.79。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
@@ -1925,9 +1951,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 20,
-      "advice": "较原价省€0.20（20%），近2日低€0.79。",
+      "advice": "较原价省€0.20（20%），近3日低€0.79。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
@@ -1951,9 +1977,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 20,
-      "advice": "较原价省€0.50（20%），近2日低€1.99。",
+      "advice": "较原价省€0.50（20%），近3日低€1.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -1977,9 +2003,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 17,
-      "advice": "较原价省€0.50（17%），近2日低€2.49。",
+      "advice": "较原价省€0.50（17%），近3日低€2.49。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
@@ -2003,9 +2029,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 17,
-      "advice": "较原价省€0.50（17%），近9日低€2.49。",
+      "advice": "较原价省€0.50（17%），近10日低€2.49。",
       "metrics": {
-        "days": 9,
+        "days": 10,
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
@@ -2029,9 +2055,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 17,
-      "advice": "较原价省€0.40（17%），近2日低€1.99。",
+      "advice": "较原价省€0.40（17%），近3日低€1.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -2055,9 +2081,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 17,
-      "advice": "较原价省€0.60（17%），近2日低€2.99。",
+      "advice": "较原价省€0.60（17%），近3日低€2.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
@@ -2081,9 +2107,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 13,
-      "advice": "较原价省€0.30（13%），近2日低€1.99。",
+      "advice": "较原价省€0.30（13%），近3日低€1.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -2107,9 +2133,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 10,
-      "advice": "较原价省€0.30（10%），近6日低€2.69。",
+      "advice": "较原价省€0.30（10%），近7日低€2.69。",
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 2.69,
         "high": 2.69,
         "latest": 2.69
@@ -2133,9 +2159,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 9,
-      "advice": "较原价省€0.16（9%），近2日低€1.59。",
+      "advice": "较原价省€0.16（9%），近3日低€1.59。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.59,
         "high": 1.59,
         "latest": 1.59
@@ -2159,9 +2185,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 7,
-      "advice": "较原价省€0.20（7%），近9日低€2.58。",
+      "advice": "较原价省€0.20（7%），近10日低€2.58。",
       "metrics": {
-        "days": 9,
+        "days": 10,
         "low": 2.58,
         "high": 2.58,
         "latest": 2.58
@@ -2185,9 +2211,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 4,
-      "advice": "较原价省€0.10（4%），近4日低€1.89。",
+      "advice": "较原价省€0.10（4%），近5日低€1.89。",
       "metrics": {
-        "days": 4,
+        "days": 5,
         "low": 1.89,
         "high": 2.39,
         "latest": 2.39
@@ -2211,9 +2237,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近2日低€1.99。",
+      "advice": "原价未列，近3日低€1.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -2237,9 +2263,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近2日低€3.99。",
+      "advice": "原价未列，近3日低€3.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
@@ -2263,9 +2289,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近2日低€4.99。",
+      "advice": "原价未列，近3日低€4.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 4.99,
         "high": 4.99,
         "latest": 4.99
@@ -2289,9 +2315,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近9日低€0.99。",
+      "advice": "原价未列，近10日低€0.99。",
       "metrics": {
-        "days": 9,
+        "days": 10,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -2302,25 +2328,25 @@
     {
       "name": "1 de Beste Blauwe bessen 300 g",
       "category": "Aardappelen, groente & fruit",
-      "sale": 3.59,
+      "sale": 3.49,
       "original": null,
       "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F247739_2026-09-01_04-07-26-876_a3f0e264-9807-4ffe-93cc-656367e95904.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/1%20de%20beste%20blauwe%20bessen/51069",
       "nameZh": "Dirk 自有品牌 蓝莓 300 克",
       "package": "",
       "grams": 300,
-      "unitPrice": 11.97,
+      "unitPrice": 11.63,
       "friendPick": false,
       "friendNote": "",
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近7日低€2.99。",
+      "advice": "原价未列，近8日低€2.99。",
       "metrics": {
-        "days": 7,
+        "days": 8,
         "low": 2.99,
         "high": 3.59,
-        "latest": 3.59
+        "latest": 3.49
       },
       "recommendationRank": 0,
       "recommendationLabel": ""
@@ -2341,9 +2367,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近2日低€1.69。",
+      "advice": "原价未列，近3日低€1.69。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 1.69,
         "high": 1.69,
         "latest": 1.69
@@ -2367,9 +2393,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近2日低€0.99。",
+      "advice": "原价未列，近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -2393,9 +2419,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近2日低€0.99。",
+      "advice": "原价未列，近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -2419,9 +2445,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近2日低€0.99。",
+      "advice": "原价未列，近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -2445,9 +2471,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近2日低€0.99。",
+      "advice": "原价未列，近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -2471,9 +2497,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近2日低€5.99。",
+      "advice": "原价未列，近3日低€5.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 5.99,
         "high": 5.99,
         "latest": 5.99
@@ -2497,9 +2523,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近6日低€2.49。",
+      "advice": "原价未列，近7日低€2.49。",
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
@@ -2523,9 +2549,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近2日低€8.99。",
+      "advice": "原价未列，近3日低€8.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 8.99,
         "high": 8.99,
         "latest": 8.99
@@ -2549,9 +2575,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近2日低€0.99。",
+      "advice": "原价未列，近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -2575,9 +2601,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近2日低€9.99。",
+      "advice": "原价未列，近3日低€9.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 9.99,
         "high": 9.99,
         "latest": 9.99
@@ -2601,9 +2627,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近2日低€0.99。",
+      "advice": "原价未列，近3日低€0.99。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -2627,9 +2653,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未列，近2日低€5.49。",
+      "advice": "原价未列，近3日低€5.49。",
       "metrics": {
-        "days": 2,
+        "days": 3,
         "low": 5.49,
         "high": 5.49,
         "latest": 5.49
