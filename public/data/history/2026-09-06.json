@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-08T07:56:20.702Z",
-  "archiveDate": "2026-09-08",
+  "generatedAt": "2026-09-06T08:58:47.866Z",
+  "archiveDate": "2026-09-06",
   "sourceUrl": "https://www.dirk.nl/aanbiedingen",
   "store": {
     "name": "Dirk supermarkt Almere",
@@ -8,7 +8,7 @@
     "address": "Korte Promenade 2-6, 1315 HN Almere",
     "url": "https://www.dirk.nl/winkels/almere/korte-promenade/68",
     "opensAt": null,
-    "closesAt": "20:00"
+    "closesAt": "18:00"
   },
   "offers": [
     {
@@ -27,9 +27,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 75,
-      "advice": "价格降75%，目前€0.99守住近6日低点。折扣属实。",
+      "advice": "价格降75%，目前€0.99守住近5日低点。折扣属实。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -53,9 +53,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 72,
-      "advice": "折让€2.50，€0.99恰为近4日低价。折扣清晰。",
+      "advice": "折让€2.50，€0.99恰为近3日低价。折扣清晰。",
       "metrics": {
-        "days": 4,
+        "days": 3,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -79,9 +79,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 67,
-      "advice": "少付€3.00，现售€1.49为近6日低位。低价可验。",
+      "advice": "少付€3.00，现售€1.49为近5日低位。低价可验。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
@@ -105,9 +105,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 65,
-      "advice": "折让€1.86，€0.99恰为近6日低价。价格有据。",
+      "advice": "折让€1.86，€0.99恰为近5日低价。价格有据。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -131,9 +131,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 62,
-      "advice": "折让€4.06，€2.49恰为近10日低价。历史可查。",
+      "advice": "折让€4.06，€2.49恰为近9日低价。历史可查。",
       "metrics": {
-        "days": 10,
+        "days": 9,
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
@@ -157,9 +157,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 58,
-      "advice": "现价压低58%，€3.49已到近6日低位。数据有据。",
+      "advice": "现价压低58%，€3.49已到近5日低位。数据有据。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 3.49,
         "high": 3.49,
         "latest": 3.49
@@ -183,9 +183,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 57,
-      "advice": "现价€1.29，比标价低57%，为近6日最低。账面属实。",
+      "advice": "现价€1.29，比标价低57%，为近5日最低。账面属实。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
@@ -209,9 +209,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 57,
-      "advice": "折让€1.30，€0.99恰为近6日低价。折扣已验。",
+      "advice": "折让€1.30，€0.99恰为近5日低价。折扣已验。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -235,9 +235,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 56,
-      "advice": "比原标价少€2.50，今价€1.99刷新近6日低位。现售可查。",
+      "advice": "比原标价少€2.50，今价€1.99刷新近5日低位。现售可查。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -261,9 +261,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 55,
-      "advice": "省€1.60（55%），售价落在近6日最低。数据已验。",
+      "advice": "省€1.60（55%），售价落在近5日最低。数据已验。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
@@ -287,9 +287,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 55,
-      "advice": "标价减55%，当前€0.99是近6日底价。折扣属实。",
+      "advice": "标价减55%，当前€0.99是近5日底价。折扣属实。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -313,9 +313,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 55,
-      "advice": "原标价少€1.20，这次€0.99贴近近6日低点。折扣属实。",
+      "advice": "原标价少€1.20，这次€0.99贴近近5日低点。折扣属实。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -339,9 +339,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 54,
-      "advice": "比原标价少€1.06，今价€0.89刷新近6日低位。低价可核。",
+      "advice": "比原标价少€1.06，今价€0.89刷新近5日低位。低价可核。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
@@ -354,7 +354,7 @@
       "category": "Huishoud & huisdieren",
       "sale": 2.99,
       "original": 6.49,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F476495_2026-09-08_04-04-39-572_5ea1fe6f-d200-408c-9b34-97a0fc847f9b.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F476495_2026-09-06_04-04-02-321_01170397-0ea7-45b2-9f5d-9d6904087b7d.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/huishoud-huisdieren/wasmiddel-verzachters/robijn%20wasparfum%20tropical/114903",
       "nameZh": "Robijn Wasparfum tropical 342 毫升",
       "package": "",
@@ -365,9 +365,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 54,
-      "advice": "少付€3.50，现售€2.99为近6日低位。现售可查。",
+      "advice": "少付€3.50，现售€2.99为近5日低位。现售可查。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
@@ -391,9 +391,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 53,
-      "advice": "比原标价少€2.10，今价€1.89刷新近6日低位。低价有据。",
+      "advice": "比原标价少€2.10，今价€1.89刷新近5日低位。低价有据。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.89,
         "high": 1.89,
         "latest": 1.89
@@ -417,9 +417,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 52,
-      "advice": "今报€0.69，较标价降52%，近6日无更低。折扣已验。",
+      "advice": "今报€0.69，较标价降52%，近5日无更低。折扣已验。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.69,
         "high": 0.69,
         "latest": 0.69
@@ -432,7 +432,7 @@
       "category": "Dranken, sap, koffie & thee",
       "sale": 8.99,
       "original": 18.29,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F411024_2026-09-07_04-03-43-726_0c14acd7-137e-4099-9de9-54064dabd0ce.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F411024_2026-09-06_04-03-47-941_4cbecc5e-d40d-40ba-9a59-cc03f2c35707.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/dranken-sap-koffie-thee/bier/heineken%20pilsener%20alcoholvrij%20krat/59000",
       "nameZh": "喜力啤酒 Pilsener alcoholvrij 整箱 24x 300 毫升",
       "package": "",
@@ -443,9 +443,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 51,
-      "advice": "折让€9.30，€8.99恰为近6日低价。降幅可验。",
+      "advice": "折让€9.30，€8.99恰为近5日低价。降幅可验。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 8.99,
         "high": 8.99,
         "latest": 8.99
@@ -469,9 +469,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 50,
-      "advice": "现价€0.99，比标价低50%，为近6日最低。历史已验。",
+      "advice": "现价€0.99，比标价低50%，为近5日最低。历史已验。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -495,9 +495,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 50,
-      "advice": "现售€1.29，较原价省€1.30，近6日未更低。账面可验。",
+      "advice": "现售€1.29，较原价省€1.30，近5日未更低。账面可验。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
@@ -521,9 +521,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 50,
-      "advice": "原标价少€1.00，这次€0.99贴近近6日低点。现售清晰。",
+      "advice": "原标价少€1.00，这次€0.99贴近近5日低点。现售清晰。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -547,9 +547,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 50,
-      "advice": "比原价减€1.00，现€0.99为近6日最惠。账面可核。",
+      "advice": "比原价减€1.00，现€0.99为近5日最惠。账面可核。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -562,7 +562,7 @@
       "category": "Aardappelen, groente & fruit",
       "sale": 0.99,
       "original": 1.79,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F418611_2026-09-08_04-02-24-725_aa83db01-c157-4bf2-a5ee-d64f52ec4676.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F418611_2026-09-06_04-02-21-932_0e5f8ced-8cd3-4a72-a432-b993a6cb0d12.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/1%20de%20beste%20handperen%20verpakt/66443",
       "nameZh": "Dirk 自有品牌 雪梨 包装 1 公斤",
       "package": "pakt 1 kg",
@@ -573,9 +573,9 @@
       "friendLabel": "可以购买",
       "friendRank": 2,
       "discountPercent": 45,
-      "advice": "今报€0.99，较标价降45%，近10日无更低。现售属实。",
+      "advice": "今报€0.99，较标价降45%，近9日无更低。现售属实。",
       "metrics": {
-        "days": 10,
+        "days": 9,
         "low": 0.99,
         "high": 1.69,
         "latest": 0.99
@@ -599,9 +599,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 48,
-      "advice": "折让€0.45，€0.49恰为近6日低价。价格可验。",
+      "advice": "折让€0.45，€0.49恰为近5日低价。价格可验。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.49,
         "high": 0.49,
         "latest": 0.49
@@ -625,9 +625,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 48,
-      "advice": "比原价减€0.46，现€0.49为近6日最惠。数据清晰。",
+      "advice": "比原价减€0.46，现€0.49为近5日最惠。数据清晰。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.49,
         "high": 0.49,
         "latest": 0.49
@@ -651,9 +651,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 48,
-      "advice": "比原价减€0.93，现€0.99为近6日最惠。降幅明确。",
+      "advice": "比原价减€0.93，现€0.99为近5日最惠。降幅明确。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -677,9 +677,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "现售€0.49，较原价省€0.40，近6日未更低。账面明确。",
+      "advice": "现售€0.49，较原价省€0.40，近5日未更低。账面明确。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.49,
         "high": 0.49,
         "latest": 0.49
@@ -703,9 +703,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 45,
-      "advice": "标价减45%，当前€0.99是近6日底价。降幅有据。",
+      "advice": "标价减45%，当前€0.99是近5日底价。降幅有据。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -729,9 +729,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 43,
-      "advice": "标价减43%，当前€0.99是近6日底价。历史有据。",
+      "advice": "标价减43%，当前€0.99是近5日底价。历史有据。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -755,9 +755,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 43,
-      "advice": "原标价少€1.30，这次€1.69贴近近6日低点。现售明确。",
+      "advice": "原标价少€1.30，这次€1.69贴近近5日低点。现售明确。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.69,
         "high": 1.69,
         "latest": 1.69
@@ -781,9 +781,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 42,
-      "advice": "比原标价少€1.46，今价€1.99刷新近6日低位。折扣属实。",
+      "advice": "比原标价少€1.46，今价€1.99刷新近5日低位。折扣属实。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -807,12 +807,38 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 42,
-      "advice": "省€1.20（42%），售价落在近6日最低。现售属实。",
+      "advice": "省€1.20（42%），售价落在近5日最低。现售属实。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.69,
         "high": 1.69,
         "latest": 1.69
+      },
+      "recommendationRank": 1,
+      "recommendationLabel": "值得关注"
+    },
+    {
+      "name": "Grote garnalen met staart of gepelde garnalen Pak 100 gram.",
+      "category": "Vlees, vis & vega",
+      "sale": 1.99,
+      "original": 3.45,
+      "imageUrl": "https://web-fileserver.dirk.nl/offers/4%2F3%2F8%2F8%2F3%2F1%2FGrote%20garnalen%20met%20staart%20of%20gepelde%20garnalen_639234187013799133.png?width=190",
+      "productUrl": "https://www.dirk.nl/aanbiedingen",
+      "nameZh": "Grote garnalen 配 staart 或 gepelde garnalen 包装 100 克.",
+      "package": "Pak 100 gram.",
+      "grams": null,
+      "unitPrice": null,
+      "friendPick": false,
+      "friendNote": "",
+      "friendLabel": "",
+      "friendRank": 0,
+      "discountPercent": 42,
+      "advice": "省€1.46（42%），售价落在近5日最低。账面可验。",
+      "metrics": {
+        "days": 5,
+        "low": 1.99,
+        "high": 1.99,
+        "latest": 1.99
       },
       "recommendationRank": 1,
       "recommendationLabel": "值得关注"
@@ -833,9 +859,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 42,
-      "advice": "优惠42%，今日€4.49对照近6日最低。低价已验。",
+      "advice": "优惠42%，今日€4.49对照近5日最低。低价已验。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 4.49,
         "high": 4.49,
         "latest": 4.49
@@ -859,9 +885,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 42,
-      "advice": "今报€1.99，较标价降42%，近6日无更低。现售可查。",
+      "advice": "今报€1.99，较标价降42%，近5日无更低。现售可查。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -885,9 +911,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 41,
-      "advice": "优惠41%，今日€1.99对照近6日最低。历史可验。",
+      "advice": "优惠41%，今日€1.99对照近5日最低。历史可验。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -911,9 +937,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 40,
-      "advice": "现价压低40%，€2.69已到近6日低位。折扣清晰。",
+      "advice": "现价压低40%，€2.69已到近5日低位。折扣清晰。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 2.69,
         "high": 2.69,
         "latest": 2.69
@@ -937,9 +963,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 40,
-      "advice": "原标价少€2.00，这次€2.99贴近近6日低点。低价属实。",
+      "advice": "原标价少€2.00，这次€2.99贴近近5日低点。低价属实。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
@@ -952,7 +978,7 @@
       "category": "Aardappelen, groente & fruit",
       "sale": 1.99,
       "original": 2.39,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F412119_2026-09-08_04-06-52-864_56df4332-58b0-47a4-a3a5-c5cdc1730dce.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F412119_2026-09-06_04-06-42-176_7492d6a3-cb55-4212-bb19-2bcafa8b144d.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/1%20de%20beste%20pitloze%20witte%20druiven/59971",
       "nameZh": "Dirk 自有品牌 Pitloze 白葡萄 500 克",
       "package": "",
@@ -963,12 +989,64 @@
       "friendLabel": "觉得便宜",
       "friendRank": 2,
       "discountPercent": 17,
-      "advice": "价格降17%，目前€1.99守住近18日低点。历史有据。",
+      "advice": "价格降17%，目前€1.99守住近17日低点。历史有据。",
       "metrics": {
-        "days": 18,
+        "days": 17,
         "low": 1.49,
         "high": 1.99,
         "latest": 1.99
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
+    },
+    {
+      "name": "1 de Beste Aardbeien 400 g",
+      "category": "Aardappelen, groente & fruit",
+      "sale": 2.89,
+      "original": 2.99,
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F243172_1_481279_638956218528263034.png?width=190",
+      "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/1%20de%20beste%20aardbeien/118477",
+      "nameZh": "Dirk 自有品牌 草莓 400 克",
+      "package": "",
+      "grams": 400,
+      "unitPrice": 7.23,
+      "friendPick": true,
+      "friendNote": "朋友确认草莓可以。",
+      "friendLabel": "可以购买",
+      "friendRank": 2,
+      "discountPercent": 3,
+      "advice": "比原标价少€0.10，今价€2.89刷新近4日低位。折扣有据。",
+      "metrics": {
+        "days": 4,
+        "low": 2.79,
+        "high": 2.89,
+        "latest": 2.89
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
+    },
+    {
+      "name": "Mango roomschnitt Per stuk",
+      "category": "Brood, beleg & koek",
+      "sale": 4.99,
+      "original": null,
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F198787_1_471570_638623407468470116.png?width=190",
+      "productUrl": "https://www.dirk.nl/boodschappen/brood-beleg-koek/vers-klein-gebak/mango%20roomschnitt/111447",
+      "nameZh": "Mango roomschnitt 每个",
+      "package": "Per stuk",
+      "grams": null,
+      "unitPrice": null,
+      "friendPick": true,
+      "friendNote": "朋友觉得芒果看起来很大。",
+      "friendLabel": "可以尝试",
+      "friendRank": 1,
+      "discountPercent": null,
+      "advice": "原价未标，€4.99对照近5日没有更低。历史可核。",
+      "metrics": {
+        "days": 5,
+        "low": 4.99,
+        "high": 4.99,
+        "latest": 4.99
       },
       "recommendationRank": 0,
       "recommendationLabel": ""
@@ -989,9 +1067,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 48,
-      "advice": "省€0.93（48%），售价落在近10日最低。折扣可验。",
+      "advice": "省€0.93（48%），售价落在近9日最低。折扣可验。",
       "metrics": {
-        "days": 10,
+        "days": 9,
         "low": 0.89,
         "high": 0.99,
         "latest": 0.99
@@ -1015,9 +1093,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 38,
-      "advice": "现售€0.99，较原价省€0.60，近6日未更低。账面清晰。",
+      "advice": "现售€0.99，较原价省€0.60，近5日未更低。账面清晰。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -1041,9 +1119,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 36,
-      "advice": "现价压低36%，€3.99已到近6日低位。账面有据。",
+      "advice": "现价压低36%，€3.99已到近5日低位。账面有据。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
@@ -1067,9 +1145,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 36,
-      "advice": "少付€0.56，现售€0.99为近6日低位。现售可查。",
+      "advice": "少付€0.56，现售€0.99为近5日低位。现售可查。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -1093,9 +1171,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 35,
-      "advice": "现价€1.29，比标价低35%，为近6日最低。历史清晰。",
+      "advice": "现价€1.29，比标价低35%，为近5日最低。历史清晰。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
@@ -1119,9 +1197,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 35,
-      "advice": "今报€0.49，较标价降35%，近6日无更低。折扣属实。",
+      "advice": "今报€0.49，较标价降35%，近5日无更低。折扣属实。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.49,
         "high": 0.49,
         "latest": 0.49
@@ -1145,9 +1223,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 35,
-      "advice": "少付€0.90，现售€1.69为近6日低位。历史清晰。",
+      "advice": "少付€0.90，现售€1.69为近5日低位。历史清晰。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.69,
         "high": 1.69,
         "latest": 1.69
@@ -1171,9 +1249,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 34,
-      "advice": "比原标价少€0.36，今价€0.69刷新近6日低位。现售清晰。",
+      "advice": "比原标价少€0.36，今价€0.69刷新近5日低位。现售清晰。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.69,
         "high": 0.69,
         "latest": 0.69
@@ -1197,9 +1275,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 34,
-      "advice": "本次降34%，€0.99已触及近6日低点。低价有据。",
+      "advice": "本次降34%，€0.99已触及近5日低点。低价有据。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -1223,9 +1301,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 34,
-      "advice": "标价减34%，当前€1.89是近6日底价。折扣属实。",
+      "advice": "标价减34%，当前€1.89是近5日底价。折扣属实。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.89,
         "high": 1.89,
         "latest": 1.89
@@ -1249,12 +1327,38 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 34,
-      "advice": "现售€0.69，较原价省€0.36，近6日未更低。数据可查。",
+      "advice": "现售€0.69，较原价省€0.36，近5日未更低。数据可查。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.69,
         "high": 0.69,
         "latest": 0.69
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
+    },
+    {
+      "name": "Bits & Bites Olijven Kuip 260 gram.",
+      "category": "Maaltijden, salades & tapas",
+      "sale": 1.99,
+      "original": 2.99,
+      "imageUrl": "https://web-fileserver.dirk.nl/offers/7%2F3%2F8%2F8%2F3%2F1%2FOlijven_639234187220529586.png?width=190",
+      "productUrl": "https://www.dirk.nl/aanbiedingen",
+      "nameZh": "Bits & Bites Olijven 盒装 260 克.",
+      "package": "",
+      "grams": 260,
+      "unitPrice": 7.65,
+      "friendPick": false,
+      "friendNote": "",
+      "friendLabel": "",
+      "friendRank": 0,
+      "discountPercent": 33,
+      "advice": "省下€1.00，降33%，近5日此价最低。价格有据。",
+      "metrics": {
+        "days": 5,
+        "low": 1.99,
+        "high": 1.99,
+        "latest": 1.99
       },
       "recommendationRank": 0,
       "recommendationLabel": ""
@@ -1275,12 +1379,38 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 33,
-      "advice": "原标价少€1.00，这次€1.99贴近近6日低点。现售可查。",
+      "advice": "原标价少€1.00，这次€1.99贴近近5日低点。现售可查。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
+    },
+    {
+      "name": "Port salut of mascarpone gorgonzola Per stuk 185 - 190 gram. OP=OP",
+      "category": "Zuivel & kaas",
+      "sale": 2.69,
+      "original": 3.99,
+      "imageUrl": "https://web-fileserver.dirk.nl/offers/8%2F3%2F8%2F8%2F3%2F1%2FPort%20salut%20of%20mascarpone%20gorgonzola__639234187087147144.png?width=190",
+      "productUrl": "https://www.dirk.nl/aanbiedingen",
+      "nameZh": "Port salut 或 mascarpone gorgonzola 每个 185 - 190 克. OP=OP",
+      "package": "Per stuk 185 - 190 gram. OP=OP",
+      "grams": null,
+      "unitPrice": null,
+      "friendPick": false,
+      "friendNote": "",
+      "friendLabel": "",
+      "friendRank": 0,
+      "discountPercent": 33,
+      "advice": "优惠33%，今日€2.69对照近5日最低。低价可查。",
+      "metrics": {
+        "days": 5,
+        "low": 2.69,
+        "high": 2.69,
+        "latest": 2.69
       },
       "recommendationRank": 0,
       "recommendationLabel": ""
@@ -1301,9 +1431,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 31,
-      "advice": "比原价减€0.90，现€1.99为近6日最惠。折扣已验。",
+      "advice": "比原价减€0.90，现€1.99为近5日最惠。折扣已验。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -1316,7 +1446,7 @@
       "category": "Aardappelen, groente & fruit",
       "sale": 0.59,
       "original": 0.85,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F248072_2026-09-08_04-02-38-436_1fae92c6-9682-4075-87e1-5b8cce83c940.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F248072_2026-09-06_04-02-29-525_4709ae34-63ce-4014-a96a-82c4435c54da.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/groente/paprika%20rood/58132",
       "nameZh": "Paprika rood 每个",
       "package": "Per stuk",
@@ -1327,9 +1457,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 31,
-      "advice": "折让€0.26，€0.59恰为近6日低价。价格清晰。",
+      "advice": "折让€0.26，€0.59恰为近5日低价。价格清晰。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.59,
         "high": 0.59,
         "latest": 0.59
@@ -1353,9 +1483,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 30,
-      "advice": "现价压低30%，€0.69已到近13日低位。降幅可查。",
+      "advice": "现价压低30%，€0.69已到近12日低位。降幅可查。",
       "metrics": {
-        "days": 13,
+        "days": 12,
         "low": 0.69,
         "high": 0.89,
         "latest": 0.69
@@ -1379,9 +1509,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 29,
-      "advice": "比原标价少€0.56，今价€1.39刷新近6日低位。历史已验。",
+      "advice": "比原标价少€0.56，今价€1.39刷新近5日低位。历史已验。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.39,
         "high": 1.39,
         "latest": 1.39
@@ -1405,9 +1535,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 28,
-      "advice": "价格降28%，目前€6.99守住近6日低点。账面已验。",
+      "advice": "价格降28%，目前€6.99守住近5日低点。账面已验。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 6.99,
         "high": 6.99,
         "latest": 6.99
@@ -1431,9 +1561,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 27,
-      "advice": "少付€0.74，现售€1.99为近6日低位。折扣清晰。",
+      "advice": "少付€0.74，现售€1.99为近5日低位。折扣清晰。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -1457,38 +1587,12 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 26,
-      "advice": "原标价少€4.60，这次€12.99贴近近6日低点。降幅可查。",
+      "advice": "原标价少€4.60，这次€12.99贴近近5日低点。降幅可查。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 12.99,
         "high": 12.99,
         "latest": 12.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
-    },
-    {
-      "name": "AL Jawhara Medjoul Dadels 1 kg",
-      "category": "Aardappelen, groente & fruit",
-      "sale": 5.99,
-      "original": 7.99,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F245497_1_475415_639062238528960557.png?width=190",
-      "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/gedroogd-fruit-noten/al%20jawhara%20medjoul%20dadels/114317",
-      "nameZh": "AL Jawhara Medjoul Dadels 1 公斤",
-      "package": "",
-      "grams": 1000,
-      "unitPrice": 5.99,
-      "friendPick": false,
-      "friendNote": "",
-      "friendLabel": "",
-      "friendRank": 0,
-      "discountPercent": 25,
-      "advice": "优惠25%，今日€5.99对照近8日最低。折扣属实。",
-      "metrics": {
-        "days": 8,
-        "low": 5.99,
-        "high": 6.99,
-        "latest": 5.99
       },
       "recommendationRank": 0,
       "recommendationLabel": ""
@@ -1509,9 +1613,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "比原标价少€2.33，今价€6.99刷新近6日低位。低价可查。",
+      "advice": "比原标价少€2.33，今价€6.99刷新近5日低位。低价可查。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 6.99,
         "high": 6.99,
         "latest": 6.99
@@ -1535,12 +1639,38 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "优惠25%，今日€3.99对照近6日最低。历史已验。",
+      "advice": "优惠25%，今日€3.99对照近5日最低。历史已验。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
+    },
+    {
+      "name": "Wahid Turkse pizza lahmacun 2 st. 300 g",
+      "category": "Vlees, vis & vega",
+      "sale": 2.99,
+      "original": 3.99,
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F452364_2026-09-05_04-04-11-389_8299ee7f-1a12-4d4f-9882-fe6d15d1b5eb.png?width=190",
+      "productUrl": "https://www.dirk.nl/boodschappen/vlees-vis/halal-vlees-kip/wahid%20turkse%20pizza%20lahmacun%202%20st/95340",
+      "nameZh": "Wahid Turkse 披萨 lahmacun 2 st. 300 克",
+      "package": "",
+      "grams": 300,
+      "unitPrice": 9.97,
+      "friendPick": false,
+      "friendNote": "",
+      "friendLabel": "",
+      "friendRank": 0,
+      "discountPercent": 25,
+      "advice": "省下€1.00，降25%，近5日此价最低。低价可查。",
+      "metrics": {
+        "days": 5,
+        "low": 2.99,
+        "high": 2.99,
+        "latest": 2.99
       },
       "recommendationRank": 0,
       "recommendationLabel": ""
@@ -1550,7 +1680,7 @@
       "category": "Dranken, sap, koffie & thee",
       "sale": 14.21,
       "original": 18.95,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F10040_2026-09-08_04-01-56-975_bc1b997a-e72f-4b3f-9faa-e33193dc35d2.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F10040_2026-09-06_04-01-38-346_66c24e02-ae43-4fad-95b1-9db764cb34ff.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/dranken-sap-koffie-thee/bier/heineken%20pilsener%20krat/6",
       "nameZh": "喜力啤酒 Pilsener 整箱 24 x 300 毫升",
       "package": "",
@@ -1561,9 +1691,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "比原价减€4.74，现€14.21为近17日最惠。数据可查。",
+      "advice": "比原价减€4.74，现€14.21为近16日最惠。数据可查。",
       "metrics": {
-        "days": 17,
+        "days": 16,
         "low": 14.21,
         "high": 14.21,
         "latest": 14.21
@@ -1587,9 +1717,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 25,
-      "advice": "比原标价少€1.00，今价€2.99刷新近6日低位。降幅清晰。",
+      "advice": "比原标价少€1.00，今价€2.99刷新近5日低位。降幅清晰。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
@@ -1613,9 +1743,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 24,
-      "advice": "降幅达24%，€3.49处于近6日低档。折扣可查。",
+      "advice": "降幅达24%，€3.49处于近5日低档。折扣可查。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 3.49,
         "high": 3.49,
         "latest": 3.49
@@ -1639,9 +1769,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 24,
-      "advice": "省下€0.40，降24%，近6日此价最低。低价有据。",
+      "advice": "省下€0.40，降24%，近5日此价最低。低价有据。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
@@ -1665,9 +1795,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 23,
-      "advice": "现价€3.99，比标价低23%，为近13日最低。账面属实。",
+      "advice": "现价€3.99，比标价低23%，为近12日最低。账面属实。",
       "metrics": {
-        "days": 13,
+        "days": 12,
         "low": 3.99,
         "high": 4.49,
         "latest": 3.99
@@ -1691,12 +1821,38 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 23,
-      "advice": "现售€0.99，较原价省€0.30，近12日未更低。折扣清晰。",
+      "advice": "现售€0.99，较原价省€0.30，近11日未更低。折扣清晰。",
       "metrics": {
-        "days": 12,
+        "days": 11,
         "low": 0.99,
         "high": 1.19,
         "latest": 0.99
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
+    },
+    {
+      "name": "Premix Blik 25 cl.",
+      "category": "Dranken, sap, koffie & thee",
+      "sale": 1.69,
+      "original": 2.19,
+      "imageUrl": "https://web-fileserver.dirk.nl/offers/9%2F3%2F8%2F8%2F3%2F1%2FPremix_639234188145033561.png?width=190",
+      "productUrl": "https://www.dirk.nl/aanbiedingen",
+      "nameZh": "Premix 罐装 25 厘升.",
+      "package": "Blik 25 cl.",
+      "grams": null,
+      "unitPrice": null,
+      "friendPick": false,
+      "friendNote": "",
+      "friendLabel": "",
+      "friendRank": 0,
+      "discountPercent": 23,
+      "advice": "现售€1.69，较原价省€0.50，近5日未更低。数据清晰。",
+      "metrics": {
+        "days": 5,
+        "low": 1.69,
+        "high": 1.69,
+        "latest": 1.69
       },
       "recommendationRank": 0,
       "recommendationLabel": ""
@@ -1717,9 +1873,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 22,
-      "advice": "本次降22%，€3.49已触及近6日低点。数据有据。",
+      "advice": "本次降22%，€3.49已触及近5日低点。数据有据。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 3.49,
         "high": 3.49,
         "latest": 3.49
@@ -1743,9 +1899,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 20,
-      "advice": "比原价减€0.20，现€0.79为近6日最惠。账面明确。",
+      "advice": "比原价减€0.20，现€0.79为近5日最惠。账面明确。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
@@ -1769,9 +1925,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 20,
-      "advice": "价格降20%，目前€0.79守住近6日低点。数据明确。",
+      "advice": "价格降20%，目前€0.79守住近5日低点。数据明确。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
@@ -1795,9 +1951,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 20,
-      "advice": "标价减20%，当前€0.79是近6日底价。现售已验。",
+      "advice": "标价减20%，当前€0.79是近5日底价。现售已验。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
@@ -1821,12 +1977,64 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 20,
-      "advice": "本次降20%，€1.99已触及近6日低点。降幅属实。",
+      "advice": "本次降20%，€1.99已触及近5日低点。降幅属实。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
+    },
+    {
+      "name": "1 de Beste Ananas geschild 400 g",
+      "category": "Aardappelen, groente & fruit",
+      "sale": 2.49,
+      "original": 2.99,
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F214752_1_469697_638738338023846440.png?width=190",
+      "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/1%20de%20beste%20ananas%20geschild/110468",
+      "nameZh": "Dirk 自有品牌 菠萝 geschild 400 克",
+      "package": "",
+      "grams": 400,
+      "unitPrice": 6.23,
+      "friendPick": false,
+      "friendNote": "",
+      "friendLabel": "",
+      "friendRank": 0,
+      "discountPercent": 17,
+      "advice": "比原价减€0.50，现€2.49为近5日最惠。低价可查。",
+      "metrics": {
+        "days": 5,
+        "low": 2.49,
+        "high": 2.49,
+        "latest": 2.49
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
+    },
+    {
+      "name": "Eat Me Groene asperges bosje 250 g",
+      "category": "Aardappelen, groente & fruit",
+      "sale": 2.49,
+      "original": 2.99,
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F422836_2026-09-06_04-04-50-453_ee8dbc61-1b56-44dc-9565-a3fea9161c2e.png?width=190",
+      "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/groente/eat%20me%20groene%20asperges%20bosje/67573",
+      "nameZh": "Eat Me 绿芦笋 bosje 250 克",
+      "package": "",
+      "grams": 250,
+      "unitPrice": 9.96,
+      "friendPick": false,
+      "friendNote": "",
+      "friendLabel": "",
+      "friendRank": 0,
+      "discountPercent": 17,
+      "advice": "比原价减€0.50，现€2.49为近12日最惠。低价可查。",
+      "metrics": {
+        "days": 12,
+        "low": 2.49,
+        "high": 2.49,
+        "latest": 2.49
       },
       "recommendationRank": 0,
       "recommendationLabel": ""
@@ -1847,9 +2055,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 17,
-      "advice": "现售€1.99，较原价省€0.40，近6日未更低。历史明确。",
+      "advice": "现售€1.99，较原价省€0.40，近5日未更低。历史明确。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -1873,9 +2081,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 17,
-      "advice": "比原价减€0.60，现€2.99为近6日最惠。历史清晰。",
+      "advice": "比原价减€0.60，现€2.99为近5日最惠。历史清晰。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
@@ -1899,9 +2107,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 13,
-      "advice": "降幅达13%，€1.99处于近6日低档。价格清晰。",
+      "advice": "降幅达13%，€1.99处于近5日低档。价格清晰。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -1914,7 +2122,7 @@
       "category": "Aardappelen, groente & fruit",
       "sale": 2.69,
       "original": 2.99,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F478163_2026-09-08_04-03-25-491_7766685c-c14b-44fb-82ad-455fbc9a83c6.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F478163_2026-09-06_04-02-58-047_7788e87d-bb41-40b9-b1e1-9a17ef287a3c.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/pink%20lady/116317",
       "nameZh": "粉红佳人6片",
       "package": "",
@@ -1925,9 +2133,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 10,
-      "advice": "降幅达10%，€2.69处于近10日低档。价格可查。",
+      "advice": "降幅达10%，€2.69处于近9日低档。价格可查。",
       "metrics": {
-        "days": 10,
+        "days": 9,
         "low": 2.69,
         "high": 2.69,
         "latest": 2.69
@@ -1951,9 +2159,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 9,
-      "advice": "省下€0.16，降9%，近6日此价最低。价格明确。",
+      "advice": "省下€0.16，降9%，近5日此价最低。价格明确。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.59,
         "high": 1.59,
         "latest": 1.59
@@ -1977,9 +2185,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 7,
-      "advice": "省下€0.20，降7%，近13日此价最低。低价属实。",
+      "advice": "省下€0.20，降7%，近12日此价最低。低价属实。",
       "metrics": {
-        "days": 13,
+        "days": 12,
         "low": 2.58,
         "high": 2.58,
         "latest": 2.58
@@ -1992,7 +2200,7 @@
       "category": "Vlees, vis & vega",
       "sale": 5.49,
       "original": 5.89,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F473668_2026-09-08_04-06-19-193_1d0e9904-5ceb-4daf-a2cf-2d3a9bb94cf0.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F473668_2026-09-06_04-06-04-284_be4f32ac-5b1d-4f11-8cfe-a7afc937be51.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/vlees-vis/vis/vleeschmeesters%20tonijnsteak/113152",
       "nameZh": "肉类大师 Tonijnsteak 200 克",
       "package": "",
@@ -2003,9 +2211,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 7,
-      "advice": "现价€5.49，比标价低7%，为近2日最低。低价有据。",
+      "advice": "现价€5.49，比标价低7%，为近1日最低。低价有据。",
       "metrics": {
-        "days": 2,
+        "days": 1,
         "low": 5.49,
         "high": 5.49,
         "latest": 5.49
@@ -2018,7 +2226,7 @@
       "category": "Aardappelen, groente & fruit",
       "sale": 2.39,
       "original": 2.49,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F245513_2026-09-08_04-03-12-651_02b2246e-06b7-421c-adde-86673e3124fd.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F245513_2026-09-06_04-03-15-945_e873f2a8-e44d-4d2e-84fd-3206026cc375.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/nectarines%20verpakt/16985",
       "nameZh": "油桃 包装 1 公斤",
       "package": "pakt 1 kg",
@@ -2029,38 +2237,12 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": 4,
-      "advice": "少付€0.10，现售€2.39为近8日低位。降幅已验。",
+      "advice": "少付€0.10，现售€2.39为近7日低位。降幅已验。",
       "metrics": {
-        "days": 8,
+        "days": 7,
         "low": 1.89,
         "high": 2.39,
         "latest": 2.39
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
-    },
-    {
-      "name": "Zespri Kiwi sungold 1 kg",
-      "category": "Aardappelen, groente & fruit",
-      "sale": 5.78,
-      "original": 5.98,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F457377_2026-09-08_04-05-31-626_cf0fc8df-3529-478c-85de-fa1747e88a6e.png?width=190",
-      "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/zespri%20kiwi%20sungold/99427",
-      "nameZh": "Zespri Kiwi sungold 1 公斤",
-      "package": "",
-      "grams": 1000,
-      "unitPrice": 5.78,
-      "friendPick": false,
-      "friendNote": "",
-      "friendLabel": "",
-      "friendRank": 0,
-      "discountPercent": 3,
-      "advice": "降幅达3%，€5.78处于近8日低档。价格明确。",
-      "metrics": {
-        "days": 8,
-        "low": 5.78,
-        "high": 5.78,
-        "latest": 5.78
       },
       "recommendationRank": 0,
       "recommendationLabel": ""
@@ -2081,9 +2263,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "未见标价，现售€1.99是近6日底价。历史属实。",
+      "advice": "未见标价，现售€1.99是近5日底价。历史属实。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
@@ -2107,12 +2289,38 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "没有原价可比，€3.99已到近6日低点。现售属实。",
+      "advice": "没有原价可比，€3.99已到近5日低点。现售属实。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
+      },
+      "recommendationRank": 0,
+      "recommendationLabel": ""
+    },
+    {
+      "name": "De Vleeschmeesters Entrecote of ribeye Per pak. OP=OP",
+      "category": "Vlees, vis & vega",
+      "sale": 4.99,
+      "original": null,
+      "imageUrl": "https://web-fileserver.dirk.nl/offers/2%2F3%2F8%2F8%2F3%2F1%2FEntrecote%20of%20ribeye_639234188811385933.png?width=190",
+      "productUrl": "https://www.dirk.nl/aanbiedingen",
+      "nameZh": "De 肉类大师 Entrecote 或 ribeye 每 包装. OP=OP",
+      "package": "pak. OP=OP",
+      "grams": null,
+      "unitPrice": null,
+      "friendPick": false,
+      "friendNote": "",
+      "friendLabel": "",
+      "friendRank": 0,
+      "discountPercent": null,
+      "advice": "未见标价，现售€4.99是近5日底价。数据属实。",
+      "metrics": {
+        "days": 5,
+        "low": 4.99,
+        "high": 4.99,
+        "latest": 4.99
       },
       "recommendationRank": 0,
       "recommendationLabel": ""
@@ -2133,9 +2341,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "没有原价可比，€0.99已到近13日低点。低价属实。",
+      "advice": "没有原价可比，€0.99已到近12日低点。低价属实。",
       "metrics": {
-        "days": 13,
+        "days": 12,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -2148,7 +2356,7 @@
       "category": "Aardappelen, groente & fruit",
       "sale": 3.49,
       "original": null,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F247739_2026-09-08_04-06-45-617_768e8e77-05e0-4fcc-aead-f7683905fb75.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F247739_2026-09-06_04-06-56-045_626f46f2-8b16-44f4-b405-64ec4010e4a4.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/1%20de%20beste%20blauwe%20bessen/51069",
       "nameZh": "Dirk 自有品牌 蓝莓 300 克",
       "package": "",
@@ -2159,9 +2367,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "暂无原标价，€3.49恰为近11日低价。账面属实。",
+      "advice": "暂无原标价，€3.49恰为近10日低价。账面属实。",
       "metrics": {
-        "days": 11,
+        "days": 10,
         "low": 2.99,
         "high": 3.59,
         "latest": 3.49
@@ -2185,9 +2393,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未标，€1.69对照近6日没有更低。折扣有据。",
+      "advice": "原价未标，€1.69对照近5日没有更低。折扣有据。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 1.69,
         "high": 1.69,
         "latest": 1.69
@@ -2211,9 +2419,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "暂无原标价，€0.99恰为近6日低价。账面可查。",
+      "advice": "暂无原标价，€0.99恰为近5日低价。账面可查。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -2237,9 +2445,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未标，€0.99对照近6日没有更低。现售清晰。",
+      "advice": "原价未标，€0.99对照近5日没有更低。现售清晰。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -2263,9 +2471,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原标价未列，现€0.99为近6日最低。价格可核。",
+      "advice": "原标价未列，现€0.99为近5日最低。价格可核。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -2289,9 +2497,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未标，€0.99对照近6日没有更低。降幅可查。",
+      "advice": "原价未标，€0.99对照近5日没有更低。降幅可查。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -2315,9 +2523,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "没有原价可比，€5.99已到近6日低点。账面可核。",
+      "advice": "没有原价可比，€5.99已到近5日低点。账面可核。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 5.99,
         "high": 5.99,
         "latest": 5.99
@@ -2341,9 +2549,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未标，€2.49对照近10日没有更低。价格明确。",
+      "advice": "原价未标，€2.49对照近9日没有更低。价格明确。",
       "metrics": {
-        "days": 10,
+        "days": 9,
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
@@ -2367,9 +2575,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "暂无原标价，€8.99恰为近6日低价。降幅可核。",
+      "advice": "暂无原标价，€8.99恰为近5日低价。降幅可核。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 8.99,
         "high": 8.99,
         "latest": 8.99
@@ -2393,9 +2601,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价缺失，今日€0.99处于近6日低位。现售明确。",
+      "advice": "原价缺失，今日€0.99处于近5日低位。现售明确。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -2419,9 +2627,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原价未标，€9.99对照近6日没有更低。价格明确。",
+      "advice": "原价未标，€9.99对照近5日没有更低。价格明确。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 9.99,
         "high": 9.99,
         "latest": 9.99
@@ -2445,9 +2653,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "原标价未列，现€0.99为近6日最低。低价可查。",
+      "advice": "原标价未列，现€0.99为近5日最低。低价可查。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
@@ -2471,9 +2679,9 @@
       "friendLabel": "",
       "friendRank": 0,
       "discountPercent": null,
-      "advice": "未见标价，现售€5.49是近6日底价。历史可核。",
+      "advice": "未见标价，现售€5.49是近5日底价。历史可核。",
       "metrics": {
-        "days": 6,
+        "days": 5,
         "low": 5.49,
         "high": 5.49,
         "latest": 5.49
