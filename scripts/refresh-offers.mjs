@@ -67,41 +67,34 @@ function evidenceAdvice(offer) {
   let variant = 2166136261;
   for (const character of offer.name) variant = Math.imul(variant ^ character.charCodeAt(0), 16777619) >>> 0;
   const chineseBits = offer.nameZh.match(/[\u3400-\u9fff]+/g)?.join("") ?? "";
-  const shortName = chineseBits.length >= 2
-    ? chineseBits.slice(0, 4)
-    : `${offer.name.replace(/[^A-Za-z]/g, "").slice(0, 4)}品`;
+  const shortName = chineseBits.length >= 2 ? chineseBits.slice(0, 6) : "该商品";
+  const pickPhrase = (openings, evidence) => `${openings[(variant >>> 16) & 7]}${evidence[(variant >>> 8) & 7]}`;
   if (offer.original != null) {
     const saving = offer.original - offer.sale;
     const percent = Math.round(saving / offer.original * 100);
-    const advice = [
-      `${shortName}现€${offer.sale.toFixed(2)}，降${percent}%，近${days}日低。`,
-      `${shortName}省€${saving.toFixed(2)}，今€${offer.sale.toFixed(2)}为近${days}日低。`,
-      `${shortName}€${offer.sale.toFixed(2)}较原价低${percent}%，近${days}日底。`,
-      `${shortName}标价减${percent}%，现€${offer.sale.toFixed(2)}处低位。`,
-      `${shortName}€${offer.sale.toFixed(2)}省€${saving.toFixed(2)}，近${days}日最低。`,
-      `${shortName}今€${offer.sale.toFixed(2)}，比原价少€${saving.toFixed(2)}。`,
-      `${shortName}降${percent}%，€${offer.sale.toFixed(2)}为近${days}日低档。`,
-      `${shortName}原价减€${saving.toFixed(2)}，现€${offer.sale.toFixed(2)}低位。`,
-      `${shortName}优惠${percent}%，今€${offer.sale.toFixed(2)}贴近低价。`,
-      `${shortName}少€${saving.toFixed(2)}，€${offer.sale.toFixed(2)}守住近${days}日低。`,
-      `${shortName}现€${offer.sale.toFixed(2)}减${percent}%，历史低价。`,
-      `${shortName}省€${saving.toFixed(2)}，降${percent}%，近${days}日低。`,
-      `${shortName}今€${offer.sale.toFixed(2)}，标价降${percent}%。`,
-      `${shortName}€${offer.sale.toFixed(2)}折让€${saving.toFixed(2)}，历史低。`,
-      `${shortName}价格降${percent}%，今€${offer.sale.toFixed(2)}低位。`,
-      `${shortName}少付€${saving.toFixed(2)}，现€${offer.sale.toFixed(2)}低。`
-    ];
-    return advice[(variant >>> 16) % advice.length];
+    return pickPhrase([
+      `${shortName}现价€${offer.sale.toFixed(2)}，`, `${shortName}今日标价€${offer.sale.toFixed(2)}，`,
+      `${shortName}页面售价€${offer.sale.toFixed(2)}，`, `${shortName}本期促销€${offer.sale.toFixed(2)}，`,
+      `${shortName}货架现价€${offer.sale.toFixed(2)}，`, `${shortName}当前价格€${offer.sale.toFixed(2)}，`,
+      `${shortName}优惠现价€${offer.sale.toFixed(2)}，`, `${shortName}这期售价€${offer.sale.toFixed(2)}，`
+    ], [
+      `较原价省€${saving.toFixed(2)}，创近${days}日低。`, `比标价降${percent}%，为近${days}日最低。`,
+      `原价少€${saving.toFixed(2)}，近${days}日未见更低。`, `折扣${percent}%，记录近${days}日低点。`,
+      `比原价低${percent}%，处近${days}日低位。`, `标价让€${saving.toFixed(2)}，刷新近${days}日低价。`,
+      `优惠€${saving.toFixed(2)}，近${days}日价格最低。`, `较原价减${percent}%，守住近${days}日低。`
+    ]);
   }
-  const advice = [
-    `${shortName}原价未列，€${offer.sale.toFixed(2)}为近${days}日低。`,
-    `${shortName}无原价比，€${offer.sale.toFixed(2)}已到低点。`,
-    `${shortName}原价缺失，今€${offer.sale.toFixed(2)}处低位。`,
-    `${shortName}未见标价，现€${offer.sale.toFixed(2)}为近${days}日底。`,
-    `${shortName}原价未标，€${offer.sale.toFixed(2)}近${days}日无低。`,
-    `${shortName}暂无原价，€${offer.sale.toFixed(2)}恰为近${days}日低。`
-  ];
-  return advice[(variant >>> 16) % advice.length];
+  return pickPhrase([
+    `${shortName}现价€${offer.sale.toFixed(2)}，`, `${shortName}今日售价€${offer.sale.toFixed(2)}，`,
+    `${shortName}页面价格€${offer.sale.toFixed(2)}，`, `${shortName}本期价€${offer.sale.toFixed(2)}，`,
+    `${shortName}当前售价€${offer.sale.toFixed(2)}，`, `${shortName}货架价€${offer.sale.toFixed(2)}，`,
+    `${shortName}促销价€${offer.sale.toFixed(2)}，`, `${shortName}本页现价€${offer.sale.toFixed(2)}，`
+  ], [
+    `原价未列，创近${days}日观察低点。`, `无原价可比，为近${days}日低价。`,
+    `标价缺失，近${days}日未见更低。`, `原价未标，记录近${days}日低位。`,
+    `暂无标价，刷新近${days}日低点。`, `缺少原价，近${days}日价格最低。`,
+    `原价未给，守住近${days}日低价。`, `未见原价，处近${days}日观察低位。`
+  ]);
 }
 function recommendation(offer) {
   if ((offer.discountPercent ?? 0) >= 60) return { rank: 3, label: "强烈推荐" };
