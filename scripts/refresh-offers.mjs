@@ -149,7 +149,7 @@ await fs.mkdir(dbDir, { recursive: true });
 const SQL = await initSqlJs();
 const dbPath = path.join(dbDir, "offers.sqlite");
 const db = new SQL.Database(await fs.readFile(dbPath).catch(() => undefined));
-db.run("CREATE TABLE IF NOT EXISTS snapshots (id INTEGER PRIMARY KEY, generated_at TEXT NOT NULL, source_url TEXT NOT NULL); CREATE TABLE IF NOT EXISTS offers (snapshot_id INTEGER, name TEXT, name_zh TEXT, category TEXT, sale REAL, original_price REAL, image_url TEXT, friend_pick INTEGER, advice TEXT); DROP TABLE IF EXISTS purchases;");
+db.run("CREATE TABLE IF NOT EXISTS snapshots (id INTEGER PRIMARY KEY, generated_at TEXT NOT NULL, source_url TEXT NOT NULL); CREATE TABLE IF NOT EXISTS offers (snapshot_id INTEGER, name TEXT, name_zh TEXT, category TEXT, sale REAL, original_price REAL, image_url TEXT, friend_pick INTEGER, advice TEXT);");
 db.run("DELETE FROM offers WHERE snapshot_id NOT IN (SELECT MAX(id) FROM snapshots GROUP BY substr(generated_at, 1, 10))");
 db.run("DELETE FROM snapshots WHERE id NOT IN (SELECT MAX(id) FROM snapshots GROUP BY substr(generated_at, 1, 10))");
 db.run("DELETE FROM offers WHERE snapshot_id IN (SELECT id FROM snapshots WHERE substr(generated_at, 1, 10) = ?)", [archiveDate]);
@@ -201,5 +201,4 @@ const history = [{ date: archiveDate, generatedAt, offerCount: output.length }, 
 await fs.writeFile(path.join(publicDir, "offers.json"), JSON.stringify(snapshot, null, 2));
 await fs.writeFile(path.join(historyDir, `${archiveDate}.json`), JSON.stringify(snapshot, null, 2));
 await fs.writeFile(indexPath, JSON.stringify(history, null, 2));
-await fs.writeFile(path.join(publicDir, "purchases.json"), "[]\n");
 console.log(`Saved ${output.length} offers for ${archiveDate}; ${history.length} daily snapshots available.`);
