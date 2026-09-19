@@ -5,6 +5,7 @@ import initSqlJs from "sql.js";
 const root = path.resolve(import.meta.dirname, "..");
 const publicDir = path.join(root, "public", "data");
 const dbDir = path.join(root, "data");
+const translationsPath = path.join(dbDir, "translations.json");
 const offerUrl = "https://www.dirk.nl/aanbiedingen";
 const storeUrl = "https://www.dirk.nl/winkels/almere/korte-promenade/68";
 const store = {
@@ -18,6 +19,7 @@ const localDate = Object.fromEntries(new Intl.DateTimeFormat("en-GB", { timeZone
 const archiveDate = `${localDate.year}-${localDate.month}-${localDate.day}`;
 const weekday = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Amsterdam", weekday: "long" }).format(new Date());
 const dutchWeekdays = { Monday: "Maandag", Tuesday: "Dinsdag", Wednesday: "Woensdag", Thursday: "Donderdag", Friday: "Vrijdag", Saturday: "Zaterdag", Sunday: "Zondag" };
+const translations = new Map(Object.entries(JSON.parse(await fs.readFile(translationsPath, "utf8").catch(() => "{}"))));
 
 if (!force && process.env.GITHUB_ACTIONS && localHour !== "10") {
   console.log(`Skipped: Amsterdam time is ${localHour}:00, not 10:00.`);
@@ -97,7 +99,7 @@ for (const match of markdown.matchAll(product)) {
 const output = [...offers.values()].map((item) => {
   const weight = grams(item.name);
   const unitPrice = weight ? Number((item.sale / weight * 1000).toFixed(2)) : null;
-  return { ...item, package: item.name.match(/(?:Bak|Pak|Zak|Per stuk|Schaal|Fles|Blik).*/i)?.[0] ?? "", grams: weight, unitPrice, discountPercent: item.original ? Math.round((1 - item.sale / item.original) * 100) : null };
+  return { ...item, nameZh: translations.get(item.name) ?? null, package: item.name.match(/(?:Bak|Pak|Zak|Per stuk|Schaal|Fles|Blik).*/i)?.[0] ?? "", grams: weight, unitPrice, discountPercent: item.original ? Math.round((1 - item.sale / item.original) * 100) : null };
 }).sort((a, b) => (b.discountPercent ?? -1) - (a.discountPercent ?? -1) || a.name.localeCompare(b.name));
 
 await fs.mkdir(publicDir, { recursive: true });
