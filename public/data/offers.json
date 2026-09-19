@@ -19,9 +19,6 @@
       "package": "Per stuk.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 72,
       "advice": "洁厕块每个本期促销€0.99，标价让€2.50，刷新近11日低价。",
       "metrics": {
@@ -29,9 +26,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 3,
-      "recommendationLabel": "强烈推荐"
+      }
     },
     {
       "name": "Robijn wasmiddel Pak 15 capsules of flacon 24 wasbeurten.",
@@ -43,9 +38,6 @@
       "package": "Pak 15 capsules of flacon 24 wasbeurten.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 71,
       "advice": "洗衣液洗衣凝页面售价€3.99，优惠€9.76，近4日价格最低。",
       "metrics": {
@@ -53,9 +45,7 @@
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
-      },
-      "recommendationRank": 3,
-      "recommendationLabel": "强烈推荐"
+      }
     },
     {
       "name": "Campina Langlekker houdbare melk Pak 1 liter.",
@@ -67,9 +57,6 @@
       "package": "Pak 1 liter.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 64,
       "advice": "包装升今日标价€0.79，较原价省€1.40，创近4日低。",
       "metrics": {
@@ -77,9 +64,7 @@
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
-      },
-      "recommendationRank": 3,
-      "recommendationLabel": "强烈推荐"
+      }
     },
     {
       "name": "Mentos kauwgom Pot 28 stuks.",
@@ -91,9 +76,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 63,
       "advice": "罐装个今日标价€0.99，较原价减63%，守住近4日低。",
       "metrics": {
@@ -101,9 +83,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 3,
-      "recommendationLabel": "强烈推荐"
+      }
     },
     {
       "name": "Grand Italia pesto Pot 90 gram.",
@@ -115,9 +95,6 @@
       "package": "",
       "grams": 90,
       "unitPrice": 11,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 62,
       "advice": "罐装克这期售价€0.99，优惠€1.60，近4日价格最低。",
       "metrics": {
@@ -125,9 +102,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 3,
-      "recommendationLabel": "强烈推荐"
+      }
     },
     {
       "name": "Prodent tandpasta Tube 75 ml.",
@@ -139,9 +114,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 62,
       "advice": "牙膏软管装毫现价€0.99，原价少€1.60，近4日未见更低。",
       "metrics": {
@@ -149,9 +121,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 3,
-      "recommendationLabel": "强烈推荐"
+      }
     },
     {
       "name": "Eat Me Passiefruit 4 stuks",
@@ -163,9 +133,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 60,
       "advice": "百香果个本期促销€0.99，标价让€1.50，刷新近11日低价。",
       "metrics": {
@@ -173,9 +140,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 3,
-      "recommendationLabel": "强烈推荐"
+      }
     },
     {
       "name": "Haribo snoep Zak 160 - 260 gram.",
@@ -187,9 +152,6 @@
       "package": "Zak 160 - 260 gram.",
       "grams": 260,
       "unitPrice": 3.42,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 59,
       "advice": "袋装克当前价格€0.89，较原价省€1.30，创近4日低。",
       "metrics": {
@@ -197,9 +159,7 @@
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
-      },
-      "recommendationRank": 2,
-      "recommendationLabel": "优先看看"
+      }
     },
     {
       "name": "Appelsientje, Dubbelfrisss of Maaza Pak 300, 330 of 350 ml.",
@@ -211,9 +171,6 @@
       "package": "Pak 300, 330 of 350 ml.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 57,
       "advice": "或包装或毫升页面售价€0.69，原价少€0.90，近4日未见更低。",
       "metrics": {
@@ -221,9 +178,7 @@
         "low": 0.69,
         "high": 0.69,
         "latest": 0.69
-      },
-      "recommendationRank": 2,
-      "recommendationLabel": "优先看看"
+      }
     },
     {
       "name": "Pickwick thee Pak 20 stuks.",
@@ -235,9 +190,6 @@
       "package": "Pak 20 stuks.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 57,
       "advice": "茶包装个页面售价€0.99，比标价降57%，为近4日最低。",
       "metrics": {
@@ -245,9 +197,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 2,
-      "recommendationLabel": "优先看看"
+      }
     },
     {
       "name": "Milner kaasplakken Pak 6 plakken.",
@@ -259,9 +209,6 @@
       "package": "Pak 6 plakken.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 57,
       "advice": "米尔纳奶酪片优惠现价€1.49，较原价省€1.98，创近8日低。",
       "metrics": {
@@ -269,9 +216,7 @@
         "low": 1.49,
         "high": 1.99,
         "latest": 1.49
-      },
-      "recommendationRank": 2,
-      "recommendationLabel": "优先看看"
+      }
     },
     {
       "name": "Starbucks ijskoffie Beker 220 ml of fles 250 ml.",
@@ -283,9 +228,6 @@
       "package": "fles 250 ml.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 56,
       "advice": "冰咖啡杯装毫优惠现价€0.99，比标价降56%，为近4日最低。",
       "metrics": {
@@ -293,9 +235,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 2,
-      "recommendationLabel": "优先看看"
+      }
     },
     {
       "name": "Becel Kuip 225 gram.",
@@ -307,9 +247,6 @@
       "package": "",
       "grams": 225,
       "unitPrice": 4.4,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 55,
       "advice": "盒装克货架现价€0.99，标价让€1.20，刷新近4日低价。",
       "metrics": {
@@ -317,9 +254,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 2,
-      "recommendationLabel": "优先看看"
+      }
     },
     {
       "name": "Coolbest Fruitdrink Pak 1 liter.",
@@ -331,9 +266,6 @@
       "package": "Pak 1 liter.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 55,
       "advice": "包装升现价€0.99，比标价降55%，为近4日最低。",
       "metrics": {
@@ -341,9 +273,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 2,
-      "recommendationLabel": "优先看看"
+      }
     },
     {
       "name": "Knorr maaltijdmix Zak 30 - 80 gram (m.u.v. voordeelverpakkingen)",
@@ -355,9 +285,6 @@
       "package": "Zak 30 - 80 gram (m.u.v. voordeelverpakkingen)",
       "grams": 80,
       "unitPrice": 11.13,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 55,
       "advice": "调味餐料袋装当前价格€0.89，较原价省€1.10，创近4日低。",
       "metrics": {
@@ -365,9 +292,7 @@
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
-      },
-      "recommendationRank": 2,
-      "recommendationLabel": "优先看看"
+      }
     },
     {
       "name": "Remia satésaus kant & klaar Kuip 325 gram.",
@@ -379,9 +304,6 @@
       "package": "",
       "grams": 325,
       "unitPrice": 3.05,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 55,
       "advice": "盒装克这期售价€0.99，较原价减55%，守住近11日低。",
       "metrics": {
@@ -389,9 +311,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 2,
-      "recommendationLabel": "优先看看"
+      }
     },
     {
       "name": "Ola waterijs Pak 4 - 12 stuks.",
@@ -403,9 +323,6 @@
       "package": "Pak 4 - 12 stuks.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 53,
       "advice": "包装个页面售价€2.49，折扣53%，记录近4日低点。",
       "metrics": {
@@ -413,9 +330,7 @@
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
-      },
-      "recommendationRank": 2,
-      "recommendationLabel": "优先看看"
+      }
     },
     {
       "name": "Optimel drinkyoghurt Pak 1 liter (m.u.v. proteïne en vezels).",
@@ -427,9 +342,6 @@
       "package": "Pak 1 liter (m.u.v. proteïne en vezels).",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 53,
       "advice": "包装升和高纤今日标价€0.99，较原价减53%，守住近4日低。",
       "metrics": {
@@ -437,9 +349,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 2,
-      "recommendationLabel": "优先看看"
+      }
     },
     {
       "name": "Hak groente in pak Pak 380 gram.",
@@ -451,9 +361,6 @@
       "package": "pak Pak 380 gram.",
       "grams": 380,
       "unitPrice": 2.34,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 52,
       "advice": "蔬菜包装包装本期促销€0.89，标价让€0.96，刷新近4日低价。",
       "metrics": {
@@ -461,9 +368,7 @@
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
-      },
-      "recommendationRank": 2,
-      "recommendationLabel": "优先看看"
+      }
     },
     {
       "name": "Bits & Bites Tapas Kuip 110 - 190 gram.",
@@ -475,9 +380,6 @@
       "package": "",
       "grams": 190,
       "unitPrice": 5.21,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 50,
       "advice": "盒装克当前价格€0.99，比原价低50%，处近4日低位。",
       "metrics": {
@@ -485,9 +387,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 2,
-      "recommendationLabel": "优先看看"
+      }
     },
     {
       "name": "Powerful! People proteïnereep Per stuk 55 gram.",
@@ -499,9 +399,6 @@
       "package": "Per stuk 55 gram.",
       "grams": 55,
       "unitPrice": 18,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 50,
       "advice": "每个克当前价格€0.99，较原价减50%，守住近4日低。",
       "metrics": {
@@ -509,9 +406,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 2,
-      "recommendationLabel": "优先看看"
+      }
     },
     {
       "name": "Mango Per stuk",
@@ -523,9 +418,6 @@
       "package": "Per stuk",
       "grams": null,
       "unitPrice": null,
-      "friendPick": true,
-      "friendLabel": "可以尝试",
-      "friendRank": 1,
       "discountPercent": 45,
       "advice": "每个优惠现价€0.99，标价让€0.80，刷新近4日低价。",
       "metrics": {
@@ -533,9 +425,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Taksi Pak 1.5 liter.",
@@ -547,9 +437,6 @@
       "package": "Pak 1.5 liter.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 49,
       "advice": "包装升本期促销€0.99，折扣49%，记录近4日低点。",
       "metrics": {
@@ -557,9 +444,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Bifi Original 3-pack 60 g",
@@ -571,9 +456,6 @@
       "package": "",
       "grams": 60,
       "unitPrice": 16.5,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 48,
       "advice": "该商品本期促销€0.99，较原价减48%，守住近4日低。",
       "metrics": {
@@ -581,9 +463,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "1 de Beste Spekkoek pandan Per stuk",
@@ -595,9 +475,6 @@
       "package": "Per stuk",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 47,
       "advice": "自有品牌每个这期售价€1.49，优惠€1.30，近4日价格最低。",
       "metrics": {
@@ -605,9 +482,7 @@
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Iglo Viskraam of Fish & Fun Pak 240 - 380 gram.",
@@ -619,9 +494,6 @@
       "package": "Pak 240 - 380 gram.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 47,
       "advice": "或包装克现价€2.49，标价让€2.20，刷新近4日低价。",
       "metrics": {
@@ -629,9 +501,7 @@
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Tena Discreet Pak 6 - 28 stuks.",
@@ -643,9 +513,6 @@
       "package": "Pak 6 - 28 stuks.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 47,
       "advice": "包装个这期售价€2.99，较原价省€2.66，创近11日低。",
       "metrics": {
@@ -653,9 +520,7 @@
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Bieze rauwkost Kuip 250 gram.",
@@ -667,9 +532,6 @@
       "package": "",
       "grams": 250,
       "unitPrice": 3.96,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 47,
       "advice": "备泽生菜盆克现价€0.99，优惠€0.89，近6日价格最低。",
       "metrics": {
@@ -677,9 +539,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Jan Poffertjes portie 12 stuks 100 g",
@@ -691,9 +551,6 @@
       "package": "",
       "grams": 100,
       "unitPrice": 7.9,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 46,
       "advice": "个克当前价格€0.79，标价让€0.66，刷新近4日低价。",
       "metrics": {
@@ -701,9 +558,7 @@
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Spa Touch Fles 1 liter.",
@@ -715,9 +570,6 @@
       "package": "Fles 1 liter.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 46,
       "advice": "瓶装升这期售价€0.99，优惠€0.86，近4日价格最低。",
       "metrics": {
@@ -725,9 +577,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Sheba filets in saus of Cesar Kuip 60 of 150 gram.",
@@ -739,9 +589,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 43,
       "advice": "或盒装或克货架现价€0.99，标价让€0.76，刷新近4日低价。",
       "metrics": {
@@ -749,9 +596,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Sourcy Vitaminwater Fles 500 ml.",
@@ -763,9 +608,6 @@
       "package": "Fles 500 ml.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 42,
       "advice": "维生素水瓶毫这期售价€0.99，比标价降42%，为近8日最低。",
       "metrics": {
@@ -773,9 +615,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Unox hotdogs of Frankfurters Blik 550 gram. OP=OP",
@@ -787,9 +627,6 @@
       "package": "Blik 550 gram. OP=OP",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 42,
       "advice": "或罐装克优惠现价€2.79，比原价低42%，处近4日低位。",
       "metrics": {
@@ -797,9 +634,7 @@
         "low": 2.79,
         "high": 2.79,
         "latest": 2.79
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Ajax allesreiniger Flacon 650 ml.",
@@ -811,9 +646,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 41,
       "advice": "瓶装毫升这期售价€0.99，优惠€0.70，近4日价格最低。",
       "metrics": {
@@ -821,9 +653,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Coca-Cola, Fanta of Sprite Fles 1 liter.",
@@ -835,9 +665,6 @@
       "package": "Fles 1 liter.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 41,
       "advice": "或瓶装升当前价格€1.29，优惠€0.90，近4日价格最低。",
       "metrics": {
@@ -845,9 +672,7 @@
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "1 de Beste Spitskool Per stuk",
@@ -859,9 +684,6 @@
       "package": "Per stuk",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 41,
       "advice": "自有品牌每个本期促销€0.99，比标价降41%，为近10日最低。",
       "metrics": {
@@ -869,9 +691,7 @@
         "low": 0.99,
         "high": 1.29,
         "latest": 0.99
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Lonka Zak of pak 200 - 244 gram.",
@@ -883,9 +703,6 @@
       "package": "Zak of pak 200 - 244 gram.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 41,
       "advice": "袋装或包装克货架现价€1.69，折扣41%，记录近4日低点。",
       "metrics": {
@@ -893,9 +710,7 @@
         "low": 1.69,
         "high": 1.69,
         "latest": 1.69
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Schogetten chocolade Reep 100 gram.",
@@ -907,9 +722,6 @@
       "package": "",
       "grams": 100,
       "unitPrice": 9.9,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 41,
       "advice": "能量棒克今日标价€0.99，比原价低41%，处近4日低位。",
       "metrics": {
@@ -917,9 +729,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Bolletje Kruidnoten 200 g",
@@ -931,9 +741,6 @@
       "package": "",
       "grams": 200,
       "unitPrice": 2.95,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 40,
       "advice": "该商品本期促销€0.59，较原价减40%，守住近4日低。",
       "metrics": {
@@ -941,9 +748,7 @@
         "low": 0.59,
         "high": 0.59,
         "latest": 0.59
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Douwe Egberts koffiecups Pak 20 stuks.",
@@ -955,9 +760,6 @@
       "package": "Pak 20 stuks.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 40,
       "advice": "包装个本期促销€3.99，标价让€2.70，刷新近4日低价。",
       "metrics": {
@@ -965,9 +767,7 @@
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Kellogg's ontbijtgranen Pak 215 - 410 gram.",
@@ -979,9 +779,6 @@
       "package": "Pak 215 - 410 gram.",
       "grams": 410,
       "unitPrice": 6.56,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 40,
       "advice": "包装克本期促销€2.69，比原价低40%，处近4日低位。",
       "metrics": {
@@ -989,9 +786,7 @@
         "low": 2.69,
         "high": 2.69,
         "latest": 2.69
-      },
-      "recommendationRank": 1,
-      "recommendationLabel": "值得关注"
+      }
     },
     {
       "name": "Vleeschmeesters Kipkluifjes gekruid 800 g",
@@ -1003,9 +798,6 @@
       "package": "",
       "grams": 800,
       "unitPrice": 4.99,
-      "friendPick": true,
-      "friendLabel": "可以购买",
-      "friendRank": 2,
       "discountPercent": 36,
       "advice": "肉类大师腌制页面售价€3.99，较原价减36%，守住近8日低。",
       "metrics": {
@@ -1013,9 +805,7 @@
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "1 de Beste Pitloze witte druiven 500 g",
@@ -1027,9 +817,6 @@
       "package": "",
       "grams": 500,
       "unitPrice": 3.98,
-      "friendPick": true,
-      "friendLabel": "觉得便宜",
-      "friendRank": 2,
       "discountPercent": 17,
       "advice": "自有品牌白葡优惠现价€1.99，比标价降17%，为近22日最低。",
       "metrics": {
@@ -1037,9 +824,7 @@
         "low": 1.49,
         "high": 1.99,
         "latest": 1.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "1 de Beste Aardbeien 400 g",
@@ -1051,9 +836,6 @@
       "package": "",
       "grams": 400,
       "unitPrice": 6.98,
-      "friendPick": true,
-      "friendLabel": "可以购买",
-      "friendRank": 2,
       "discountPercent": 7,
       "advice": "自有品牌草莓页面售价€2.79，比标价降7%，为近10日最低。",
       "metrics": {
@@ -1061,9 +843,7 @@
         "low": 2.79,
         "high": 2.99,
         "latest": 2.79
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Balconi Mix Pak 10 stuks. OP=OP",
@@ -1075,9 +855,6 @@
       "package": "Pak 10 stuks. OP=OP",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 39,
       "advice": "包装个当前价格€1.99，比原价低39%，处近4日低位。",
       "metrics": {
@@ -1085,9 +862,7 @@
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Danish Chef Tube 85 gram.",
@@ -1099,9 +874,6 @@
       "package": "",
       "grams": 85,
       "unitPrice": 11.65,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 38,
       "advice": "软管装克这期售价€0.99，标价让€0.60，刷新近4日低价。",
       "metrics": {
@@ -1109,9 +881,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Maggi jus Zakje 18 - 29 gram.",
@@ -1123,9 +893,6 @@
       "package": "Zakje 18 - 29 gram.",
       "grams": 29,
       "unitPrice": 16.9,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 38,
       "advice": "该商品本期促销€0.49，比标价降38%，为近4日最低。",
       "metrics": {
@@ -1133,9 +900,7 @@
         "low": 0.49,
         "high": 0.49,
         "latest": 0.49
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Yummy noodles Beker 70 gram.",
@@ -1147,9 +912,6 @@
       "package": "",
       "grams": 70,
       "unitPrice": 12.71,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 36,
       "advice": "方便面杯装克货架现价€0.89，较原价省€0.50，创近4日低。",
       "metrics": {
@@ -1157,9 +919,7 @@
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "1 de Beste Shot Fles 125 ml.",
@@ -1171,9 +931,6 @@
       "package": "Fles 125 ml.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 34,
       "advice": "自有品牌小瓶今日标价€0.79，折扣34%，记录近4日低点。",
       "metrics": {
@@ -1181,9 +938,7 @@
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Doritos Zak 170 of 185 gram.",
@@ -1195,9 +950,6 @@
       "package": "Zak 170 of 185 gram.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 34,
       "advice": "袋装或克本期促销€1.49，标价让€0.76，刷新近4日低价。",
       "metrics": {
@@ -1205,9 +957,7 @@
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Earth & Wheat naanbrood Pak 2 x 110 gram.",
@@ -1219,9 +969,6 @@
       "package": "Pak 2 x 110 gram.",
       "grams": 110,
       "unitPrice": 9,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 34,
       "advice": "包装克现价€0.99，比标价降34%，为近4日最低。",
       "metrics": {
@@ -1229,9 +976,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Farmland Knoflook baguette 175 g",
@@ -1243,9 +988,6 @@
       "package": "",
       "grams": 175,
       "unitPrice": 5.66,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 34,
       "advice": "大蒜克现价€0.99，较原价减34%，守住近4日低。",
       "metrics": {
@@ -1253,9 +995,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Daily Chef gevulde verse pasta Pak 250 gram.",
@@ -1267,9 +1007,6 @@
       "package": "Pak 250 gram.",
       "grams": 250,
       "unitPrice": 7.96,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 33,
       "advice": "意大利面包装本期促销€1.99，原价少€1.00，近4日未见更低。",
       "metrics": {
@@ -1277,9 +1014,7 @@
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Penotti Duopasta 400 g",
@@ -1291,9 +1026,6 @@
       "package": "",
       "grams": 400,
       "unitPrice": 4.98,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 33,
       "advice": "该商品这期售价€1.99，标价让€1.00，刷新近4日低价。",
       "metrics": {
@@ -1301,9 +1033,7 @@
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Bakker van der Akker Bruine of volkoren bollen Per zak.",
@@ -1315,9 +1045,6 @@
       "package": "Bakker van der Akker Bruine of volkoren bollen Per zak.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 31,
       "advice": "或每袋装页面售价€0.99，比原价低31%，处近11日低位。",
       "metrics": {
@@ -1325,9 +1052,7 @@
         "low": 0.99,
         "high": 1.29,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "1 de Beste Zoete puntpaprika rood 500 g",
@@ -1339,9 +1064,6 @@
       "package": "",
       "grams": 500,
       "unitPrice": 3.98,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 31,
       "advice": "自有品牌克今日标价€1.99，折扣31%，记录近11日低点。",
       "metrics": {
@@ -1349,9 +1071,7 @@
         "low": 1.79,
         "high": 1.99,
         "latest": 1.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Dadels met pit 200 g",
@@ -1363,9 +1083,6 @@
       "package": "",
       "grams": 200,
       "unitPrice": 3.45,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 30,
       "advice": "配克当前价格€0.69，优惠€0.30，近4日价格最低。",
       "metrics": {
@@ -1373,9 +1090,7 @@
         "low": 0.69,
         "high": 0.69,
         "latest": 0.69
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Aviko Supercrunch Zak 750 gram.",
@@ -1387,9 +1102,6 @@
       "package": "Zak 750 gram.",
       "grams": 750,
       "unitPrice": 2.65,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 29,
       "advice": "袋装克当前价格€1.99，较原价减29%，守住近4日低。",
       "metrics": {
@@ -1397,9 +1109,7 @@
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Bolletje Pepsels Zak 115 of 180 gram.",
@@ -1411,9 +1121,6 @@
       "package": "Zak 115 of 180 gram.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 29,
       "advice": "袋装或克这期售价€0.89，较原价省€0.36，创近4日低。",
       "metrics": {
@@ -1421,9 +1128,7 @@
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Vijgen 1 Stuks",
@@ -1435,9 +1140,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 29,
       "advice": "该商品货架现价€0.49，优惠€0.20，近4日价格最低。",
       "metrics": {
@@ -1445,9 +1147,7 @@
         "low": 0.49,
         "high": 0.49,
         "latest": 0.49
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Yakult Flesje 65 ml. OP=OP",
@@ -1459,9 +1159,6 @@
       "package": "Flesje 65 ml. OP=OP",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 29,
       "advice": "小瓶装毫升这期售价€2.99，较原价省€1.23，创近4日低。",
       "metrics": {
@@ -1469,9 +1166,7 @@
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Melkunie milkshake Beker 200 ml.",
@@ -1483,9 +1178,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 28,
       "advice": "杯装毫升这期售价€0.79，标价让€0.30，刷新近4日低价。",
       "metrics": {
@@ -1493,9 +1185,7 @@
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Van Wijngaarden's Mayonaise zaanse 650 ml",
@@ -1507,9 +1197,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 28,
       "advice": "毫升当前价格€2.79，较原价省€1.10，创近4日低。",
       "metrics": {
@@ -1517,9 +1204,7 @@
         "low": 2.79,
         "high": 2.79,
         "latest": 2.79
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Simon Lévelt koffiebonen Per zak.",
@@ -1531,9 +1216,6 @@
       "package": "zak.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 27,
       "advice": "咖啡豆每袋装优惠现价€8.99，较原价减27%，守住近4日低。",
       "metrics": {
@@ -1541,9 +1223,7 @@
         "low": 8.99,
         "high": 8.99,
         "latest": 8.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Amstel pils Blik 50 cl.",
@@ -1555,9 +1235,6 @@
       "package": "Blik 50 cl.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 25,
       "advice": "罐装厘升货架现价€0.79，标价让€0.26，刷新近4日低价。",
       "metrics": {
@@ -1565,9 +1242,7 @@
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Amstel Pilsener krat 24 x 300 ml",
@@ -1579,9 +1254,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 25,
       "advice": "整箱毫升这期售价€12.67，标价让€4.22，刷新近10日低价。",
       "metrics": {
@@ -1589,9 +1261,7 @@
         "low": 12.67,
         "high": 12.67,
         "latest": 12.67
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Hertog Jan, Brand of Grolsch bokbier 6-pack fles à 30 cl.",
@@ -1603,9 +1273,6 @@
       "package": "fles à 30 cl.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 25,
       "advice": "啤酒或格罗尔今日标价€4.99，标价让€1.66，刷新近4日低价。",
       "metrics": {
@@ -1613,9 +1280,7 @@
         "low": 4.99,
         "high": 4.99,
         "latest": 4.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Raak Gazeuse Fles 750 ml.",
@@ -1627,9 +1292,6 @@
       "package": "Fles 750 ml.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 25,
       "advice": "瓶装毫升页面售价€0.59，比标价降25%，为近4日最低。",
       "metrics": {
@@ -1637,9 +1299,7 @@
         "low": 0.59,
         "high": 0.59,
         "latest": 0.59
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Heineken Pilsener Krat 24 x 300 ml",
@@ -1651,9 +1311,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 25,
       "advice": "喜力啤酒整箱这期售价€14.21，较原价省€4.74，创近21日低。",
       "metrics": {
@@ -1661,9 +1318,7 @@
         "low": 14.21,
         "high": 14.21,
         "latest": 14.21
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Vleeschmeesters Varkens entrecote 450 g",
@@ -1675,9 +1330,6 @@
       "package": "",
       "grams": 450,
       "unitPrice": 9.98,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 25,
       "advice": "肉类大师克现价€4.49，较原价省€1.50，创近4日低。",
       "metrics": {
@@ -1685,9 +1337,7 @@
         "low": 4.49,
         "high": 4.49,
         "latest": 4.49
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Aperitivo tapasschotel Amoretti 300 g",
@@ -1699,9 +1349,6 @@
       "package": "",
       "grams": 300,
       "unitPrice": 21.63,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 23,
       "advice": "该商品当前价格€6.49，优惠€1.90，近4日价格最低。",
       "metrics": {
@@ -1709,9 +1356,7 @@
         "low": 6.49,
         "high": 6.49,
         "latest": 6.49
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Favolino Spritz Blik 25 cl.",
@@ -1723,9 +1368,6 @@
       "package": "Blik 25 cl.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 23,
       "advice": "罐装厘升当前价格€0.99，较原价省€0.30，创近4日低。",
       "metrics": {
@@ -1733,9 +1375,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Garlan roomkaas Kuip 150 gram.",
@@ -1747,9 +1387,6 @@
       "package": "",
       "grams": 150,
       "unitPrice": 6.6,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 23,
       "advice": "盒装克优惠现价€0.99，较原价减23%，守住近4日低。",
       "metrics": {
@@ -1757,9 +1394,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Gran Pavesi crackers Zak 150 of 180 gram. OP=OP",
@@ -1771,9 +1406,6 @@
       "package": "Zak 150 of 180 gram. OP=OP",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 23,
       "advice": "饼干袋装或克今日标价€1.99，较原价减23%，守住近11日低。",
       "metrics": {
@@ -1781,9 +1413,7 @@
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Hele dorade of schol OP=OP",
@@ -1795,9 +1425,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 23,
       "advice": "该商品现价€4.99，标价让€1.50，刷新近4日低价。",
       "metrics": {
@@ -1805,9 +1432,7 @@
         "low": 4.99,
         "high": 4.99,
         "latest": 4.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Ladessa Filet Americain naturel 130 g",
@@ -1819,9 +1444,6 @@
       "package": "",
       "grams": 130,
       "unitPrice": 15.31,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 23,
       "advice": "该商品当前价格€1.99，原价少€0.60，近4日未见更低。",
       "metrics": {
@@ -1829,9 +1451,7 @@
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Real Cool Blik 25 cl.",
@@ -1843,9 +1463,6 @@
       "package": "Blik 25 cl.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 23,
       "advice": "罐装厘升本期促销€0.99，优惠€0.30，近4日价格最低。",
       "metrics": {
@@ -1853,9 +1470,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Stoney Creek Fles 75 cl.",
@@ -1867,9 +1482,6 @@
       "package": "Fles 75 cl.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 23,
       "advice": "瓶装厘升当前价格€3.39，较原价省€1.00，创近4日低。",
       "metrics": {
@@ -1877,9 +1489,7 @@
         "low": 3.39,
         "high": 3.39,
         "latest": 3.39
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Soep verspakket Per pakket.",
@@ -1891,9 +1501,6 @@
       "package": "pakket Per pakket.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 22,
       "advice": "汤每当前价格€3.49，较原价省€1.00，创近4日低。",
       "metrics": {
@@ -1901,9 +1508,7 @@
         "low": 3.49,
         "high": 3.49,
         "latest": 3.49
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "De Kuyper Cocktail amaretto sour 500 ml",
@@ -1915,9 +1520,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 20,
       "advice": "毫升货架现价€7.99，标价让€2.00，刷新近4日低价。",
       "metrics": {
@@ -1925,9 +1527,7 @@
         "low": 7.99,
         "high": 7.99,
         "latest": 7.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Diamond Allure of Fibonacci Nero d'Avola Fles 75 cl.",
@@ -1939,9 +1539,6 @@
       "package": "Fles 75 cl.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 20,
       "advice": "或瓶装厘升优惠现价€3.99，比原价低20%，处近4日低位。",
       "metrics": {
@@ -1949,9 +1546,7 @@
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Grolsch pils 6-pack blik à 33 cl.",
@@ -1963,9 +1558,6 @@
       "package": "blik à 33 cl.",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 20,
       "advice": "格罗尔施啤酒这期售价€4.49，标价让€1.10，刷新近4日低价。",
       "metrics": {
@@ -1973,9 +1565,7 @@
         "low": 4.49,
         "high": 4.49,
         "latest": 4.49
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Grolsch Pilsener 500 ml",
@@ -1987,9 +1577,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 20,
       "advice": "格罗尔施啤酒货架现价€0.99，较原价减20%，守住近4日低。",
       "metrics": {
@@ -1997,9 +1584,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "1 de Beste Royal gala 1,5 kg",
@@ -2011,9 +1596,6 @@
       "package": "",
       "grams": 1500,
       "unitPrice": 1.99,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 19,
       "advice": "自有品牌公斤这期售价€2.99，优惠€0.70，近11日价格最低。",
       "metrics": {
@@ -2021,9 +1603,7 @@
         "low": 2.99,
         "high": 3.49,
         "latest": 2.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Olvarit knijpfruit Knijpzakje 100 gram.",
@@ -2035,9 +1615,6 @@
       "package": "zakje 100 gram.",
       "grams": 100,
       "unitPrice": 9.9,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 17,
       "advice": "吸嘴袋克货架现价€0.99，比原价低17%，处近4日低位。",
       "metrics": {
@@ -2045,9 +1622,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Noord-Hollandse overjarige kaas 48+ 360 g",
@@ -2059,9 +1634,6 @@
       "package": "",
       "grams": 360,
       "unitPrice": 8.31,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 14,
       "advice": "该商品当前价格€2.99，折扣14%，记录近4日低点。",
       "metrics": {
@@ -2069,9 +1641,7 @@
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "1 de Beste Polderkiprollade 100 g",
@@ -2083,9 +1653,6 @@
       "package": "",
       "grams": 100,
       "unitPrice": 19.9,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 13,
       "advice": "自有品牌克页面售价€1.99，较原价省€0.30，创近4日低。",
       "metrics": {
@@ -2093,9 +1660,7 @@
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Goudse kaas rasp mild 500 g",
@@ -2107,9 +1672,6 @@
       "package": "",
       "grams": 500,
       "unitPrice": 6.98,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 13,
       "advice": "高达奶酪克今日标价€3.49，原价少€0.50，近4日未见更低。",
       "metrics": {
@@ -2117,9 +1679,7 @@
         "low": 3.49,
         "high": 3.49,
         "latest": 3.49
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Knoflook 3 Stuks",
@@ -2131,9 +1691,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 12,
       "advice": "大蒜个今日标价€1.49，原价少€0.20，近11日未见更低。",
       "metrics": {
@@ -2141,9 +1698,7 @@
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Bloemkool Per stuk",
@@ -2155,9 +1710,6 @@
       "package": "Per stuk",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 10,
       "advice": "每个当前价格€1.49，折扣10%，记录近10日低点。",
       "metrics": {
@@ -2165,9 +1717,7 @@
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "1 de Beste Granny smith 6 stuks",
@@ -2179,9 +1729,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 9,
       "advice": "自有品牌个现价€2.99，较原价减9%，守住近11日低。",
       "metrics": {
@@ -2189,9 +1736,7 @@
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Slagerhuis Gelderse rookworst 225 g",
@@ -2203,9 +1748,6 @@
       "package": "",
       "grams": 225,
       "unitPrice": 4.4,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 9,
       "advice": "该商品本期促销€0.99，较原价减9%，守住近4日低。",
       "metrics": {
@@ -2213,9 +1755,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Vleeschmeesters Gemengd gehakt 750 g",
@@ -2227,9 +1767,6 @@
       "package": "",
       "grams": 750,
       "unitPrice": 6.65,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 9,
       "advice": "混合肉末克本期促销€4.99，优惠€0.50，近8日价格最低。",
       "metrics": {
@@ -2237,9 +1774,7 @@
         "low": 4.99,
         "high": 4.99,
         "latest": 4.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Pijnboompitten 100 g",
@@ -2251,9 +1786,6 @@
       "package": "",
       "grams": 100,
       "unitPrice": 36.9,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 8,
       "advice": "该商品本期促销€3.69，比标价降8%，为近4日最低。",
       "metrics": {
@@ -2261,9 +1793,7 @@
         "low": 3.69,
         "high": 3.69,
         "latest": 3.69
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Vleeschmeesters Actie schouderkarbonade 5 stuks 875 g",
@@ -2275,9 +1805,6 @@
       "package": "",
       "grams": 875,
       "unitPrice": 6.85,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 8,
       "advice": "肉类大师个克本期促销€5.99，比原价低8%，处近4日低位。",
       "metrics": {
@@ -2285,9 +1812,7 @@
         "low": 5.99,
         "high": 5.99,
         "latest": 5.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Zoete aardappelen 1 kg",
@@ -2299,9 +1824,6 @@
       "package": "",
       "grams": 1000,
       "unitPrice": 2.58,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 7,
       "advice": "红薯公斤本期促销€2.58，比原价低7%，处近17日低位。",
       "metrics": {
@@ -2309,9 +1831,7 @@
         "low": 2.58,
         "high": 2.58,
         "latest": 2.58
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Eat Me Avocado ready to eat 2 stuks",
@@ -2323,9 +1843,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 4,
       "advice": "牛油果个现价€2.39，原价少€0.10，近8日未见更低。",
       "metrics": {
@@ -2333,9 +1850,7 @@
         "low": 1.49,
         "high": 2.39,
         "latest": 2.39
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Zespri Kiwi sungold 1 kg",
@@ -2347,9 +1862,6 @@
       "package": "",
       "grams": 1000,
       "unitPrice": 5.78,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": 3,
       "advice": "公斤优惠现价€5.78，折扣3%，记录近12日低点。",
       "metrics": {
@@ -2357,9 +1869,7 @@
         "low": 5.78,
         "high": 5.78,
         "latest": 5.78
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Berruto pasta of gnocchi Zak 500 gram. OP=OP",
@@ -2371,9 +1881,6 @@
       "package": "Zak 500 gram. OP=OP",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "意大利面或袋本页现价€0.99，暂无标价，刷新近4日低点。",
       "metrics": {
@@ -2381,9 +1888,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Bertolli pastasaus Zak 460 of pot 670 gram. OP=OP",
@@ -2395,9 +1900,6 @@
       "package": "Zak 460 of pot 670 gram. OP=OP",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "意面酱袋装或现价€1.59，未见原价，处近8日观察低位。",
       "metrics": {
@@ -2405,9 +1907,7 @@
         "low": 1.59,
         "high": 1.59,
         "latest": 1.59
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Cheese bretzel Per stuk",
@@ -2419,9 +1919,6 @@
       "package": "Per stuk",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "每个现价€0.99，原价未标，记录近4日低位。",
       "metrics": {
@@ -2429,9 +1926,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Cheestrings original 4 stuks 80 g",
@@ -2443,9 +1938,6 @@
       "package": "",
       "grams": 80,
       "unitPrice": 12.38,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "个克本页现价€0.99，无原价可比，为近4日低价。",
       "metrics": {
@@ -2453,9 +1945,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Chio Heartbreakers of Pom-bär Zak 60 of 80 gram. OP=OP",
@@ -2467,9 +1957,6 @@
       "package": "Zak 60 of 80 gram. OP=OP",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "或袋装或克当前售价€0.99，原价未给，守住近4日低价。",
       "metrics": {
@@ -2477,9 +1964,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Chio popcorn Zak 90 of 150 gram. OP=OP",
@@ -2491,9 +1976,6 @@
       "package": "Zak 90 of 150 gram. OP=OP",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "袋装或克本页现价€0.79，原价未列，创近4日观察低点。",
       "metrics": {
@@ -2501,9 +1983,7 @@
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Colgate Tandenborstel zigzag medium Per stuk",
@@ -2515,9 +1995,6 @@
       "package": "Per stuk",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "每个页面价格€0.69，暂无标价，刷新近4日低点。",
       "metrics": {
@@ -2525,9 +2002,7 @@
         "low": 0.69,
         "high": 0.69,
         "latest": 0.69
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Corona, Affligem Blond of Texels 12-pack fles à 25 of 30 CL. OP=OP",
@@ -2539,9 +2014,6 @@
       "package": "fles à 25 of 30 CL. OP=OP",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "或瓶装或厘升本期价€9.99，原价未标，记录近4日低位。",
       "metrics": {
@@ -2549,9 +2021,7 @@
         "low": 9.99,
         "high": 9.99,
         "latest": 9.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Danette Pak 4 x 125 gram. OP=OP",
@@ -2563,9 +2033,6 @@
       "package": "Pak 4 x 125 gram. OP=OP",
       "grams": 125,
       "unitPrice": 7.92,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "包装克页面价格€0.99，原价未标，记录近4日低位。",
       "metrics": {
@@ -2573,9 +2040,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Danlers chicken- of cheeseburger Per stuk. OP=OP",
@@ -2587,9 +2052,6 @@
       "package": "Per stuk. OP=OP",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "或每个货架价€0.99，无原价可比，为近4日低价。",
       "metrics": {
@@ -2597,9 +2059,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "1 de Beste Gekookte of boterhamworst Pak 90 of 110 gram. OP=OP",
@@ -2611,9 +2071,6 @@
       "package": "Pak 90 of 110 gram. OP=OP",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "自有品牌或包当前售价€0.99，无原价可比，为近4日低价。",
       "metrics": {
@@ -2621,9 +2078,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Dreft wasverzachter Per flacon. OP=OP",
@@ -2635,9 +2090,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "衣物柔顺剂每当前售价€2.99，标价缺失，近4日未见更低。",
       "metrics": {
@@ -2645,9 +2097,7 @@
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Fa deodorant Roller 50 ml. OP=OP",
@@ -2659,9 +2109,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "止汗剂滚珠毫本期价€0.99，标价缺失，近4日未见更低。",
       "metrics": {
@@ -2669,9 +2116,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Finish Vaatwascaps ultimate regular 16 Stuks",
@@ -2683,9 +2128,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "该商品本期价€3.99，标价缺失，近4日未见更低。",
       "metrics": {
@@ -2693,9 +2135,7 @@
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Guhl shampoo of conditioner Flacon 200 of 250 ml. OP=OP",
@@ -2707,9 +2147,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "洗发水或护发货架价€2.99，未见原价，处近4日观察低位。",
       "metrics": {
@@ -2717,9 +2154,7 @@
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Healthy Hand Appel parten 200 g",
@@ -2731,9 +2166,6 @@
       "package": "",
       "grams": 200,
       "unitPrice": 4.95,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "该商品今日售价€0.99，原价未列，创近4日观察低点。",
       "metrics": {
@@ -2741,9 +2173,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Krokante visschnitzel of De Vleeschmeesters koteletto Per stuk. OP=OP",
@@ -2755,9 +2185,6 @@
       "package": "Per stuk. OP=OP",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "或肉类大师每货架价€0.99，原价未给，守住近4日低价。",
       "metrics": {
@@ -2765,9 +2192,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Milka koek Pak 120 - 150 gram. OP=OP",
@@ -2779,9 +2204,6 @@
       "package": "Pak 120 - 150 gram. OP=OP",
       "grams": 150,
       "unitPrice": 6.6,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "包装克本期价€0.99，暂无标价，刷新近4日低点。",
       "metrics": {
@@ -2789,9 +2211,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Mini speculaas gevulde koek met amandelspijs 45 g",
@@ -2803,9 +2223,6 @@
       "package": "",
       "grams": 45,
       "unitPrice": 7.33,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "配克当前售价€0.33，缺少原价，近4日价格最低。",
       "metrics": {
@@ -2813,9 +2230,7 @@
         "low": 0.33,
         "high": 0.33,
         "latest": 0.33
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Nalys Toiletpapier 32 rollen soft 2 laags 32 Stuks",
@@ -2827,9 +2242,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "湿厕纸卷个当前售价€8.99，暂无标价，刷新近4日低点。",
       "metrics": {
@@ -2837,9 +2249,7 @@
         "low": 8.99,
         "high": 8.99,
         "latest": 8.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Odorex men douche Flacon 300 ml. OP=OP",
@@ -2851,9 +2261,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "瓶装毫升促销价€0.99，标价缺失，近4日未见更低。",
       "metrics": {
@@ -2861,9 +2268,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Ouwehand tonijnstukken Blik 160 gram. OP=OP",
@@ -2875,9 +2280,6 @@
       "package": "Blik 160 gram. OP=OP",
       "grams": 160,
       "unitPrice": 5.56,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "罐装克本期价€0.89，无原价可比，为近4日低价。",
       "metrics": {
@@ -2885,9 +2287,7 @@
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Pangasius mozzarella of kip in honing-mosterd Ovenschaal 330 of 380 gram. OP=OP",
@@ -2899,9 +2299,6 @@
       "package": "schaal 330 of 380 gram. OP=OP",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "或蜂蜜或克页面价格€4.99，无原价可比，为近4日低价。",
       "metrics": {
@@ -2909,9 +2306,7 @@
         "low": 4.99,
         "high": 4.99,
         "latest": 4.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Pringles paspoort Bus 165 gram. OP=OP",
@@ -2923,9 +2318,6 @@
       "package": "",
       "grams": 165,
       "unitPrice": 7.82,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "该商品现价€1.29，原价未列，创近4日观察低点。",
       "metrics": {
@@ -2933,9 +2325,7 @@
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Red Band Stophoest of King pepermunt Pak 3 rollen. OP=OP",
@@ -2947,9 +2337,6 @@
       "package": "Pak 3 rollen. OP=OP",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "或包装卷页面价格€0.99，未见原价，处近4日观察低位。",
       "metrics": {
@@ -2957,9 +2344,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Snelle Jelle kruidkoekrepen 3-pack. OP=OP",
@@ -2971,9 +2356,6 @@
       "package": "",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "香料姜饼能量当前售价€0.99，缺少原价，近4日价格最低。",
       "metrics": {
@@ -2981,9 +2363,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Spekreepjes gerookt 100 g",
@@ -2995,9 +2375,6 @@
       "package": "",
       "grams": 100,
       "unitPrice": 9.9,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "该商品现价€0.99，暂无标价，刷新近4日低点。",
       "metrics": {
@@ -3005,9 +2382,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Toast It! French toast 120 g",
@@ -3019,9 +2394,6 @@
       "package": "",
       "grams": 120,
       "unitPrice": 8.25,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "该商品页面价格€0.99，原价未标，记录近4日低位。",
       "metrics": {
@@ -3029,9 +2401,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Vers Donut cherry cola Per stuk",
@@ -3043,9 +2413,6 @@
       "package": "Per stuk",
       "grams": null,
       "unitPrice": null,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "每个现价€0.49，原价未列，创近4日观察低点。",
       "metrics": {
@@ -3053,9 +2420,7 @@
         "low": 0.49,
         "high": 0.49,
         "latest": 0.49
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Whiskas Per stuk 85 gram OP=OP",
@@ -3067,9 +2432,6 @@
       "package": "Per stuk 85 gram OP=OP",
       "grams": 85,
       "unitPrice": 6.94,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "每个克本页现价€0.59，未见原价，处近4日观察低位。",
       "metrics": {
@@ -3077,9 +2439,7 @@
         "low": 0.59,
         "high": 0.59,
         "latest": 0.59
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Lay's Bugles nacho cheese 75 g",
@@ -3091,9 +2451,6 @@
       "package": "",
       "grams": 75,
       "unitPrice": 13.2,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "乐事薯片克页面价格€0.99，标价缺失，近4日未见更低。",
       "metrics": {
@@ -3101,9 +2458,7 @@
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     },
     {
       "name": "Vleeschmeesters Gehaktschnitzel gepaneerd 6 st. 600 g",
@@ -3115,9 +2470,6 @@
       "package": "",
       "grams": 600,
       "unitPrice": 8.32,
-      "friendPick": false,
-      "friendLabel": "",
-      "friendRank": 0,
       "discountPercent": null,
       "advice": "肉类大师克货架价€4.99，原价未标，记录近4日低位。",
       "metrics": {
@@ -3125,9 +2477,7 @@
         "low": 4.99,
         "high": 4.99,
         "latest": 4.99
-      },
-      "recommendationRank": 0,
-      "recommendationLabel": ""
+      }
     }
   ]
 }

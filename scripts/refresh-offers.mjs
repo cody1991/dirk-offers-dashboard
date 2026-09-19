@@ -24,20 +24,6 @@ if (!force && process.env.GITHUB_ACTIONS && localHour !== "10") {
   process.exit(0);
 }
 
-const friendTerms = new Map([
-  ["Roerbakgarnalen", { label: "觉得便宜", rank: 2, note: "朋友认为便宜，但提醒去壳后量会少。" }],
-  ["XL watermeloen", { label: "推荐购买", rank: 3, note: "朋友说西瓜便宜，建议买。" }],
-  ["Aardbeien", { label: "可以购买", rank: 2, note: "朋友确认草莓可以。" }],
-  ["blauwe bessen", { label: "可以购买", rank: 2, note: "朋友确认蓝莓也可以。" }],
-  ["Chinese kool", { label: "可以购买", rank: 2, note: "朋友确认大白菜也可以。" }],
-  ["Galia meloen", { label: "推荐购买", rank: 3, note: "朋友确认是哈密瓜，可以买。" }],
-  ["Handperen", { label: "可以购买", rank: 2, note: "朋友确认雪梨可以。" }],
-  ["Cocktail trostomaten", { label: "推荐购买", rank: 3, note: "朋友说这种串番茄好吃，建议买。" }],
-  ["Kipkluifjes gekruid", { label: "可以购买", rank: 2, note: "朋友确认腌制好，适合空气炸锅。" }],
-  ["Mango", { label: "可以尝试", rank: 1, note: "朋友觉得芒果看起来很大。" }],
-  ["Kersen verpakt", { label: "觉得便宜", rank: 2, note: "朋友认为樱桃便宜。" }],
-  ["witte druiven", { label: "觉得便宜", rank: 2, note: "朋友认为葡萄/油桃很便宜。" }]
-]);
 function grams(name) { if (/\b(?:of|or)\b/i.test(name)) return null; const kg = name.match(/(\d+(?:[.,]\d+)?)\s*(?:kilo|kg)\b/i); if (kg) return Number(kg[1].replace(",", ".")) * 1000; const g = name.match(/(\d+(?:[.,]\d+)?)\s*(?:gram|g)\b/i); return g ? Number(g[1].replace(",", ".")) : null; }
 function queryRows(result) {
   if (!result[0]) return [];
@@ -78,13 +64,6 @@ function evidenceAdvice(offer) {
     `原价未给，守住近${days}日低价。`, `未见原价，处近${days}日观察低位。`
   ]);
 }
-function recommendation(offer) {
-  if ((offer.discountPercent ?? 0) >= 60) return { rank: 3, label: "强烈推荐" };
-  if ((offer.discountPercent ?? 0) >= 50) return { rank: 2, label: "优先看看" };
-  if ((offer.discountPercent ?? 0) >= 40 && offer.metrics?.low != null && Math.abs(offer.sale - offer.metrics.low) < 0.005) return { rank: 1, label: "值得关注" };
-  return { rank: 0, label: "" };
-}
-
 const [response, storeResponse] = await Promise.all([
   fetch(`https://r.jina.ai/${offerUrl}`),
   fetch(`https://r.jina.ai/${storeUrl}`)
@@ -116,11 +95,10 @@ for (const match of markdown.matchAll(product)) {
 }
 
 const output = [...offers.values()].map((item) => {
-  const friend = [...friendTerms.entries()].find(([term]) => item.name.includes(term))?.[1] ?? null;
   const weight = grams(item.name);
   const unitPrice = weight ? Number((item.sale / weight * 1000).toFixed(2)) : null;
-  return { ...item, package: item.name.match(/(?:Bak|Pak|Zak|Per stuk|Schaal|Fles|Blik).*/i)?.[0] ?? "", grams: weight, unitPrice, friendPick: Boolean(friend), friendLabel: friend?.label ?? "", friendRank: friend?.rank ?? 0, discountPercent: item.original ? Math.round((1 - item.sale / item.original) * 100) : null };
-}).sort((a, b) => b.friendRank - a.friendRank || (b.discountPercent ?? -1) - (a.discountPercent ?? -1) || a.name.localeCompare(b.name));
+  return { ...item, package: item.name.match(/(?:Bak|Pak|Zak|Per stuk|Schaal|Fles|Blik).*/i)?.[0] ?? "", grams: weight, unitPrice, discountPercent: item.original ? Math.round((1 - item.sale / item.original) * 100) : null };
+}).sort((a, b) => (b.discountPercent ?? -1) - (a.discountPercent ?? -1) || a.name.localeCompare(b.name));
 
 await fs.mkdir(publicDir, { recursive: true });
 await fs.mkdir(dbDir, { recursive: true });
@@ -154,11 +132,8 @@ for (const item of output) {
 }
 for (const item of output) {
   item.advice = evidenceAdvice(item);
-  const pick = recommendation(item);
-  item.recommendationRank = pick.rank;
-  item.recommendationLabel = pick.label;
 }
-output.sort((a, b) => b.recommendationRank - a.recommendationRank || b.friendRank - a.friendRank || (b.discountPercent ?? -1) - (a.discountPercent ?? -1) || a.name.localeCompare(b.name));
+output.sort((a, b) => (b.discountPercent ?? -1) - (a.discountPercent ?? -1) || a.name.localeCompare(b.name));
 db.run("VACUUM");
 await fs.writeFile(dbPath, db.export());
 db.close();
