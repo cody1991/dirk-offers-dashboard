@@ -4,14 +4,11 @@ import initSqlJs from "sql.js";
 
 const root = path.resolve(import.meta.dirname, "..");
 const publicDir = path.join(root, "public", "data");
-const historyDir = path.join(publicDir, "history");
 const dbDir = path.join(root, "data");
 const offerUrl = "https://www.dirk.nl/aanbiedingen";
 const storeUrl = "https://www.dirk.nl/winkels/almere/korte-promenade/68";
 const store = {
   name: "Dirk supermarkt Almere",
-  nameZh: "Dirk Almere（Korte Promenade）",
-  address: "Korte Promenade 2-6, 1315 HN Almere",
   url: storeUrl
 };
 const force = process.argv.includes("--force");
@@ -27,11 +24,6 @@ if (!force && process.env.GITHUB_ACTIONS && localHour !== "10") {
   process.exit(0);
 }
 
-const translationsPath = path.join(root, "data", "translations.json");
-const exactTranslations = new Map(Object.entries(JSON.parse(await fs.readFile(translationsPath, "utf8"))));
-const translations = [
-  ["Kipkluifjes gekruid", "腌制鸡翅根"], ["Cocktail trostomaten", "串番茄"], ["Mango ready to eat", "即食芒果"], ["Hollandse aardbeien", "荷兰草莓"], ["cherry trostomaten", "樱桃番茄"], ["witte druiven", "白葡萄"], ["blauwe bessen", "蓝莓"], ["zoete aardappelen", "红薯"], ["groene asperges", "绿芦笋"], ["rundergehakt", "瘦牛肉末"], ["rundersteak", "牛排"], ["varkensoester", "猪里脊肉"], ["Hollandse nieuwe", "荷兰新鲜鲱鱼"], ["Vleeschmeesters", "肉类大师"], ["pangasiusfilet", "巴沙鱼柳"], ["filet american", "生牛肉酱"], ["geraspte kaas", "奶酪碎"], ["Goudse kaas", "高达奶酪"], ["brood- of toastsalade", "面包/吐司沙拉"], ["Smeren zonder palmolie", "无棕榈油涂抹酱"], ["crispy chili oil", "香脆辣椒油"], ["aloë vera drink", "芦荟饮料"], ["soep in zak", "袋装汤"], ["oploskoffie", "速溶咖啡"], ["wasbeurten", "次洗涤"], ["capsules", "洗衣凝珠"], ["haverdrink", "燕麦饮"], ["wasverzachter", "衣物柔顺剂"], ["wasmiddel", "洗衣液/洗衣凝珠"], ["toiletpapier", "湿厕纸"], ["keukenpapier", "厨房纸"], ["koffiebonen", "咖啡豆"], ["koffie", "咖啡"], ["Hertog Jan", "Hertog Jan 啤酒"], ["Grolsch", "格罗尔施啤酒"], ["Heineken", "喜力啤酒"], ["geurparels", "留香珠"], ["toiletblok", "洁厕块"], ["handijs", "手持冰淇淋"], ["spareribs", "排骨"], ["kip toink balls", "鸡肉丸"], ["shoarma", "沙威玛肉"], ["honing", "蜂蜜"], ["tonijn", "金枪鱼"], ["kaasplakken", "奶酪片"], ["broodjes", "小面包"], ["afbak", "烘烤用"], ["kruidenboter", "香草黄油"], ["maaltijdmix", "调味餐料"], ["maaltijd", "即食餐"], ["groente", "蔬菜"], ["appelmoes", "苹果酱"], ["Passiefruit", "百香果"], ["Pruimen", "李子"], ["Minneola", "蜜柑"], ["Ananas", "菠萝"], ["Knoflook", "大蒜"], ["noodles", "方便面"], ["wraps", "墨西哥卷饼"], ["crackers", "饼干"], ["cookies", "曲奇"], ["granola", "格兰诺拉麦片"], ["soep", "汤"], ["vochtig", "湿润"], ["tafelsaus", "佐餐酱"], ["sojasaus", "酱油"], ["douchegel", "沐浴露"], ["kattenbrokjes", "猫粮"], ["Dentastix", "洁牙棒"], ["smoothie", "果昔"], ["shot", "小瓶饮"], ["roller", "滚珠"], ["reep", "能量棒"], ["vezels", "高纤"], ["olijf", "橄榄油"], ["ham", "火腿"], ["schinken", "熏火腿"], ["wolkentoetje", "慕斯甜点"], ["pizza", "披萨"], ["pita", "皮塔饼"], ["thee", "茶"], ["tandpasta", "牙膏"], ["Salami", "萨拉米香肠"], ["limoenen", "青柠"], ["ijskoffie", "冰咖啡"], ["chocolademelk", "巧克力奶"], ["Aardbeien", "草莓"], ["Chinese kool", "大白菜"], ["Handperen", "雪梨"], ["Galia meloen", "哈密瓜"], ["XL watermeloen", "特大西瓜"], ["Kersen", "樱桃"], ["Nectarines", "油桃"], ["courgette", "西葫芦"], ["rode paprika", "红甜椒"], ["Uien", "洋葱"], ["Avocado", "牛油果"], ["Magnum ijs", "梦龙冰淇淋"], ["Friet", "薯条"], ["pastasaus", "意面酱"], ["pasta", "意大利面"], ["shampoo", "洗发水"], ["conditioner", "护发素"], ["deodorant", "止汗剂"], ["Klene", "甘草糖"], ["Lay", "乐事薯片"], ["zak", "袋装"], ["Pak", "包装"], ["Bak", "盒装"], ["Flesje", "小瓶装"], ["Fles", "瓶装"], ["Flacon", "瓶装"], ["Blik", "罐装"], ["Pot", "罐装"], ["Kuip", "盒装"], ["Schaal", "托盘装"], ["Beker", "杯装"], ["Tube", "软管装"], ["Knijpzakje", "吸嘴袋"], ["Statube", "挤压瓶"], ["Krat", "整箱"], ["flessen", "瓶"], ["Per stuk", "每个"], ["Per", "每"], ["stuks", "个"], ["Stuks", "个"], ["rollen", "卷"], ["plakken", "片"], ["gram", "克"], ["liter", "升"], ["kilo", "公斤"], ["kg", "公斤"], ["ml", "毫升"], ["cl", "厘升"], ["g", "克"], ["of", "或"], ["met", "配"], ["en", "和"]
-];
 const friendTerms = new Map([
   ["Roerbakgarnalen", { label: "觉得便宜", rank: 2, note: "朋友认为便宜，但提醒去壳后量会少。" }],
   ["XL watermeloen", { label: "推荐购买", rank: 3, note: "朋友说西瓜便宜，建议买。" }],
@@ -46,28 +38,18 @@ const friendTerms = new Map([
   ["Kersen verpakt", { label: "觉得便宜", rank: 2, note: "朋友认为樱桃便宜。" }],
   ["witte druiven", { label: "觉得便宜", rank: 2, note: "朋友认为葡萄/油桃很便宜。" }]
 ]);
-function escapeRegExp(value) { return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
-function chineseName(name) { if (exactTranslations.has(name)) return exactTranslations.get(name); let value = name; for (const [nl, zh] of translations) value = value.replace(new RegExp(`\\b${escapeRegExp(nl)}\\b`, "ig"), zh); return value.replace(/1 de Beste/ig, "Dirk 自有品牌").replace(/Biologische/ig, "有机").replace(/verpakt/ig, "包装").replace(/Per stuk/ig, "每个").replace(/\s+/g, " ").trim(); }
-function isChineseTranslation(name, nameZh) { return name !== nameZh && /[\u3400-\u9fff]/.test(nameZh); }
 function grams(name) { if (/\b(?:of|or)\b/i.test(name)) return null; const kg = name.match(/(\d+(?:[.,]\d+)?)\s*(?:kilo|kg)\b/i); if (kg) return Number(kg[1].replace(",", ".")) * 1000; const g = name.match(/(\d+(?:[.,]\d+)?)\s*(?:gram|g)\b/i); return g ? Number(g[1].replace(",", ".")) : null; }
-function analysis(offer) {
-  const saving = offer.original == null ? null : offer.original - offer.sale;
-  const percent = saving == null ? null : Math.round(saving / offer.original * 100);
-  const perKg = offer.unitPrice;
-  const prefix = saving == null ? `现价 €${offer.sale.toFixed(2)}` : `省 €${saving.toFixed(2)}（${percent}%）`;
-  if (offer.name.includes("XL watermeloen")) return `${prefix}；约 €${perKg.toFixed(2)}/kg，是本页最值的水果。`;
-  if (offer.name.includes("Roerbakgarnalen")) return `${prefix}；约 €${perKg.toFixed(2)}/kg，单价仍高，不必囤。`;
-  if (percent != null && percent >= 45) return `${prefix}；折扣很大，刚好需要就带。`;
-  if (percent != null && percent >= 25) return `${prefix}${perKg ? `；约 €${perKg.toFixed(2)}/kg` : ""}，正常好价。`;
-  return `${prefix}${perKg ? `；约 €${perKg.toFixed(2)}/kg` : ""}，折扣有限，不缺不用凑。`;
+function queryRows(result) {
+  if (!result[0]) return [];
+  const { columns, values } = result[0];
+  return values.map((values) => Object.fromEntries(columns.map((column, index) => [column, values[index]])));
 }
 function evidenceAdvice(offer) {
   const low = offer.metrics?.low;
   const days = offer.metrics?.days;
   let variant = 2166136261;
   for (const character of offer.name) variant = Math.imul(variant ^ character.charCodeAt(0), 16777619) >>> 0;
-  const chineseBits = offer.nameZh.match(/[\u3400-\u9fff]+/g)?.join("") ?? "";
-  const shortName = chineseBits.length >= 2 ? chineseBits.slice(0, 6) : "该商品";
+  const shortName = offer.name;
   const pickPhrase = (openings, evidence) => `${openings[(variant >>> 16) & 7]}${evidence[(variant >>> 8) & 7]}`;
   if (offer.original != null) {
     const saving = offer.original - offer.sale;
@@ -137,68 +119,49 @@ const output = [...offers.values()].map((item) => {
   const friend = [...friendTerms.entries()].find(([term]) => item.name.includes(term))?.[1] ?? null;
   const weight = grams(item.name);
   const unitPrice = weight ? Number((item.sale / weight * 1000).toFixed(2)) : null;
-  const analysisData = { ...item, grams: weight, unitPrice };
-  return { ...item, nameZh: chineseName(item.name), package: item.name.match(/(?:Bak|Pak|Zak|Per stuk|Schaal|Fles|Blik).*/i)?.[0] ?? "", grams: weight, unitPrice, friendPick: Boolean(friend), friendNote: friend?.note ?? "", friendLabel: friend?.label ?? "", friendRank: friend?.rank ?? 0, discountPercent: item.original ? Math.round((1 - item.sale / item.original) * 100) : null, advice: analysis(analysisData) };
-}).sort((a, b) => b.friendRank - a.friendRank || (b.discountPercent ?? -1) - (a.discountPercent ?? -1) || a.nameZh.localeCompare(b.nameZh));
-const untranslated = output.filter((item) => !isChineseTranslation(item.name, item.nameZh));
-if (untranslated.length) throw new Error(`Chinese product name required: ${untranslated.map((item) => item.name).join(" | ")}`);
+  return { ...item, package: item.name.match(/(?:Bak|Pak|Zak|Per stuk|Schaal|Fles|Blik).*/i)?.[0] ?? "", grams: weight, unitPrice, friendPick: Boolean(friend), friendLabel: friend?.label ?? "", friendRank: friend?.rank ?? 0, discountPercent: item.original ? Math.round((1 - item.sale / item.original) * 100) : null };
+}).sort((a, b) => b.friendRank - a.friendRank || (b.discountPercent ?? -1) - (a.discountPercent ?? -1) || a.name.localeCompare(b.name));
 
 await fs.mkdir(publicDir, { recursive: true });
-await fs.mkdir(historyDir, { recursive: true });
 await fs.mkdir(dbDir, { recursive: true });
 const SQL = await initSqlJs();
 const dbPath = path.join(dbDir, "offers.sqlite");
 const db = new SQL.Database(await fs.readFile(dbPath).catch(() => undefined));
-db.run("CREATE TABLE IF NOT EXISTS snapshots (id INTEGER PRIMARY KEY, generated_at TEXT NOT NULL, source_url TEXT NOT NULL); CREATE TABLE IF NOT EXISTS offers (snapshot_id INTEGER, name TEXT, name_zh TEXT, category TEXT, sale REAL, original_price REAL, image_url TEXT, friend_pick INTEGER, advice TEXT);");
-db.run("DELETE FROM offers WHERE snapshot_id NOT IN (SELECT MAX(id) FROM snapshots GROUP BY substr(generated_at, 1, 10))");
-db.run("DELETE FROM snapshots WHERE id NOT IN (SELECT MAX(id) FROM snapshots GROUP BY substr(generated_at, 1, 10))");
-db.run("DELETE FROM offers WHERE snapshot_id IN (SELECT id FROM snapshots WHERE substr(generated_at, 1, 10) = ?)", [archiveDate]);
-db.run("DELETE FROM snapshots WHERE substr(generated_at, 1, 10) = ?", [archiveDate]);
-db.run("INSERT INTO snapshots (generated_at, source_url) VALUES (?, ?)", [generatedAt, offerUrl]);
-const snapshotId = db.exec("SELECT last_insert_rowid() AS id")[0].values[0][0];
-for (const item of output) db.run("INSERT INTO offers VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [snapshotId, item.name, item.nameZh, item.category, item.sale, item.original, item.imageUrl, Number(item.friendPick), item.advice]);
-function queryRows(result) {
-  if (!result[0]) return [];
-  const { columns, values } = result[0];
-  return values.map((values) => Object.fromEntries(columns.map((column, index) => [column, values[index]])));
+const legacyTables = queryRows(db.exec("SELECT name FROM sqlite_master WHERE type = 'table' AND name IN ('offers', 'snapshots')"));
+db.run("CREATE TABLE IF NOT EXISTS price_stats (name TEXT PRIMARY KEY, days INTEGER NOT NULL, low REAL NOT NULL, high REAL NOT NULL, latest REAL NOT NULL, last_seen_date TEXT NOT NULL);");
+if (legacyTables.some((table) => table.name === "offers") && legacyTables.some((table) => table.name === "snapshots")) {
+  const rows = queryRows(db.exec("SELECT o.name, substr(s.generated_at, 1, 10) AS date, o.sale FROM offers o JOIN snapshots s ON s.id = o.snapshot_id ORDER BY s.generated_at ASC"));
+  const dailyPrices = new Map(rows.map((row) => [`${row.name}|${row.date}`, row]));
+  const stats = new Map();
+  for (const row of dailyPrices.values()) {
+    const current = stats.get(row.name) ?? { days: 0, low: row.sale, high: row.sale, latest: row.sale, lastSeenDate: row.date };
+    current.days += 1;
+    current.low = Math.min(current.low, row.sale);
+    current.high = Math.max(current.high, row.sale);
+    if (row.date >= current.lastSeenDate) { current.latest = row.sale; current.lastSeenDate = row.date; }
+    stats.set(row.name, current);
+  }
+  db.run("BEGIN; DROP TABLE offers; DROP TABLE snapshots; COMMIT;");
+  for (const [name, stat] of stats) db.run("INSERT OR REPLACE INTO price_stats VALUES (?, ?, ?, ?, ?, ?)", [name, stat.days, stat.low, stat.high, stat.latest, stat.lastSeenDate]);
 }
-const snapshotRows = queryRows(db.exec("SELECT s.generated_at AS generatedAt, substr(s.generated_at, 1, 10) AS date, o.name, o.name_zh AS nameZh, o.sale FROM offers o JOIN snapshots s ON s.id = o.snapshot_id ORDER BY s.generated_at ASC"));
-const lastAppearancePerDay = new Map();
-for (const row of snapshotRows) lastAppearancePerDay.set(`${row.name}|${row.date}`, row);
-const productHistories = {};
-for (const row of lastAppearancePerDay.values()) {
-  const history = productHistories[row.name] ?? { name: row.name, nameZh: row.nameZh, entries: [] };
-  history.entries.push({ date: row.date, price: row.sale });
-  productHistories[row.name] = history;
-}
-for (const history of Object.values(productHistories)) {
-  history.entries.sort((a, b) => a.date.localeCompare(b.date));
-  const prices = history.entries.map((entry) => entry.price);
-  history.days = history.entries.length;
-  history.low = Math.min(...prices);
-  history.high = Math.max(...prices);
-  history.latest = history.entries.at(-1).price;
-}
+const statsByName = new Map(queryRows(db.exec("SELECT name, days, low, high, latest, last_seen_date AS lastSeenDate FROM price_stats")).map((stat) => [stat.name, stat]));
 for (const item of output) {
-  const history = productHistories[item.name];
-  item.metrics = history ? { days: history.days, low: history.low, high: history.high, latest: history.latest } : null;
+  const prior = statsByName.get(item.name);
+  const days = prior ? prior.days + Number(prior.lastSeenDate !== archiveDate) : 1;
+  const stat = { days, low: Math.min(prior?.low ?? item.sale, item.sale), high: Math.max(prior?.high ?? item.sale, item.sale), latest: item.sale, lastSeenDate: archiveDate };
+  item.metrics = { days: stat.days, low: stat.low, high: stat.high, latest: stat.latest };
+  db.run("INSERT OR REPLACE INTO price_stats VALUES (?, ?, ?, ?, ?, ?)", [item.name, stat.days, stat.low, stat.high, stat.latest, stat.lastSeenDate]);
 }
 for (const item of output) {
   item.advice = evidenceAdvice(item);
   const pick = recommendation(item);
   item.recommendationRank = pick.rank;
   item.recommendationLabel = pick.label;
-  db.run("UPDATE offers SET advice = ? WHERE snapshot_id = ? AND name = ?", [item.advice, snapshotId, item.name]);
 }
-output.sort((a, b) => b.recommendationRank - a.recommendationRank || b.friendRank - a.friendRank || (b.discountPercent ?? -1) - (a.discountPercent ?? -1) || a.nameZh.localeCompare(b.nameZh));
+output.sort((a, b) => b.recommendationRank - a.recommendationRank || b.friendRank - a.friendRank || (b.discountPercent ?? -1) - (a.discountPercent ?? -1) || a.name.localeCompare(b.name));
 db.run("VACUUM");
 await fs.writeFile(dbPath, db.export());
 db.close();
-const snapshot = { generatedAt, archiveDate, sourceUrl: offerUrl, store: todayStore, offers: output };
-const indexPath = path.join(publicDir, "history.json");
-const priorHistory = JSON.parse(await fs.readFile(indexPath, "utf8").catch(() => "[]"));
-const history = [{ date: archiveDate, generatedAt, offerCount: output.length }, ...priorHistory.filter((entry) => entry.date !== archiveDate)].sort((a, b) => b.date.localeCompare(a.date));
-await fs.writeFile(path.join(publicDir, "offers.json"), JSON.stringify(snapshot, null, 2));
-await fs.writeFile(path.join(historyDir, `${archiveDate}.json`), JSON.stringify(snapshot, null, 2));
-await fs.writeFile(indexPath, JSON.stringify(history, null, 2));
-console.log(`Saved ${output.length} offers for ${archiveDate}; ${history.length} daily snapshots available.`);
+const payload = { generatedAt, sourceUrl: offerUrl, store: todayStore, offers: output };
+await fs.writeFile(path.join(publicDir, "offers.json"), JSON.stringify(payload, null, 2));
+console.log(`Saved ${output.length} offers for ${archiveDate}; compact price statistics updated.`);
