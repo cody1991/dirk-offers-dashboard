@@ -33,37 +33,33 @@ function queryRows(result) {
   return values.map((values) => Object.fromEntries(columns.map((column, index) => [column, values[index]])));
 }
 function evidenceAdvice(offer) {
-  const low = offer.metrics?.low;
   const days = offer.metrics?.days;
   let variant = 2166136261;
   for (const character of offer.name) variant = Math.imul(variant ^ character.charCodeAt(0), 16777619) >>> 0;
-  const shortName = offer.name;
-  const pickPhrase = (openings, evidence) => `${openings[(variant >>> 16) & 7]}${evidence[(variant >>> 8) & 7]}`;
+  const phrase = (variants) => variants[(variant >>> 8) & 7];
   if (offer.original != null) {
     const saving = offer.original - offer.sale;
     const percent = Math.round(saving / offer.original * 100);
-    return pickPhrase([
-      `${shortName}现价€${offer.sale.toFixed(2)}，`, `${shortName}今日标价€${offer.sale.toFixed(2)}，`,
-      `${shortName}页面售价€${offer.sale.toFixed(2)}，`, `${shortName}本期促销€${offer.sale.toFixed(2)}，`,
-      `${shortName}货架现价€${offer.sale.toFixed(2)}，`, `${shortName}当前价格€${offer.sale.toFixed(2)}，`,
-      `${shortName}优惠现价€${offer.sale.toFixed(2)}，`, `${shortName}这期售价€${offer.sale.toFixed(2)}，`
-    ], [
-      `较原价省€${saving.toFixed(2)}，创近${days}日低。`, `比标价降${percent}%，为近${days}日最低。`,
-      `原价少€${saving.toFixed(2)}，近${days}日未见更低。`, `折扣${percent}%，记录近${days}日低点。`,
-      `比原价低${percent}%，处近${days}日低位。`, `标价让€${saving.toFixed(2)}，刷新近${days}日低价。`,
-      `优惠€${saving.toFixed(2)}，近${days}日价格最低。`, `较原价减${percent}%，守住近${days}日低。`
+    return phrase([
+      `降${percent}%，原价少€${saving.toFixed(2)}，近${days}日价位最低。`,
+      `现价比原标低${percent}%，省€${saving.toFixed(2)}，${days}日未见更低。`,
+      `本期让利€${saving.toFixed(2)}，折扣${percent}%，创近${days}日低价。`,
+      `相较原价减€${saving.toFixed(2)}，现降${percent}%，保持${days}日低位。`,
+      `标价直降${percent}%，少€${saving.toFixed(2)}，近${days}日仍为低点。`,
+      `原价差€${saving.toFixed(2)}，优惠${percent}%，刷新${days}日最低记录。`,
+      `相比标价省€${saving.toFixed(2)}，降幅${percent}%，${days}日低价。`,
+      `本次省€${saving.toFixed(2)}，折扣${percent}%，近${days}日价格最低。`
     ]);
   }
-  return pickPhrase([
-    `${shortName}现价€${offer.sale.toFixed(2)}，`, `${shortName}今日售价€${offer.sale.toFixed(2)}，`,
-    `${shortName}页面价格€${offer.sale.toFixed(2)}，`, `${shortName}本期价€${offer.sale.toFixed(2)}，`,
-    `${shortName}当前售价€${offer.sale.toFixed(2)}，`, `${shortName}货架价€${offer.sale.toFixed(2)}，`,
-    `${shortName}促销价€${offer.sale.toFixed(2)}，`, `${shortName}本页现价€${offer.sale.toFixed(2)}，`
-  ], [
-    `原价未列，创近${days}日观察低点。`, `无原价可比，为近${days}日低价。`,
-    `标价缺失，近${days}日未见更低。`, `原价未标，记录近${days}日低位。`,
-    `暂无标价，刷新近${days}日低点。`, `缺少原价，近${days}日价格最低。`,
-    `原价未给，守住近${days}日低价。`, `未见原价，处近${days}日观察低位。`
+  return phrase([
+    `原价缺失，现价€${offer.sale.toFixed(2)}仍为近${days}日低价。`,
+    `未列原标，€${offer.sale.toFixed(2)}为近${days}日最低记录。`,
+    `缺少标价，现价€${offer.sale.toFixed(2)}守住${days}日低位。`,
+    `原价未示，€${offer.sale.toFixed(2)}刷新近${days}日低价。`,
+    `只见现价€${offer.sale.toFixed(2)}，近${days}日尚无更低。`,
+    `标价未知，€${offer.sale.toFixed(2)}为${days}日观察低点。`,
+    `原价待核，€${offer.sale.toFixed(2)}处近${days}日最低位。`,
+    `无原价比较，€${offer.sale.toFixed(2)}仍是${days}日低价。`
   ]);
 }
 const [response, storeResponse] = await Promise.all([
@@ -134,6 +130,8 @@ for (const item of output) {
 }
 for (const item of output) {
   item.advice = evidenceAdvice(item);
+  const chineseChars = [...item.advice].filter((character) => /[\u3400-\u9fff]/.test(character)).length;
+  if (chineseChars < 10 || chineseChars > 28) throw new Error(`Advice must contain 10-28 Chinese characters: ${item.name}`);
 }
 output.sort((a, b) => (b.discountPercent ?? -1) - (a.discountPercent ?? -1) || a.name.localeCompare(b.name));
 db.run("VACUUM");
