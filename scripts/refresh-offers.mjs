@@ -26,7 +26,13 @@ if (!force && process.env.GITHUB_ACTIONS && localHour !== "10") {
   process.exit(0);
 }
 
-function grams(name) { if (/\b(?:of|or)\b/i.test(name)) return null; const kg = name.match(/(\d+(?:[.,]\d+)?)\s*(?:kilo|kg)\b/i); if (kg) return Number(kg[1].replace(",", ".")) * 1000; const g = name.match(/(\d+(?:[.,]\d+)?)\s*(?:gram|g)\b/i); return g ? Number(g[1].replace(",", ".")) : null; }
+function grams(name) {
+  if (/\b(?:of|or)\b/i.test(name) || /\d+(?:[.,]\d+)?\s*(?:-|–)\s*\d+(?:[.,]\d+)?\s*(?:gram|g|kilo|kg)\b/i.test(name)) return null;
+  const kg = name.match(/(\d+(?:[.,]\d+)?)\s*(?:kilo|kg)\b/i);
+  if (kg) return Number(kg[1].replace(",", ".")) * 1000;
+  const g = name.match(/(\d+(?:[.,]\d+)?)\s*(?:gram|g)\b/i);
+  return g ? Number(g[1].replace(",", ".")) : null;
+}
 function queryRows(result) {
   if (!result[0]) return [];
   const { columns, values } = result[0];
@@ -36,30 +42,32 @@ function evidenceAdvice(offer) {
   const days = offer.metrics?.days;
   let variant = 2166136261;
   for (const character of offer.name) variant = Math.imul(variant ^ character.charCodeAt(0), 16777619) >>> 0;
-  const phrase = (variants) => variants[(variant >>> 8) & 7];
+  const phrase = (variants) => variants[(variant >>> 8) % variants.length];
+  const spec = offer.grams ? `${offer.grams}克规格` : offer.package ? `该包装规格` : "单件规格";
+  const unit = offer.unitPrice != null ? `，约€${offer.unitPrice.toFixed(2)}/公斤` : "";
   if (offer.original != null) {
     const saving = offer.original - offer.sale;
     const percent = Math.round(saving / offer.original * 100);
     return phrase([
-      `降${percent}%，原价少€${saving.toFixed(2)}，近${days}日价位最低。`,
-      `现价比原标低${percent}%，省€${saving.toFixed(2)}，${days}日未见更低。`,
-      `本期让利€${saving.toFixed(2)}，折扣${percent}%，创近${days}日低价。`,
-      `相较原价减€${saving.toFixed(2)}，现降${percent}%，保持${days}日低位。`,
-      `标价直降${percent}%，少€${saving.toFixed(2)}，近${days}日仍为低点。`,
-      `原价差€${saving.toFixed(2)}，优惠${percent}%，刷新${days}日最低记录。`,
-      `相比标价省€${saving.toFixed(2)}，降幅${percent}%，${days}日低价。`,
-      `本次省€${saving.toFixed(2)}，折扣${percent}%，近${days}日价格最低。`
+      `${spec}省€${saving.toFixed(2)}，较原标降${percent}%，${days}日低价${unit}。`,
+      `${spec}现价少€${saving.toFixed(2)}，折扣${percent}%，创${days}日低位${unit}。`,
+      `${spec}比原价低${percent}%，价差€${saving.toFixed(2)}，${days}日最低${unit}。`,
+      `${spec}让利€${saving.toFixed(2)}，降幅${percent}%，守住${days}日低点${unit}。`,
+      `${spec}原标减€${saving.toFixed(2)}，直降${percent}%，${days}日未更低${unit}。`,
+      `${spec}标价差€${saving.toFixed(2)}，优惠${percent}%，刷新${days}日低位${unit}。`,
+      `${spec}省下€${saving.toFixed(2)}，价格低${percent}%，${days}日新低${unit}。`,
+      `${spec}从原价降€${saving.toFixed(2)}，折扣${percent}%，处${days}日低点${unit}。`
     ]);
   }
   return phrase([
-    `原价缺失，现价€${offer.sale.toFixed(2)}仍为近${days}日低价。`,
-    `未列原标，€${offer.sale.toFixed(2)}为近${days}日最低记录。`,
-    `缺少标价，现价€${offer.sale.toFixed(2)}守住${days}日低位。`,
-    `原价未示，€${offer.sale.toFixed(2)}刷新近${days}日低价。`,
-    `只见现价€${offer.sale.toFixed(2)}，近${days}日尚无更低。`,
-    `标价未知，€${offer.sale.toFixed(2)}为${days}日观察低点。`,
-    `原价待核，€${offer.sale.toFixed(2)}处近${days}日最低位。`,
-    `无原价比较，€${offer.sale.toFixed(2)}仍是${days}日低价。`
+    `${spec}原价未列，€${offer.sale.toFixed(2)}为${days}日最低${unit}。`,
+    `${spec}仅见€${offer.sale.toFixed(2)}现价，${days}日无更低${unit}。`,
+    `${spec}缺原标，€${offer.sale.toFixed(2)}守住${days}日低位${unit}。`,
+    `${spec}原价待核，€${offer.sale.toFixed(2)}刷新${days}日低点${unit}。`,
+    `${spec}无标价对照，€${offer.sale.toFixed(2)}处${days}日低位${unit}。`,
+    `${spec}原标未知，€${offer.sale.toFixed(2)}是${days}日观察低点${unit}。`,
+    `${spec}只标€${offer.sale.toFixed(2)}，历史${days}日未见低价${unit}。`,
+    `${spec}标价缺失，€${offer.sale.toFixed(2)}仍为${days}日最低${unit}。`
   ]);
 }
 const [response, storeResponse] = await Promise.all([
