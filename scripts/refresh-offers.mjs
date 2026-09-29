@@ -21,6 +21,212 @@ const weekday = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Amsterdam",
 const dutchWeekdays = { Monday: "Maandag", Tuesday: "Dinsdag", Wednesday: "Woensdag", Thursday: "Donderdag", Friday: "Vrijdag", Saturday: "Zaterdag", Sunday: "Zondag" };
 const translations = new Map(Object.entries(JSON.parse(await fs.readFile(translationsPath, "utf8").catch(() => "{}"))));
 
+
+function deriveOfferIdFromImageUrl(imageUrl) {
+  if (!imageUrl || !imageUrl.includes("/offers/")) return null;
+  const encodedPath = imageUrl.split("/offers/")[1] ?? "";
+  const pathPart = decodeURIComponent(encodedPath.split("?")[0] ?? "");
+  const digits = [];
+  for (const segment of pathPart.split("/")) {
+    if (/^\d$/.test(segment)) digits.push(segment);
+    else break;
+  }
+  if (digits.length < 3) return null;
+  return digits.reverse().join("");
+}
+
+function deepenProductUrl(productUrl, imageUrl) {
+  const bare = productUrl?.replace(/\/$/, "") === offerUrl;
+  if (!bare) return productUrl;
+  const offerId = deriveOfferIdFromImageUrl(imageUrl);
+  return offerId ? `${offerUrl}?offer=${offerId}` : productUrl;
+}
+
+const dutchWeekdayLong = { Monday: "maandag", Tuesday: "dinsdag", Wednesday: "woensdag", Thursday: "donderdag", Friday: "vrijdag", Saturday: "zaterdag", Sunday: "zondag" };
+const dutchMonthLong = { January: "januari", February: "februari", March: "maart", April: "april", May: "mei", June: "juni", July: "juli", August: "augustus", September: "september", October: "oktober", November: "november", December: "december" };
+const zhWeekday = { Monday: "星期一", Tuesday: "星期二", Wednesday: "星期三", Thursday: "星期四", Friday: "星期五", Saturday: "星期六", Sunday: "星期日" };
+
+// Dirk encodes offer calendar days as UTC timestamps (end often 23:59Z).
+// Format labels from the UTC calendar date so 2026-09-29T23:59:00.000Z stays 29 september.
+function utcCalendarParts(iso) {
+  const date = new Date(iso);
+  const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  return { weekday: weekdays[date.getUTCDay()], day: date.getUTCDate(), month: months[date.getUTCMonth()], monthNum: date.getUTCMonth() + 1 };
+}
+
+function formatDutchValidityDay(iso) {
+  const parts = utcCalendarParts(iso);
+  return `${dutchWeekdayLong[parts.weekday]} ${parts.day} ${dutchMonthLong[parts.month]}`;
+}
+
+function formatChineseValidityDay(iso) {
+  const parts = utcCalendarParts(iso);
+  return `${parts.monthNum}月${parts.day}日${zhWeekday[parts.weekday]}`;
+}
+
+function validityLabels(validFrom, validTo) {
+  if (!validFrom || !validTo) return { validityNl: null, validityZh: null };
+  return {
+    validityNl: `Geldig van ${formatDutchValidityDay(validFrom)} t/m ${formatDutchValidityDay(validTo)}`,
+    validityZh: `有效期为${formatChineseValidityDay(validFrom)}至${formatChineseValidityDay(validTo)}`
+  };
+}
+
+function extractNuxtPayload(html) {
+  const match = html.match(/<script[^>]*id="__NUXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
+  if (!match) return null;
+  try { return JSON.parse(match[1]); } catch { return null; }
+}
+
+function lit(data, ref, depth = 0) {
+  if (depth > 8 || typeof ref !== "number" || ref < 0 || ref >= data.length) return ref;
+  const value = data[ref];
+  if (value == null || ["string", "number", "boolean"].includes(typeof value)) return value;
+  return value;
+}
+
+function parseOfferValidityById(html) {
+  const data = extractNuxtPayload(html);
+  const byId = new Map();
+  if (!Array.isArray(data)) return byId;
+  for (const node of data) {
+    if (!node || typeof node !== "object" || !("offerId" in node) || !("startDate" in node) || !("endDate" in node)) continue;
+    const offerId = String(lit(data, node.offerId));
+    const startDate = lit(data, node.startDate);
+    const endDate = lit(data, node.endDate);
+    const disclaimerStart = "disclaimerStartDate" in node ? lit(data, node.disclaimerStartDate) : null;
+    const disclaimerEnd = "disclaimerEndDate" in node ? lit(data, node.disclaimerEndDate) : null;
+    if (!/^\d+$/.test(offerId) || typeof startDate !== "string" || typeof endDate !== "string") continue;
+    // Prefer disclaimer dates for calendar display when present (endDate is often 23:59Z).
+    byId.set(offerId, {
+      validFrom: typeof disclaimerStart === "string" ? disclaimerStart : startDate,
+      validTo: typeof disclaimerEnd === "string" ? disclaimerEnd : endDate
+    });
+  }
+  return byId;
+}
+
+function majorityValidity(validityById) {
+  const counts = new Map();
+  for (const value of validityById.values()) {
+    const key = `${value.validFrom}|${value.validTo}`;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  let best = null;
+  let bestCount = 0;
+  for (const [key, count] of counts) {
+    if (count > bestCount) {
+      bestCount = count;
+      const [validFrom, validTo] = key.split("|");
+      best = { validFrom, validTo };
+    }
+  }
+  return best;
+}
+
+
+
+async function fetchText(url, label, init = {}) {
+  let lastError;
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    try {
+      const response = await fetch(url, init);
+      if (!response.ok) throw new Error(`${label} failed: ${response.status}`);
+      return await response.text();
+    } catch (error) {
+      lastError = error;
+      console.warn(`${label} attempt ${attempt}/3 failed: ${error.message ?? error}`);
+      await new Promise((resolve) => setTimeout(resolve, 500 * attempt));
+    }
+  }
+  throw lastError;
+}
+
+
+function buildOfferImageUrl(imagePath) {
+  if (!imagePath) return "";
+  if (/^https?:\/\//i.test(imagePath)) return imagePath.includes("?") ? imagePath : `${imagePath}?width=190`;
+  // Nuxt stores paths like "1/3/3/9/3/1/Odorex....png" under offers/
+  const encoded = imagePath.split("/").map(encodeURIComponent).join("/");
+  const prefix = imagePath.startsWith("artikelen/") ? "" : (imagePath.startsWith("offers/") ? "" : "offers/");
+  return `https://web-fileserver.dirk.nl/${prefix}${encoded}?width=190`;
+}
+
+function parseOffersFromNuxt(html) {
+  const data = extractNuxtPayload(html);
+  if (!Array.isArray(data)) return [];
+  const categoryByOfferId = new Map();
+  // Walk HTML sections for category labels tied to article data-product-id
+  const headings = [...html.matchAll(/<h2[^>]*>([^<]+)<\/h2>/g)].map((m) => ({ index: m.index, name: m[1].replace(/&amp;/g, "&").trim() }));
+  for (const match of html.matchAll(/<article data-product-id="(\d+)"[^>]*>/g)) {
+    const heading = headings.filter((item) => item.index < match.index).at(-1)?.name ?? "其他";
+    categoryByOfferId.set(match[1], heading);
+  }
+  const parsed = [];
+  for (const node of data) {
+    if (!node || typeof node !== "object" || !("offerId" in node) || !("headerText" in node) || !("offerPrice" in node)) continue;
+    const offerId = String(lit(data, node.offerId));
+    if (!/^\d+$/.test(offerId)) continue;
+    const headerText = lit(data, node.headerText);
+    const packaging = lit(data, node.packaging) ?? "";
+    const sale = lit(data, node.offerPrice);
+    let original = lit(data, node.normalPrice);
+    if (typeof original !== "number") original = null;
+    const imagePath = lit(data, node.image);
+    const startDate = lit(data, node.startDate);
+    const endDate = lit(data, node.endDate);
+    if (typeof headerText !== "string" || typeof sale !== "number") continue;
+    const name = `${headerText} ${typeof packaging === "string" ? packaging : ""}`.replace(/\s+/g, " ").trim();
+    // Prefer category from HTML article; fall back to first product department
+    let category = categoryByOfferId.get(offerId) ?? "其他";
+    if (category === "其他" && typeof node.products === "number") {
+      const products = data[node.products];
+      if (Array.isArray(products) && products.length) {
+        const first = typeof products[0] === "number" ? data[products[0]] : products[0];
+        if (first && typeof first === "object" && typeof first.productInformation === "number") {
+          const info = data[first.productInformation];
+          if (info && typeof info === "object") {
+            const dept = lit(data, info.department);
+            if (typeof dept === "string") category = dept === "Vlees & vis" ? "Vlees, vis & vega" : dept;
+          }
+        }
+      }
+    }
+    const imageUrl = buildOfferImageUrl(typeof imagePath === "string" ? imagePath : "");
+    const productUrl = `${offerUrl}?offer=${offerId}`;
+    const labels = validityLabels(typeof startDate === "string" ? startDate : null, typeof endDate === "string" ? endDate : null);
+    parsed.push({
+      name,
+      category,
+      sale,
+      original,
+      imageUrl,
+      productUrl,
+      offerId,
+      validFrom: typeof startDate === "string" ? startDate : null,
+      validTo: typeof endDate === "string" ? endDate : null,
+      validityNl: labels.validityNl,
+      validityZh: labels.validityZh
+    });
+  }
+  // Deduplicate by name, prefer richer category
+  const byName = new Map();
+  for (const item of parsed) {
+    const existing = byName.get(item.name);
+    if (!existing || (existing.category === "其他" && item.category !== "其他")) byName.set(item.name, item);
+  }
+  return [...byName.values()];
+}
+
+function parseStoreHoursFromHtml(html, dutchWeekday) {
+  const row = html.match(new RegExp(`${dutchWeekday}[^<]{0,40}?([0-2]\\d:[0-5]\\d)\\s*[–-]\\s*([0-2]\\d:[0-5]\\d)`, "i"));
+  if (row) return { opensAt: row[1], closesAt: row[2] };
+  const openTot = html.match(/Open tot\s+([0-2]\d:[0-5]\d)/i);
+  return { opensAt: null, closesAt: openTot?.[1] ?? null };
+}
+
+
 if (!force && process.env.GITHUB_ACTIONS && localHour !== "10") {
   console.log(`Skipped: Amsterdam time is ${localHour}:00, not 10:00.`);
   process.exit(0);
@@ -70,19 +276,49 @@ function evidenceAdvice(offer) {
     `${spec}标价缺失，€${offer.sale.toFixed(2)}仍为${days}日最低${unit}。`
   ]);
 }
-const [response, storeResponse] = await Promise.all([
-  fetch(`https://r.jina.ai/${offerUrl}`),
-  fetch(`https://r.jina.ai/${storeUrl}`)
-]);
-if (!response.ok) throw new Error(`Offer page request failed: ${response.status}`);
-if (!storeResponse.ok) throw new Error(`Store page request failed: ${storeResponse.status}`);
-const [markdown, storeMarkdown] = await Promise.all([response.text(), storeResponse.text()]);
-const storeHours = storeMarkdown.match(new RegExp(`\\*\\s+${dutchWeekdays[weekday]}\\s*\\n+([0-2]\\d:[0-5]\\d)\\s*-\\s*([0-2]\\d:[0-5]\\d)`));
-const storeClosesAt = storeHours?.[2] ?? storeMarkdown.match(/Almere Korte Promenade[\s\S]{0,100}?Open tot\s+([0-2]\d:[0-5]\d)/)?.[1];
+let markdown = "";
+let storeMarkdown = "";
+let dirkHtml = "";
+try {
+  dirkHtml = await fetchText(offerUrl, "Dirk HTML", { headers: { "user-agent": "Mozilla/5.0 (compatible; DirkOffersBot/1.0)" } });
+} catch (error) {
+  console.warn(`Dirk HTML unavailable: ${error.message ?? error}`);
+}
+try {
+  markdown = await fetchText(`https://r.jina.ai/${offerUrl}`, "Jina offer markdown");
+} catch (error) {
+  console.warn(`Jina offer markdown unavailable: ${error.message ?? error}`);
+}
+try {
+  storeMarkdown = await fetchText(`https://r.jina.ai/${storeUrl}`, "Jina store markdown");
+} catch (error) {
+  console.warn(`Jina store markdown unavailable: ${error.message ?? error}`);
+}
+
+const validityById = parseOfferValidityById(dirkHtml);
+const sharedValidity = majorityValidity(validityById);
+if (sharedValidity) console.log(`Offer validity window: ${sharedValidity.validFrom} -> ${sharedValidity.validTo} (${validityById.size} Nuxt offers).`);
+else console.warn("Could not parse offer validity dates from Dirk HTML Nuxt payload.");
+
+let storeHours = storeMarkdown.match(new RegExp(`\\*\\s+${dutchWeekdays[weekday]}\\s*\\n+([0-2]\\d:[0-5]\\d)\\s*-\\s*([0-2]\\d:[0-5]\\d)`));
+let storeClosesAt = storeHours?.[2] ?? storeMarkdown.match(/Almere Korte Promenade[\s\S]{0,100}?Open tot\s+([0-2]\d:[0-5]\d)/)?.[1];
+let storeOpensAt = storeHours?.[1] ?? null;
+if (!storeClosesAt) {
+  let storeHtml = "";
+  try {
+    storeHtml = await fetchText(storeUrl, "Dirk store HTML", { headers: { "user-agent": "Mozilla/5.0 (compatible; DirkOffersBot/1.0)" }, redirect: "follow" });
+  } catch (error) {
+    console.warn(`Dirk store HTML unavailable: ${error.message ?? error}`);
+  }
+  const parsedStore = parseStoreHoursFromHtml(storeHtml, dutchWeekdays[weekday]);
+  storeOpensAt = parsedStore.opensAt;
+  storeClosesAt = parsedStore.closesAt;
+}
 if (!storeClosesAt) throw new Error(`Could not parse opening hours or today's closing time for ${store.name}`);
-const todayStore = { ...store, opensAt: storeHours?.[1] ?? null, closesAt: storeClosesAt };
-const headings = [...markdown.matchAll(/^##\s+(.+)$/gm)].map((m) => ({ index: m.index, name: m[1] }));
+const todayStore = { ...store, opensAt: storeOpensAt, closesAt: storeClosesAt };
+
 const offers = new Map();
+const headings = [...markdown.matchAll(/^##\s+(.+)$/gm)].map((m) => ({ index: m.index, name: m[1] }));
 const product = /\[([^\]]+)\]\((https:\/\/www\.dirk\.nl\/(?:aanbiedingen|boodschappen)[^)]*)\)/g;
 for (const match of markdown.matchAll(product)) {
   const name = match[1].replace(/\s+/g, " ").trim();
@@ -95,10 +331,27 @@ for (const match of markdown.matchAll(product)) {
   const original = chunks.at(-2)?.match(/van\s+(\d+\.\d+)/)?.[1];
   const heading = headings.filter((item) => item.index < match.index).at(-1)?.name ?? "其他";
   const imageUrl = [...prior.matchAll(/!\[Image \d+: Foto van [^\]]+\]\((https:[^)]+)\)/g)].at(-1)?.[1] ?? "";
-  const candidate = { name, category: heading, sale, original: original ? Number(original) : null, imageUrl, productUrl: match[2] };
+  const productUrl = deepenProductUrl(match[2], imageUrl);
+  const offerId = deriveOfferIdFromImageUrl(imageUrl) ?? productUrl.match(/[?&]offer=(\d+)/)?.[1] ?? null;
+  const validity = (offerId && validityById.get(String(offerId))) || sharedValidity || null;
+  const labels = validityLabels(validity?.validFrom, validity?.validTo);
+  const candidate = { name, category: heading, sale, original: original ? Number(original) : null, imageUrl, productUrl, offerId: offerId ? String(offerId) : null, validFrom: validity?.validFrom ?? null, validTo: validity?.validTo ?? null, validityNl: labels.validityNl, validityZh: labels.validityZh };
   const existing = offers.get(name);
   if (!existing || (existing.category === "Weekendverwenners" && heading !== "Weekendverwenners")) offers.set(name, candidate);
 }
+
+const nuxtOffers = parseOffersFromNuxt(dirkHtml);
+if (offers.size < Math.max(10, Math.floor(nuxtOffers.length * 0.75))) {
+  console.warn(`Markdown parser yielded ${offers.size} offers vs ${nuxtOffers.length} Nuxt offers; merging Nuxt fallback.`);
+  for (const candidate of nuxtOffers) {
+    const existing = offers.get(candidate.name);
+    if (!existing) offers.set(candidate.name, candidate);
+  }
+} else if (nuxtOffers.length) {
+  console.log(`Markdown parser yielded ${offers.size} offers (Nuxt has ${nuxtOffers.length}); keeping markdown names for translation continuity.`);
+}
+if (offers.size === 0) throw new Error("No offers parsed from Jina markdown or Dirk Nuxt HTML.");
+
 
 const output = [...offers.values()].map((item) => {
   const weight = grams(item.name);
@@ -145,6 +398,14 @@ output.sort((a, b) => (b.discountPercent ?? -1) - (a.discountPercent ?? -1) || a
 db.run("VACUUM");
 await fs.writeFile(dbPath, db.export());
 db.close();
-const payload = { generatedAt, sourceUrl: offerUrl, store: todayStore, offers: output };
+const payload = {
+  generatedAt,
+  sourceUrl: offerUrl,
+  store: todayStore,
+  validity: sharedValidity ? { validFrom: sharedValidity.validFrom, validTo: sharedValidity.validTo, ...validityLabels(sharedValidity.validFrom, sharedValidity.validTo) } : null,
+  offers: output
+};
 await fs.writeFile(path.join(publicDir, "offers.json"), JSON.stringify(payload, null, 2));
-console.log(`Saved ${output.length} offers for ${archiveDate}; compact price statistics updated.`);
+const uniqueUrls = new Set(output.map((item) => item.productUrl)).size;
+const deepLinked = output.filter((item) => /[?&]offer=\d+/.test(item.productUrl ?? "")).length;
+console.log(`Saved ${output.length} offers for ${archiveDate}; ${uniqueUrls} unique productUrls (${deepLinked} ?offer= deep links); compact price statistics updated.`);

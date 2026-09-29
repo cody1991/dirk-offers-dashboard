@@ -14,3 +14,11 @@ h1,h2,h3,p { margin-top:0; } h1 { margin:10px 0; font-size:clamp(42px,7vw,92px);
 .loading { display:grid; min-height:100vh; place-items:center; color:#536056; }
 .original-name { min-height:18px; margin:0; overflow:hidden; color:#6c766c; font-size:11px; line-height:1.35; text-overflow:ellipsis; white-space:nowrap; }
 @media (max-width:720px) { .hero { grid-template-columns:1fr; gap:20px; padding-top:30px; }.stamp { display:none; }.update { order:-1; }.catalogue-head { align-items:start; flex-direction:column; }.catalogue-controls { width:100%; justify-content:stretch; }.sort-control,.catalogue-head input { width:100%; }.sort-options { width:100%; }.sort-options button { flex:1; padding-inline:8px; }.offer-grid { grid-template-columns:1fr; }.page { padding:18px 18px 50px; } }
+
+.validity { margin: 4px 0 0; color: #536056; font-size: 11px; line-height: 1.35; }
+.validity .validity-nl, .catalogue-summary .validity-nl { color: #6c766c; font-size: 10px; }
+.validity.expiring, .offer.almost-expired .validity { color: #e31b23; font-weight: 700; }
+.offer.almost-expired { border-color: #e31b23; box-shadow: inset 0 4px 0 #e31b23; }
+.offer.almost-expired.historical-low { box-shadow: inset 0 4px 0 #e31b23, inset 0 8px 0 #d29420; }
+.expiry-badge { left: 8px !important; right: auto !important; color: #fff !important; background: #e31b23 !important; font-weight: 700; }
+.offer.almost-expired .low-badge { top: 30px; }

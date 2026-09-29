@@ -17,6 +17,24 @@ const categoryLabels = {
 };
 function categoryLabel(category) { return categoryLabels[category] ?? category; }
 
+/** Almost-expired: validTo calendar day is today or tomorrow in Europe/Amsterdam. */
+function daysUntilValidTo(validTo) {
+  if (!validTo) return null;
+  // Dirk validity timestamps are calendar dates in UTC; compare that UTC day to Amsterdam today.
+  const end = new Date(validTo);
+  const endKey = `${end.getUTCFullYear()}-${String(end.getUTCMonth() + 1).padStart(2, "0")}-${String(end.getUTCDate()).padStart(2, "0")}`;
+  const todayKey = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Amsterdam", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  const toUtc = (dateKey) => {
+    const [year, month, day] = dateKey.split("-").map(Number);
+    return Date.UTC(year, month - 1, day);
+  };
+  return Math.round((toUtc(endKey) - toUtc(todayKey)) / 86400000);
+}
+function isAlmostExpired(offer) {
+  const days = daysUntilValidTo(offer.validTo);
+  return days != null && days >= 0 && days <= 1;
+}
+
 function Price({ value }) { return value == null ? "—" : euro.format(value); }
 function UnitPrice({ offer }) { const value = offer.unitPrice ?? (offer.grams ? offer.sale / offer.grams * 1000 : null); return value == null ? null : <span className="unit-price">€{value.toFixed(2)}/kg</span>; }
 function PriceTrail({ history }) { return history ? <p className="price-trail">价格足迹：{history.days} 天 · 史低 <b>{euro.format(history.low)}</b> · 史高 <b>{euro.format(history.high)}</b></p> : <p className="price-trail">价格足迹：等待首次出现</p>; }
@@ -61,14 +79,16 @@ export default function App() {
       <div className={`update ${stale ? "stale" : ""}`}><b>{data.offers.length}</b><span>个优惠<br />{stale ? "数据等待更新" : "最近更新"}<br />{dateFormatter.format(new Date(data.generatedAt))}</span></div>
     </header>
     <section className="catalogue" aria-labelledby="catalogue-title">
-      <div className="catalogue-head"><div><span>全部优惠 · {offers.length} 项</span><h2 id="catalogue-title">今日优惠。</h2><p className="catalogue-summary">按折扣、单位价格或售价排序。</p></div><div className="catalogue-controls"><SortControl value={sortBy} onChange={setSortBy} /><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="搜索：草莓、鸡翅、咖啡…" aria-label="搜索优惠" /></div></div>
+      <div className="catalogue-head"><div><span>全部优惠 · {offers.length} 项</span><h2 id="catalogue-title">今日优惠。</h2><p className="catalogue-summary">按折扣、单位价格或售价排序。{data.validity?.validityZh ? ` ${data.validity.validityZh}。` : ""}{data.validity?.validityNl ? <span className="validity-nl"> {data.validity.validityNl}</span> : null}</p></div><div className="catalogue-controls"><SortControl value={sortBy} onChange={setSortBy} /><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="搜索：草莓、鸡翅、咖啡…" aria-label="搜索优惠" /></div></div>
       <div className="filters">{categories.map((item) => <button className={item === category ? "selected" : ""} onClick={() => setCategory(item)} key={item}>{item === "全部" ? item : categoryLabel(item)}</button>)}</div>
       <div className="offer-grid">
         {offers.map((offer) => {
           const atHistoricalLow = offer.metrics?.low != null && Math.abs(offer.sale - offer.metrics.low) < 0.005;
-          return <article className={"offer " + (atHistoricalLow ? "historical-low" : "")} key={offer.name}>
-            <div className="photo"><img src={offer.imageUrl} alt={offer.name} loading="lazy" decoding="async" />{atHistoricalLow && <span className="low-badge">史低价</span>}</div>
-            <div className="offer-body"><p className="category">{categoryLabel(offer.category)}</p><h3>{offer.nameZh ?? offer.name}</h3>{offer.nameZh && <p className="original-name">{offer.name}</p>}<p className="pack">{offer.package}</p><div className="price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>} {offer.discountPercent && <i>−{offer.discountPercent}%</i>}</div><UnitPrice offer={offer} /><PriceTrail history={offer.metrics} /><p className="advice">{offer.advice}</p>{offer.productUrl && <a className="product-link" href={offer.productUrl} target="_blank" rel="noreferrer">在 Dirk 查看原商品 ↗</a>}</div>
+          const almostExpired = isAlmostExpired(offer);
+          const classes = ["offer", atHistoricalLow ? "historical-low" : "", almostExpired ? "almost-expired" : ""].filter(Boolean).join(" ");
+          return <article className={classes} key={offer.name}>
+            <div className="photo"><img src={offer.imageUrl} alt={offer.name} loading="lazy" decoding="async" />{atHistoricalLow && <span className="low-badge">史低价</span>}{almostExpired && <span className="expiry-badge">即将结束</span>}</div>
+            <div className="offer-body"><p className="category">{categoryLabel(offer.category)}</p><h3>{offer.nameZh ?? offer.name}</h3>{offer.nameZh && <p className="original-name">{offer.name}</p>}{(offer.validityZh || offer.validityNl) && <p className={"validity " + (almostExpired ? "expiring" : "")}>{offer.validityZh ?? offer.validityNl}{offer.validityZh && offer.validityNl ? <span className="validity-nl"> · {offer.validityNl}</span> : null}</p>}<p className="pack">{offer.package}</p><div className="price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>} {offer.discountPercent && <i>−{offer.discountPercent}%</i>}</div><UnitPrice offer={offer} /><PriceTrail history={offer.metrics} /><p className="advice">{offer.advice}</p>{offer.productUrl && <a className="product-link" href={offer.productUrl} target="_blank" rel="noreferrer">在 Dirk 查看原商品 ↗</a>}</div>
           </article>;
         })}
       </div>
