@@ -32,14 +32,81 @@ function deriveOfferIdFromImageUrl(imageUrl) {
     else break;
   }
   if (digits.length < 3) return null;
+  // Image CDN path stores offerId digits reversed: 1/3/3/9/3/1 -> 139331.
   return digits.reverse().join("");
 }
 
-function deepenProductUrl(productUrl, imageUrl) {
+function lit(data, ref, depth = 0) {
+  if (depth > 12 || typeof ref !== "number" || ref < 0 || ref >= data.length) return ref;
+  const value = data[ref];
+  if (value == null || ["string", "number", "boolean"].includes(typeof value)) return value;
+  if (Array.isArray(value)) {
+    if (typeof value[0] === "string" && ["ShallowReactive", "Reactive", "Ref", "EmptyRef", "Set"].includes(value[0])) {
+      return lit(data, value[1], depth + 1);
+    }
+    return value.map((item) => lit(data, item, depth + 1));
+  }
+  if (typeof value === "object") {
+    const out = {};
+    for (const [key, item] of Object.entries(value)) out[key] = lit(data, item, depth + 1);
+    return out;
+  }
+  return value;
+}
+
+/** Dirk SPA deep links use query.offer = `${uitgelichtSectionCmsId}${productId}` where multi-product cards set productId = offerId. */
+function parseDepartmentSections(html) {
+  const data = extractNuxtPayload(html);
+  const byName = new Map();
+  const byApiDept = new Map();
+  if (!Array.isArray(data)) return { byName, byApiDept };
+  const root = data[1];
+  const storeRef = root && typeof root === "object" ? root.data : null;
+  const storeWrapper = typeof storeRef === "number" ? data[storeRef] : null;
+  const store = Array.isArray(storeWrapper) && storeWrapper[0] === "ShallowReactive" ? data[storeWrapper[1]] : (typeof storeWrapper === "object" ? storeWrapper : null);
+  const categoryRef = store && typeof store === "object" ? store["offers-category"] : null;
+  const category = typeof categoryRef === "number" ? lit(data, categoryRef) : null;
+  const sections = category?.sections;
+  if (!Array.isArray(sections)) return { byName, byApiDept };
+  const uitgelicht = sections.find((section) => section?.name === "uitgelicht");
+  for (const item of uitgelicht?.items ?? []) {
+    if (!item || typeof item.id !== "number" || typeof item.name !== "string") continue;
+    const sectionId = String(item.id);
+    byName.set(item.name, sectionId);
+    // Alias HTML entity variants seen in markdown/Nuxt.
+    byName.set(item.name.replace(/&/g, "&amp;"), sectionId);
+    let apiDept = null;
+    for (const control of item.template?.controls ?? []) {
+      if (control?.alias === "departmentId" && control.value != null && String(control.value).trim() !== "") {
+        apiDept = String(control.value);
+      }
+    }
+    if (apiDept) byApiDept.set(apiDept, sectionId);
+  }
+  return { byName, byApiDept };
+}
+
+function buildOfferSectionIdMap(html, sectionIdByName) {
+  const byOfferId = new Map();
+  const headings = [...html.matchAll(/<h2[^>]*>([^<]+)<\/h2>/g)].map((match) => ({
+    index: match.index,
+    name: match[1].replace(/&amp;/g, "&").trim()
+  }));
+  for (const match of html.matchAll(/<article data-product-id="(\d+)"[^>]*>/g)) {
+    const heading = headings.filter((item) => item.index < match.index).at(-1)?.name;
+    const sectionId = heading ? sectionIdByName.get(heading) : null;
+    if (sectionId) byOfferId.set(match[1], sectionId);
+  }
+  return byOfferId;
+}
+
+function deepenProductUrl(productUrl, imageUrl, sectionId) {
   const bare = productUrl?.replace(/\/$/, "") === offerUrl;
   if (!bare) return productUrl;
   const offerId = deriveOfferIdFromImageUrl(imageUrl);
-  return offerId ? `${offerUrl}?offer=${offerId}` : productUrl;
+  if (!offerId) return productUrl;
+  // SPA compares query.offer to `${departmentSectionId}${offerId}`.
+  return sectionId ? `${offerUrl}?offer=${sectionId}${offerId}` : `${offerUrl}?offer=${offerId}`;
 }
 
 const dutchWeekdayLong = { Monday: "maandag", Tuesday: "dinsdag", Wednesday: "woensdag", Thursday: "donderdag", Friday: "vrijdag", Saturday: "zaterdag", Sunday: "zondag" };
@@ -79,11 +146,9 @@ function extractNuxtPayload(html) {
   try { return JSON.parse(match[1]); } catch { return null; }
 }
 
-function lit(data, ref, depth = 0) {
-  if (depth > 8 || typeof ref !== "number" || ref < 0 || ref >= data.length) return ref;
-  const value = data[ref];
-  if (value == null || ["string", "number", "boolean"].includes(typeof value)) return value;
-  return value;
+function shallowLit(data, ref) {
+  if (typeof ref !== "number" || ref < 0 || ref >= data.length) return ref;
+  return data[ref];
 }
 
 function parseOfferValidityById(html) {
@@ -91,12 +156,12 @@ function parseOfferValidityById(html) {
   const byId = new Map();
   if (!Array.isArray(data)) return byId;
   for (const node of data) {
-    if (!node || typeof node !== "object" || !("offerId" in node) || !("startDate" in node) || !("endDate" in node)) continue;
-    const offerId = String(lit(data, node.offerId));
-    const startDate = lit(data, node.startDate);
-    const endDate = lit(data, node.endDate);
-    const disclaimerStart = "disclaimerStartDate" in node ? lit(data, node.disclaimerStartDate) : null;
-    const disclaimerEnd = "disclaimerEndDate" in node ? lit(data, node.disclaimerEndDate) : null;
+    if (!node || typeof node !== "object" || Array.isArray(node) || !("offerId" in node) || !("startDate" in node) || !("endDate" in node)) continue;
+    const offerId = String(shallowLit(data, node.offerId));
+    const startDate = shallowLit(data, node.startDate);
+    const endDate = shallowLit(data, node.endDate);
+    const disclaimerStart = "disclaimerStartDate" in node ? shallowLit(data, node.disclaimerStartDate) : null;
+    const disclaimerEnd = "disclaimerEndDate" in node ? shallowLit(data, node.disclaimerEndDate) : null;
     if (!/^\d+$/.test(offerId) || typeof startDate !== "string" || typeof endDate !== "string") continue;
     // Prefer disclaimer dates for calendar display when present (endDate is often 23:59Z).
     byId.set(offerId, {
@@ -153,7 +218,7 @@ function buildOfferImageUrl(imagePath) {
   return `https://web-fileserver.dirk.nl/${prefix}${encoded}?width=190`;
 }
 
-function parseOffersFromNuxt(html) {
+function parseOffersFromNuxt(html, sectionIdByName = new Map()) {
   const data = extractNuxtPayload(html);
   if (!Array.isArray(data)) return [];
   const categoryByOfferId = new Map();
@@ -165,17 +230,18 @@ function parseOffersFromNuxt(html) {
   }
   const parsed = [];
   for (const node of data) {
-    if (!node || typeof node !== "object" || !("offerId" in node) || !("headerText" in node) || !("offerPrice" in node)) continue;
-    const offerId = String(lit(data, node.offerId));
+    if (!node || typeof node !== "object" || Array.isArray(node) || !("offerId" in node) || !("headerText" in node) || !("offerPrice" in node)) continue;
+    const offerIdRaw = typeof node.offerId === "number" ? data[node.offerId] : node.offerId;
+    const offerId = String(offerIdRaw);
     if (!/^\d+$/.test(offerId)) continue;
-    const headerText = lit(data, node.headerText);
-    const packaging = lit(data, node.packaging) ?? "";
-    const sale = lit(data, node.offerPrice);
-    let original = lit(data, node.normalPrice);
+    const headerText = typeof node.headerText === "number" ? data[node.headerText] : node.headerText;
+    const packaging = (typeof node.packaging === "number" ? data[node.packaging] : node.packaging) ?? "";
+    const sale = typeof node.offerPrice === "number" ? data[node.offerPrice] : node.offerPrice;
+    let original = typeof node.normalPrice === "number" ? data[node.normalPrice] : node.normalPrice;
     if (typeof original !== "number") original = null;
-    const imagePath = lit(data, node.image);
-    const startDate = lit(data, node.startDate);
-    const endDate = lit(data, node.endDate);
+    const imagePath = typeof node.image === "number" ? data[node.image] : node.image;
+    const startDate = typeof node.startDate === "number" ? data[node.startDate] : node.startDate;
+    const endDate = typeof node.endDate === "number" ? data[node.endDate] : node.endDate;
     if (typeof headerText !== "string" || typeof sale !== "number") continue;
     const name = `${headerText} ${typeof packaging === "string" ? packaging : ""}`.replace(/\s+/g, " ").trim();
     // Prefer category from HTML article; fall back to first product department
@@ -187,14 +253,15 @@ function parseOffersFromNuxt(html) {
         if (first && typeof first === "object" && typeof first.productInformation === "number") {
           const info = data[first.productInformation];
           if (info && typeof info === "object") {
-            const dept = lit(data, info.department);
+            const dept = typeof info.department === "number" ? data[info.department] : info.department;
             if (typeof dept === "string") category = dept === "Vlees & vis" ? "Vlees, vis & vega" : dept;
           }
         }
       }
     }
     const imageUrl = buildOfferImageUrl(typeof imagePath === "string" ? imagePath : "");
-    const productUrl = `${offerUrl}?offer=${offerId}`;
+    const sectionId = sectionIdByName.get(category) ?? null;
+    const productUrl = sectionId ? `${offerUrl}?offer=${sectionId}${offerId}` : `${offerUrl}?offer=${offerId}`;
     const labels = validityLabels(typeof startDate === "string" ? startDate : null, typeof endDate === "string" ? endDate : null);
     parsed.push({
       name,
@@ -300,6 +367,10 @@ const sharedValidity = majorityValidity(validityById);
 if (sharedValidity) console.log(`Offer validity window: ${sharedValidity.validFrom} -> ${sharedValidity.validTo} (${validityById.size} Nuxt offers).`);
 else console.warn("Could not parse offer validity dates from Dirk HTML Nuxt payload.");
 
+const { byName: sectionIdByName } = parseDepartmentSections(dirkHtml);
+const sectionIdByOfferId = buildOfferSectionIdMap(dirkHtml, sectionIdByName);
+console.log(`Dirk department sections: ${sectionIdByName.size} names, ${sectionIdByOfferId.size} article->section mappings.`);
+
 let storeHours = storeMarkdown.match(new RegExp(`\\*\\s+${dutchWeekdays[weekday]}\\s*\\n+([0-2]\\d:[0-5]\\d)\\s*-\\s*([0-2]\\d:[0-5]\\d)`));
 let storeClosesAt = storeHours?.[2] ?? storeMarkdown.match(/Almere Korte Promenade[\s\S]{0,100}?Open tot\s+([0-2]\d:[0-5]\d)/)?.[1];
 let storeOpensAt = storeHours?.[1] ?? null;
@@ -331,8 +402,9 @@ for (const match of markdown.matchAll(product)) {
   const original = chunks.at(-2)?.match(/van\s+(\d+\.\d+)/)?.[1];
   const heading = headings.filter((item) => item.index < match.index).at(-1)?.name ?? "其他";
   const imageUrl = [...prior.matchAll(/!\[Image \d+: Foto van [^\]]+\]\((https:[^)]+)\)/g)].at(-1)?.[1] ?? "";
-  const productUrl = deepenProductUrl(match[2], imageUrl);
-  const offerId = deriveOfferIdFromImageUrl(imageUrl) ?? productUrl.match(/[?&]offer=(\d+)/)?.[1] ?? null;
+  const offerId = deriveOfferIdFromImageUrl(imageUrl);
+  const sectionId = (offerId && sectionIdByOfferId.get(String(offerId))) || sectionIdByName.get(heading) || null;
+  const productUrl = deepenProductUrl(match[2], imageUrl, sectionId);
   const validity = (offerId && validityById.get(String(offerId))) || sharedValidity || null;
   const labels = validityLabels(validity?.validFrom, validity?.validTo);
   const candidate = { name, category: heading, sale, original: original ? Number(original) : null, imageUrl, productUrl, offerId: offerId ? String(offerId) : null, validFrom: validity?.validFrom ?? null, validTo: validity?.validTo ?? null, validityNl: labels.validityNl, validityZh: labels.validityZh };
@@ -340,7 +412,7 @@ for (const match of markdown.matchAll(product)) {
   if (!existing || (existing.category === "Weekendverwenners" && heading !== "Weekendverwenners")) offers.set(name, candidate);
 }
 
-const nuxtOffers = parseOffersFromNuxt(dirkHtml);
+const nuxtOffers = parseOffersFromNuxt(dirkHtml, sectionIdByName);
 if (offers.size < Math.max(10, Math.floor(nuxtOffers.length * 0.75))) {
   console.warn(`Markdown parser yielded ${offers.size} offers vs ${nuxtOffers.length} Nuxt offers; merging Nuxt fallback.`);
   for (const candidate of nuxtOffers) {
@@ -407,5 +479,6 @@ const payload = {
 };
 await fs.writeFile(path.join(publicDir, "offers.json"), JSON.stringify(payload, null, 2));
 const uniqueUrls = new Set(output.map((item) => item.productUrl)).size;
-const deepLinked = output.filter((item) => /[?&]offer=\d+/.test(item.productUrl ?? "")).length;
-console.log(`Saved ${output.length} offers for ${archiveDate}; ${uniqueUrls} unique productUrls (${deepLinked} ?offer= deep links); compact price statistics updated.`);
+const deepLinked = output.filter((item) => /[?&]offer=\d{10,}/.test(item.productUrl ?? "")).length;
+const shortLinked = output.filter((item) => /[?&]offer=\d{1,9}(?:&|$)/.test(item.productUrl ?? "")).length;
+console.log(`Saved ${output.length} offers for ${archiveDate}; ${uniqueUrls} unique productUrls (${deepLinked} composite ?offer= deep links, ${shortLinked} short/fallback); compact price statistics updated.`);
