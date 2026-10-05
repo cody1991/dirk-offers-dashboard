@@ -353,7 +353,7 @@ function evidenceAdvice(offer) {
     return phrase([
       `${spec}省€${saving.toFixed(2)}，降${percent}%，高于${days}日低${lowText}${unit}。`,
       `${spec}现价少€${saving.toFixed(2)}，折扣${percent}%，未及史低${lowText}${unit}。`,
-      `${spec}比原价低${percent}%，差€${saving.toFixed(2)}，史低${lowText}${unit}。`,
+      `${spec}比原价低${percent}%，差€${saving.toFixed(2)}，仍高于史低${lowText}${unit}。`,
       `${spec}让利€${saving.toFixed(2)}，降幅${percent}%，高过低点${lowText}${unit}。`,
       `${spec}原标减€${saving.toFixed(2)}，直降${percent}%，非${days}日低${unit}。`,
       `${spec}标价差€${saving.toFixed(2)}，优惠${percent}%，低点${lowText}${unit}。`,
