@@ -218,7 +218,7 @@ function buildOfferImageUrl(imagePath) {
   return `https://web-fileserver.dirk.nl/${prefix}${encoded}?width=190`;
 }
 
-function parseOffersFromNuxt(html, sectionIdByName = new Map()) {
+function parseOffersFromNuxt(html, sectionIdByName = new Map(), sectionIdByOfferId = new Map()) {
   const data = extractNuxtPayload(html);
   if (!Array.isArray(data)) return [];
   const categoryByOfferId = new Map();
@@ -260,7 +260,7 @@ function parseOffersFromNuxt(html, sectionIdByName = new Map()) {
       }
     }
     const imageUrl = buildOfferImageUrl(typeof imagePath === "string" ? imagePath : "");
-    const sectionId = sectionIdByName.get(category) ?? null;
+    const sectionId = sectionIdByOfferId.get(String(offerId)) ?? sectionIdByName.get(category) ?? null;
     const productUrl = sectionId ? `${offerUrl}?offer=${sectionId}${offerId}` : `${offerUrl}?offer=${offerId}`;
     const labels = validityLabels(typeof startDate === "string" ? startDate : null, typeof endDate === "string" ? endDate : null);
     parsed.push({
@@ -289,8 +289,11 @@ function parseOffersFromNuxt(html, sectionIdByName = new Map()) {
 function parseStoreHoursFromHtml(html, dutchWeekday) {
   const row = html.match(new RegExp(`${dutchWeekday}[^<]{0,40}?([0-2]\\d:[0-5]\\d)\\s*[–-]\\s*([0-2]\\d:[0-5]\\d)`, "i"));
   if (row) return { opensAt: row[1], closesAt: row[2] };
-  const openTot = html.match(/Open tot\s+([0-2]\d:[0-5]\d)/i);
-  return { opensAt: null, closesAt: openTot?.[1] ?? null };
+  // The store page also lists many other Dirk stores; only trust "Open tot" next to our own address.
+  const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+  const ownStore = text.match(/Almere Korte Promenade[^|]{0,120}?Open tot\s+([0-2]\d:[0-5]\d)/i)
+    ?? text.match(/Korte Promenade 2-6[^|]{0,120}?Open tot\s+([0-2]\d:[0-5]\d)/i);
+  return { opensAt: null, closesAt: ownStore?.[1] ?? null };
 }
 
 
@@ -466,7 +469,7 @@ for (const match of markdown.matchAll(product)) {
   if (!existing || (existing.category === "Weekendverwenners" && heading !== "Weekendverwenners")) offers.set(name, candidate);
 }
 
-const nuxtOffers = parseOffersFromNuxt(dirkHtml, sectionIdByName);
+const nuxtOffers = parseOffersFromNuxt(dirkHtml, sectionIdByName, sectionIdByOfferId);
 if (offers.size < Math.max(10, Math.floor(nuxtOffers.length * 0.75))) {
   console.warn(`Markdown parser yielded ${offers.size} offers vs ${nuxtOffers.length} Nuxt offers; merging Nuxt fallback.`);
   for (const candidate of nuxtOffers) {
