@@ -304,6 +304,8 @@ if (!force && process.env.GITHUB_ACTIONS && localHour !== "10") {
 
 function grams(name) {
   if (/\b(?:of|or)\b/i.test(name) || /\d+(?:[.,]\d+)?\s*(?:-|–)\s*\d+(?:[.,]\d+)?\s*(?:gram|g|kilo|kg)\b/i.test(name)) return null;
+  const multi = name.match(/(\d+)\s*[x×]\s*(\d+(?:[.,]\d+)?)\s*(kilo|kg|gram|g)\b/i);
+  if (multi) return Number(multi[1]) * Number(multi[2].replace(",", ".")) * (/^k/i.test(multi[3]) ? 1000 : 1);
   const kg = name.match(/(\d+(?:[.,]\d+)?)\s*(?:kilo|kg)\b/i);
   if (kg) return Number(kg[1].replace(",", ".")) * 1000;
   const g = name.match(/(\d+(?:[.,]\d+)?)\s*(?:gram|g)\b/i);
@@ -384,7 +386,7 @@ function evidenceAdvice(offer) {
       `${spec}原价待核，€${offer.sale.toFixed(2)}刷新${days}日低点${unit}。`,
       `${spec}无标价对照，€${offer.sale.toFixed(2)}处${days}日低位${unit}。`,
       `${spec}原标未知，€${offer.sale.toFixed(2)}是${days}日观察低点${unit}。`,
-      `${spec}只标€${offer.sale.toFixed(2)}，历史${days}日未见低价${unit}。`,
+      `${spec}只标€${offer.sale.toFixed(2)}，历史${days}日未见更低${unit}。`,
       `${spec}标价缺失，€${offer.sale.toFixed(2)}仍为${days}日最低${unit}。`
     ]);
   }
