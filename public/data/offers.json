@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T08:04:34.967Z",
+  "generatedAt": "2026-10-13T08:08:08.070Z",
   "sourceUrl": "https://www.dirk.nl/aanbiedingen",
   "store": {
     "name": "Dirk supermarkt Almere",
@@ -32,12 +32,12 @@
       "unitPrice": null,
       "discountPercent": 70,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
       },
-      "advice": "单件规格省€4.56，较原标降70%，6日低价。"
+      "advice": "单件规格省€4.56，较原标降70%，7日低价。"
     },
     {
       "name": "Lay's Gourmet Zak 145 gram.",
@@ -57,12 +57,12 @@
       "unitPrice": 6.83,
       "discountPercent": 65,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
       },
-      "advice": "145克规格原标减€1.86，直降65%，6日未更低，约€6.83/公斤。"
+      "advice": "145克规格原标减€1.86，直降65%，7日未更低，约€6.83/公斤。"
     },
     {
       "name": "Unox rookworst Per stuk 250 - 285 gram.",
@@ -82,12 +82,12 @@
       "unitPrice": null,
       "discountPercent": 65,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.79,
         "high": 1.79,
         "latest": 1.79
       },
-      "advice": "该包装规格现价少€3.36，折扣65%，创6日低位。"
+      "advice": "该包装规格现价少€3.36，折扣65%，创7日低位。"
     },
     {
       "name": "Knorr Wereldgerechten Pak 2 - 3 personen. (m.u.v. voordeelpakken)",
@@ -107,12 +107,12 @@
       "unitPrice": null,
       "discountPercent": 63,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.79,
         "high": 1.79,
         "latest": 1.79
       },
-      "advice": "该包装规格省下€3.10，价格低63%，6日新低。"
+      "advice": "该包装规格省下€3.10，价格低63%，7日新低。"
     },
     {
       "name": "Elmex tandpasta Tube 75 ml.",
@@ -126,18 +126,18 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Elmex 牙膏 软管装 75 毫升.",
+      "nameZh": "Elmex 牙膏 软管装 75 毫升",
       "package": "",
       "grams": null,
       "unitPrice": null,
       "discountPercent": 62,
       "metrics": {
-        "days": 11,
+        "days": 12,
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
       },
-      "advice": "单件规格标价差€4.00，优惠62%，刷新11日低位。"
+      "advice": "单件规格标价差€4.00，优惠62%，刷新12日低位。"
     },
     {
       "name": "Ritter Sport vegan chocolade Reep 100 gram.",
@@ -157,12 +157,12 @@
       "unitPrice": 9.9,
       "discountPercent": 62,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
       },
-      "advice": "100克规格原标减€1.60，直降62%，6日未更低，约€9.90/公斤。"
+      "advice": "100克规格原标减€1.60，直降62%，7日未更低，约€9.90/公斤。"
     },
     {
       "name": "Robijn Wasparfum tropical 342 ml",
@@ -182,12 +182,12 @@
       "unitPrice": null,
       "discountPercent": 62,
       "metrics": {
-        "days": 12,
+        "days": 13,
         "low": 2.49,
         "high": 2.99,
         "latest": 2.49
       },
-      "advice": "单件规格省€4.00，较原标降62%，12日低价。"
+      "advice": "单件规格省€4.00，较原标降62%，13日低价。"
     },
     {
       "name": "Johma brood- en toastsalade Kuip 175 gram.",
@@ -207,12 +207,12 @@
       "unitPrice": 7.94,
       "discountPercent": 61,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.39,
         "high": 1.39,
         "latest": 1.39
       },
-      "advice": "175克规格省€2.20，较原标降61%，6日低价，约€7.94/公斤。"
+      "advice": "175克规格省€2.20，较原标降61%，7日低价，约€7.94/公斤。"
     },
     {
       "name": "Knorr Cup a Soup Pak 3 stuks.",
@@ -226,18 +226,18 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Knorr Cup a Soup 包装 3 个.",
+      "nameZh": "Knorr Cup a Soup 速溶汤 3 包装",
       "package": "Pak 3 stuks.",
       "grams": null,
       "unitPrice": null,
       "discountPercent": 61,
       "metrics": {
-        "days": 12,
+        "days": 13,
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
       },
-      "advice": "该包装规格比原价低61%，价差€1.26，12日最低。"
+      "advice": "该包装规格比原价低61%，价差€1.26，13日最低。"
     },
     {
       "name": "Bertolli pasta presto Beker 70 gram.",
@@ -257,12 +257,12 @@
       "unitPrice": 14.14,
       "discountPercent": 60,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
       },
-      "advice": "70克规格比原价低60%，价差€1.46，6日最低，约€14.14/公斤。"
+      "advice": "70克规格比原价低60%，价差€1.46，7日最低，约€14.14/公斤。"
     },
     {
       "name": "Appelsientje Fruitdrink Pak 1 liter.",
@@ -282,12 +282,12 @@
       "unitPrice": null,
       "discountPercent": 59,
       "metrics": {
-        "days": 12,
+        "days": 13,
         "low": 0.89,
         "high": 0.99,
         "latest": 0.89
       },
-      "advice": "该包装规格原标减€1.30，直降59%，12日未更低。"
+      "advice": "该包装规格原标减€1.30，直降59%，13日未更低。"
     },
     {
       "name": "Better Pete noodles Zak 70 gram.",
@@ -307,12 +307,12 @@
       "unitPrice": 7,
       "discountPercent": 59,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.49,
         "high": 0.49,
         "latest": 0.49
       },
-      "advice": "70克规格现价少€0.70，折扣59%，创6日低位，约€7.00/公斤。"
+      "advice": "70克规格现价少€0.70，折扣59%，创7日低位，约€7.00/公斤。"
     },
     {
       "name": "Garden Gourmet Pak 2 stuks of 175 - 190 gram.",
@@ -332,12 +332,12 @@
       "unitPrice": null,
       "discountPercent": 59,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.79,
         "high": 1.79,
         "latest": 1.79
       },
-      "advice": "该包装规格原标减€2.60，直降59%，6日未更低。"
+      "advice": "该包装规格原标减€2.60，直降59%，7日未更低。"
     },
     {
       "name": "Maoam Pinballs red 210 g",
@@ -357,12 +357,12 @@
       "unitPrice": 4.24,
       "discountPercent": 59,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
       },
-      "advice": "210克规格省€1.26，较原标降59%，6日低价，约€4.24/公斤。"
+      "advice": "210克规格省€1.26，较原标降59%，7日低价，约€4.24/公斤。"
     },
     {
       "name": "Chio Fusion peanuts Zak 200 gram.",
@@ -382,12 +382,12 @@
       "unitPrice": 3.95,
       "discountPercent": 58,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.79,
         "high": 0.79,
         "latest": 0.79
       },
-      "advice": "200克规格标价差€1.10，优惠58%，刷新6日低位，约€3.95/公斤。"
+      "advice": "200克规格标价差€1.10，优惠58%，刷新7日低位，约€3.95/公斤。"
     },
     {
       "name": "Santa Maria wraps Pak 6 of 8 stuks.",
@@ -401,18 +401,18 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Santa Maria 墨西哥卷饼 包装 6 或 8 个.",
+      "nameZh": "Santa Maria 墨西哥卷饼 6 或 8 张装",
       "package": "Pak 6 of 8 stuks.",
       "grams": null,
       "unitPrice": null,
       "discountPercent": 58,
       "metrics": {
-        "days": 13,
+        "days": 14,
         "low": 1.29,
         "high": 1.49,
         "latest": 1.29
       },
-      "advice": "该包装规格原标减€1.76，直降58%，13日未更低。"
+      "advice": "该包装规格原标减€1.76，直降58%，14日未更低。"
     },
     {
       "name": "Knorr Good noodles Zak 70 gram.",
@@ -432,12 +432,12 @@
       "unitPrice": 7,
       "discountPercent": 57,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.49,
         "high": 0.49,
         "latest": 0.49
       },
-      "advice": "70克规格省€0.66，较原标降57%，6日低价，约€7.00/公斤。"
+      "advice": "70克规格省€0.66，较原标降57%，7日低价，约€7.00/公斤。"
     },
     {
       "name": "Kwekkeboom Bitterbal oven mini rundvlees 255 g",
@@ -457,12 +457,12 @@
       "unitPrice": 7.8,
       "discountPercent": 57,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
       },
-      "advice": "255克规格标价差€2.60，优惠57%，刷新6日低位，约€7.80/公斤。"
+      "advice": "255克规格标价差€2.60，优惠57%，刷新7日低位，约€7.80/公斤。"
     },
     {
       "name": "Danio kwark Beker 450 gram.",
@@ -476,18 +476,18 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Danio 干酪杯 450 克。",
+      "nameZh": "Danio 夸克酸奶 450 克",
       "package": "",
       "grams": 450,
       "unitPrice": 2.87,
       "discountPercent": 55,
       "metrics": {
-        "days": 15,
+        "days": 16,
         "low": 1.29,
         "high": 1.29,
         "latest": 1.29
       },
-      "advice": "450克规格比原价低55%，价差€1.56，15日最低，约€2.87/公斤。"
+      "advice": "450克规格比原价低55%，价差€1.56，16日最低，约€2.87/公斤。"
     },
     {
       "name": "Hellmann's of Calvé mayonaise Knijpfles 430 ml of pot 430 - 650 ml.",
@@ -507,12 +507,12 @@
       "unitPrice": null,
       "discountPercent": 55,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.89,
         "high": 1.89,
         "latest": 1.89
       },
-      "advice": "该包装规格省€2.30，较原标降55%，6日低价。"
+      "advice": "该包装规格省€2.30，较原标降55%，7日低价。"
     },
     {
       "name": "Nescafé koffiespecialiteiten Pak 8 - 25 stuks.",
@@ -532,12 +532,12 @@
       "unitPrice": null,
       "discountPercent": 54,
       "metrics": {
-        "days": 12,
+        "days": 13,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
       },
-      "advice": "该包装规格现价少€2.30，折扣54%，创12日低位。"
+      "advice": "该包装规格现价少€2.30，折扣54%，创13日低位。"
     },
     {
       "name": "Calvé pindakaas Pot 350 gram. OP=OP",
@@ -557,12 +557,12 @@
       "unitPrice": 4.26,
       "discountPercent": 53,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
       },
-      "advice": "350克规格让利€1.70，降幅53%，守住6日低点，约€4.26/公斤。"
+      "advice": "350克规格让利€1.70，降幅53%，守住7日低点，约€4.26/公斤。"
     },
     {
       "name": "Dr. Oetker Suprema pizza Per stuk 424 of 425 gram.",
@@ -582,12 +582,12 @@
       "unitPrice": null,
       "discountPercent": 53,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
       },
-      "advice": "该包装规格从原价降€2.76，折扣53%，处6日低点。"
+      "advice": "该包装规格从原价降€2.76，折扣53%，处7日低点。"
     },
     {
       "name": "Muscle Meat Proteine melk 1 liter",
@@ -601,18 +601,18 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Muscle Meat 蛋白奶 1升",
+      "nameZh": "Muscle Meat 蛋白奶 1 升",
       "package": "",
       "grams": null,
       "unitPrice": null,
       "discountPercent": 53,
       "metrics": {
-        "days": 4,
+        "days": 5,
         "low": 1.39,
         "high": 1.39,
         "latest": 1.39
       },
-      "advice": "单件规格从原价降€1.56，折扣53%，处4日低点。"
+      "advice": "单件规格从原价降€1.56，折扣53%，处5日低点。"
     },
     {
       "name": "Spa Active Fles 500 ml.",
@@ -632,12 +632,12 @@
       "unitPrice": null,
       "discountPercent": 53,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
       },
-      "advice": "该包装规格让利€1.00，降幅53%，守住6日低点。"
+      "advice": "该包装规格让利€1.00，降幅53%，守住7日低点。"
     },
     {
       "name": "Koopmans zoete bakmix Pak 320 - 550 gram. (m.u.v. appelkoeken en tompoucecake",
@@ -657,12 +657,12 @@
       "unitPrice": null,
       "discountPercent": 52,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
       },
-      "advice": "该包装规格让利€1.06，降幅52%，守住6日低点。"
+      "advice": "该包装规格让利€1.06，降幅52%，守住7日低点。"
     },
     {
       "name": "Becel Kuip 450 - 550 gram.",
@@ -682,12 +682,12 @@
       "unitPrice": null,
       "discountPercent": 51,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.89,
         "high": 1.89,
         "latest": 1.89
       },
-      "advice": "单件规格省下€1.96，价格低51%，6日新低。"
+      "advice": "单件规格省下€1.96，价格低51%，7日新低。"
     },
     {
       "name": "Alpro Barista cinnamon roll 1 liter",
@@ -707,12 +707,12 @@
       "unitPrice": null,
       "discountPercent": 50,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
       },
-      "advice": "单件规格比原价低50%，价差€1.50，6日最低。"
+      "advice": "单件规格比原价低50%，价差€1.50，7日最低。"
     },
     {
       "name": "Kerrygold Wikkel 250 gram.",
@@ -732,12 +732,12 @@
       "unitPrice": 7.96,
       "discountPercent": 50,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
       },
-      "advice": "250克规格原标减€2.00，直降50%，6日未更低，约€7.96/公斤。"
+      "advice": "250克规格原标减€2.00，直降50%，7日未更低，约€7.96/公斤。"
     },
     {
       "name": "Optimel kwark of Griekse stijl yoghurt Bak 450 of 500 gram.",
@@ -757,37 +757,37 @@
       "unitPrice": null,
       "discountPercent": 50,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.19,
         "high": 1.19,
         "latest": 1.19
       },
-      "advice": "该包装规格省€1.20，较原标降50%，6日低价。"
+      "advice": "该包装规格省€1.20，较原标降50%，7日低价。"
     },
     {
       "name": "Oranje pompoen Holland Per stuk",
       "category": "Aardappelen, groente & fruit",
       "sale": 0.99,
       "original": 1.99,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F443826_2026-10-12_04-04-51-952_7fad426b-ef65-4a0a-abe2-3bde89f7112f.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F443826_2026-10-13_04-05-09-090_b38727c8-f57e-46b7-a1f7-54de58a8b8d0.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/groente/oranje%20pompoen%20holland/82138",
       "offerId": null,
       "validFrom": "2026-10-07T00:00:00.000Z",
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "橙色南瓜 Holland 每个",
+      "nameZh": "荷兰产橙色南瓜 每个",
       "package": "Per stuk",
       "grams": null,
       "unitPrice": null,
       "discountPercent": 50,
       "metrics": {
-        "days": 10,
+        "days": 11,
         "low": 0.99,
         "high": 1.39,
         "latest": 0.99
       },
-      "advice": "该包装规格省下€1.00，价格低50%，10日新低。"
+      "advice": "该包装规格省下€1.00，价格低50%，11日新低。"
     },
     {
       "name": "Bifi of Jack Link's Pak 40 - 100 gram.",
@@ -807,12 +807,12 @@
       "unitPrice": null,
       "discountPercent": 49,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
       },
-      "advice": "该包装规格原标减€1.90，直降49%，6日未更低。"
+      "advice": "该包装规格原标减€1.90，直降49%，7日未更低。"
     },
     {
       "name": "Honig maaltijdmix Pak 36 - 125 gram. (m.u.v. voordeelpakken)",
@@ -832,12 +832,12 @@
       "unitPrice": null,
       "discountPercent": 49,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
       },
-      "advice": "该包装规格比原价低49%，价差€0.94，6日最低。"
+      "advice": "该包装规格比原价低49%，价差€0.94，7日最低。"
     },
     {
       "name": "1 de Beste Spruiten verpakt 750 g",
@@ -857,12 +857,12 @@
       "unitPrice": 1.32,
       "discountPercent": 48,
       "metrics": {
-        "days": 10,
+        "days": 11,
         "low": 0.99,
         "high": 1.29,
         "latest": 0.99
       },
-      "advice": "750克规格现价少€0.90，折扣48%，创10日低位，约€1.32/公斤。"
+      "advice": "750克规格现价少€0.90，折扣48%，创11日低位，约€1.32/公斤。"
     },
     {
       "name": "Grand'Italia Sugocasa of pesto Pot 90 - 690 gram.",
@@ -882,12 +882,12 @@
       "unitPrice": null,
       "discountPercent": 48,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.79,
         "high": 1.79,
         "latest": 1.79
       },
-      "advice": "单件规格让利€1.66，降幅48%，守住6日低点。"
+      "advice": "单件规格让利€1.66，降幅48%，守住7日低点。"
     },
     {
       "name": "Coca-Cola, Fanta, Sprite of Powerade Fles 500 ml.",
@@ -907,12 +907,12 @@
       "unitPrice": null,
       "discountPercent": 47,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
       },
-      "advice": "该包装规格标价差€0.80，优惠47%，刷新6日低位。"
+      "advice": "该包装规格标价差€0.80，优惠47%，刷新7日低位。"
     },
     {
       "name": "Duca snacks Pak 4 - 20 stuks. (m.u.v. mini groente loempia's)",
@@ -932,12 +932,12 @@
       "unitPrice": null,
       "discountPercent": 47,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
       },
-      "advice": "该包装规格标价差€2.20，优惠47%，刷新6日低位。"
+      "advice": "该包装规格标价差€2.20，优惠47%，刷新7日低位。"
     },
     {
       "name": "Milka Mmmax Reep 250 - 300 gram.",
@@ -951,18 +951,18 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Milka Mmmax 能量棒 250 - 300 克.",
+      "nameZh": "Milka Mmmax 大块巧克力 250–300 克",
       "package": "",
       "grams": null,
       "unitPrice": null,
       "discountPercent": 47,
       "metrics": {
-        "days": 12,
+        "days": 13,
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
       },
-      "advice": "单件规格省€2.70，较原标降47%，12日低价。"
+      "advice": "单件规格省€2.70，较原标降47%，13日低价。"
     },
     {
       "name": "Arla biologische zuivel Pak 1 liter.",
@@ -982,12 +982,12 @@
       "unitPrice": null,
       "discountPercent": 46,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.19,
         "high": 1.19,
         "latest": 1.19
       },
-      "advice": "该包装规格从原价降€1.00，折扣46%，处6日低点。"
+      "advice": "该包装规格从原价降€1.00，折扣46%，处7日低点。"
     },
     {
       "name": "Lipton ice tea Blik 25 cl.",
@@ -1007,12 +1007,12 @@
       "unitPrice": null,
       "discountPercent": 44,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.49,
         "high": 0.49,
         "latest": 0.49
       },
-      "advice": "该包装规格省下€0.39，价格低44%，6日新低。"
+      "advice": "该包装规格省下€0.39，价格低44%，7日新低。"
     },
     {
       "name": "Santa Maria seasoningmix Zakje 25 - 50 gram.",
@@ -1032,12 +1032,12 @@
       "unitPrice": null,
       "discountPercent": 44,
       "metrics": {
-        "days": 12,
+        "days": 13,
         "low": 0.59,
         "high": 0.69,
         "latest": 0.59
       },
-      "advice": "该包装规格省€0.46，较原标降44%，12日低价。"
+      "advice": "该包装规格省€0.46，较原标降44%，13日低价。"
     },
     {
       "name": "Felix kattenvoer Pak 12 zakjes. (m.u.v. Original)",
@@ -1057,12 +1057,12 @@
       "unitPrice": null,
       "discountPercent": 42,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
       },
-      "advice": "该包装规格标价差€2.90，优惠42%，刷新6日低位。"
+      "advice": "该包装规格标价差€2.90，优惠42%，刷新7日低位。"
     },
     {
       "name": "Bio+ Biologische winterpeen 1 kg",
@@ -1082,19 +1082,19 @@
       "unitPrice": 0.99,
       "discountPercent": 41,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
       },
-      "advice": "1000克规格省€0.70，较原标降41%，6日低价，约€0.99/公斤。"
+      "advice": "1000克规格省€0.70，较原标降41%，7日低价，约€0.99/公斤。"
     },
     {
       "name": "Broccoli 1 kg (ca. 2 stuks)",
       "category": "Aardappelen, groente & fruit",
       "sale": 1.38,
       "original": 2.3,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F268383_2026-10-12_04-02-46-848_c5f101dc-6dad-4339-8ca1-3458c243fe39.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F268383_2026-10-13_04-03-35-636_65eb28fb-e222-4c3c-80d0-ad0ec46a66a0.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/groente/broccoli/4431",
       "offerId": null,
       "validFrom": "2026-10-07T00:00:00.000Z",
@@ -1107,12 +1107,12 @@
       "unitPrice": 1.38,
       "discountPercent": 40,
       "metrics": {
-        "days": 10,
+        "days": 11,
         "low": 1.38,
         "high": 1.98,
         "latest": 1.38
       },
-      "advice": "1000克规格比原价低40%，价差€0.92，10日最低，约€1.38/公斤。"
+      "advice": "1000克规格比原价低40%，价差€0.92，11日最低，约€1.38/公斤。"
     },
     {
       "name": "Uniekaas kaasplakken 48+ Pak 125 of 150 gram.",
@@ -1132,12 +1132,12 @@
       "unitPrice": null,
       "discountPercent": 40,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
       },
-      "advice": "该包装规格让利€1.00，降幅40%，守住6日低点。"
+      "advice": "该包装规格让利€1.00，降幅40%，守住7日低点。"
     },
     {
       "name": "Pepsi, Sisi of 7-Up Fles 1.5 liter.",
@@ -1151,18 +1151,18 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Pepsi, Sisi 或 7-Up 瓶装 1.5 升.",
+      "nameZh": "Pepsi、Sisi 或 7-Up 瓶装 1.5 升",
       "package": "Fles 1.5 liter.",
       "grams": null,
       "unitPrice": null,
       "discountPercent": 39,
       "metrics": {
-        "days": 11,
+        "days": 12,
         "low": 1.69,
         "high": 1.69,
         "latest": 1.69
       },
-      "advice": "该包装规格省€1.06，较原标降39%，11日低价。"
+      "advice": "该包装规格省€1.06，较原标降39%，12日低价。"
     },
     {
       "name": "Dr. Oetker Wolkentoetje Kuip 115 of 125 gram.",
@@ -1176,18 +1176,18 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Dr. Oetker 慕斯甜点 盒装 115 或 125 克.",
+      "nameZh": "Dr. Oetker 慕斯甜点 盒装 115 或 125 克",
       "package": "",
       "grams": null,
       "unitPrice": null,
       "discountPercent": 38,
       "metrics": {
-        "days": 13,
+        "days": 14,
         "low": 0.49,
         "high": 0.49,
         "latest": 0.49
       },
-      "advice": "单件规格现价少€0.30，折扣38%，创13日低位。"
+      "advice": "单件规格现价少€0.30，折扣38%，创14日低位。"
     },
     {
       "name": "Gouda's Glorie knijpkanjers Knijpfles 750 ml.",
@@ -1207,12 +1207,12 @@
       "unitPrice": null,
       "discountPercent": 38,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.79,
         "high": 1.79,
         "latest": 1.79
       },
-      "advice": "该包装规格标价差€1.10，优惠38%，刷新6日低位。"
+      "advice": "该包装规格标价差€1.10，优惠38%，刷新7日低位。"
     },
     {
       "name": "Kahrel Snelfiltermaling rood 500 g",
@@ -1232,12 +1232,12 @@
       "unitPrice": 9.98,
       "discountPercent": 38,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 4.99,
         "high": 4.99,
         "latest": 4.99
       },
-      "advice": "500克规格省€3.00，较原标降38%，6日低价，约€9.98/公斤。"
+      "advice": "500克规格省€3.00，较原标降38%，7日低价，约€9.98/公斤。"
     },
     {
       "name": "Ocean Spray vruchtendrank Fles 1 liter.",
@@ -1257,12 +1257,12 @@
       "unitPrice": null,
       "discountPercent": 38,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
       },
-      "advice": "该包装规格让利€0.90，降幅38%，守住6日低点。"
+      "advice": "该包装规格让利€0.90，降幅38%，守住7日低点。"
     },
     {
       "name": "Old Amsterdam 48+ stuk 400 g",
@@ -1282,12 +1282,12 @@
       "unitPrice": 12.47,
       "discountPercent": 38,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 4.99,
         "high": 4.99,
         "latest": 4.99
       },
-      "advice": "400克规格原标减€3.00，直降38%，6日未更低，约€12.47/公斤。"
+      "advice": "400克规格原标减€3.00，直降38%，7日未更低，约€12.47/公斤。"
     },
     {
       "name": "Healthy People Pak 1 liter.",
@@ -1307,12 +1307,12 @@
       "unitPrice": null,
       "discountPercent": 37,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
       },
-      "advice": "该包装规格现价少€1.16，折扣37%，创6日低位。"
+      "advice": "该包装规格现价少€1.16，折扣37%，创7日低位。"
     },
     {
       "name": "Unox soep Per blik.",
@@ -1332,12 +1332,12 @@
       "unitPrice": null,
       "discountPercent": 37,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
       },
-      "advice": "该包装规格省€1.46，较原标降37%，6日低价。"
+      "advice": "该包装规格省€1.46，较原标降37%，7日低价。"
     },
     {
       "name": "Iglo maaltijden Pak 380 - 400 gram of zak 450 gram.",
@@ -1357,12 +1357,12 @@
       "unitPrice": null,
       "discountPercent": 36,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
       },
-      "advice": "该包装规格原标减€2.26，直降36%，6日未更低。"
+      "advice": "该包装规格原标减€2.26，直降36%，7日未更低。"
     },
     {
       "name": "LU Prince Pak 150 - 300 gram.",
@@ -1382,19 +1382,19 @@
       "unitPrice": null,
       "discountPercent": 33,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
       },
-      "advice": "该包装规格让利€1.00，降幅33%，守住6日低点。"
+      "advice": "该包装规格让利€1.00，降幅33%，守住7日低点。"
     },
     {
       "name": "Watermeloen Per stuk",
       "category": "Aardappelen, groente & fruit",
       "sale": 1.99,
       "original": 2.99,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F369008_2026-10-12_04-12-50-032_0672db8e-685a-4243-9362-05499867ddb0.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F369008_2026-10-13_04-12-49-514_9fd76598-6e4a-4cf1-bc1b-4ad1f5cef6fb.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/watermeloen/13057",
       "offerId": null,
       "validFrom": "2026-10-07T00:00:00.000Z",
@@ -1407,12 +1407,12 @@
       "unitPrice": null,
       "discountPercent": 33,
       "metrics": {
-        "days": 3,
+        "days": 4,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
       },
-      "advice": "该包装规格现价少€1.00，折扣33%，创3日低位。"
+      "advice": "该包装规格现价少€1.00，折扣33%，创4日低位。"
     },
     {
       "name": "Bugles, Hamka's of Wokkels Zak 100 of 125 gram.",
@@ -1432,12 +1432,12 @@
       "unitPrice": null,
       "discountPercent": 32,
       "metrics": {
-        "days": 13,
+        "days": 14,
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
       },
-      "advice": "该包装规格让利€0.70，降幅32%，守住13日低点。"
+      "advice": "该包装规格让利€0.70，降幅32%，守住14日低点。"
     },
     {
       "name": "Always Pak 8 - 30 stuks. (m.u.v. Discreet)",
@@ -1457,12 +1457,12 @@
       "unitPrice": null,
       "discountPercent": 31,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
       },
-      "advice": "该包装规格从原价降€0.90，折扣31%，处6日低点。"
+      "advice": "该包装规格从原价降€0.90，折扣31%，处7日低点。"
     },
     {
       "name": "Knolselderij Per stuk",
@@ -1482,12 +1482,12 @@
       "unitPrice": null,
       "discountPercent": 31,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
       },
-      "advice": "该包装规格标价差€0.40，优惠31%，刷新6日低位。"
+      "advice": "该包装规格标价差€0.40，优惠31%，刷新7日低位。"
     },
     {
       "name": "Philadelphia zuivelspread Kuip 145 - 200 gram.",
@@ -1507,7 +1507,7 @@
       "unitPrice": null,
       "discountPercent": 30,
       "metrics": {
-        "days": 12,
+        "days": 13,
         "low": 1.69,
         "high": 1.99,
         "latest": 1.99
@@ -1526,18 +1526,18 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "L'OR 或 Douwe Egberts Excellent 咖啡豆 袋装 450 或 500 克.",
+      "nameZh": "L'OR 或 Douwe Egberts Excellent 咖啡豆 袋装 450 或 500 克",
       "package": "Zak 450 of 500 gram.",
       "grams": null,
       "unitPrice": null,
       "discountPercent": 29,
       "metrics": {
-        "days": 13,
+        "days": 14,
         "low": 8.99,
         "high": 8.99,
         "latest": 8.99
       },
-      "advice": "该包装规格从原价降€3.66，折扣29%，处13日低点。"
+      "advice": "该包装规格从原价降€3.66，折扣29%，处14日低点。"
     },
     {
       "name": "Quaker Cruesli Pak 800 of 850 gram.",
@@ -1557,12 +1557,12 @@
       "unitPrice": null,
       "discountPercent": 29,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
       },
-      "advice": "该包装规格让利€1.66，降幅29%，守住6日低点。"
+      "advice": "该包装规格让利€1.66，降幅29%，守住7日低点。"
     },
     {
       "name": "Vijgen 1 Stuks",
@@ -1576,13 +1576,13 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Vijgen 1 个",
+      "nameZh": "无花果 1 个",
       "package": "",
       "grams": null,
       "unitPrice": null,
       "discountPercent": 29,
       "metrics": {
-        "days": 12,
+        "days": 13,
         "low": 0.39,
         "high": 0.49,
         "latest": 0.49
@@ -1607,19 +1607,19 @@
       "unitPrice": null,
       "discountPercent": 27,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.89,
         "high": 1.89,
         "latest": 1.89
       },
-      "advice": "该包装规格标价差€0.70，优惠27%，刷新6日低位。"
+      "advice": "该包装规格标价差€0.70，优惠27%，刷新7日低位。"
     },
     {
       "name": "Amstel Pilsener krat 24 x 300 ml",
       "category": "Dranken, sap, koffie & thee",
       "sale": 12.67,
       "original": 16.89,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F742140_2026-10-12_04-01-32-499_f6db8c90-4127-44ca-ad51-328d9ff07cec.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F742140_2026-10-13_04-01-18-877_040ac3c7-741f-42b4-acf2-b325ae6a2b05.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/dranken-sap-koffie-thee/bier/amstel%20pilsener%20krat/9492",
       "offerId": null,
       "validFrom": "2026-10-07T00:00:00.000Z",
@@ -1632,19 +1632,19 @@
       "unitPrice": null,
       "discountPercent": 25,
       "metrics": {
-        "days": 19,
+        "days": 20,
         "low": 12.67,
         "high": 12.67,
         "latest": 12.67
       },
-      "advice": "单件规格标价差€4.22，优惠25%，刷新19日低位。"
+      "advice": "单件规格标价差€4.22，优惠25%，刷新20日低位。"
     },
     {
       "name": "Bio fairtrade bananen 5 stuks",
       "category": "Aardappelen, groente & fruit",
       "sale": 1.49,
       "original": 1.99,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F248045_2026-10-12_04-04-18-930_19a50682-9d72-4e3f-9f50-286605ed74b8.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F248045_2026-10-13_04-04-33-275_c72605f1-ed4d-4801-8879-d27517cbd9e0.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/bio%20fairtrade%20bananen/57632",
       "offerId": null,
       "validFrom": "2026-10-07T00:00:00.000Z",
@@ -1657,12 +1657,12 @@
       "unitPrice": null,
       "discountPercent": 25,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
       },
-      "advice": "单件规格让利€0.50，降幅25%，守住6日低点。"
+      "advice": "单件规格让利€0.50，降幅25%，守住7日低点。"
     },
     {
       "name": "Daily Chef Hollandse stamppot maaltijd Bak 500 gram.",
@@ -1682,12 +1682,12 @@
       "unitPrice": 6.98,
       "discountPercent": 25,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 3.49,
         "high": 3.49,
         "latest": 3.49
       },
-      "advice": "500克规格原标减€1.16，直降25%，6日未更低，约€6.98/公斤。"
+      "advice": "500克规格原标减€1.16，直降25%，7日未更低，约€6.98/公斤。"
     },
     {
       "name": "Hertog Jan Pilsener 24 x 300 ml",
@@ -1707,12 +1707,12 @@
       "unitPrice": null,
       "discountPercent": 25,
       "metrics": {
-        "days": 21,
+        "days": 22,
         "low": 14.96,
         "high": 14.96,
         "latest": 14.96
       },
-      "advice": "单件规格标价差€4.99，优惠25%，刷新21日低位。"
+      "advice": "单件规格标价差€4.99，优惠25%，刷新22日低位。"
     },
     {
       "name": "Leffe Blond, Blond 0.0 of Tripel 6-pack fles à 30 cl.",
@@ -1732,12 +1732,12 @@
       "unitPrice": null,
       "discountPercent": 25,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 7.49,
         "high": 7.49,
         "latest": 7.49
       },
-      "advice": "该包装规格现价少€2.50，折扣25%，创6日低位。"
+      "advice": "该包装规格现价少€2.50，折扣25%，创7日低位。"
     },
     {
       "name": "Polders wit en meergranen Per stuk.",
@@ -1757,12 +1757,12 @@
       "unitPrice": null,
       "discountPercent": 25,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
       },
-      "advice": "该包装规格原标减€0.50，直降25%，6日未更低。"
+      "advice": "该包装规格原标减€0.50，直降25%，7日未更低。"
     },
     {
       "name": "1 de Beste Meesterlijke ham of Schwarzwalder schinken gerookt Pak 100 gram.",
@@ -1782,12 +1782,12 @@
       "unitPrice": null,
       "discountPercent": 24,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
       },
-      "advice": "该包装规格原标减€0.80，直降24%，6日未更低。"
+      "advice": "该包装规格原标减€0.80，直降24%，7日未更低。"
     },
     {
       "name": "1 de Beste Elstar 1,5 kg",
@@ -1801,18 +1801,18 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Dirk 自有品牌 Elstar 1,5 公斤",
+      "nameZh": "Dirk 自有品牌 Elstar 苹果 1.5 公斤",
       "package": "",
       "grams": 1500,
       "unitPrice": 1.26,
       "discountPercent": 23,
       "metrics": {
-        "days": 21,
+        "days": 22,
         "low": 1.79,
         "high": 2.49,
         "latest": 1.89
       },
-      "advice": "1500克规格原标减€0.56，直降23%，非21日低，约€1.26/公斤。"
+      "advice": "1500克规格原标减€0.56，直降23%，非22日低，约€1.26/公斤。"
     },
     {
       "name": "Amstel of Grolsch pils 6-pack blik à 33 cl.",
@@ -1832,12 +1832,12 @@
       "unitPrice": null,
       "discountPercent": 23,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
       },
-      "advice": "该包装规格从原价降€1.20，折扣23%，处6日低点。"
+      "advice": "该包装规格从原价降€1.20，折扣23%，处7日低点。"
     },
     {
       "name": "1 de Beste Grijze pompoen Per stuk",
@@ -1857,12 +1857,12 @@
       "unitPrice": null,
       "discountPercent": 22,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.39,
         "high": 1.39,
         "latest": 1.39
       },
-      "advice": "该包装规格标价差€0.40，优惠22%，刷新6日低位。"
+      "advice": "该包装规格标价差€0.40，优惠22%，刷新7日低位。"
     },
     {
       "name": "1 de Beste Spaghetti pompoen Per stuk",
@@ -1882,12 +1882,12 @@
       "unitPrice": null,
       "discountPercent": 22,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.39,
         "high": 1.39,
         "latest": 1.39
       },
-      "advice": "该包装规格标价差€0.40，优惠22%，刷新6日低位。"
+      "advice": "该包装规格标价差€0.40，优惠22%，刷新7日低位。"
     },
     {
       "name": "1 de Beste Sweet lightning pompoen Per stuk",
@@ -1907,12 +1907,12 @@
       "unitPrice": null,
       "discountPercent": 22,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.39,
         "high": 1.39,
         "latest": 1.39
       },
-      "advice": "该包装规格现价少€0.40，折扣22%，创6日低位。"
+      "advice": "该包装规格现价少€0.40，折扣22%，创7日低位。"
     },
     {
       "name": "Muskaat pompoen Per stuk",
@@ -1932,12 +1932,12 @@
       "unitPrice": null,
       "discountPercent": 22,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.39,
         "high": 1.39,
         "latest": 1.39
       },
-      "advice": "该包装规格现价少€0.40，折扣22%，创6日低位。"
+      "advice": "该包装规格现价少€0.40，折扣22%，创7日低位。"
     },
     {
       "name": "1 de Beste Andijvie fijn kleinverpakking 250 g",
@@ -1957,12 +1957,12 @@
       "unitPrice": 3.96,
       "discountPercent": 21,
       "metrics": {
-        "days": 13,
+        "days": 14,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
       },
-      "advice": "250克规格省下€0.26，价格低21%，13日新低，约€3.96/公斤。"
+      "advice": "250克规格省下€0.26，价格低21%，14日新低，约€3.96/公斤。"
     },
     {
       "name": "1 de Beste Aardbeien 400 g",
@@ -1982,19 +1982,19 @@
       "unitPrice": 6.23,
       "discountPercent": 17,
       "metrics": {
-        "days": 20,
+        "days": 21,
         "low": 2.49,
         "high": 3.49,
         "latest": 2.49
       },
-      "advice": "400克规格现价少€0.50，折扣17%，创20日低位，约€6.23/公斤。"
+      "advice": "400克规格现价少€0.50，折扣17%，创21日低位，约€6.23/公斤。"
     },
     {
       "name": "1 de Beste Pitloze rode druiven 500 g",
       "category": "Aardappelen, groente & fruit",
       "sale": 1.99,
       "original": 2.39,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F412118_2026-10-12_04-12-43-140_89dc9c63-bbba-424a-b76d-1ff15dde921e.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F412118_2026-10-13_04-12-42-574_c7917079-3c5f-40ab-865e-ceb1533de498.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/1%20de%20beste%20pitloze%20rode%20druiven/59970",
       "offerId": null,
       "validFrom": "2026-10-07T00:00:00.000Z",
@@ -2007,7 +2007,7 @@
       "unitPrice": 3.98,
       "discountPercent": 17,
       "metrics": {
-        "days": 21,
+        "days": 22,
         "low": 1.79,
         "high": 1.99,
         "latest": 1.99
@@ -2026,18 +2026,18 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Cactusvijgen 500 克",
+      "nameZh": "仙人掌果 500 克",
       "package": "",
       "grams": 500,
       "unitPrice": 2.98,
       "discountPercent": 17,
       "metrics": {
-        "days": 15,
+        "days": 16,
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
       },
-      "advice": "500克规格从原价降€0.30，折扣17%，处15日低点，约€2.98/公斤。"
+      "advice": "500克规格从原价降€0.30，折扣17%，处16日低点，约€2.98/公斤。"
     },
     {
       "name": "Muffins chocolade 2 stuks",
@@ -2057,12 +2057,12 @@
       "unitPrice": null,
       "discountPercent": 17,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.49,
         "high": 1.49,
         "latest": 1.49
       },
-      "advice": "单件规格标价差€0.30，优惠17%，刷新6日低位。"
+      "advice": "单件规格标价差€0.30，优惠17%，刷新7日低位。"
     },
     {
       "name": "1 de Beste Bami nasi groente 450 g",
@@ -2076,18 +2076,18 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Dirk 自有品牌 Bami nasi 蔬菜 450 克",
+      "nameZh": "Dirk 自有品牌 炒面/炒饭配菜 450 克",
       "package": "",
       "grams": 450,
       "unitPrice": 3.09,
       "discountPercent": 16,
       "metrics": {
-        "days": 13,
+        "days": 14,
         "low": 1.29,
         "high": 1.39,
         "latest": 1.39
       },
-      "advice": "450克规格省€0.26，降16%，高于13日低€1.29，约€3.09/公斤。"
+      "advice": "450克规格省€0.26，降16%，高于14日低€1.29，约€3.09/公斤。"
     },
     {
       "name": "Bolicious Mini appel-kaneelbollen 360 g",
@@ -2107,12 +2107,12 @@
       "unitPrice": 4.69,
       "discountPercent": 15,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.69,
         "high": 1.69,
         "latest": 1.69
       },
-      "advice": "360克规格原标减€0.30，直降15%，6日未更低，约€4.69/公斤。"
+      "advice": "360克规格原标减€0.30，直降15%，7日未更低，约€4.69/公斤。"
     },
     {
       "name": "1 de Beste Zoete puntpaprika rood 500 g",
@@ -2132,7 +2132,7 @@
       "unitPrice": 4.98,
       "discountPercent": 14,
       "metrics": {
-        "days": 20,
+        "days": 21,
         "low": 1.79,
         "high": 2.49,
         "latest": 2.49
@@ -2157,12 +2157,12 @@
       "unitPrice": null,
       "discountPercent": 14,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
       },
-      "advice": "该包装规格省下€0.50，价格低14%，6日新低。"
+      "advice": "该包装规格省下€0.50，价格低14%，7日新低。"
     },
     {
       "name": "Vleeschmeesters Actie gehaktschnitzel korean 2 st. 200 g",
@@ -2182,12 +2182,12 @@
       "unitPrice": 14.95,
       "discountPercent": 14,
       "metrics": {
-        "days": 13,
+        "days": 14,
         "low": 2.99,
         "high": 2.99,
         "latest": 2.99
       },
-      "advice": "200克规格标价差€0.50，优惠14%，刷新13日低位，约€14.95/公斤。"
+      "advice": "200克规格标价差€0.50，优惠14%，刷新14日低位，约€14.95/公斤。"
     },
     {
       "name": "De Vleeschmeesters Gegaarde kipstukjes Pak 175 gram.",
@@ -2207,12 +2207,12 @@
       "unitPrice": 19.94,
       "discountPercent": 13,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 3.49,
         "high": 3.49,
         "latest": 3.49
       },
-      "advice": "175克规格比原价低13%，价差€0.50，6日最低，约€19.94/公斤。"
+      "advice": "175克规格比原价低13%，价差€0.50，7日最低，约€19.94/公斤。"
     },
     {
       "name": "1 de Beste Ananas geschild 400 g",
@@ -2226,18 +2226,18 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Dirk 自有品牌 菠萝 geschild 400 克",
+      "nameZh": "Dirk 自有品牌 去皮菠萝 400 克",
       "package": "",
       "grams": 400,
       "unitPrice": 6.72,
       "discountPercent": 10,
       "metrics": {
-        "days": 11,
+        "days": 12,
         "low": 2.49,
         "high": 2.69,
         "latest": 2.69
       },
-      "advice": "400克规格省€0.30，降10%，高于11日低€2.49，约€6.72/公斤。"
+      "advice": "400克规格省€0.30，降10%，高于12日低€2.49，约€6.72/公斤。"
     },
     {
       "name": "1 de Beste Bacon 150 g",
@@ -2257,12 +2257,12 @@
       "unitPrice": 11.93,
       "discountPercent": 10,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.79,
         "high": 1.79,
         "latest": 1.79
       },
-      "advice": "150克规格比原价低10%，价差€0.20，6日最低，约€11.93/公斤。"
+      "advice": "150克规格比原价低10%，价差€0.20，7日最低，约€11.93/公斤。"
     },
     {
       "name": "Brandwijk Spliterwten 500 g",
@@ -2282,12 +2282,12 @@
       "unitPrice": 1.78,
       "discountPercent": 10,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.89,
         "high": 0.89,
         "latest": 0.89
       },
-      "advice": "500克规格现价少€0.10，折扣10%，创6日低位，约€1.78/公斤。"
+      "advice": "500克规格现价少€0.10，折扣10%，创7日低位，约€1.78/公斤。"
     },
     {
       "name": "1 de Beste Aardappelen Zak 1 kilo.",
@@ -2301,13 +2301,13 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Dirk 自有品牌 Aardappelen 袋装 1 公斤.",
+      "nameZh": "Dirk 自有品牌 土豆 袋装 1 公斤",
       "package": "Zak 1 kilo.",
       "grams": 1000,
       "unitPrice": 1.09,
       "discountPercent": 8,
       "metrics": {
-        "days": 15,
+        "days": 16,
         "low": 0.99,
         "high": 1.09,
         "latest": 1.09
@@ -2332,12 +2332,12 @@
       "unitPrice": 3.97,
       "discountPercent": 8,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.19,
         "high": 1.19,
         "latest": 1.19
       },
-      "advice": "300克规格标价差€0.10，优惠8%，刷新6日低位，约€3.97/公斤。"
+      "advice": "300克规格标价差€0.10，优惠8%，刷新7日低位，约€3.97/公斤。"
     },
     {
       "name": "Actie rundergehakt 500 g",
@@ -2357,12 +2357,12 @@
       "unitPrice": 7.98,
       "discountPercent": 7,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 3.99,
         "high": 3.99,
         "latest": 3.99
       },
-      "advice": "500克规格让利€0.30，降幅7%，守住6日低点，约€7.98/公斤。"
+      "advice": "500克规格让利€0.30，降幅7%，守住7日低点，约€7.98/公斤。"
     },
     {
       "name": "1 de Beste Kipfilet gebraden 100 g",
@@ -2382,19 +2382,19 @@
       "unitPrice": 19.9,
       "discountPercent": 5,
       "metrics": {
-        "days": 12,
+        "days": 13,
         "low": 1.99,
         "high": 1.99,
         "latest": 1.99
       },
-      "advice": "100克规格省€0.10，较原标降5%，12日低价，约€19.90/公斤。"
+      "advice": "100克规格省€0.10，较原标降5%，13日低价，约€19.90/公斤。"
     },
     {
       "name": "Eat Me Avocado ready to eat 2 stuks",
       "category": "Aardappelen, groente & fruit",
       "sale": 2.39,
       "original": 2.49,
-      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F248060_2026-10-12_04-01-47-033_27ec58db-cc24-48e1-8c1d-4ae32748c77a.png?width=190",
+      "imageUrl": "https://web-fileserver.dirk.nl/artikelen%2F248060_2026-10-13_04-01-44-707_dfbb0e29-9e10-40f5-b7e1-9bac716c8816.png?width=190",
       "productUrl": "https://www.dirk.nl/boodschappen/aardappelen-groente-fruit/fruit/eat%20me%20avocado%20ready%20to%20eat/57949",
       "offerId": null,
       "validFrom": "2026-10-07T00:00:00.000Z",
@@ -2407,7 +2407,7 @@
       "unitPrice": null,
       "discountPercent": 4,
       "metrics": {
-        "days": 21,
+        "days": 22,
         "low": 1.49,
         "high": 2.39,
         "latest": 2.39
@@ -2432,12 +2432,12 @@
       "unitPrice": null,
       "discountPercent": null,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 2.49,
         "high": 2.49,
         "latest": 2.49
       },
-      "advice": "单件规格原标未知，€2.49是6日观察低点。"
+      "advice": "单件规格原标未知，€2.49是7日观察低点。"
     },
     {
       "name": "Ariel wasmiddel Pods 44, poeder 40 of vloeibaar wasmiddel 50 wasbeurten. OP=OP",
@@ -2457,12 +2457,12 @@
       "unitPrice": null,
       "discountPercent": null,
       "metrics": {
-        "days": 10,
+        "days": 11,
         "low": 9.99,
         "high": 9.99,
         "latest": 9.99
       },
-      "advice": "单件规格原标未知，€9.99是10日观察低点。"
+      "advice": "单件规格原标未知，€9.99是11日观察低点。"
     },
     {
       "name": "Axe deodorant Bus 150 ml. OP=OP",
@@ -2476,13 +2476,13 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Axe 止汗剂 Bus 150 毫升. OP=OP",
+      "nameZh": "Axe 止汗喷雾 150 毫升（售完即止）",
       "package": "",
       "grams": null,
       "unitPrice": null,
       "discountPercent": null,
       "metrics": {
-        "days": 12,
+        "days": 13,
         "low": 1.99,
         "high": 2.49,
         "latest": 2.49
@@ -2507,12 +2507,12 @@
       "unitPrice": null,
       "discountPercent": null,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
       },
-      "advice": "该包装规格缺原标，€0.99守住6日低位。"
+      "advice": "该包装规格缺原标，€0.99守住7日低位。"
     },
     {
       "name": "Edet vochtig toiletpapier Pak 42 stuks. OP=OP",
@@ -2532,12 +2532,12 @@
       "unitPrice": null,
       "discountPercent": null,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 0.99,
         "high": 0.99,
         "latest": 0.99
       },
-      "advice": "该包装规格仅见€0.99现价，6日无更低。"
+      "advice": "该包装规格仅见€0.99现价，7日无更低。"
     },
     {
       "name": "Extra kauwgom OP=OP",
@@ -2557,12 +2557,12 @@
       "unitPrice": null,
       "discountPercent": null,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.19,
         "high": 1.19,
         "latest": 1.19
       },
-      "advice": "单件规格原价未列，€1.19为6日最低。"
+      "advice": "单件规格原价未列，€1.19为7日最低。"
     },
     {
       "name": "Hertog Jan, Brand of Grolsch bokbier 6-pack fles à 30 cl.",
@@ -2576,18 +2576,18 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Hertog Jan 啤酒, Brand 或 格罗尔施啤酒 bokbier 6-pack 瓶装 à 30 厘升.",
+      "nameZh": "Hertog Jan、Brand 或 Grolsch 博克啤酒 6 瓶×300 毫升",
       "package": "fles à 30 cl.",
       "grams": null,
       "unitPrice": null,
       "discountPercent": null,
       "metrics": {
-        "days": 13,
+        "days": 14,
         "low": 4.99,
         "high": 4.99,
         "latest": 4.99
       },
-      "advice": "该包装规格原标未知，€4.99是13日观察低点。"
+      "advice": "该包装规格原标未知，€4.99是14日观察低点。"
     },
     {
       "name": "Klinex toiletblokken Pak 2 x 50 gram. OP=OP",
@@ -2607,12 +2607,12 @@
       "unitPrice": 18.9,
       "discountPercent": null,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 1.89,
         "high": 1.89,
         "latest": 1.89
       },
-      "advice": "100克规格原标未知，€1.89是6日观察低点，约€18.90/公斤。"
+      "advice": "100克规格原标未知，€1.89是7日观察低点，约€18.90/公斤。"
     },
     {
       "name": "Mediterraneo pizza of mini focaccia's Per stuk of pak 4 stuks. OP=OP",
@@ -2626,13 +2626,13 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Mediterraneo 披萨 或 mini focaccia's 每个 或 包装 4 个. OP=OP",
+      "nameZh": "Mediterraneo 披萨或迷你佛卡夏 每个或 4 个装（售完即止）",
       "package": "Per stuk of pak 4 stuks. OP=OP",
       "grams": null,
       "unitPrice": null,
       "discountPercent": null,
       "metrics": {
-        "days": 10,
+        "days": 11,
         "low": 1.49,
         "high": 1.69,
         "latest": 1.69
@@ -2657,12 +2657,12 @@
       "unitPrice": null,
       "discountPercent": null,
       "metrics": {
-        "days": 12,
+        "days": 13,
         "low": 5.99,
         "high": 5.99,
         "latest": 5.99
       },
-      "advice": "单件规格原标未知，€5.99是12日观察低点。"
+      "advice": "单件规格原标未知，€5.99是13日观察低点。"
     },
     {
       "name": "Sea Fresh Zalmfilet teriyaki 2st 250 g",
@@ -2682,12 +2682,12 @@
       "unitPrice": 21.96,
       "discountPercent": null,
       "metrics": {
-        "days": 6,
+        "days": 7,
         "low": 5.49,
         "high": 5.49,
         "latest": 5.49
       },
-      "advice": "250克规格原标未知，€5.49是6日观察低点，约€21.96/公斤。"
+      "advice": "250克规格原标未知，€5.49是7日观察低点，约€21.96/公斤。"
     },
     {
       "name": "Vleeschmeesters Actie varkensoester 6 st. 720 g",
@@ -2701,18 +2701,18 @@
       "validTo": "2026-10-13T00:00:00.000Z",
       "validityNl": "Geldig van woensdag 7 oktober t/m dinsdag 13 oktober",
       "validityZh": "有效期为10月7日星期三至10月13日星期二",
-      "nameZh": "Vleeschmeesters 特价猪里脊肉 6 块 720g",
+      "nameZh": "Vleeschmeesters 特价猪里脊肉 6 块 720 克",
       "package": "",
       "grams": 720,
       "unitPrice": 8.32,
       "discountPercent": null,
       "metrics": {
-        "days": 10,
+        "days": 11,
         "low": 5.99,
         "high": 5.99,
         "latest": 5.99
       },
-      "advice": "720克规格只标€5.99，历史10日未见更低，约€8.32/公斤。"
+      "advice": "720克规格只标€5.99，历史11日未见更低，约€8.32/公斤。"
     }
   ]
 }
