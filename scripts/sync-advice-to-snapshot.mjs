@@ -22,3 +22,6 @@ const nextHistory = [{ date, generatedAt: snapshot.generatedAt, offerCount: snap
 await fs.writeFile(path.join(historyDir, `${date}.json`), `${JSON.stringify(dailySnapshot, null, 2)}\n`);
 await fs.writeFile(indexPath, `${JSON.stringify(nextHistory, null, 2)}\n`);
 console.log(`Synced ${snapshot.offers.length} Dirk advice records to ${date} snapshot.`);
+const { buildPriceSeries } = await import("./build-price-series.mjs");
+const series = await buildPriceSeries(dataDir);
+console.log(`Updated price-series.json (${Object.keys(series.series).length} products, ${series.dates.length} days).`);

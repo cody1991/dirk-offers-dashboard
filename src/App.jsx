@@ -37,7 +37,26 @@ function isAlmostExpired(offer) {
 
 function Price({ value }) { return value == null ? "—" : euro.format(value); }
 function UnitPrice({ offer }) { const value = offer.unitPrice ?? (offer.grams ? offer.sale / offer.grams * 1000 : null); return value == null ? null : <span className="unit-price">€{value.toFixed(2)}/kg</span>; }
-function PriceTrail({ history }) { return history ? <p className="price-trail">价格足迹：{history.days} 天 · 史低 <b>{euro.format(history.low)}</b> · 史高 <b>{euro.format(history.high)}</b></p> : <p className="price-trail">价格足迹：等待首次出现</p>; }
+const shortDate = (d) => `${Number(d.slice(5, 7))}/${Number(d.slice(8, 10))}`;
+const dayNum = (d) => Date.UTC(+d.slice(0, 4), +d.slice(5, 7) - 1, +d.slice(8, 10)) / 86400000;
+function PriceTrail({ points, dates }) {
+  if (!points || !dates) return <p className="price-trail">价格走势：等待数据</p>;
+  const pts = points.map(([i, v]) => ({ date: dates[i], day: dayNum(dates[i]), v }));
+  if (pts.length < 2) return <p className="price-trail">价格走势：仅1天记录</p>;
+  const W = 220, H = 56, P = 6, first = pts[0].day, span = Math.max(1, pts.at(-1).day - first);
+  const vals = pts.map((p) => p.v), min = Math.min(...vals), max = Math.max(...vals), range = max - min || 1;
+  const x = (p) => P + (p.day - first) / span * (W - 2 * P), y = (p) => max === min ? H / 2 : P + (max - p.v) / range * (H - 2 * P);
+  const segs = []; for (const p of pts) { const last = segs.at(-1); if (last && p.day - last.at(-1).day === 1) last.push(p); else segs.push([p]); }
+  const low = pts.reduce((a, b) => (b.v < a.v ? b : a)), cur = pts.at(-1);
+  return <div className="price-trail sparkline">
+    <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} role="img" aria-label="价格走势">
+      {segs.map((seg, k) => seg.length > 1 ? <polyline key={k} points={seg.map((p) => `${x(p)},${y(p)}`).join(" ")} fill="none" stroke="#999" strokeWidth="1.5" /> : null)}
+      {pts.map((p, k) => <circle key={k} cx={x(p)} cy={y(p)} r="1.6" fill="#999" />)}
+      <circle cx={x(low)} cy={y(low)} r="3.5" fill="#2e8b57" /><circle cx={x(cur)} cy={y(cur)} r="3.5" fill="#d62828" />
+    </svg>
+    <small><span style={{ color: "#2e8b57" }}>● 最低 {euro.format(low.v)}（{shortDate(low.date)}）</span> <span style={{ color: "#d62828" }}>● 当前 {euro.format(cur.v)}</span> · {pts.length} 天记录</small>
+  </div>;
+}
 function SortControl({ value, onChange }) {
   const options = [{ value: "discount", label: "折扣最高" }, { value: "unit", label: "单位价低" }, { value: "price", label: "售价最低" }];
   return <div className="sort-control" aria-label="排序方式"><span>排序</span><div className="sort-options">{options.map((option) => <button type="button" className={option.value === value ? "selected" : ""} onClick={() => onChange(option.value)} aria-pressed={option.value === value} key={option.value}>{option.label}</button>)}</div></div>;
@@ -48,8 +67,10 @@ export default function App() {
   const [category, setCategory] = useState("全部");
   const [query, setQuery] = useState("");
   const [sortBy, setSortBy] = useState("discount");
+  const [series, setSeries] = useState(null);
   useEffect(() => {
     fetch("./data/offers.json").then((response) => response.json()).then(setData).catch(() => setData({ offers: [], error: true }));
+    fetch("./data/price-series.json").then((response) => response.json()).then(setSeries).catch(() => setSeries(null));
   }, []);
 
   const categories = useMemo(() => ["全部", ...new Set((data?.offers ?? []).map((item) => item.category))], [data]);
@@ -88,11 +109,11 @@ export default function App() {
           const classes = ["offer", atHistoricalLow ? "historical-low" : "", almostExpired ? "almost-expired" : ""].filter(Boolean).join(" ");
           return <article className={classes} key={offer.name}>
             <div className="photo"><img src={offer.imageUrl} alt={offer.name} loading="lazy" decoding="async" />{atHistoricalLow && <span className="low-badge">史低价</span>}{almostExpired && <span className="expiry-badge">即将结束</span>}</div>
-            <div className="offer-body"><p className="category">{categoryLabel(offer.category)}</p><h3>{offer.nameZh ?? offer.name}</h3>{offer.nameZh && <p className="original-name">{offer.name}</p>}{(offer.validityZh || offer.validityNl) && <p className={"validity " + (almostExpired ? "expiring" : "")}>{offer.validityZh ?? offer.validityNl}{offer.validityZh && offer.validityNl ? <span className="validity-nl"> · {offer.validityNl}</span> : null}</p>}<p className="pack">{offer.package}</p><div className="price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>} {offer.discountPercent && <i>−{offer.discountPercent}%</i>}</div><UnitPrice offer={offer} /><PriceTrail history={offer.metrics} /><p className="advice">{offer.advice}</p>{offer.productUrl && <a className="product-link" href={offer.productUrl} target="_blank" rel="noreferrer">在 Dirk 查看原商品 ↗</a>}</div>
+            <div className="offer-body"><p className="category">{categoryLabel(offer.category)}</p><h3>{offer.nameZh ?? offer.name}</h3>{offer.nameZh && <p className="original-name">{offer.name}</p>}{(offer.validityZh || offer.validityNl) && <p className={"validity " + (almostExpired ? "expiring" : "")}>{offer.validityZh ?? offer.validityNl}{offer.validityZh && offer.validityNl ? <span className="validity-nl"> · {offer.validityNl}</span> : null}</p>}<p className="pack">{offer.package}</p><div className="price"><b><Price value={offer.sale} /></b>{offer.original && <s><Price value={offer.original} /></s>} {offer.discountPercent && <i>−{offer.discountPercent}%</i>}</div><UnitPrice offer={offer} /><PriceTrail points={series ? series.series[offer.name] ?? [] : null} dates={series?.dates} /><p className="advice">{offer.advice}</p>{offer.productUrl && <a className="product-link" href={offer.productUrl} target="_blank" rel="noreferrer">在 Dirk 查看原商品 ↗</a>}</div>
           </article>;
         })}
       </div>
     </section>
-    <footer>数据来自 Dirk aanbiedingen；仅展示当天优惠。价格统计仅保留每个商品的出现天数、最低价、最高价与最近价格。图片与价格以门店实际标签为准。</footer>
+    <footer>数据来自 Dirk aanbiedingen；仅展示当天优惠。每个商品的小折线图展示我们记录到的每日优惠价走势（自 9 月 20 日起，未记录的日子留空不连线），绿点为记录最低价，红点为当前价。图片与价格以门店实际标签为准。</footer>
   </main>;
 }
