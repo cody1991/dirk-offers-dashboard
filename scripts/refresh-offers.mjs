@@ -7,7 +7,7 @@ const publicDir = path.join(root, "public", "data");
 const dbDir = path.join(root, "data");
 const translationsPath = path.join(dbDir, "translations.json");
 const offerUrl = "https://www.dirk.nl/aanbiedingen";
-const storeUrl = "https://www.dirk.nl/winkels/almere/korte-promenade/68";
+const storeUrl = "https://www.dirk.nl/winkels/almere/schipperplein/69";
 const store = {
   name: "Dirk supermarkt Almere",
   url: storeUrl
@@ -291,7 +291,9 @@ function parseStoreHoursFromHtml(html, dutchWeekday) {
   if (row) return { opensAt: row[1], closesAt: row[2] };
   // The store page also lists many other Dirk stores; only trust "Open tot" next to our own address.
   const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
-  const ownStore = text.match(/Almere Korte Promenade[^|]{0,120}?Open tot\s+([0-2]\d:[0-5]\d)/i)
+  const ownStore = text.match(/Almere Schipperplein[^|]{0,120}?Open tot\s+([0-2]\d:[0-5]\d)/i)
+    ?? text.match(/Schipperplein 4[^|]{0,120}?Open tot\s+([0-2]\d:[0-5]\d)/i)
+    ?? text.match(/Almere Korte Promenade[^|]{0,120}?Open tot\s+([0-2]\d:[0-5]\d)/i)
     ?? text.match(/Korte Promenade 2-6[^|]{0,120}?Open tot\s+([0-2]\d:[0-5]\d)/i);
   return { opensAt: null, closesAt: ownStore?.[1] ?? null };
 }
@@ -431,7 +433,7 @@ const sectionIdByOfferId = buildOfferSectionIdMap(dirkHtml, sectionIdByName);
 console.log(`Dirk department sections: ${sectionIdByName.size} names, ${sectionIdByOfferId.size} article->section mappings.`);
 
 let storeHours = storeMarkdown.match(new RegExp(`\\*\\s+${dutchWeekdays[weekday]}\\s*\\n+([0-2]\\d:[0-5]\\d)\\s*-\\s*([0-2]\\d:[0-5]\\d)`));
-let storeClosesAt = storeHours?.[2] ?? storeMarkdown.match(/Almere Korte Promenade[\s\S]{0,100}?Open tot\s+([0-2]\d:[0-5]\d)/)?.[1];
+let storeClosesAt = storeHours?.[2] ?? storeMarkdown.match(/Almere Schipperplein[\s\S]{0,100}?Open tot\s+([0-2]\d:[0-5]\d)/)?.[1] ?? storeMarkdown.match(/Almere Korte Promenade[\s\S]{0,100}?Open tot\s+([0-2]\d:[0-5]\d)/)?.[1];
 let storeOpensAt = storeHours?.[1] ?? null;
 if (!storeClosesAt) {
   let storeHtml = "";
