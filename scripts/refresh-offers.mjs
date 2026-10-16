@@ -329,7 +329,8 @@ function evidenceAdvice(offer) {
   const spec = offer.grams ? `${offer.grams}克规格` : offer.package ? `该包装规格` : "单件规格";
   // Keep unit short so Chinese-char budget (10-28) still holds for above-low lines.
   const unit = offer.unitPrice != null ? `，约€${offer.unitPrice.toFixed(2)}/公斤` : "";
-  if (offer.original != null) {
+  // Treat 0/negative original as missing (Nuxt sometimes sends 0) to avoid Infinity% advice.
+  if (offer.original != null && offer.original > 0) {
     const saving = offer.original - offer.sale;
     const percent = Math.round(saving / offer.original * 100);
     if (thin) {
