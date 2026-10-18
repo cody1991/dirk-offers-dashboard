@@ -23,7 +23,8 @@ h1,h2,h3,p { margin-top:0; } h1 { margin:10px 0; font-size:clamp(42px,7vw,92px);
 .expiry-badge { left: 8px !important; right: auto !important; color: #fff !important; background: #e31b23 !important; font-weight: 700; }
 .offer.almost-expired .low-badge { top: 30px; }
 
-.price-trail { margin-top: 8px; }
-.price-trail-chart { position: relative; }
-.price-trail-tip { position: absolute; left: 50%; top: 4px; transform: translateX(-50%); z-index: 2; padding: 4px 8px; color: #fffdf8; background: #172119; border-radius: 6px; font: 700 11px ui-monospace, monospace; white-space: nowrap; pointer-events: none; box-shadow: 0 4px 12px rgba(23,33,25,.18); }
-.price-trail-hover { color: #172119; font-weight: 700; }
+.price-trail { margin-top: 10px; }
+.price-trail-chart { position: relative; height: 110px; }
+.price-trail svg .axis-label { fill: #6c766c; font: 700 9px ui-monospace, monospace; }
+.price-trail-tip { position: absolute; transform: translate(-50%, -120%); z-index: 3; padding: 4px 8px; color: #fffdf8; background: #172119; border-radius: 6px; font: 700 11px ui-monospace, monospace; white-space: nowrap; pointer-events: none; box-shadow: 0 4px 12px rgba(23,33,25,.18); }
+.price-trail small { display: block; min-height: 16px; margin-top: 4px; }

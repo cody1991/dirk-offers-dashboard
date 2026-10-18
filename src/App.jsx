@@ -44,35 +44,80 @@ function PriceTrail({ points, dates }) {
   if (!points || !dates) return <p className="price-trail">价格走势：等待数据</p>;
   const pts = points.map(([i, v]) => ({ date: dates[i], day: dayNum(dates[i]), v }));
   if (pts.length < 2) return <p className="price-trail">价格走势：仅1天记录</p>;
-  const W = 220, H = 56, P = 6, first = pts[0].day, span = Math.max(1, pts.at(-1).day - first);
-  const vals = pts.map((p) => p.v), min = Math.min(...vals), max = Math.max(...vals), range = max - min || 1;
-  const x = (p) => P + (p.day - first) / span * (W - 2 * P), y = (p) => max === min ? H / 2 : P + (max - p.v) / range * (H - 2 * P);
-  const segs = []; for (const p of pts) { const last = segs.at(-1); if (last && p.day - last.at(-1).day === 1) last.push(p); else segs.push([p]); }
-  const low = pts.reduce((a, b) => (b.v < a.v ? b : a)), cur = pts.at(-1);
+
+  const W = 260, H = 110;
+  const left = 42, right = 10, top = 12, bottom = 26;
+  const plotW = W - left - right, plotH = H - top - bottom;
+  const first = pts[0].day, span = Math.max(1, pts.at(-1).day - first);
+  const vals = pts.map((p) => p.v);
+  let min = Math.min(...vals), max = Math.max(...vals);
+  if (max === min) { min = Math.max(0, min - 0.2); max = max + 0.2; }
+  const niceStep = (() => {
+    const raw = (max - min) / 2;
+    const pow = 10 ** Math.floor(Math.log10(raw || 1));
+    const n = raw / pow;
+    const step = n <= 1 ? 1 : n <= 2 ? 2 : n <= 5 ? 5 : 10;
+    return step * pow;
+  })();
+  const yMin = Math.floor(min / niceStep) * niceStep;
+  const yMax = Math.ceil(max / niceStep) * niceStep || yMin + niceStep;
+  const yRange = yMax - yMin || 1;
+  const x = (p) => left + (p.day - first) / span * plotW;
+  const y = (p) => top + (yMax - p.v) / yRange * plotH;
+  const segs = [];
+  for (const p of pts) {
+    const last = segs.at(-1);
+    if (last && p.day - last.at(-1).day === 1) last.push(p);
+    else segs.push([p]);
+  }
+  const low = pts.reduce((a, b) => (b.v < a.v ? b : a));
+  const cur = pts.at(-1);
+  const yTicks = [];
+  for (let v = yMin; v <= yMax + niceStep / 1000; v += niceStep) yTicks.push(Number(v.toFixed(4)));
+  const xTicks = pts.length <= 3 ? pts : [pts[0], pts[Math.floor(pts.length / 2)], pts.at(-1)];
   const tip = (p) => `${shortDate(p.date)} · ${euro.format(p.v)}`;
-  const show = (p) => setHover(p);
-  const clear = () => setHover(null);
-  const hit = (p, key, fill, r) => (
-    <g key={key} onMouseEnter={() => show(p)} onMouseLeave={clear} onFocus={() => show(p)} onBlur={clear} style={{ cursor: "pointer" }}>
-      <circle cx={x(p)} cy={y(p)} r="10" fill="transparent" />
-      <circle cx={x(p)} cy={y(p)} r={r} fill={fill} />
-    </g>
-  );
-  return <div className="price-trail sparkline">
-    <div className="price-trail-chart" onMouseLeave={clear}>
+  const money = (v) => euro.format(v).replace(/\s/g, "");
+
+  return <div className="price-trail chart">
+    <div className="price-trail-chart" onMouseLeave={() => setHover(null)}>
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} role="img" aria-label="价格走势">
-        {segs.map((seg, k) => seg.length > 1 ? <polyline key={k} points={seg.map((p) => `${x(p)},${y(p)}`).join(" ")} fill="none" stroke="#999" strokeWidth="1.5" pointerEvents="none" /> : null)}
-        {pts.map((p, k) => hit(p, k, "#999", 1.6))}
-        {hit(low, "low", "#2e8b57", 3.5)}
-        {hit(cur, "cur", "#d62828", 3.5)}
+        {yTicks.map((v) => {
+          const yy = top + (yMax - v) / yRange * plotH;
+          return <g key={`y-${v}`}>
+            <line x1={left} y1={yy} x2={left + plotW} y2={yy} stroke="#e6e8e2" strokeWidth="1" />
+            <text x={left - 6} y={yy + 3} textAnchor="end" className="axis-label">{money(v)}</text>
+          </g>;
+        })}
+        <line x1={left} y1={top} x2={left} y2={top + plotH} stroke="#9aa39a" strokeWidth="1.2" />
+        <line x1={left} y1={top + plotH} x2={left + plotW} y2={top + plotH} stroke="#9aa39a" strokeWidth="1.2" />
+        {xTicks.map((p, i) => (
+          <text key={`x-${i}`} x={x(p)} y={H - 6} textAnchor="middle" className="axis-label">{shortDate(p.date)}</text>
+        ))}
+        {segs.map((seg, k) => seg.length > 1
+          ? <polyline key={k} points={seg.map((p) => `${x(p)},${y(p)}`).join(" ")} fill="none" stroke="#536056" strokeWidth="1.8" pointerEvents="none" />
+          : null)}
+        {pts.map((p, k) => (
+          <g key={k} onMouseEnter={() => setHover(p)} style={{ cursor: "crosshair" }}>
+            <circle cx={x(p)} cy={y(p)} r="9" fill="transparent" />
+            <circle cx={x(p)} cy={y(p)} r="2.4" fill={p === low ? "#2e8b57" : p === cur ? "#d62828" : "#536056"} />
+          </g>
+        ))}
       </svg>
-      {hover && <div className="price-trail-tip" role="status">{tip(hover)}</div>}
+      {hover && (
+        <div
+          className="price-trail-tip"
+          style={{ left: `${(x(hover) / W) * 100}%`, top: `${Math.max(4, (y(hover) / H) * 100 - 12)}%` }}
+          role="status"
+        >{tip(hover)}</div>
+      )}
     </div>
-    <small>{hover
-      ? <span className="price-trail-hover">悬停：{tip(hover)}</span>
-      : <><span style={{ color: "#2e8b57" }}>● 最低 {euro.format(low.v)}（{shortDate(low.date)}）</span> <span style={{ color: "#d62828" }}>● 当前 {euro.format(cur.v)}</span> · {pts.length} 天记录</>}</small>
+    <small>
+      <span style={{ color: "#2e8b57" }}>● 最低 {euro.format(low.v)}（{shortDate(low.date)}）</span>{" "}
+      <span style={{ color: "#d62828" }}>● 当前 {euro.format(cur.v)}</span> · {pts.length} 天记录
+    </small>
   </div>;
 }
+
 function SortControl({ value, onChange }) {
   const options = [{ value: "discount", label: "折扣最高" }, { value: "unit", label: "单位价低" }, { value: "price", label: "售价最低" }];
   return <div className="sort-control" aria-label="排序方式"><span>排序</span><div className="sort-options">{options.map((option) => <button type="button" className={option.value === value ? "selected" : ""} onClick={() => onChange(option.value)} aria-pressed={option.value === value} key={option.value}>{option.label}</button>)}</div></div>;
