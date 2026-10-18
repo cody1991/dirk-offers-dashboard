@@ -48,11 +48,13 @@ function PriceTrail({ points, dates }) {
   const x = (p) => P + (p.day - first) / span * (W - 2 * P), y = (p) => max === min ? H / 2 : P + (max - p.v) / range * (H - 2 * P);
   const segs = []; for (const p of pts) { const last = segs.at(-1); if (last && p.day - last.at(-1).day === 1) last.push(p); else segs.push([p]); }
   const low = pts.reduce((a, b) => (b.v < a.v ? b : a)), cur = pts.at(-1);
+  const tip = (p) => `${shortDate(p.date)} · ${euro.format(p.v)}`;
   return <div className="price-trail sparkline">
     <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} role="img" aria-label="价格走势">
       {segs.map((seg, k) => seg.length > 1 ? <polyline key={k} points={seg.map((p) => `${x(p)},${y(p)}`).join(" ")} fill="none" stroke="#999" strokeWidth="1.5" /> : null)}
-      {pts.map((p, k) => <circle key={k} cx={x(p)} cy={y(p)} r="1.6" fill="#999" />)}
-      <circle cx={x(low)} cy={y(low)} r="3.5" fill="#2e8b57" /><circle cx={x(cur)} cy={y(cur)} r="3.5" fill="#d62828" />
+      {pts.map((p, k) => <g key={k}><circle cx={x(p)} cy={y(p)} r="8" fill="transparent"><title>{tip(p)}</title></circle><circle cx={x(p)} cy={y(p)} r="1.6" fill="#999" /></g>)}
+      <g><circle cx={x(low)} cy={y(low)} r="8" fill="transparent"><title>{tip(low)}</title></circle><circle cx={x(low)} cy={y(low)} r="3.5" fill="#2e8b57" /></g>
+      <g><circle cx={x(cur)} cy={y(cur)} r="8" fill="transparent"><title>{tip(cur)}</title></circle><circle cx={x(cur)} cy={y(cur)} r="3.5" fill="#d62828" /></g>
     </svg>
     <small><span style={{ color: "#2e8b57" }}>● 最低 {euro.format(low.v)}（{shortDate(low.date)}）</span> <span style={{ color: "#d62828" }}>● 当前 {euro.format(cur.v)}</span> · {pts.length} 天记录</small>
   </div>;
