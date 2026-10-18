@@ -40,6 +40,7 @@ function UnitPrice({ offer }) { const value = offer.unitPrice ?? (offer.grams ? 
 const shortDate = (d) => `${Number(d.slice(5, 7))}/${Number(d.slice(8, 10))}`;
 const dayNum = (d) => Date.UTC(+d.slice(0, 4), +d.slice(5, 7) - 1, +d.slice(8, 10)) / 86400000;
 function PriceTrail({ points, dates }) {
+  const [hover, setHover] = useState(null);
   if (!points || !dates) return <p className="price-trail">价格走势：等待数据</p>;
   const pts = points.map(([i, v]) => ({ date: dates[i], day: dayNum(dates[i]), v }));
   if (pts.length < 2) return <p className="price-trail">价格走势：仅1天记录</p>;
@@ -49,14 +50,27 @@ function PriceTrail({ points, dates }) {
   const segs = []; for (const p of pts) { const last = segs.at(-1); if (last && p.day - last.at(-1).day === 1) last.push(p); else segs.push([p]); }
   const low = pts.reduce((a, b) => (b.v < a.v ? b : a)), cur = pts.at(-1);
   const tip = (p) => `${shortDate(p.date)} · ${euro.format(p.v)}`;
+  const show = (p) => setHover(p);
+  const clear = () => setHover(null);
+  const hit = (p, key, fill, r) => (
+    <g key={key} onMouseEnter={() => show(p)} onMouseLeave={clear} onFocus={() => show(p)} onBlur={clear} style={{ cursor: "pointer" }}>
+      <circle cx={x(p)} cy={y(p)} r="10" fill="transparent" />
+      <circle cx={x(p)} cy={y(p)} r={r} fill={fill} />
+    </g>
+  );
   return <div className="price-trail sparkline">
-    <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} role="img" aria-label="价格走势">
-      {segs.map((seg, k) => seg.length > 1 ? <polyline key={k} points={seg.map((p) => `${x(p)},${y(p)}`).join(" ")} fill="none" stroke="#999" strokeWidth="1.5" /> : null)}
-      {pts.map((p, k) => <g key={k}><circle cx={x(p)} cy={y(p)} r="8" fill="transparent"><title>{tip(p)}</title></circle><circle cx={x(p)} cy={y(p)} r="1.6" fill="#999" /></g>)}
-      <g><circle cx={x(low)} cy={y(low)} r="8" fill="transparent"><title>{tip(low)}</title></circle><circle cx={x(low)} cy={y(low)} r="3.5" fill="#2e8b57" /></g>
-      <g><circle cx={x(cur)} cy={y(cur)} r="8" fill="transparent"><title>{tip(cur)}</title></circle><circle cx={x(cur)} cy={y(cur)} r="3.5" fill="#d62828" /></g>
-    </svg>
-    <small><span style={{ color: "#2e8b57" }}>● 最低 {euro.format(low.v)}（{shortDate(low.date)}）</span> <span style={{ color: "#d62828" }}>● 当前 {euro.format(cur.v)}</span> · {pts.length} 天记录</small>
+    <div className="price-trail-chart" onMouseLeave={clear}>
+      <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} role="img" aria-label="价格走势">
+        {segs.map((seg, k) => seg.length > 1 ? <polyline key={k} points={seg.map((p) => `${x(p)},${y(p)}`).join(" ")} fill="none" stroke="#999" strokeWidth="1.5" pointerEvents="none" /> : null)}
+        {pts.map((p, k) => hit(p, k, "#999", 1.6))}
+        {hit(low, "low", "#2e8b57", 3.5)}
+        {hit(cur, "cur", "#d62828", 3.5)}
+      </svg>
+      {hover && <div className="price-trail-tip" role="status">{tip(hover)}</div>}
+    </div>
+    <small>{hover
+      ? <span className="price-trail-hover">悬停：{tip(hover)}</span>
+      : <><span style={{ color: "#2e8b57" }}>● 最低 {euro.format(low.v)}（{shortDate(low.date)}）</span> <span style={{ color: "#d62828" }}>● 当前 {euro.format(cur.v)}</span> · {pts.length} 天记录</>}</small>
   </div>;
 }
 function SortControl({ value, onChange }) {

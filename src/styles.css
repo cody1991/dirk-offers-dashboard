@@ -22,3 +22,8 @@ h1,h2,h3,p { margin-top:0; } h1 { margin:10px 0; font-size:clamp(42px,7vw,92px);
 .offer.almost-expired.historical-low { box-shadow: inset 0 4px 0 #e31b23, inset 0 8px 0 #d29420; }
 .expiry-badge { left: 8px !important; right: auto !important; color: #fff !important; background: #e31b23 !important; font-weight: 700; }
 .offer.almost-expired .low-badge { top: 30px; }
+
+.price-trail { margin-top: 8px; }
+.price-trail-chart { position: relative; }
+.price-trail-tip { position: absolute; left: 50%; top: 4px; transform: translateX(-50%); z-index: 2; padding: 4px 8px; color: #fffdf8; background: #172119; border-radius: 6px; font: 700 11px ui-monospace, monospace; white-space: nowrap; pointer-events: none; box-shadow: 0 4px 12px rgba(23,33,25,.18); }
+.price-trail-hover { color: #172119; font-weight: 700; }
