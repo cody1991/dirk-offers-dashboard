@@ -286,16 +286,35 @@ function parseOffersFromNuxt(html, sectionIdByName = new Map(), sectionIdByOffer
   return [...byName.values()];
 }
 
+function isoDurationToTime(value) {
+  const match = String(value ?? "").match(/^PT(\d+)H(?:(\d+)M)?$/);
+  if (!match) return null;
+  const hours = Number(match[1]);
+  const minutes = Number(match[2] ?? 0);
+  if (hours === 0 && minutes === 0) return null;
+  return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}`;
+}
+function isPlausibleCloseTime(time) {
+  return typeof time === "string" && /^(?:0[1-9]|1\d|2[0-3]):[0-5]\d$/.test(time);
+}
 function parseStoreHoursFromHtml(html, dutchWeekday) {
   const row = html.match(new RegExp(`${dutchWeekday}[^<]{0,40}?([0-2]\\d:[0-5]\\d)\\s*[–-]\\s*([0-2]\\d:[0-5]\\d)`, "i"));
-  if (row) return { opensAt: row[1], closesAt: row[2] };
+  if (row && isPlausibleCloseTime(row[2])) return { opensAt: row[1], closesAt: row[2] };
+  // Official Nuxt payload lists today's close/open as ISO durations next to this store.
+  const nuxt = html.match(/"Schipperplein"[\s\S]{0,500}?"close"\s*:\s*\d+\s*,\s*"open"\s*:\s*\d+\s*,\s*"date"\s*:\s*\d+[\s\S]{0,160}?"(PT\d+H(?:\d+M)?)","(PT\d+H(?:\d+M)?)","(\d{4}-\d{2}-\d{2})"/);
+  if (nuxt && nuxt[3] === archiveDate) {
+    const closesAt = isoDurationToTime(nuxt[1]);
+    const opensAt = isoDurationToTime(nuxt[2]);
+    if (isPlausibleCloseTime(closesAt)) return { opensAt, closesAt };
+  }
   // The store page also lists many other Dirk stores; only trust "Open tot" next to our own address.
-  const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
-  const ownStore = text.match(/Almere Schipperplein[^|]{0,120}?Open tot\s+([0-2]\d:[0-5]\d)/i)
-    ?? text.match(/Schipperplein 4[^|]{0,120}?Open tot\s+([0-2]\d:[0-5]\d)/i)
-    ?? text.match(/Almere Korte Promenade[^|]{0,120}?Open tot\s+([0-2]\d:[0-5]\d)/i)
-    ?? text.match(/Korte Promenade 2-6[^|]{0,120}?Open tot\s+([0-2]\d:[0-5]\d)/i);
-  return { opensAt: null, closesAt: ownStore?.[1] ?? null };
+  const visible = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+  const ownStore = visible.match(/Almere Schipperplein[^|]{0,120}?Open tot\s+([0-2]\d:[0-5]\d)/i)
+    ?? visible.match(/Schipperplein 4[^|]{0,120}?Open tot\s+([0-2]\d:[0-5]\d)/i)
+    ?? visible.match(/Almere Korte Promenade[^|]{0,120}?Open tot\s+([0-2]\d:[0-5]\d)/i)
+    ?? visible.match(/Korte Promenade 2-6[^|]{0,120}?Open tot\s+([0-2]\d:[0-5]\d)/i);
+  const closesAt = isPlausibleCloseTime(ownStore?.[1]) ? ownStore[1] : null;
+  return { opensAt: null, closesAt };
 }
 
 
@@ -436,6 +455,11 @@ console.log(`Dirk department sections: ${sectionIdByName.size} names, ${sectionI
 let storeHours = storeMarkdown.match(new RegExp(`\\*\\s+${dutchWeekdays[weekday]}\\s*\\n+([0-2]\\d:[0-5]\\d)\\s*-\\s*([0-2]\\d:[0-5]\\d)`));
 let storeClosesAt = storeHours?.[2] ?? storeMarkdown.match(/Almere Schipperplein[\s\S]{0,100}?Open tot\s+([0-2]\d:[0-5]\d)/)?.[1] ?? storeMarkdown.match(/Almere Korte Promenade[\s\S]{0,100}?Open tot\s+([0-2]\d:[0-5]\d)/)?.[1];
 let storeOpensAt = storeHours?.[1] ?? null;
+// Jina store lists sometimes show a placeholder "Open tot 00:00"; that is not a real closing time.
+if (!isPlausibleCloseTime(storeClosesAt)) {
+  storeClosesAt = null;
+  storeOpensAt = null;
+}
 if (!storeClosesAt) {
   let storeHtml = "";
   try {
